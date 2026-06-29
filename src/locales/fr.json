@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "services": "Services",
+    "projects": "Projets",
+    "about": "À propos",
+    "contact": "Contact",
+    "cta": "Démarrer un projet"
+  },
+  "hero": {
+    "badge": "Studio digital spécialisé",
+    "title": "Nous créons des expériences digitales",
+    "titleAccent": "qui font grandir votre business.",
+    "subtitle": "Nous concevons et développons des sites, applications et identités visuelles qui reflètent le professionnalisme de votre marque et convertissent les visiteurs en clients.",
+    "cta": "Démarrer votre projet",
+    "ctaSecondary": "Voir nos réalisations"
+  },
+  "trusted": {
+    "title": "Conçu pour les entreprises ambitieuses"
+  },
+  "services": {
+    "label": "Nos services",
+    "title": "Tout ce qu'il faut pour une présence digitale complète",
+    "subtitle": "Du design au développement et à la stratégie — nous couvrons tous les aspects de votre transformation digitale.",
+    "items": {
+      "web": {
+        "title": "Développement Web",
+        "description": "Des sites rapides et modernes, construits avec les dernières technologies, conçus pour convertir les visiteurs en clients."
+      },
+      "apps": {
+        "title": "Applications Web & Mobile",
+        "description": "Des applications performantes qui simplifient vos opérations et offrent une expérience fluide sur tous les appareils."
+      },
+      "branding": {
+        "title": "Identité Visuelle",
+        "description": "Une identité de marque cohérente qui inspire confiance et distingue votre entreprise dans un marché concurrentiel."
+      },
+      "uiux": {
+        "title": "Design UI/UX",
+        "description": "Des interfaces élégantes et réfléchies, centrées sur la simplicité et la facilité d'utilisation."
+      },
+      "automation": {
+        "title": "Automatisation",
+        "description": "Automatisez vos processus répétitifs pour gagner du temps, réduire les coûts et vous concentrer sur l'essentiel."
+      },
+      "ai": {
+        "title": "Solutions IA",
+        "description": "Intégrez l'intelligence artificielle dans vos opérations pour des décisions plus rapides et plus éclairées."
+      }
+    }
+  },
+  "why": {
+    "label": "Pourquoi Massar ?",
+    "title": "Nous ne créons pas que des sites — nous construisons de vrais outils de croissance",
+    "subtitle": "Chaque projet reçoit le même niveau d'attention aux détails et de qualité. Nous croyons que le bon design est un investissement, pas un coût.",
+    "pillars": {
+      "craft": {
+        "title": "L'excellence dans chaque détail",
+        "description": "Chaque pixel est réfléchi, chaque interaction est soignée. Nous livrons un travail qui reflète le professionnalisme que votre entreprise mérite."
+      },
+      "strategy": {
+        "title": "Réflexion stratégique",
+        "description": "Nous ne commençons pas par le design — nous commençons par comprendre vos objectifs et votre audience pour construire des solutions qui génèrent des résultats."
+      },
+      "reliability": {
+        "title": "Un partenaire fiable",
+        "description": "Nous respectons les délais et la qualité. Communication continue et transparente du début jusqu'au lancement et au-delà."
+      }
+    }
+  },
+  "process": {
+    "label": "Notre méthode",
+    "title": "De l'idée au lancement",
+    "steps": {
+      "discover": { "title": "Découverte", "description": "Comprendre en profondeur votre activité, vos objectifs et votre audience." },
+      "plan": { "title": "Planification", "description": "Définir un plan d'action clair avec des jalons et un calendrier précis." },
+      "design": { "title": "Design", "description": "Concevoir des interfaces élégantes qui reflètent l'identité de votre marque." },
+      "develop": { "title": "Développement", "description": "Construire des solutions techniques robustes avec les standards actuels." },
+      "launch": { "title": "Lancement", "description": "Déployer votre projet après des tests rigoureux pour garantir la qualité." },
+      "support": { "title": "Support", "description": "Fournir un support continu et des mises à jour pour une croissance durable." }
+    }
+  },
+  "projects": {
+    "label": "Nos réalisations",
+    "title": "Des projets construits avec soin",
+    "subtitle": "Chaque projet est le fruit d'une collaboration étroite avec nos clients et d'une attention profonde aux détails.",
+    "viewProject": "Voir le projet",
+    "items": {
+      "journeya": {
+        "title": "Journeya",
+        "category": "Site + App + Identité visuelle",
+        "description": "Plateforme touristique complète combinant réservation intelligente et découverte de destinations."
+      },
+      "wafr": {
+        "title": "Wafr",
+        "category": "Site + App + Identité visuelle",
+        "description": "Application anti-gaspillage alimentaire connectant les consommateurs aux offres à proximité."
+      },
+      "darlink": {
+        "title": "DarLink",
+        "category": "Site + App + Identité visuelle",
+        "description": "Plateforme immobilière moderne connectant acheteurs, vendeurs et investisseurs de manière fluide."
+      },
+      "nextgen": {
+        "title": "NextGen",
+        "category": "Développement web",
+        "description": "Boutique en ligne moderne avec une expérience d'achat fluide et un design qui reflète la qualité des produits."
+      }
+    }
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Tout ce que vous devez savoir",
+    "items": [
+      {
+        "question": "Combien de temps faut-il pour créer un site professionnel ?",
+        "answer": "Cela dépend de la taille du projet. Un site vitrine prend de 2 à 4 semaines, tandis que les plateformes avancées peuvent prendre de 6 à 12 semaines."
+      },
+      {
+        "question": "Proposez-vous la maintenance après le lancement ?",
+        "answer": "Oui, nous proposons des forfaits de support incluant les mises à jour de sécurité, l'optimisation des performances et l'ajout de nouvelles fonctionnalités."
+      },
+      {
+        "question": "Quelles technologies utilisez-vous ?",
+        "answer": "Nous utilisons React, Next.js, TypeScript et Tailwind CSS pour le frontend, avec des solutions cloud avancées pour le backend."
+      },
+      {
+        "question": "Comment déterminez-vous le coût d'un projet ?",
+        "answer": "Nous commençons par une session de découverte gratuite pour comprendre vos besoins, puis nous fournissons un devis détaillé adapté à la portée du projet."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Prêt à construire votre présence digitale ?",
+    "subtitle": "Contactez-nous aujourd'hui et voyons ensemble comment nous pouvons vous aider.",
+    "button": "Contactez-nous"
+  },
+  "footer": {
+    "description": "Studio digital spécialisé dans la création d'expériences digitales qui aident les entreprises à grandir.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "followUs": "Suivez-nous",
+    "rights": "Tous droits réservés",
+    "location": "Algérie",
+    "email": "massar.digital.studio@gmail.com",
+    "phone": "+213 555 123 456"
+  }
+}

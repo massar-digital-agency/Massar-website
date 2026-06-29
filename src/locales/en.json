@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "services": "Services",
+    "projects": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Start a project"
+  },
+  "hero": {
+    "badge": "Specialized digital studio",
+    "title": "We build digital experiences",
+    "titleAccent": "that help businesses grow.",
+    "subtitle": "We design and develop websites, applications, and brand identities that reflect your professionalism and turn visitors into customers.",
+    "cta": "Start your project",
+    "ctaSecondary": "View our work"
+  },
+  "trusted": {
+    "title": "Built for ambitious businesses"
+  },
+  "services": {
+    "label": "Services",
+    "title": "Everything you need for a complete digital presence",
+    "subtitle": "From design to development and strategy — we cover every aspect of your digital transformation.",
+    "items": {
+      "web": {
+        "title": "Website Development",
+        "description": "Fast, modern websites built with the latest technologies, designed to convert visitors into real customers."
+      },
+      "apps": {
+        "title": "Web & Mobile Applications",
+        "description": "High-performance applications that streamline your operations and deliver a seamless experience across all devices."
+      },
+      "branding": {
+        "title": "Brand Identity",
+        "description": "A cohesive brand identity that builds trust and sets your business apart in a crowded market."
+      },
+      "uiux": {
+        "title": "UI/UX Design",
+        "description": "Elegant, thoughtful interfaces centered on simplicity and ease of use."
+      },
+      "automation": {
+        "title": "Automation",
+        "description": "Automate repetitive processes to save time, reduce costs, and focus your efforts on what matters."
+      },
+      "ai": {
+        "title": "AI Solutions",
+        "description": "Integrate artificial intelligence into your operations for faster, smarter decisions."
+      }
+    }
+  },
+  "why": {
+    "label": "Why Massar?",
+    "title": "We don't just build websites — we build real growth tools",
+    "subtitle": "Every project receives the same level of attention to detail and quality. We believe good design is an investment, not a cost.",
+    "pillars": {
+      "craft": {
+        "title": "Craft in every detail",
+        "description": "Every pixel is intentional, every interaction is carefully designed. We deliver work that reflects the professionalism your business deserves."
+      },
+      "strategy": {
+        "title": "Strategic thinking",
+        "description": "We don't start with design — we start by understanding your goals and audience to build solutions that drive real results."
+      },
+      "reliability": {
+        "title": "A reliable partner",
+        "description": "We respect deadlines and quality. Continuous, transparent communication from start to launch and beyond."
+      }
+    }
+  },
+  "process": {
+    "label": "Our process",
+    "title": "From idea to launch",
+    "steps": {
+      "discover": { "title": "Discover", "description": "Deeply understand your business, goals, and target audience." },
+      "plan": { "title": "Plan", "description": "Define a clear action plan with milestones and a precise timeline." },
+      "design": { "title": "Design", "description": "Create elegant interfaces that reflect your brand identity." },
+      "develop": { "title": "Develop", "description": "Build robust technical solutions with current standards." },
+      "launch": { "title": "Launch", "description": "Deploy your project after rigorous testing to ensure quality." },
+      "support": { "title": "Support", "description": "Provide ongoing support and updates for sustainable growth." }
+    }
+  },
+  "projects": {
+    "label": "Our work",
+    "title": "Projects built with care",
+    "subtitle": "Every project is the result of close collaboration with our clients and deep attention to detail.",
+    "viewProject": "View project",
+    "items": {
+      "journeya": {
+        "title": "Journeya",
+        "category": "Website + App + Branding",
+        "description": "A complete tourism platform combining smart booking and destination discovery."
+      },
+      "wafr": {
+        "title": "Wafr",
+        "category": "Website + App + Branding",
+        "description": "A food waste reduction app connecting consumers with nearby deals."
+      },
+      "darlink": {
+        "title": "DarLink",
+        "category": "Website + App + Branding",
+        "description": "A modern real estate platform seamlessly connecting buyers, sellers, and investors."
+      },
+      "nextgen": {
+        "title": "NextGen",
+        "category": "Website development",
+        "description": "A modern e-commerce store with a seamless shopping experience and design that reflects product quality."
+      }
+    }
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Everything you need to know",
+    "items": [
+      {
+        "question": "How long does it take to build a professional website?",
+        "answer": "It depends on the project size. A simple showcase site takes 2 to 4 weeks, while advanced platforms may take 6 to 12 weeks."
+      },
+      {
+        "question": "Do you offer maintenance after launch?",
+        "answer": "Yes, we offer support packages including security updates, performance optimization, and new feature additions."
+      },
+      {
+        "question": "What technologies do you use?",
+        "answer": "We use React, Next.js, TypeScript, and Tailwind CSS for frontend, with advanced cloud solutions for backend infrastructure."
+      },
+      {
+        "question": "How do you determine project costs?",
+        "answer": "We start with a free discovery session to understand your needs, then provide a detailed quote tailored to the project scope."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to build your digital presence?",
+    "subtitle": "Get in touch today and let's see how we can help.",
+    "button": "Get in touch"
+  },
+  "footer": {
+    "description": "A digital studio specializing in building digital experiences that help businesses grow.",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "followUs": "Follow us",
+    "rights": "All rights reserved",
+    "location": "Algeria",
+    "email": "massar.digital.studio@gmail.com",
+    "phone": "+213 555 123 456"
+  }
+}
