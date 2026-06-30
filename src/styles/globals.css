@@ -39,18 +39,19 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
 }
 
-[dir="rtl"] body,
-[dir="rtl"] h1,
-[dir="rtl"] h2,
-[dir="rtl"] h3,
-[dir="rtl"] h4,
-[dir="rtl"] h5,
-[dir="rtl"] h6,
-[dir="rtl"] p,
-[dir="rtl"] span,
-[dir="rtl"] a,
-[dir="rtl"] button,
-[dir="rtl"] li {
+[lang="ar"] body,
+html[lang="ar"] body,
+[lang="ar"] h1,
+[lang="ar"] h2,
+[lang="ar"] h3,
+[lang="ar"] h4,
+[lang="ar"] h5,
+[lang="ar"] h6,
+[lang="ar"] p,
+[lang="ar"] span,
+[lang="ar"] a,
+[lang="ar"] button,
+[lang="ar"] li {
   font-family: var(--font-arabic);
 }
 

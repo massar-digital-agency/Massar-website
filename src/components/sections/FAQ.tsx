@@ -5,6 +5,7 @@ import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { Accordion } from '@/components/ui/Accordion'
+import ChatShape from '@/assets/images/chatbulb3d.svg'
 
 export function FAQ() {
   const { t } = useTranslation()
@@ -14,8 +15,13 @@ export function FAQ() {
   }>
 
   return (
-    <Section>
-      <Container narrow>
+    <Section className="relative overflow-hidden">
+      <img
+        src={ChatShape}
+        alt=""
+        className="pointer-events-none absolute -top-10 end-[-80px] hidden h-[280px] w-auto opacity-[0.07] lg:block"
+      />
+      <Container narrow className="relative">
         <SectionHeader
           label={t('faq.label')}
           title={t('faq.title')}

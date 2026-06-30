@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Container } from '@/components/ui/Container'
 import { Mail, MapPin, Phone } from 'lucide-react'
+import { HoverSlideText } from '@/components/ui/HoverSlideText'
 import Logo from '@/assets/images/Logo.svg'
 
 export function Footer() {
@@ -29,9 +30,9 @@ export function Footer() {
                 <a
                   key={key}
                   href={`#${key}`}
-                  className="text-[14px] text-[#71717A] transition-colors duration-200 hover:text-[#0A0A0A]"
+                  className="group text-[14px] text-[#71717A] w-fit"
                 >
-                  {t(`nav.${key}`)}
+                  <HoverSlideText>{t(`nav.${key}`)}</HoverSlideText>
                 </a>
               ))}
             </div>
@@ -72,17 +73,17 @@ export function Footer() {
                 href="https://www.instagram.com/massar.digital.studio"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[14px] text-[#71717A] transition-colors duration-200 hover:text-[#0A0A0A]"
+                className="group text-[14px] text-[#71717A] w-fit"
               >
-                Instagram
+                <HoverSlideText>Instagram</HoverSlideText>
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[14px] text-[#71717A] transition-colors duration-200 hover:text-[#0A0A0A]"
+                className="group text-[14px] text-[#71717A] w-fit"
               >
-                LinkedIn
+                <HoverSlideText>LinkedIn</HoverSlideText>
               </a>
             </div>
           </div>

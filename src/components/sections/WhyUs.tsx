@@ -5,6 +5,7 @@ import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 import { Target, Sparkles, Shield } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
+import FaceShape from '@/assets/images/face3d.svg'
 
 const pillars: { key: string; icon: LucideIcon }[] = [
   { key: 'craft', icon: Sparkles },
@@ -16,15 +17,21 @@ export function WhyUs() {
   const { t } = useTranslation()
 
   return (
-    <Section id="about" className="bg-white border-y border-[#E4E4E7]">
-      <Container>
+    <Section id="about" className="relative overflow-hidden bg-white border-y border-[#E4E4E7]">
+      <Container className="relative">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-20 items-start">
           <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-60px' }}
+            className="relative"
           >
+            <img
+              src={FaceShape}
+              alt=""
+              className="pointer-events-none absolute -top-16 start-[-40px] -z-10 h-[320px] w-auto opacity-[0.06]"
+            />
             <span className="mb-4 inline-block text-[13px] font-semibold tracking-[0.1em] text-[#8B5CF6] uppercase">
               {t('why.label')}
             </span>

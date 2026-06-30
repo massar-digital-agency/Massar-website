@@ -4,70 +4,104 @@ import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { fadeUp } from '@/hooks/useAnimationVariants'
+import { useTransparentImage } from '@/hooks/useTransparentImage'
+import MascotSrc from '@/assets/images/logo-3d-alt.png'
+
+const marqueeKeys = ['web', 'apps', 'branding', 'uiux', 'automation', 'ai'] as const
 
 export function Hero() {
   const { t, i18n } = useTranslation()
   const isRTL = i18n.language === 'ar'
   const Arrow = isRTL ? ArrowLeft : ArrowRight
+  const Mascot = useTransparentImage(MascotSrc)
 
   return (
-    <section className="relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28 lg:pt-48 lg:pb-32">
-      <Container>
-        <div className="mx-auto max-w-[640px] text-center">
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-          >
-            <div className="mb-7 inline-flex items-center gap-2.5 rounded-full border border-[#E4E4E7] bg-white px-5 py-2 shadow-sm shadow-black/[0.04]">
-              <span className="h-2 w-2 rounded-full bg-[#8B5CF6]" />
-              <span className="text-[13px] font-medium text-[#52525B]">
+    <section className="relative flex min-h-[100svh] flex-col pt-24 pb-8 sm:pt-28">
+      <Container className="flex flex-1 items-center">
+        <div className="grid w-full items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
+          <div className="mx-auto max-w-[640px] text-center lg:mx-0 lg:max-w-none lg:text-start">
+            <motion.div variants={fadeUp} initial="hidden" animate="visible">
+              <span className="mb-6 inline-flex items-center gap-2 text-[13px] font-medium text-[#71717A]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#8B5CF6]" />
                 {t('hero.badge')}
               </span>
-            </div>
-          </motion.div>
+            </motion.div>
 
-          <motion.h1
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 0.05 }}
-            className="text-[24px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0A0A0A] sm:text-[32px] lg:text-[40px]"
-          >
-            {t('hero.title')}{' '}
-            <span className="text-[#8B5CF6]">{t('hero.titleAccent')}</span>
-          </motion.h1>
+            <motion.h1
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.05 }}
+              className="text-[30px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0A0A0A] sm:text-[40px] lg:text-[52px]"
+            >
+              {t('hero.title')}{' '}
+              <span className="text-[#8B5CF6]">{t('hero.titleAccent')}</span>
+            </motion.h1>
 
-          <motion.p
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 0.1 }}
-            className="mx-auto mt-5 max-w-[480px] text-[14px] leading-[1.8] text-[#71717A] sm:text-[16px] sm:mt-6"
-          >
-            {t('hero.subtitle')}
-          </motion.p>
+            <motion.p
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.1 }}
+              className="mx-auto mt-5 max-w-[460px] text-[14px] leading-[1.8] text-[#71717A] sm:text-[16px] lg:mx-0"
+            >
+              {t('hero.subtitle')}
+            </motion.p>
+
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.15 }}
+              className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:mt-10 lg:justify-start"
+            >
+              <Button size="lg" href="#contact">
+                {t('hero.cta')}
+                <Arrow className="h-4 w-4" />
+              </Button>
+              <Button variant="secondary" size="lg" href="#projects">
+                {t('hero.ctaSecondary')}
+              </Button>
+            </motion.div>
+          </div>
 
           <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 0.15 }}
-            className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:mt-10"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+            className="mx-auto w-full max-w-[260px] sm:max-w-[320px] lg:max-w-[400px]"
           >
-            <Button size="lg" href="#contact">
-              {t('hero.cta')}
-              <Arrow className="h-4 w-4" />
-            </Button>
-            <Button variant="secondary" size="lg" href="#projects">
-              {t('hero.ctaSecondary')}
-            </Button>
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
+              className="relative block aspect-square w-full"
+            >
+              <img
+                src={Mascot}
+                alt="Massar"
+                className="absolute inset-0 h-full w-full object-contain"
+              />
+            </motion.div>
           </motion.div>
         </div>
       </Container>
 
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-[#8B5CF6]/[0.03] blur-[120px]" />
+      <div className="mt-12 overflow-hidden border-t border-[#E4E4E7] py-6 sm:mt-16">
+        <motion.div
+          animate={{ x: isRTL ? ['0%', '50%'] : ['0%', '-50%'] }}
+          transition={{ duration: 22, repeat: Infinity, ease: 'linear' }}
+          className="flex w-max items-center gap-10 whitespace-nowrap"
+        >
+          {[...marqueeKeys, ...marqueeKeys, ...marqueeKeys, ...marqueeKeys].map((key, i) => (
+            <span
+              key={`${key}-${i}`}
+              className="flex items-center gap-10 text-[14px] font-medium text-[#A1A1AA]"
+            >
+              {t(`services.items.${key}.title`)}
+              <span className="h-1 w-1 rounded-full bg-[#D4D4D8]" />
+            </span>
+          ))}
+        </motion.div>
       </div>
     </section>
   )

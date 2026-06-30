@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { LanguageSwitcher } from './LanguageSwitcher'
+import { HoverSlideText } from '@/components/ui/HoverSlideText'
 import Logo from '@/assets/images/Logo.svg'
 
 const navLinks = ['services', 'projects', 'about', 'contact'] as const
@@ -45,9 +46,9 @@ export function Navbar() {
               <a
                 key={key}
                 href={`#${key}`}
-                className="text-[14px] font-medium text-[#71717A] transition-colors duration-200 hover:text-[#0A0A0A]"
+                className="group text-[14px] font-medium text-[#71717A]"
               >
-                {t(`nav.${key}`)}
+                <HoverSlideText>{t(`nav.${key}`)}</HoverSlideText>
               </a>
             ))}
           </div>

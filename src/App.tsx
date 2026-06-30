@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import { useDirection } from '@/hooks/useDirection'
+import { LoadingScreen } from '@/components/layout/LoadingScreen'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { Hero } from '@/components/sections/Hero'
@@ -12,9 +14,11 @@ import { CTA } from '@/components/sections/CTA'
 
 export default function App() {
   useDirection()
+  const [loading, setLoading] = useState(true)
 
   return (
     <>
+      {loading && <LoadingScreen onFinish={() => setLoading(false)} />}
       <Navbar />
       <main>
         <Hero />
