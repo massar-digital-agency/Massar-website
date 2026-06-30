@@ -3,6 +3,7 @@ import { useDirection } from '@/hooks/useDirection'
 import { LoadingScreen } from '@/components/layout/LoadingScreen'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
+import { FloatingContact } from '@/components/layout/FloatingContact'
 import { Hero } from '@/components/sections/Hero'
 import { TrustedBy } from '@/components/sections/TrustedBy'
 import { Services } from '@/components/sections/Services'
@@ -31,6 +32,7 @@ export default function App() {
         <CTA />
       </main>
       <Footer />
+      <FloatingContact />
     </>
   )
 }
