@@ -9,15 +9,17 @@
   "nav": {
     "services": "Services",
     "projects": "Work",
+    "pricing": "Pricing",
     "about": "About",
     "contact": "Contact",
     "cta": "Start a project"
   },
   "hero": {
-    "badge": "Specialized digital studio",
-    "title": "We build digital experiences",
-    "titleAccent": "that help businesses grow.",
-    "subtitle": "We design and develop websites, applications, and brand identities that reflect your professionalism and turn visitors into customers.",
+    "badge": "Digital studio — Algeria",
+    "title": "Strategy-first digital products",
+    "titleAccent": "built for measurable growth.",
+    "subtitle": "We start with your goals, not a template. Through strategy, careful craft, and transparent delivery, we build websites, apps, and brand identities that turn visitors into customers and ideas into growth.",
+    "trustStatement": "Trusted by Journeya, DarLink, and businesses across Algeria.",
     "cta": "Start your project",
     "ctaSecondary": "View our work",
     "trust": {
@@ -125,6 +127,183 @@
         "category": "Website development",
         "description": "A modern e-commerce store with a seamless shopping experience and design that reflects product quality."
       }
+    }
+  },
+  "pricing": {
+    "label": "Pricing",
+    "title": "Transparent pricing for every project",
+    "subtitle": "Choose a package that fits your needs, or request a custom quote for more complex projects.",
+    "trust": {
+      "projects": "Projects Completed",
+      "satisfaction": "Client Satisfaction",
+      "response": "Expected Response Time"
+    },
+    "packages": {
+      "popular": "Most Popular",
+      "fromLabel": "Starting from",
+      "timelineLabel": "Estimated timeline",
+      "includesLabel": "What's included",
+      "addonsLabel": "Optional add-ons",
+      "todoWarning": "Update these prices to reflect your actual rates before going live.",
+      "cta": "Get started",
+      "ctaCustom": "Request custom quote",
+      "idealLabel": "Best for",
+      "website": {
+        "name": "Website Package",
+        "price": "$2,500",
+        "description": "A professional, responsive website built with modern technology to establish your online presence.",
+        "ideal": "Small businesses, freelancers & startups",
+        "timeline": "2–3 weeks",
+        "features": [
+          "Up to 5 pages",
+          "Responsive design (mobile + tablet + desktop)",
+          "SEO basics (meta tags, sitemap, speed)",
+          "Contact form with validation",
+          "Performance optimization (90+ Lighthouse)",
+          "Basic analytics setup"
+        ],
+        "addons": [
+          "Content management system (CMS) — +$500",
+          "Blog/news section — +$400",
+          "E-commerce integration — from $2,000",
+          "Custom animations — from $300"
+        ]
+      },
+      "growth": {
+        "name": "Growth Bundle",
+        "price": "$5,000",
+        "description": "A full-featured website with CMS, advanced functionality, and everything you need to scale your online presence.",
+        "ideal": "Growing businesses, service companies & startups",
+        "timeline": "3–5 weeks",
+        "features": [
+          "Up to 10 pages",
+          "Everything in Website Package",
+          "Content management system (CMS)",
+          "Advanced page animations & transitions",
+          "Blog / news section",
+          "Google Analytics + Search Console setup",
+          "Cookie consent & GDPR compliance"
+        ],
+        "addons": [
+          "E-commerce integration — from $2,000",
+          "Multi-language support — +$800",
+          "Custom feature development — quote based",
+          "Maintenance package (monthly) — from $150/mo"
+        ]
+      },
+      "custom": {
+        "name": "Custom Project",
+        "price": "$10,000",
+        "description": "A fully custom web application, platform, or digital product tailored to your unique business requirements.",
+        "ideal": "SaaS, platforms, marketplaces & enterprises",
+        "timeline": "6–12 weeks",
+        "features": [
+          "Custom UI/UX design from scratch",
+          "Full-stack development (frontend + backend)",
+          "Database design & optimization",
+          "User authentication & authorization",
+          "Admin dashboard with analytics",
+          "API integrations (payment, CRM, etc.)",
+          "Load testing & security audit",
+          "Deployment & CI/CD pipeline"
+        ],
+        "addons": [
+          "Mobile app development — quote based",
+          "AI / ML integration — quote based",
+          "Dedicated team extension — quote based",
+          "Ongoing maintenance & support — quote based"
+        ]
+      }
+    },
+    "comparison": {
+      "label": "Comparison",
+      "title": "Compare packages side by side",
+      "subtitle": "Every package is designed for a specific need. See which one fits your project best.",
+      "headers": {
+        "feature": "Feature"
+      },
+      "features": [
+        { "feature": "Pages / Routes", "starter": "Up to 5", "growth": "Up to 10", "custom": "Unlimited" },
+        { "feature": "Responsive Design", "starter": "✓", "growth": "✓", "custom": "✓" },
+        { "feature": "SEO Optimization", "starter": "Basic", "growth": "Advanced", "custom": "Advanced" },
+        { "feature": "Content Management", "starter": "—", "growth": "✓", "custom": "✓" },
+        { "feature": "Custom Design", "starter": "Template-based", "growth": "Custom", "custom": "Full custom" },
+        { "feature": "Animations", "starter": "Basic", "growth": "Advanced", "custom": "Custom" },
+        { "feature": "Analytics Setup", "starter": "Basic", "growth": "Advanced", "custom": "Custom" },
+        { "feature": "CMS Integration", "starter": "—", "growth": "✓", "custom": "✓" },
+        { "feature": "E-commerce", "starter": "Add-on", "growth": "Add-on", "custom": "Included" },
+        { "feature": "User Accounts / Auth", "starter": "—", "growth": "—", "custom": "✓" },
+        { "feature": "API Integrations", "starter": "—", "growth": "—", "custom": "✓" },
+        { "feature": "Admin Dashboard", "starter": "—", "growth": "—", "custom": "✓" },
+        { "feature": "Performance Target", "starter": "90+", "growth": "95+", "custom": "95+" },
+        { "feature": "Security Audit", "starter": "Basic", "growth": "Standard", "custom": "Advanced" },
+        { "feature": "Revisions", "starter": "2 rounds", "growth": "3 rounds", "custom": "Agreed scope" },
+        { "feature": "Deployment", "starter": "✓", "growth": "✓", "custom": "✓" },
+        { "feature": "Post-launch Support", "starter": "2 weeks", "growth": "1 month", "custom": "Custom" },
+        { "feature": "Timeline", "starter": "2–3 weeks", "growth": "3–5 weeks", "custom": "6–12 weeks" }
+      ]
+    },
+    "custom": {
+      "label": "Custom Project",
+      "title": "Need something unique? Let's build it together.",
+      "description": "Not every project fits into a predefined package. If your project requires a tailored approach, we offer custom quotes based on your specific requirements.",
+      "factors": [
+        "Complex integrations with third-party APIs or legacy systems",
+        "Advanced custom functionality beyond standard features",
+        "Enterprise-grade security, compliance, and performance",
+        "Multi-platform delivery (web + mobile + desktop)",
+        "Long-term partnership with ongoing development and support",
+        "Large-scale data processing, AI/ML, or automation"
+      ],
+      "ctaSubtitle": "Describe your project and we'll get back to you within 24 hours with a detailed proposal.",
+      "cta": "Request a proposal",
+      "ctaSchedule": "Book a discovery call"
+    },
+    "testimonial": {
+      "text": "We chose Massar for our platform development and the transparent pricing was a breath of fresh air. They delivered exactly what was promised, on time and within budget. The ongoing support has been exceptional.",
+      "author": "Client Name",
+      "role": "Company — Role",
+      "initials": "CN"
+    },
+    "faq": {
+      "label": "Pricing FAQ",
+      "title": "Frequently asked questions about pricing",
+      "moreQuestions": "Have more questions?",
+      "contactLink": "Get in touch",
+      "items": [
+        {
+          "question": "Why isn't every project priced the same?",
+          "answer": "Every project is unique in scope, complexity, and requirements. A simple brochure website requires less time and resources than a custom web application with user accounts, API integrations, and an admin dashboard. Our pricing reflects the actual effort needed to deliver quality work."
+        },
+        {
+          "question": "What's included in the quoted price?",
+          "answer": "Our quotes cover strategy, design, development, testing, and deployment. We are transparent about what's included and what's not, so there are no surprises. Each proposal includes a clear breakdown of deliverables, timeline, and payment schedule."
+        },
+        {
+          "question": "How are payments handled?",
+          "answer": "We typically work with a milestone-based payment structure. A deposit is required to begin work, followed by payments at key project milestones. The final balance is due upon completion and approval. We are flexible on schedules and happy to discuss terms that work for both parties."
+        },
+        {
+          "question": "Do you offer maintenance after launch?",
+          "answer": "Yes, we offer ongoing maintenance and support packages. These include security updates, performance monitoring, content updates, and technical support. Monthly retainer options start at $150/month and can be tailored to your needs."
+        },
+        {
+          "question": "Are revisions included?",
+          "answer": "Yes, our packages include a set number of revision rounds during the design phase (typically 2–3 rounds). Additional revisions beyond the agreed scope are billed at our standard hourly rate. We make sure you're happy with the result before moving to development."
+        },
+        {
+          "question": "How long does a typical project take?",
+          "answer": "Timelines vary by project complexity. A standard website (2–3 weeks), a growth bundle (3–5 weeks), and custom applications (6–12 weeks). We provide a detailed timeline in every proposal and keep you updated throughout the process."
+        },
+        {
+          "question": "Can pricing change after the project starts?",
+          "answer": "Once the scope is agreed upon and the contract is signed, the price remains fixed. If you request additional features or changes that were not in the original scope, we will discuss the impact on timeline and budget before proceeding."
+        },
+        {
+          "question": "Do you work with international clients?",
+          "answer": "Absolutely. We work with clients worldwide and are comfortable collaborating remotely. We use modern communication tools (Slack, WhatsApp, Notion, Figma) and are used to working across different time zones."
+        }
+      ]
     }
   },
   "testimonials": {

@@ -9,15 +9,17 @@
   "nav": {
     "services": "Services",
     "projects": "Projets",
+    "pricing": "Tarifs",
     "about": "À propos",
     "contact": "Contact",
     "cta": "Démarrer un projet"
   },
   "hero": {
-    "badge": "Studio digital spécialisé",
-    "title": "Nous créons des expériences digitales",
-    "titleAccent": "qui font grandir votre business.",
-    "subtitle": "Nous concevons et développons des sites, applications et identités visuelles qui reflètent le professionnalisme de votre marque et convertissent les visiteurs en clients.",
+    "badge": "Studio digital — Algérie",
+    "title": "Des produits digitaux stratégiques",
+    "titleAccent": "pour une croissance mesurable.",
+    "subtitle": "Nous commençons par vos objectifs, pas par un template. Grâce à la stratégie, un travail soigné et une livraison transparente, nous créons des sites, applications et identités visuelles qui transforment les visiteurs en clients et les idées en croissance.",
+    "trustStatement": "Approuvé par Journeya, DarLink, et des entreprises à travers l'Algérie.",
     "cta": "Démarrer votre projet",
     "ctaSecondary": "Voir nos réalisations",
     "trust": {

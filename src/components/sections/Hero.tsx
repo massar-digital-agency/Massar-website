@@ -66,12 +66,22 @@ export function Hero() {
               </Button>
             </motion.div>
 
+            <motion.p
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.18 }}
+              className="mt-6 text-center text-[13px] text-[#71717A] lg:text-start"
+            >
+              {t('hero.trustStatement')}
+            </motion.p>
+
             <motion.div
               variants={fadeUp}
               initial="hidden"
               animate="visible"
               transition={{ delay: 0.2 }}
-              className="mt-8 flex flex-wrap items-center justify-center gap-6 sm:mt-10 lg:justify-start"
+              className="mt-6 flex flex-wrap items-center justify-center gap-6 lg:justify-start"
             >
               <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
                 <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
