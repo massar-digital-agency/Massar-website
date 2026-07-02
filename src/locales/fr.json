@@ -26,6 +26,11 @@
       "projects": "15+ Projets",
       "experience": "3+ Années",
       "clients": "10+ Clients"
+    },
+    "process": {
+      "discovery": "Séance découverte gratuite",
+      "delivery": "Livraison sous 2–12 semaines",
+      "support": "Support continu"
     }
   },
   "trusted": {
@@ -394,6 +399,172 @@
         "technologies": ["Next.js", "Shopify", "Tailwind CSS", "Vercel"],
         "outcomes": "Score de performance Lighthouse de 90+ et expérience d'achat alignée sur la marque."
       }
+    }
+  },
+  "aboutPage": {
+    "seo": {
+      "title": "À propos | Massar Digital Studio | Agence web & digitale en Algérie",
+      "description": "Découvrez Massar Digital Studio — une agence digitale spécialisée en Algérie qui crée des sites web, apps mobiles, identités visuelles et solutions IA pour la croissance des entreprises."
+    },
+    "hero": {
+      "badge": "À propos",
+      "title": "Un studio digital",
+      "titleAccent": "bâti sur l'excellence et la confiance.",
+      "subtitle": "Nous sommes une petite équipe spécialisée basée en Algérie, qui crée des expériences digitales pour aider les entreprises à grandir. De la stratégie au design en passant par le développement — chaque projet est un partenariat.",
+      "cta": "Voir nos réalisations",
+      "ctaSecondary": "Démarrer un projet",
+      "subtitleMicro": "Développement orienté stratégie • Processus transparent • Réponse sous 24h"
+    },
+    "story": {
+      "title": "Notre histoire",
+      "intro": "Massar Digital Studio est né d'une conviction simple : les grandes expériences digitales doivent être construites avec stratégie, soin et transparence — pas avec des raccourcis.",
+      "paragraphs": [
+        "Nous avons commencé comme une petite équipe de designers et développeurs frustrés par le nombre d'agences qui livraient de beaux sites sans réellement aider les entreprises à se développer. Nous savions qu'il y avait une meilleure façon de faire.",
+        "Aujourd'hui, nous travaillons avec des startups, des entreprises en croissance et des sociétés établies en Algérie et au-delà. Chaque projet — site web, application mobile, identité de marque ou solution IA — suit la même philosophie : comprendre l'objectif d'abord, concevoir avec intention, et construire pour la performance.",
+        "Nous sommes fiers du travail accompli et des relations que nous avons bâties. Mais nous n'en sommes qu'au début."
+      ],
+      "note": "TODO: Ajouter la date de fondation vérifiée, les étapes clés et l'historique de l'entreprise",
+      "placeholder": true
+    },
+    "founder": {
+      "title": "Rencontrez le fondateur",
+      "subtitle": "Derrière chaque grande agence se cache quelqu'un qui a refusé de se contenter de la moyenne.",
+      "placeholder": true,
+      "placeholderNote": "TODO: Ajouter le nom, la photo, la biographie, l'expérience et le lien LinkedIn du fondateur"
+    },
+    "mission": {
+      "title": "Mission, vision & valeurs",
+      "subtitle": "Ces principes guident chaque décision et chaque projet que nous livrons.",
+      "mission": {
+        "label": "Notre mission",
+        "text": "Aider les entreprises à se développer en créant des expériences digitales stratégiquement solides, magnifiquement conçues et techniquement excellentes."
+      },
+      "vision": {
+        "label": "Notre vision",
+        "text": "Devenir le partenaire digital le plus fiable pour les entreprises en Algérie et au-delà — reconnu pour notre savoir-faire, notre transparence et nos résultats concrets."
+      },
+      "values": {
+        "label": "Valeurs fondamentales",
+        "items": [
+          {
+            "title": "L'excellence dans chaque détail",
+            "description": "Chaque pixel, chaque interaction, chaque ligne de code est intentionnelle. Nous ne prenons pas de raccourcis car votre réputation est la nôtre.",
+            "icon": "craft"
+          },
+          {
+            "title": "La stratégie avant tout",
+            "description": "Nous ne commençons jamais par le design ou le code. Nous commençons par comprendre vos objectifs, votre audience et votre marché — la bonne stratégie rend tout le reste plus facile.",
+            "icon": "strategy"
+          },
+          {
+            "title": "Transparence radicale",
+            "description": "Pas de jargon, pas de frais cachés, pas de surprises. Nous communiquons clairement, partageons les progrès régulièrement et traitons votre budget comme le nôtre.",
+            "icon": "transparency"
+          },
+          {
+            "title": "La performance non négociable",
+            "description": "Un beau site qui charge lentement est un mauvais investissement. Nous construisons pour la vitesse, l'accessibilité et le SEO dès la première ligne de code.",
+            "icon": "performance"
+          },
+          {
+            "title": "Vision à long terme",
+            "description": "Nous construisons des partenariats, pas seulement des projets. Le meilleur travail émerge quand nous comprenons profondément votre entreprise — cela prend du temps et de la confiance.",
+            "icon": "reliability"
+          }
+        ]
+      }
+    },
+    "why": {
+      "title": "Pourquoi les clients nous choisissent",
+      "subtitle": "Nous ne prétendons pas être la plus grande agence. Mais nous travaillons dur pour être la plus fiable.",
+      "items": [
+        {
+          "title": "Approche stratégique",
+          "description": "Nous n'ouvrons pas Figma avant d'avoir compris vos objectifs commerciaux, votre public cible et votre paysage concurrentiel. Chaque décision de design est fondée sur la recherche."
+        },
+        {
+          "title": "Expertise technique moderne",
+          "description": "Nous construisons avec React, Next.js, TypeScript et Tailwind CSS — des technologies modernes qui offrent des résultats rapides, maintenables et évolutifs."
+        },
+        {
+          "title": "Obsession de la performance",
+          "description": "Nous visons des scores Lighthouse de 90+ sur chaque projet. La rapidité améliore l'expérience utilisateur, le référencement et les taux de conversion."
+        },
+        {
+          "title": "Communication claire et honnête",
+          "description": "Vous ne vous demanderez jamais où en est votre projet. Nous fournissons des mises à jour régulières via Slack ou WhatsApp, répondons en quelques heures et sommes toujours disponibles."
+        },
+        {
+          "title": "Accessibilité par défaut",
+          "description": "Nous construisons selon les normes WCAG 2.2 AA car un design inclusif est un bon design. Chaque projet prend en compte la navigation au clavier, les lecteurs d'écran et le contraste des couleurs."
+        },
+        {
+          "title": "Partenariat post-lancement",
+          "description": "Nous ne disparaissons pas après le lancement. Nous offrons un support continu, de la maintenance et de l'optimisation pour assurer la performance continue de votre présence digitale."
+        }
+      ]
+    },
+    "process": {
+      "title": "Comment nous travaillons",
+      "subtitle": "Un processus éprouvé qui accompagne votre projet de l'idée au lancement avec clarté et confiance.",
+      "note": "La section processus réutilise les 6 étapes existantes de la page d'accueil."
+    },
+    "team": {
+      "title": "Rencontrez l'équipe",
+      "subtitle": "Une petite équipe concentrée avec de grandes ambitions.",
+      "placeholder": true,
+      "placeholderNote": "TODO: Ajouter les profils des membres de l'équipe avec photos, rôles, bios et compétences",
+      "members": []
+    },
+    "achievements": {
+      "title": "Expérience & réalisations",
+      "subtitle": "Des chiffres qui reflètent notre engagement envers la qualité.",
+      "items": [
+        {
+          "metric": "15+",
+          "label": "Projets réalisés",
+          "description": "En web, mobile, branding et IA"
+        },
+        {
+          "metric": "3+",
+          "label": "Années d'expérience",
+          "description": "Au service des clients en Algérie et au-delà",
+          "placeholder": false
+        },
+        {
+          "metric": "10+",
+          "label": "Clients satisfaits",
+          "description": "Des startups aux entreprises établies",
+          "placeholder": false
+        },
+        {
+          "metric": "98%",
+          "label": "Satisfaction client",
+          "description": "Basé sur les retours post-projet",
+          "placeholder": true
+        }
+      ],
+      "placeholderNote": "TODO: Ajouter les récompenses, certifications et réalisations vérifiées",
+      "hasPlaceholders": true
+    },
+    "techStack": {
+      "title": "Notre stack technologique",
+      "subtitle": "Des outils modernes pour construire des produits digitaux rapides, fiables et évolutifs.",
+      "categories": [
+        { "label": "Frontend", "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"] },
+        { "label": "Backend", "items": ["Node.js", "Firebase", "Supabase", "REST APIs", "GraphQL"] },
+        { "label": "Base de données", "items": ["PostgreSQL", "Firestore", "SQLite"] },
+        { "label": "Design", "items": ["Figma", "Adobe Creative Suite", "Prototyping"] },
+        { "label": "Déploiement", "items": ["Vercel", "Netlify", "Git", "CI/CD"] }
+      ],
+      "note": "TODO: Vérifier et enrichir la liste des technologies selon l'expérience réelle"
+    },
+    "cta": {
+      "title": "Prêt à collaborer ?",
+      "subtitle": "Parlez-nous de vos objectifs et nous vous fournirons une proposition personnalisée sous 24 heures. Aucun engagement, juste une conversation.",
+      "button": "Démarrer votre projet",
+      "buttonSecondary": "Voir nos réalisations",
+      "micro": "Appel découverte gratuit • Sans engagement • Réponse sous 24h"
     }
   },
   "faq": {

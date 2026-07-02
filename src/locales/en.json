@@ -12,7 +12,8 @@
     "pricing": "Pricing",
     "about": "About",
     "contact": "Contact",
-    "cta": "Start a project"
+    "cta": "Start your project",
+    "ctaMicro": "Free discovery call • Response within 24h"
   },
   "hero": {
     "badge": "Digital studio — Algeria",
@@ -21,11 +22,17 @@
     "subtitle": "We start with your goals, not a template. Through strategy, careful craft, and transparent delivery, we build websites, apps, and brand identities that turn visitors into customers and ideas into growth.",
     "trustStatement": "Trusted by Journeya, DarLink, and businesses across Algeria.",
     "cta": "Start your project",
+    "ctaMicro": "Free 15-min discovery call • No obligation • Response within 24h",
     "ctaSecondary": "View our work",
     "trust": {
       "projects": "15+ Projects",
       "experience": "3+ Years",
       "clients": "10+ Clients"
+    },
+    "process": {
+      "discovery": "Free discovery session",
+      "delivery": "2–12 week delivery",
+      "support": "Ongoing support"
     }
   },
   "trusted": {
@@ -101,11 +108,27 @@
       "support": { "title": "Support", "description": "Provide ongoing support and updates for sustainable growth." }
     }
   },
+  "process": {
+    "label": "Our process",
+    "title": "From idea to launch",
+    "steps": {
+      "discover": { "title": "Discover", "description": "Deeply understand your business, goals, and target audience." },
+      "plan": { "title": "Plan", "description": "Define a clear action plan with milestones and a precise timeline." },
+      "design": { "title": "Design", "description": "Create elegant interfaces that reflect your brand identity." },
+      "develop": { "title": "Develop", "description": "Build robust technical solutions with current standards." },
+      "launch": { "title": "Launch", "description": "Deploy your project after rigorous testing to ensure quality." },
+      "support": { "title": "Support", "description": "Provide ongoing support and updates for sustainable growth." }
+    },
+    "cta": "Ready to start your project?",
+    "ctaMicro": "Most projects move from discovery to launch in 2–12 weeks depending on scope."
+  },
   "projects": {
     "label": "Our work",
     "title": "Projects built with care",
     "subtitle": "Every project is the result of close collaboration with our clients and deep attention to detail.",
     "viewProject": "View project",
+    "cta": "Have a project in mind?",
+    "ctaMicro": "Tell us about your goals and we'll provide a tailored proposal within 24 hours.",
     "items": {
       "journeya": {
         "title": "Journeya",
@@ -363,12 +386,16 @@
         "description": "Based on post-project feedback scores",
         "placeholder": true
       }
-    ]
+    ],
+    "cta": "See projects we've delivered",
+    "ctaMicro": "Explore real case studies with challenges, solutions, and measurable outcomes."
   },
   "caseStudies": {
     "label": "Case Studies",
     "title": "See how we solve real problems",
     "subtitle": "Deep dives into the challenges, solutions, and outcomes behind our favorite projects.",
+    "cta": "Have a similar project?",
+    "ctaMicro": "Let's discuss how we can help you build a digital experience that drives real results.",
     "items": {
       "journeya": {
         "challenge": "Journeya needed a complete digital ecosystem combining a booking platform, mobile app, and cohesive brand identity to launch their tourism startup.",
@@ -396,9 +423,192 @@
       }
     }
   },
+  "aboutPage": {
+    "seo": {
+      "title": "About Massar Digital Studio | Digital Agency & Web Development in Algeria",
+      "description": "Learn about Massar Digital Studio — a specialized digital agency in Algeria building custom websites, mobile apps, brand identities, and AI solutions that drive business growth."
+    },
+    "hero": {
+      "badge": "About us",
+      "title": "A digital studio",
+      "titleAccent": "built on craft and trust.",
+      "subtitle": "We're a small, specialized team based in Algeria, building digital experiences that help businesses grow. From strategy and design to development and launch — we treat every project as a partnership.",
+      "cta": "View our work",
+      "ctaSecondary": "Start a project",
+      "subtitleMicro": "Strategy-first development • Transparent process • 24-hour response time"
+    },
+    "story": {
+      "title": "Our story",
+      "intro": "Massar Digital Studio was founded with a simple belief: great digital experiences should be built with strategy, care, and transparency — not shortcuts.",
+      "paragraphs": [
+        "We started as a small team of designers and developers who were frustrated by how many agencies delivered beautiful websites that didn't actually help businesses grow. Too often, design was treated as decoration rather than a business tool. We knew there was a better way.",
+        "Today, we work with startups, growing businesses, and established companies across Algeria and beyond. Every project — whether it's a website, a mobile app, a brand identity, or an AI solution — follows the same philosophy: understand the goal first, design with purpose, and build for performance.",
+        "We're proud of the work we've done and the relationships we've built. But we're just getting started."
+      ],
+      "note": "TODO: Expand with verified founding date, specific milestones, and company history",
+      "placeholder": true
+    },
+    "founder": {
+      "title": "Meet the founder",
+      "subtitle": "Behind every great agency is someone who refused to settle for average.",
+      "placeholder": true,
+      "placeholderNote": "TODO: Add founder name, professional photo, biography, experience highlights, LinkedIn link, and personal approach statement."
+    },
+    "mission": {
+      "title": "Mission, vision & values",
+      "subtitle": "These principles guide every decision we make and every project we deliver.",
+      "mission": {
+        "label": "Mission",
+        "text": "To help businesses grow by building digital experiences that are strategically sound, beautifully designed, and technically excellent."
+      },
+      "vision": {
+        "label": "Vision",
+        "text": "To be the most trusted digital partner for businesses in Algeria and beyond — known for craft, transparency, and real results."
+      },
+      "values": {
+        "label": "Core Values",
+        "items": [
+          {
+            "title": "Craft in every detail",
+            "description": "Every pixel, every interaction, every line of code is intentional. We don't cut corners because your reputation is our reputation.",
+            "icon": "craft"
+          },
+          {
+            "title": "Strategy before execution",
+            "description": "We never start with design or code. We start by understanding your goals, your audience, and your market — because the right strategy makes everything else easier.",
+            "icon": "strategy"
+          },
+          {
+            "title": "Radical transparency",
+            "description": "No jargon, no hidden fees, no surprises. We communicate clearly, share progress regularly, and treat your budget like our own.",
+            "icon": "transparency"
+          },
+          {
+            "title": "Performance is non-negotiable",
+            "description": "A beautiful site that loads slowly is a bad investment. We build for speed, accessibility, and SEO from the first line of code.",
+            "icon": "performance"
+          },
+          {
+            "title": "Long-term thinking",
+            "description": "We build partnerships, not just projects. The best work happens when we understand your business deeply — and that takes time and trust.",
+            "icon": "reliability"
+          }
+        ]
+      }
+    },
+    "why": {
+      "title": "Why clients choose us",
+      "subtitle": "We don't claim to be the biggest agency. But we work hard to be the most trusted one.",
+      "items": [
+        {
+          "title": "Strategy-first approach",
+          "description": "We don't open Figma or start coding until we understand your business goals, target audience, and competitive landscape. Every design decision is backed by research."
+        },
+        {
+          "title": "Modern technical expertise",
+          "description": "We build with React, Next.js, TypeScript, and Tailwind CSS — modern technologies that deliver fast, maintainable, and scalable results. No outdated frameworks, no bloated page builders."
+        },
+        {
+          "title": "Performance obsession",
+          "description": "We target 90+ Lighthouse scores on every project. Fast load times improve user experience, SEO rankings, and conversion rates — that's not optional, it's essential."
+        },
+        {
+          "title": "Clear, honest communication",
+          "description": "You'll never wonder what's happening with your project. We provide regular updates via Slack or WhatsApp, respond within hours, and are always available for a quick call."
+        },
+        {
+          "title": "Accessibility by default",
+          "description": "We build to WCAG 2.2 AA standards because inclusive design is good design. Every project considers keyboard navigation, screen readers, color contrast, and reduced motion."
+        },
+        {
+          "title": "Post-launch partnership",
+          "description": "We don't disappear after launch. We offer ongoing support, maintenance, and optimization to ensure your digital presence continues to perform and grow."
+        }
+      ]
+    },
+    "process": {
+      "title": "How we work",
+      "subtitle": "A proven process that takes your project from idea to launch with clarity and confidence.",
+      "note": "The process section reuses the existing 6-step timeline from the homepage process section."
+    },
+    "team": {
+      "title": "Meet the team",
+      "subtitle": "A small, focused team with big ambitions.",
+      "placeholder": true,
+      "placeholderNote": "TODO: Add team member profiles including photos, roles, bios, and skills. If solo-operated, present the founder professionally here.",
+      "members": []
+    },
+    "achievements": {
+      "title": "Experience & achievements",
+      "subtitle": "Numbers that reflect our commitment to quality.",
+      "items": [
+        {
+          "metric": "15+",
+          "label": "Projects Delivered",
+          "description": "Across web, mobile, branding, and AI"
+        },
+        {
+          "metric": "3+",
+          "label": "Years in Business",
+          "description": "Serving clients in Algeria and beyond",
+          "placeholder": false
+        },
+        {
+          "metric": "10+",
+          "label": "Happy Clients",
+          "description": "From startups to established businesses",
+          "placeholder": false
+        },
+        {
+          "metric": "98%",
+          "label": "Client Satisfaction",
+          "description": "Based on post-project feedback",
+          "placeholder": true
+        }
+      ],
+      "placeholderNote": "TODO: Add verified awards, certifications, and any additional achievements",
+      "hasPlaceholders": true
+    },
+    "techStack": {
+      "title": "Our technology stack",
+      "subtitle": "Modern tools we use to build fast, reliable, and scalable digital products.",
+      "categories": [
+        {
+          "label": "Frontend",
+          "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]
+        },
+        {
+          "label": "Backend",
+          "items": ["Node.js", "Firebase", "Supabase", "REST APIs", "GraphQL"]
+        },
+        {
+          "label": "Database",
+          "items": ["PostgreSQL", "Firestore", "SQLite"]
+        },
+        {
+          "label": "Design",
+          "items": ["Figma", "Adobe Creative Suite", "Prototyping"]
+        },
+        {
+          "label": "DevOps & Deployment",
+          "items": ["Vercel", "Netlify", "Git", "CI/CD"]
+        }
+      ],
+      "note": "TODO: Verify and expand technology list based on actual project experience"
+    },
+    "cta": {
+      "title": "Ready to work together?",
+      "subtitle": "Tell us about your project goals and we'll provide a tailored proposal within 24 hours. No obligation, just a conversation.",
+      "button": "Start your project",
+      "buttonSecondary": "View our work",
+      "micro": "Free discovery call • No commitment • Response within 24h"
+    }
+  },
   "faq": {
     "label": "FAQ",
     "title": "Everything you need to know",
+    "cta": "Still have questions?",
+    "ctaMicro": "We're happy to help. Reach out and we'll get back to you within 24 hours.",
     "items": [
       {
         "question": "How long does it take to build a professional website?",
@@ -449,8 +659,9 @@
       },
       "description": "Project Details",
       "descriptionPlaceholder": "Tell us about your project, goals, and timeline...",
-      "submit": "Send Inquiry",
-      "submitting": "Sending...",
+      "submit": "Send Project Brief",
+      "submitMicro": "We'll review your project and respond within 24 hours with a tailored proposal.",
+      "submitting": "Sending brief...",
       "successTitle": "Message Sent!",
       "successDesc": "Thank you for reaching out. We will review your project details and get back to you soon.",
       "errorTitle": "Something went wrong",
@@ -478,7 +689,40 @@
       "projectsLabel": "Projects Done",
       "experienceLabel": "Years Experience"
     },
-    "why": {
+  "services": {
+    "label": "Services",
+    "title": "Everything you need for a complete digital presence",
+    "subtitle": "From design to development and strategy — we cover every aspect of your digital transformation.",
+    "items": {
+      "web": {
+        "title": "Website Development",
+        "description": "Fast, modern websites built with the latest technologies, designed to convert visitors into real customers."
+      },
+      "apps": {
+        "title": "Web & Mobile Applications",
+        "description": "High-performance applications that streamline your operations and deliver a seamless experience across all devices."
+      },
+      "branding": {
+        "title": "Brand Identity",
+        "description": "A cohesive brand identity that builds trust and sets your business apart in a crowded market."
+      },
+      "uiux": {
+        "title": "UI/UX Design",
+        "description": "Elegant, thoughtful interfaces centered on simplicity and ease of use."
+      },
+      "automation": {
+        "title": "Automation",
+        "description": "Automate repetitive processes to save time, reduce costs, and focus your efforts on what matters."
+      },
+      "ai": {
+        "title": "AI Solutions",
+        "description": "Integrate artificial intelligence into your operations for faster, smarter decisions."
+      }
+    },
+    "cta": "Turn one of these services into your next project",
+    "ctaMicro": "We'll discuss your goals, scope, and provide a transparent quote — no commitment required."
+  },
+  "why": {
       "label": "Why Massar",
       "title": "A partnership geared for your growth",
       "items": {
@@ -504,6 +748,8 @@
   },
   "footer": {
     "description": "A digital studio specializing in building digital experiences that help businesses grow.",
+    "cta": "Ready to build something great?",
+    "ctaMicro": "Start a project and get a tailored proposal within 24 hours.",
     "navigation": "Navigation",
     "contact": "Contact",
     "followUs": "Follow us",

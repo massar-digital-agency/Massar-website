@@ -96,6 +96,27 @@ export function Hero() {
                 {t('hero.trust.clients')}
               </div>
             </motion.div>
+
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.22 }}
+              className="mt-5 flex flex-wrap items-center justify-center gap-6 lg:justify-start"
+            >
+              <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
+                <span className="flex h-1.5 w-1.5 rounded-full bg-sky-500" />
+                {t('hero.process.discovery')}
+              </div>
+              <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
+                <span className="flex h-1.5 w-1.5 rounded-full bg-sky-500" />
+                {t('hero.process.delivery')}
+              </div>
+              <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
+                <span className="flex h-1.5 w-1.5 rounded-full bg-sky-500" />
+                {t('hero.process.support')}
+              </div>
+            </motion.div>
           </div>
 
           <motion.div
