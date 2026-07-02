@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
@@ -14,6 +14,8 @@ export function Navbar() {
   const { t } = useTranslation()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const mobileMenuRef = useRef<HTMLDivElement>(null)
+  const closeButtonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
@@ -24,6 +26,22 @@ export function Navbar() {
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
+  }, [mobileOpen])
+
+  const handleCloseMenu = useCallback(() => {
+    setMobileOpen(false)
+  }, [])
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Escape' && mobileOpen) {
+      handleCloseMenu()
+    }
+  }
+
+  useEffect(() => {
+    if (mobileOpen) {
+      closeButtonRef.current?.focus()
+    }
   }, [mobileOpen])
 
   return (
@@ -61,10 +79,12 @@ export function Navbar() {
           </div>
 
           <button
+            ref={closeButtonRef}
             className="flex h-10 w-10 items-center justify-center rounded-xl text-[#0A0A0A] transition-colors hover:bg-[#F4F4F5] md:hidden"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileOpen}
+            aria-controls="mobile-menu-panel"
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -74,6 +94,12 @@ export function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
+            id="mobile-menu-panel"
+            ref={mobileMenuRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile navigation"
+            onKeyDown={handleKeyDown}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -87,14 +113,14 @@ export function Navbar() {
                     key={key}
                     href={`#${key}`}
                     className="rounded-xl px-4 py-3 text-[15px] font-medium text-[#52525B] transition-colors hover:bg-[#F4F4F5] hover:text-[#0A0A0A]"
-                    onClick={() => setMobileOpen(false)}
+                    onClick={handleCloseMenu}
                   >
                     {t(`nav.${key}`)}
                   </a>
                 ))}
                 <div className="mt-4 flex items-center gap-3 border-t border-[#E4E4E7] pt-5">
                   <LanguageSwitcher />
-                  <Button size="sm" href="#contact" className="flex-1">
+                  <Button size="sm" href="#contact" className="flex-1" onClick={handleCloseMenu}>
                     {t('nav.cta')}
                   </Button>
                 </div>

@@ -28,7 +28,7 @@ export function CTA() {
           <div className="mt-9 sm:mt-10">
             <Button size="lg" href="mailto:massar.digital.studio@gmail.com">
               {t('cta.button')}
-              <Arrow className="h-4 w-4" />
+              <Arrow className="h-4 w-4" aria-hidden="true" />
             </Button>
           </div>
         </motion.div>

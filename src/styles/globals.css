@@ -76,3 +76,7 @@ html[lang="ar"] body,
     scroll-behavior: auto !important;
   }
 }
+
+[aria-busy="true"] {
+  cursor: progress;
+}

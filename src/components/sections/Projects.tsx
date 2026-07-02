@@ -65,7 +65,7 @@ export function Projects() {
                   <span className="text-[14px] font-medium text-[#71717A] group-hover:text-[#8B5CF6] transition-colors">
                     {t('projects.viewProject')}
                   </span>
-                  <ArrowUpRight className="h-4 w-4 text-[#A1A1AA] transition-all duration-300 group-hover:text-[#8B5CF6] group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  <ArrowUpRight className="h-4 w-4 text-[#A1A1AA] transition-all duration-300 group-hover:text-[#8B5CF6] group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
                 </div>
               </motion.a>
             )

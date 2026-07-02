@@ -48,7 +48,7 @@ export function Services() {
                 className="group rounded-2xl border border-[#E4E4E7] bg-white p-7 sm:p-8 transition-all duration-300 hover:border-[#D4D4D8] hover:shadow-lg hover:shadow-black/[0.04]"
               >
                 <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-[#F3F0FF] text-[#8B5CF6]">
-                  <Icon className="h-5 w-5" strokeWidth={1.75} />
+                  <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />
                 </div>
                 <h3 className="mb-2 text-[16px] font-semibold text-[#0A0A0A] sm:text-[17px]">
                   {t(`services.items.${key}.title`)}

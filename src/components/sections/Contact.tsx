@@ -28,7 +28,7 @@ const initialFormState: FormState = {
 
 export function Contact() {
   const { t } = useTranslation()
-  
+
   const [form, setForm] = useState<FormState>(initialFormState)
   const [errors, setErrors] = useState<Partial<FormState>>({})
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -56,7 +56,7 @@ export function Contact() {
     }
     if (!form.service) tempErrors.service = t('contact.form.errors.service')
     if (!form.description.trim()) tempErrors.description = t('contact.form.errors.description')
-    
+
     setErrors(tempErrors)
     return Object.keys(tempErrors).length === 0
   }
@@ -66,8 +66,7 @@ export function Contact() {
     if (!validate()) return
 
     setStatus('loading')
-    
-    // Simulate API request
+
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500))
       setStatus('success')
@@ -80,14 +79,22 @@ export function Contact() {
   const servicesList = ['web', 'apps', 'branding', 'uiux', 'automation', 'ai'] as const
   const budgetList = ['under_5k', '5k_10k', '10k_25k', 'above_25k'] as const
 
+  const getInputClassName = (field: keyof FormState) => {
+    const base = 'w-full h-11 px-4 text-[14px] rounded-lg border bg-[#FAFAF9] transition-all duration-200 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#8B5CF6]/20'
+    if (errors[field]) {
+      return `${base} border-red-500 focus:border-red-500`
+    }
+    return `${base} border-[#E4E4E7] focus:border-[#8B5CF6]`
+  }
+
+  const getErrorId = (field: keyof FormState) => `error-${field}`
+
   return (
     <section id="contact" className="relative overflow-hidden py-24 sm:py-32">
-      {/* Background shapes */}
       <div className="absolute top-1/4 start-1/4 -z-10 h-72 w-72 rounded-full bg-[#8B5CF6]/5 blur-[80px]" />
       <div className="absolute bottom-1/4 end-1/4 -z-10 h-96 w-96 rounded-full bg-[#8B5CF6]/5 blur-[100px]" />
 
       <Container>
-        {/* Hero Section */}
         <div className="mx-auto max-w-[800px] text-center mb-16 sm:mb-24">
           <motion.div
             variants={fadeUp}
@@ -110,7 +117,6 @@ export function Contact() {
         </div>
 
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 items-start">
-          {/* Left: Contact Form Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -122,25 +128,27 @@ export function Contact() {
               {t('contact.form.title')}
             </h2>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6" noValidate>
               <div className="grid gap-6 sm:grid-cols-2">
                 <div>
                   <label htmlFor="name" className="block text-[13px] font-semibold text-[#0A0A0A] mb-2">
-                    {t('contact.form.name')} <span className="text-[#8B5CF6]">*</span>
+                    {t('contact.form.name')} <span className="text-[#8B5CF6]" aria-hidden="true">*</span>
                   </label>
                   <input
                     type="text"
                     id="name"
+                    required
+                    aria-required="true"
+                    aria-invalid={!!errors.name}
+                    aria-describedby={errors.name ? getErrorId('name') : undefined}
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className={`w-full h-11 px-4 text-[14px] rounded-lg border bg-[#FAFAF9] transition-all duration-200 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#8B5CF6]/20 ${
-                      errors.name ? 'border-red-500 focus:border-red-500' : 'border-[#E4E4E7] focus:border-[#8B5CF6]'
-                    }`}
+                    className={getInputClassName('name')}
                     placeholder={t('contact.form.namePlaceholder')}
                   />
                   {errors.name && (
-                    <span className="mt-1.5 flex items-center gap-1.5 text-[12px] text-red-500">
-                      <AlertCircle className="h-3.5 w-3.5" />
+                    <span id={getErrorId('name')} className="mt-1.5 flex items-center gap-1.5 text-[12px] text-red-500" role="alert">
+                      <AlertCircle className="h-3.5 w-3.5" aria-hidden="true" />
                       {errors.name}
                     </span>
                   )}
@@ -148,21 +156,23 @@ export function Contact() {
 
                 <div>
                   <label htmlFor="email" className="block text-[13px] font-semibold text-[#0A0A0A] mb-2">
-                    {t('contact.form.email')} <span className="text-[#8B5CF6]">*</span>
+                    {t('contact.form.email')} <span className="text-[#8B5CF6]" aria-hidden="true">*</span>
                   </label>
                   <input
                     type="email"
                     id="email"
+                    required
+                    aria-required="true"
+                    aria-invalid={!!errors.email}
+                    aria-describedby={errors.email ? getErrorId('email') : undefined}
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    className={`w-full h-11 px-4 text-[14px] rounded-lg border bg-[#FAFAF9] transition-all duration-200 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#8B5CF6]/20 ${
-                      errors.email ? 'border-red-500 focus:border-red-500' : 'border-[#E4E4E7] focus:border-[#8B5CF6]'
-                    }`}
+                    className={getInputClassName('email')}
                     placeholder="you@company.com"
                   />
                   {errors.email && (
-                    <span className="mt-1.5 flex items-center gap-1.5 text-[12px] text-red-500">
-                      <AlertCircle className="h-3.5 w-3.5" />
+                    <span id={getErrorId('email')} className="mt-1.5 flex items-center gap-1.5 text-[12px] text-red-500" role="alert">
+                      <AlertCircle className="h-3.5 w-3.5" aria-hidden="true" />
                       {errors.email}
                     </span>
                   )}
@@ -202,15 +212,17 @@ export function Contact() {
               <div className="grid gap-6 sm:grid-cols-2">
                 <div>
                   <label htmlFor="service" className="block text-[13px] font-semibold text-[#0A0A0A] mb-2">
-                    {t('contact.form.service')} <span className="text-[#8B5CF6]">*</span>
+                    {t('contact.form.service')} <span className="text-[#8B5CF6]" aria-hidden="true">*</span>
                   </label>
                   <select
                     id="service"
+                    required
+                    aria-required="true"
+                    aria-invalid={!!errors.service}
+                    aria-describedby={errors.service ? getErrorId('service') : undefined}
                     value={form.service}
                     onChange={(e) => setForm({ ...form, service: e.target.value })}
-                    className={`w-full h-11 px-4 text-[14px] rounded-lg border bg-[#FAFAF9] transition-all duration-200 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#8B5CF6]/20 ${
-                      errors.service ? 'border-red-500 focus:border-red-500' : 'border-[#E4E4E7] focus:border-[#8B5CF6]'
-                    }`}
+                    className={getInputClassName('service')}
                   >
                     <option value="" disabled>{t('contact.form.serviceSelect')}</option>
                     {servicesList.map((key) => (
@@ -220,8 +232,8 @@ export function Contact() {
                     ))}
                   </select>
                   {errors.service && (
-                    <span className="mt-1.5 flex items-center gap-1.5 text-[12px] text-red-500">
-                      <AlertCircle className="h-3.5 w-3.5" />
+                    <span id={getErrorId('service')} className="mt-1.5 flex items-center gap-1.5 text-[12px] text-red-500" role="alert">
+                      <AlertCircle className="h-3.5 w-3.5" aria-hidden="true" />
                       {errors.service}
                     </span>
                   )}
@@ -249,21 +261,23 @@ export function Contact() {
 
               <div>
                 <label htmlFor="description" className="block text-[13px] font-semibold text-[#0A0A0A] mb-2">
-                  {t('contact.form.description')} <span className="text-[#8B5CF6]">*</span>
+                  {t('contact.form.description')} <span className="text-[#8B5CF6]" aria-hidden="true">*</span>
                 </label>
                 <textarea
                   id="description"
+                  required
+                  aria-required="true"
+                  aria-invalid={!!errors.description}
+                  aria-describedby={errors.description ? getErrorId('description') : undefined}
                   rows={4}
                   value={form.description}
                   onChange={(e) => setForm({ ...form, description: e.target.value })}
-                  className={`w-full p-4 text-[14px] rounded-lg border bg-[#FAFAF9] transition-all duration-200 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#8B5CF6]/20 resize-none ${
-                    errors.description ? 'border-red-500 focus:border-red-500' : 'border-[#E4E4E7] focus:border-[#8B5CF6]'
-                  }`}
+                  className={getInputClassName('description')}
                   placeholder={t('contact.form.descriptionPlaceholder')}
                 />
                 {errors.description && (
-                  <span className="mt-1.5 flex items-center gap-1.5 text-[12px] text-red-500">
-                    <AlertCircle className="h-3.5 w-3.5" />
+                  <span id={getErrorId('description')} className="mt-1.5 flex items-center gap-1.5 text-[12px] text-red-500" role="alert">
+                    <AlertCircle className="h-3.5 w-3.5" aria-hidden="true" />
                     {errors.description}
                   </span>
                 )}
@@ -283,12 +297,14 @@ export function Contact() {
               <AnimatePresence>
                 {status === 'success' && (
                   <motion.div
+                    role="status"
+                    aria-live="polite"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
                     className="flex items-start gap-3 rounded-lg bg-emerald-50 border border-emerald-200 p-4 mt-4"
                   >
-                    <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" aria-hidden="true" />
                     <div>
                       <h4 className="text-[14px] font-bold text-emerald-900">{t('contact.form.successTitle')}</h4>
                       <p className="text-[13px] text-emerald-700 mt-1">{t('contact.form.successDesc')}</p>
@@ -298,12 +314,14 @@ export function Contact() {
 
                 {status === 'error' && (
                   <motion.div
+                    role="alert"
+                    aria-live="assertive"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
                     className="flex items-start gap-3 rounded-lg bg-red-50 border border-red-200 p-4 mt-4"
                   >
-                    <AlertCircle className="h-5 w-5 text-red-600 shrink-0 mt-0.5" />
+                    <AlertCircle className="h-5 w-5 text-red-600 shrink-0 mt-0.5" aria-hidden="true" />
                     <div>
                       <h4 className="text-[14px] font-bold text-red-900">{t('contact.form.errorTitle')}</h4>
                       <p className="text-[13px] text-red-700 mt-1">{t('contact.form.errorDesc')}</p>
@@ -314,9 +332,7 @@ export function Contact() {
             </form>
           </motion.div>
 
-          {/* Right: Contact Options & Social Proof */}
           <div className="space-y-8">
-            {/* Contact Options Cards */}
             <motion.div
               variants={stagger}
               initial="hidden"
@@ -324,7 +340,6 @@ export function Contact() {
               viewport={{ once: true }}
               className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1"
             >
-              {/* Card 1: Email */}
               <motion.div
                 variants={fadeUp}
                 className="group relative rounded-xl border border-[#E4E4E7] bg-white p-5 transition-all duration-200 hover:border-[#D4D4D8]"
@@ -332,7 +347,7 @@ export function Contact() {
                 <div className="flex items-start justify-between">
                   <div className="flex gap-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#F3F0FF] text-[#8B5CF6]">
-                      <Mail className="h-4.5 w-4.5" />
+                      <Mail className="h-4.5 w-4.5" aria-hidden="true" />
                     </div>
                     <div>
                       <span className="text-[12px] font-semibold tracking-[0.08em] text-[#71717A] uppercase">
@@ -346,14 +361,14 @@ export function Contact() {
                   <button
                     onClick={() => copyToClipboard('massar.digital.studio@gmail.com', 'email')}
                     className="h-8 w-8 rounded-lg flex items-center justify-center hover:bg-[#F4F4F5] text-[#71717A] hover:text-[#0A0A0A]"
+                    aria-label={copiedEmail ? 'Email copied to clipboard' : 'Copy email address'}
                     title="Copy Email"
                   >
-                    {copiedEmail ? <Check className="h-4 w-4 text-emerald-600" /> : <Copy className="h-4 w-4" />}
+                    {copiedEmail ? <Check className="h-4 w-4 text-emerald-600" aria-hidden="true" /> : <Copy className="h-4 w-4" aria-hidden="true" />}
                   </button>
                 </div>
               </motion.div>
 
-              {/* Card 2: Phone / WhatsApp */}
               <motion.div
                 variants={fadeUp}
                 className="group relative rounded-xl border border-[#E4E4E7] bg-white p-5 transition-all duration-200 hover:border-[#D4D4D8]"
@@ -361,7 +376,7 @@ export function Contact() {
                 <div className="flex items-start justify-between">
                   <div className="flex gap-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#E8F8EE] text-[#25D366]">
-                      <Phone className="h-4.5 w-4.5" />
+                      <Phone className="h-4.5 w-4.5" aria-hidden="true" />
                     </div>
                     <div>
                       <span className="text-[12px] font-semibold tracking-[0.08em] text-[#71717A] uppercase">
@@ -375,21 +390,21 @@ export function Contact() {
                   <button
                     onClick={() => copyToClipboard('+213 555 123 456', 'phone')}
                     className="h-8 w-8 rounded-lg flex items-center justify-center hover:bg-[#F4F4F5] text-[#71717A] hover:text-[#0A0A0A]"
+                    aria-label={copiedPhone ? 'Phone number copied to clipboard' : 'Copy phone number'}
                     title="Copy Phone Number"
                   >
-                    {copiedPhone ? <Check className="h-4 w-4 text-emerald-600" /> : <Copy className="h-4 w-4" />}
+                    {copiedPhone ? <Check className="h-4 w-4 text-emerald-600" aria-hidden="true" /> : <Copy className="h-4 w-4" aria-hidden="true" />}
                   </button>
                 </div>
               </motion.div>
 
-              {/* Card 3: Location */}
               <motion.div
                 variants={fadeUp}
                 className="group relative rounded-xl border border-[#E4E4E7] bg-white p-5 transition-all duration-200 hover:border-[#D4D4D8]"
               >
                 <div className="flex gap-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#FFF2E8] text-[#EA580C]">
-                    <MapPin className="h-4.5 w-4.5" />
+                    <MapPin className="h-4.5 w-4.5" aria-hidden="true" />
                   </div>
                   <div>
                     <span className="text-[12px] font-semibold tracking-[0.08em] text-[#71717A] uppercase">
@@ -402,14 +417,13 @@ export function Contact() {
                 </div>
               </motion.div>
 
-              {/* Card 4: Hours & Response Time */}
               <motion.div
                 variants={fadeUp}
                 className="group relative rounded-xl border border-[#E4E4E7] bg-white p-5 transition-all duration-200 hover:border-[#D4D4D8]"
               >
                 <div className="flex gap-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#EBF5FF] text-[#2563EB]">
-                    <Clock className="h-4.5 w-4.5" />
+                    <Clock className="h-4.5 w-4.5" aria-hidden="true" />
                   </div>
                   <div>
                     <span className="text-[12px] font-semibold tracking-[0.08em] text-[#71717A] uppercase">
@@ -426,7 +440,6 @@ export function Contact() {
               </motion.div>
             </motion.div>
 
-            {/* Social Proof Box */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -436,7 +449,7 @@ export function Contact() {
             >
               <div className="flex items-center gap-1.5 text-amber-500 mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-current" />
+                  <Star key={i} className="h-4 w-4 fill-current" aria-hidden="true" />
                 ))}
                 <span className="text-[13px] font-bold text-[#0A0A0A] ms-2">5.0 / 5.0</span>
               </div>
@@ -444,7 +457,7 @@ export function Contact() {
                 "{t('contact.social.testimonialText')}"
               </p>
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-[#8B5CF6]/10 flex items-center justify-center text-[14px] font-bold text-[#8B5CF6]">
+                <div className="h-10 w-10 rounded-full bg-[#8B5CF6]/10 flex items-center justify-center text-[14px] font-bold text-[#8B5CF6]" aria-hidden="true">
                   A
                 </div>
                 <div>
@@ -475,7 +488,6 @@ export function Contact() {
           </div>
         </div>
 
-        {/* Why work with us */}
         <div className="mt-24 sm:mt-32">
           <div className="text-center mb-12 sm:mb-16">
             <span className="mb-3 inline-block text-[13px] font-semibold tracking-[0.1em] text-[#8B5CF6] uppercase">
@@ -503,7 +515,6 @@ export function Contact() {
           </div>
         </div>
 
-        {/* Final Conversion Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -524,9 +535,9 @@ export function Contact() {
               className="bg-white text-[#0A0A0A] hover:bg-neutral-100 border-none shadow-md"
               href="https://calendly.com"
             >
-              <Calendar className="h-4.5 w-4.5" />
+              <Calendar className="h-4.5 w-4.5" aria-hidden="true" />
               {t('contact.cta.schedule')}
-              <ArrowUpRight className="h-4 w-4" />
+              <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
             </Button>
           </div>
         </motion.div>

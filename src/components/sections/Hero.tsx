@@ -57,7 +57,7 @@ export function Hero() {
             >
               <Button size="lg" href="#contact">
                 {t('hero.cta')}
-                <Arrow className="h-4 w-4" />
+                <Arrow className="h-4 w-4" aria-hidden="true" />
               </Button>
               <Button variant="secondary" size="lg" href="#projects">
                 {t('hero.ctaSecondary')}

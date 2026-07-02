@@ -90,7 +90,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col items-center justify-between gap-3 border-t border-[#E4E4E7] py-7 sm:flex-row">
-          <p className="text-[13px] text-[#A1A1AA]">
+          <p className="text-[13px] text-[#71717A]">
             &copy; {new Date().getFullYear()} Massar Digital Studio. {t('footer.rights')}.
           </p>
         </div>

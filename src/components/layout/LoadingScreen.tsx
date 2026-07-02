@@ -40,6 +40,9 @@ export function LoadingScreen({ onFinish }: { onFinish: () => void }) {
       {!exiting && (
         <motion.div
           key="loading-screen"
+          role="status"
+          aria-live="polite"
+          aria-label="Loading Massar Digital Studio website"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
