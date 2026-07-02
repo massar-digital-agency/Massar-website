@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
@@ -14,6 +15,7 @@ export function Hero() {
   const isRTL = i18n.language === 'ar'
   const Arrow = isRTL ? ArrowLeft : ArrowRight
   const Mascot = useTransparentImage(MascotSrc)
+  const [marqueePaused, setMarqueePaused] = useState(false)
 
   return (
     <section className="relative flex min-h-[100svh] flex-col pt-24 pb-8 sm:pt-28">
@@ -63,6 +65,27 @@ export function Hero() {
                 {t('hero.ctaSecondary')}
               </Button>
             </motion.div>
+
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.2 }}
+              className="mt-8 flex flex-wrap items-center justify-center gap-6 sm:mt-10 lg:justify-start"
+            >
+              <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
+                <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                {t('hero.trust.projects')}
+              </div>
+              <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
+                <span className="flex h-1.5 w-1.5 rounded-full bg-[#8B5CF6]" />
+                {t('hero.trust.experience')}
+              </div>
+              <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
+                <span className="flex h-1.5 w-1.5 rounded-full bg-amber-500" />
+                {t('hero.trust.clients')}
+              </div>
+            </motion.div>
           </div>
 
           <motion.div
@@ -86,10 +109,15 @@ export function Hero() {
         </div>
       </Container>
 
-      <div className="mt-12 overflow-hidden border-t border-[#E4E4E7] py-6 sm:mt-16">
+      <div
+        className="mt-12 overflow-hidden border-t border-[#E4E4E7] py-6 sm:mt-16"
+        onMouseEnter={() => setMarqueePaused(true)}
+        onMouseLeave={() => setMarqueePaused(false)}
+      >
         <motion.div
-          animate={{ x: isRTL ? ['0%', '50%'] : ['0%', '-50%'] }}
-          transition={{ duration: 22, repeat: Infinity, ease: 'linear' }}
+          initial={false}
+          animate={marqueePaused ? { x: 0 } : { x: isRTL ? ['0%', '50%'] : ['0%', '-50%'] }}
+          transition={marqueePaused ? { duration: 0 } : { duration: 22, repeat: Infinity, ease: 'linear' }}
           className="flex w-max items-center gap-10 whitespace-nowrap"
         >
           {[...marqueeKeys, ...marqueeKeys, ...marqueeKeys, ...marqueeKeys].map((key, i) => (

@@ -61,9 +61,16 @@ html[lang="ar"] body,
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 3px;
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
   border-radius: 4px;
+}
+
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 3px solid ButtonText;
+    outline-offset: 2px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

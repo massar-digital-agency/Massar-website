@@ -14,7 +14,7 @@
 
 Items that should be fixed immediately.
 
-- [ ] Replace all placeholder project links (`href="#"`) with real case study pages or external project URLs.
+- [X] Replace all placeholder project links (`href="#"`) with real case study pages or external project URLs.
   Why it matters: Clicking a project card currently goes nowhere, which damages credibility and makes the portfolio feel unfinished.
   Recommendation: Create dedicated case study pages for each project or link to live demos and ensure every card has a real destination.
   Estimated impact (High/Medium/Low): High
@@ -24,17 +24,17 @@ Items that should be fixed immediately.
   Recommendation: Add a short conversion-focused form with name, email, company, budget, service need, and project brief, plus a success state and clear response-time promise.
   Estimated impact (High/Medium/Low): High
 
-- [ ] Replace the generic page title and weak meta description with SEO-focused, market-specific metadata.
+- [X] Replace the generic page title and weak meta description with SEO-focused, market-specific metadata.
   Why it matters: The current title is brand-only and the description is thin, so search engines and social previews do not communicate value or intent.
   Recommendation: Use a keyword-relevant title, a stronger meta description, Open Graph tags, Twitter tags, and localized metadata for each language.
   Estimated impact (High/Medium/Low): High
 
-- [ ] Add proof-based trust assets immediately: testimonials, client logos, and measurable outcomes.
+- [X] Add proof-based trust assets immediately: testimonials, client logos, and measurable outcomes.
   Why it matters: The site claims expertise, but there is almost no external validation to reduce buyer skepticism.
   Recommendation: Add testimonials with names and roles, a client logo strip, and project metrics such as conversion lift, speed improvements, leads generated, or completion timelines.
   Estimated impact (High/Medium/Low): High
 
-- [ ] Fix the accessibility of the FAQ and other interactive controls.
+- [X] Fix the accessibility of the FAQ and other interactive controls.
   Why it matters: The FAQ buttons remove visible focus styling and lack robust ARIA relationships, which makes keyboard navigation and screen reader use weaker than it should be.
   Recommendation: Add accessible focus states, `aria-controls`, unique IDs, and ensure all interactive elements have visible, consistent keyboard focus indicators.
   Estimated impact (High/Medium/Low): High

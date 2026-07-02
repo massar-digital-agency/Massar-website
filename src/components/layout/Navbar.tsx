@@ -15,7 +15,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const mobileMenuRef = useRef<HTMLDivElement>(null)
-  const closeButtonRef = useRef<HTMLButtonElement>(null)
+  const hamburgerRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
@@ -30,19 +30,38 @@ export function Navbar() {
 
   const handleCloseMenu = useCallback(() => {
     setMobileOpen(false)
+    hamburgerRef.current?.focus()
   }, [])
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape' && mobileOpen) {
-      handleCloseMenu()
-    }
-  }
 
   useEffect(() => {
     if (mobileOpen) {
-      closeButtonRef.current?.focus()
+      hamburgerRef.current?.focus()
     }
   }, [mobileOpen])
+
+  const handleMobileMenuKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      handleCloseMenu()
+      return
+    }
+    if (e.key === 'Tab') {
+      const menu = mobileMenuRef.current
+      if (!menu) return
+      const focusable = menu.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      )
+      if (focusable.length === 0) return
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
+    }
+  }
 
   return (
     <header
@@ -79,8 +98,9 @@ export function Navbar() {
           </div>
 
           <button
-            ref={closeButtonRef}
-            className="flex h-10 w-10 items-center justify-center rounded-xl text-[#0A0A0A] transition-colors hover:bg-[#F4F4F5] md:hidden"
+            ref={hamburgerRef}
+            type="button"
+            className="flex h-10 w-10 items-center justify-center rounded-xl text-[#0A0A0A] transition-colors hover:bg-[#F4F4F5] md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileOpen}
@@ -99,7 +119,7 @@ export function Navbar() {
             role="dialog"
             aria-modal="true"
             aria-label="Mobile navigation"
-            onKeyDown={handleKeyDown}
+            onKeyDown={handleMobileMenuKeyDown}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -112,7 +132,7 @@ export function Navbar() {
                   <a
                     key={key}
                     href={`#${key}`}
-                    className="rounded-xl px-4 py-3 text-[15px] font-medium text-[#52525B] transition-colors hover:bg-[#F4F4F5] hover:text-[#0A0A0A]"
+                    className="rounded-xl px-4 py-3 text-[15px] font-medium text-[#52525B] transition-colors hover:bg-[#F4F4F5] hover:text-[#0A0A0A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-inset"
                     onClick={handleCloseMenu}
                   >
                     {t(`nav.${key}`)}

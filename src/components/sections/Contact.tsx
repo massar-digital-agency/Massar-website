@@ -106,10 +106,10 @@ export function Contact() {
               <span className="h-1.5 w-1.5 rounded-full bg-[#8B5CF6]" />
               {t('contact.hero.badge')}
             </span>
-            <h1 className="text-[32px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0A0A0A] sm:text-[44px] lg:text-[56px] mb-6">
+            <h2 className="text-[32px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0A0A0A] sm:text-[44px] lg:text-[56px] mb-6">
               {t('contact.hero.title')}{' '}
               <span className="text-[#8B5CF6]">{t('contact.hero.titleAccent')}</span>
-            </h1>
+            </h2>
             <p className="mx-auto max-w-[600px] text-[15px] leading-[1.75] text-[#71717A] sm:text-[18px]">
               {t('contact.hero.subtitle')}
             </p>
@@ -124,9 +124,9 @@ export function Contact() {
             transition={{ duration: 0.5 }}
             className="rounded-2xl border border-[#E4E4E7] bg-white p-6 sm:p-10 shadow-sm"
           >
-            <h2 className="text-[20px] font-bold text-[#0A0A0A] sm:text-[24px] mb-8">
+            <h3 className="text-[20px] font-bold text-[#0A0A0A] sm:text-[24px] mb-8">
               {t('contact.form.title')}
-            </h2>
+            </h3>
 
             <form onSubmit={handleSubmit} className="space-y-6" noValidate>
               <div className="grid gap-6 sm:grid-cols-2">
@@ -359,6 +359,7 @@ export function Contact() {
                     </div>
                   </div>
                   <button
+                    type="button"
                     onClick={() => copyToClipboard('massar.digital.studio@gmail.com', 'email')}
                     className="h-8 w-8 rounded-lg flex items-center justify-center hover:bg-[#F4F4F5] text-[#71717A] hover:text-[#0A0A0A]"
                     aria-label={copiedEmail ? 'Email copied to clipboard' : 'Copy email address'}
@@ -388,6 +389,7 @@ export function Contact() {
                     </div>
                   </div>
                   <button
+                    type="button"
                     onClick={() => copyToClipboard('+213 555 123 456', 'phone')}
                     className="h-8 w-8 rounded-lg flex items-center justify-center hover:bg-[#F4F4F5] text-[#71717A] hover:text-[#0A0A0A]"
                     aria-label={copiedPhone ? 'Phone number copied to clipboard' : 'Copy phone number'}
@@ -493,9 +495,9 @@ export function Contact() {
             <span className="mb-3 inline-block text-[13px] font-semibold tracking-[0.1em] text-[#8B5CF6] uppercase">
               {t('contact.why.label')}
             </span>
-            <h2 className="text-[24px] font-bold leading-[1.25] text-[#0A0A0A] sm:text-[32px]">
+            <h3 className="text-[24px] font-bold leading-[1.25] text-[#0A0A0A] sm:text-[32px]">
               {t('contact.why.title')}
-            </h2>
+            </h3>
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
@@ -504,9 +506,9 @@ export function Contact() {
                 key={key}
                 className="rounded-xl border border-[#E4E4E7] bg-white p-6 transition-all duration-200 hover:border-[#D4D4D8] hover:shadow-sm"
               >
-                <h3 className="text-[16px] font-bold text-[#0A0A0A]">
+                <h4 className="text-[16px] font-bold text-[#0A0A0A]">
                   {t(`contact.why.items.${key}.title`)}
-                </h3>
+                </h4>
                 <p className="mt-3 text-[14px] leading-[1.7] text-[#71717A]">
                   {t(`contact.why.items.${key}.description`)}
                 </p>
@@ -522,9 +524,9 @@ export function Contact() {
           className="mt-24 sm:mt-32 rounded-3xl border border-[#E4E4E7] bg-[#0A0A0A] text-white p-8 sm:p-14 lg:p-20 text-center relative overflow-hidden"
         >
           <div className="absolute inset-0 -z-10 opacity-30 bg-[radial-gradient(ellipse_at_center,#8B5CF6_0%,transparent_70%)]" />
-          <h2 className="text-[24px] font-bold tracking-tight sm:text-[36px] lg:text-[42px] max-w-[600px] mx-auto leading-tight">
+          <h3 className="text-[24px] font-bold tracking-tight sm:text-[36px] lg:text-[42px] max-w-[600px] mx-auto leading-tight">
             {t('contact.cta.title')}
-          </h2>
+          </h3>
           <p className="mt-5 max-w-[500px] mx-auto text-[14px] text-[#A1A1AA] sm:text-[16px] leading-[1.75]">
             {t('contact.cta.subtitle')}
           </p>

@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { fadeUp, stagger } from '@/hooks/useAnimationVariants'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Code2 } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 import { SectionHeader } from '@/components/ui/SectionHeader'
@@ -35,6 +35,13 @@ export function Projects() {
         >
           {projectKeys.map((key) => {
             const color = projectColors[key]
+            const cs = t(`caseStudies.items.${key}`, { returnObjects: true }) as {
+              challenge: string
+              solution: string
+              technologies: string[]
+              outcomes: string
+            } | undefined
+
             return (
               <motion.a
                 key={key}
@@ -56,9 +63,29 @@ export function Projects() {
                   <h3 className="mb-2.5 text-[19px] font-bold text-[#0A0A0A] sm:text-[21px]">
                     {t(`projects.items.${key}.title`)}
                   </h3>
-                  <p className="text-[14px] leading-[1.75] text-[#71717A] sm:text-[15px]">
+                  <p className="mb-4 text-[14px] leading-[1.75] text-[#71717A] sm:text-[15px]">
                     {t(`projects.items.${key}.description`)}
                   </p>
+
+                  {cs?.outcomes && (
+                    <p className="mb-4 text-[13px] leading-[1.6] text-[#52525B] border-s-2 border-[#8B5CF6]/30 ps-3">
+                      {cs.outcomes}
+                    </p>
+                  )}
+
+                  {cs?.technologies && cs.technologies.length > 0 && (
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      <Code2 className="h-3.5 w-3.5 text-[#A1A1AA]" aria-hidden="true" />
+                      {cs.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="rounded-md bg-white border border-[#E4E4E7] px-2 py-0.5 text-[11px] font-medium text-[#71717A]"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
                 <div className="flex items-center justify-between border-t border-[#E4E4E7] px-7 py-4 sm:px-8">

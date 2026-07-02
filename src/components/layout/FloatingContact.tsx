@@ -43,7 +43,7 @@ export function FloatingContact() {
           href={href}
           target={external ? '_blank' : undefined}
           rel={external ? 'noopener noreferrer' : undefined}
-          aria-label={label}
+              aria-label={external ? `${label} (opens in new tab)` : label}
           animate={{ y: [0, -6, 0] }}
           transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut', delay: i * 0.3 }}
           className={`flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full text-white ${bg}`}

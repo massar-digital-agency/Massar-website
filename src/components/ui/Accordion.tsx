@@ -32,11 +32,9 @@ function AccordionItem({
       return
     }
 
-    if (!isOpen) return
-
     if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
       e.preventDefault()
-      const container = buttonRef.current?.parentElement?.parentElement
+      const container = buttonRef.current?.closest('[data-accordion]')
       if (!container) return
 
       const buttons = Array.from(
@@ -61,12 +59,13 @@ function AccordionItem({
         <button
           ref={buttonRef}
           data-accordion-trigger
+          type="button"
           id={buttonId}
           onClick={onToggle}
           onKeyDown={handleKeyDown}
           aria-expanded={isOpen}
           aria-controls={panelId}
-          className="flex w-full cursor-pointer items-center justify-between py-5 sm:py-6 text-start transition-colors group"
+          className="flex w-full cursor-pointer items-center justify-between py-5 sm:py-6 text-start transition-colors group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded-lg"
         >
           <span className="pe-6 text-[15px] font-semibold text-[#0A0A0A] sm:text-[16px] group-hover:text-[#8B5CF6] transition-colors">
             {question}
@@ -113,7 +112,7 @@ export function Accordion({ items }: AccordionProps) {
   }, [])
 
   return (
-    <div>
+    <div data-accordion>
       {items.map((item, index) => (
         <AccordionItem
           key={index}

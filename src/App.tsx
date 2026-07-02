@@ -12,6 +12,8 @@ import { Services } from '@/components/sections/Services'
 import { WhyUs } from '@/components/sections/WhyUs'
 import { Process } from '@/components/sections/Process'
 import { Projects } from '@/components/sections/Projects'
+import { Testimonials } from '@/components/sections/Testimonials'
+import { Results } from '@/components/sections/Results'
 import { FAQ } from '@/components/sections/FAQ'
 import { Contact } from '@/components/sections/Contact'
 
@@ -31,6 +33,8 @@ export default function App() {
         <Services />
         <WhyUs />
         <Process />
+        <Testimonials />
+        <Results />
         <Projects />
         <FAQ />
         <Contact />

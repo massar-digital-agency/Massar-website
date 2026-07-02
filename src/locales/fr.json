@@ -19,10 +19,23 @@
     "titleAccent": "qui font grandir votre business.",
     "subtitle": "Nous concevons et développons des sites, applications et identités visuelles qui reflètent le professionnalisme de votre marque et convertissent les visiteurs en clients.",
     "cta": "Démarrer votre projet",
-    "ctaSecondary": "Voir nos réalisations"
+    "ctaSecondary": "Voir nos réalisations",
+    "trust": {
+      "projects": "15+ Projets",
+      "experience": "3+ Années",
+      "clients": "10+ Clients"
+    }
   },
   "trusted": {
-    "title": "Conçu pour les entreprises ambitieuses"
+    "title": "Approuvé par des entreprises innovantes",
+    "logos": {
+      "placeholder1": { "name": "TechFlow", "alt": "Logo TechFlow" },
+      "placeholder2": { "name": "NestCode", "alt": "Logo NestCode" },
+      "placeholder3": { "name": "BrightPath", "alt": "Logo BrightPath" },
+      "placeholder4": { "name": "DataSphere", "alt": "Logo DataSphere" },
+      "placeholder5": { "name": "CloudPulse", "alt": "Logo CloudPulse" },
+      "placeholder6": { "name": "VertexLab", "alt": "Logo VertexLab" }
+    }
   },
   "services": {
     "label": "Nos services",
@@ -111,6 +124,96 @@
         "title": "NextGen",
         "category": "Développement web",
         "description": "Boutique en ligne moderne avec une expérience d'achat fluide et un design qui reflète la qualité des produits."
+      }
+    }
+  },
+  "testimonials": {
+    "label": "Témoignages",
+    "title": "Ce que disent nos clients",
+    "subtitle": "Nous collaborons avec des fondateurs et des équipes qui attachent de l'importance à la qualité. Voici ce qu'ils disent de notre collaboration.",
+    "items": [
+      {
+        "text": "Massar a livré notre application web en avance sur le calendrier et avec une attention incroyable aux détails. Leur communication a été impeccable tout au long.",
+        "author": "Amine Rahmani",
+        "role": "Co-fondateur",
+        "company": "Journeya",
+        "rating": 5
+      },
+      {
+        "text": "Travailler avec Massar a été un véritable tournant pour notre marque. Ils ont pris le temps de comprendre notre vision et l'ont traduite en une expérience numérique magnifique.",
+        "author": "Sarah Khelif",
+        "role": "CEO",
+        "company": "NestCode",
+        "rating": 5,
+        "placeholder": true
+      },
+      {
+        "text": "Massar a entièrement repensé notre plateforme. Le résultat a été une amélioration de 40% de l'engagement utilisateur et un look moderne qui reflète parfaitement nos valeurs.",
+        "author": "Mehdi Lounis",
+        "role": "Responsable Produit",
+        "company": "DataSphere",
+        "rating": 5,
+        "placeholder": true
+      }
+    ]
+  },
+  "results": {
+    "label": "Résultats",
+    "title": "Un impact mesurable, des résultats concrets",
+    "subtitle": "Nous construisons avec des objectifs business en tête. Chaque projet est conçu et mesuré pour la performance, l'engagement et la croissance.",
+    "items": [
+      {
+        "metric": "15+",
+        "label": "Projets Livrés",
+        "description": "En web, mobile, branding et IA"
+      },
+      {
+        "metric": "40%",
+        "label": "Amélioration d'engagement",
+        "description": "Amélioration de l'interaction utilisateur après le lancement",
+        "placeholder": true
+      },
+      {
+        "metric": "3+",
+        "label": "Années d'expérience",
+        "description": "Au service des clients en Algérie et au-delà"
+      },
+      {
+        "metric": "98%",
+        "label": "Satisfaction Client",
+        "description": "Basé sur les scores de feedback post-projet",
+        "placeholder": true
+      }
+    ]
+  },
+  "caseStudies": {
+    "label": "Études de cas",
+    "title": "Découvrez comment nous résolvons des problèmes concrets",
+    "subtitle": "Plongez au cœur des défis, solutions et résultats de nos projets préférés.",
+    "items": {
+      "journeya": {
+        "challenge": "Journeya avait besoin d'un écosystème numérique complet combinant plateforme de réservation, application mobile et identité de marque cohérente.",
+        "solution": "Nous avons conçu et développé une application web responsive avec réservation en temps réel, une application mobile et un système d'identité visuelle complet.",
+        "technologies": ["React", "Node.js", "Tailwind CSS", "Figma"],
+        "outcomes": "Lancé dans les délais avec une expérience de marque unifiée sur le web et le mobile."
+      },
+      "wafr": {
+        "challenge": "Wafr avait besoin d'une application mobile intuitive pour connecter les consommateurs aux offres alimentaires à proximité et réduire le gaspillage.",
+        "solution": "Nous avons construit une application mobile cross-platform avec géolocalisation, notifications en temps réel et un parcours d'inscription simplifié.",
+        "technologies": ["React Native", "Firebase", "Google Maps API"],
+        "outcomes": "Lancé avec succès avec des utilisateurs bêta à Alger."
+      },
+      "darlink": {
+        "challenge": "DarLink avait besoin d'une plateforme immobilière moderne connectant acheteurs, vendeurs et investisseurs sur le marché algérien.",
+        "solution": "Développement d'une plateforme web complète avec recherche avancée de propriétés, filtres et messagerie directe.",
+        "technologies": ["Next.js", "TypeScript", "PostgreSQL", "Stripe"],
+        "outcomes": "Plateforme lancée avec plus de 200 annonces immobilières."
+      },
+      "nextgen": {
+        "challenge": "NextGen souhaitait une boutique en ligne reflétant la qualité premium de ses produits avec une expérience d'achat fluide.",
+        "solution": "Création d'une solution e-commerce sur mesure avec pages produit optimisées et processus de paiement rapide.",
+        "technologies": ["Next.js", "Shopify", "Tailwind CSS", "Vercel"],
+        "outcomes": "Score de performance Lighthouse de 90+ et expérience d'achat alignée sur la marque."
       }
     }
   },
@@ -225,9 +328,15 @@
     "navigation": "Navigation",
     "contact": "Contact",
     "followUs": "Suivez-nous",
+    "trust": "Gages de confiance",
     "rights": "Tous droits réservés",
     "location": "Algérie",
     "email": "massar.digital.studio@gmail.com",
-    "phone": "+213 555 123 456"
+    "phone": "+213 555 123 456",
+    "badges": {
+      "responsive": "Design Responsive",
+      "secure": "Sécurité SSL",
+      "performance": "Performances Optimisées"
+    }
   }
 }

@@ -67,7 +67,7 @@ export function LoadingScreen({ onFinish }: { onFinish: () => void }) {
             </AnimatePresence>
           </motion.div>
 
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-1.5" aria-hidden="true">
             {[0, 1, 2].map((i) => (
               <motion.span
                 key={i}

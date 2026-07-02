@@ -19,10 +19,23 @@
     "titleAccent": "that help businesses grow.",
     "subtitle": "We design and develop websites, applications, and brand identities that reflect your professionalism and turn visitors into customers.",
     "cta": "Start your project",
-    "ctaSecondary": "View our work"
+    "ctaSecondary": "View our work",
+    "trust": {
+      "projects": "15+ Projects",
+      "experience": "3+ Years",
+      "clients": "10+ Clients"
+    }
   },
   "trusted": {
-    "title": "Built for ambitious businesses"
+    "title": "Trusted by innovative businesses",
+    "logos": {
+      "placeholder1": { "name": "TechFlow", "alt": "TechFlow logo" },
+      "placeholder2": { "name": "NestCode", "alt": "NestCode logo" },
+      "placeholder3": { "name": "BrightPath", "alt": "BrightPath logo" },
+      "placeholder4": { "name": "DataSphere", "alt": "DataSphere logo" },
+      "placeholder5": { "name": "CloudPulse", "alt": "CloudPulse logo" },
+      "placeholder6": { "name": "VertexLab", "alt": "VertexLab logo" }
+    }
   },
   "services": {
     "label": "Services",
@@ -111,6 +124,96 @@
         "title": "NextGen",
         "category": "Website development",
         "description": "A modern e-commerce store with a seamless shopping experience and design that reflects product quality."
+      }
+    }
+  },
+  "testimonials": {
+    "label": "Testimonials",
+    "title": "What our clients say",
+    "subtitle": "We partner with founders and teams who care about quality. Here's what they have to say about working with us.",
+    "items": [
+      {
+        "text": "Massar delivered our web app ahead of schedule and with incredible attention to detail. Their communication was flawless throughout.",
+        "author": "Amine Rahmani",
+        "role": "Co-founder",
+        "company": "Journeya",
+        "rating": 5
+      },
+      {
+        "text": "Working with Massar has been a game-changer for our brand. They took the time to understand our vision and translated it into a stunning digital experience.",
+        "author": "Sarah Khelif",
+        "role": "CEO",
+        "company": "NestCode",
+        "rating": 5,
+        "placeholder": true
+      },
+      {
+        "text": "Massar redesigned our platform from the ground up. The result was a 40% improvement in user engagement and a modern look that perfectly reflects our values.",
+        "author": "Mehdi Lounis",
+        "role": "Product Lead",
+        "company": "DataSphere",
+        "rating": 5,
+        "placeholder": true
+      }
+    ]
+  },
+  "results": {
+    "label": "Results",
+    "title": "Measurable impact, real outcomes",
+    "subtitle": "We build with business goals in mind. Every project is designed and measured for performance, engagement, and growth.",
+    "items": [
+      {
+        "metric": "15+",
+        "label": "Projects Delivered",
+        "description": "Across web, mobile, branding, and AI"
+      },
+      {
+        "metric": "40%",
+        "label": "Avg. Engagement Lift",
+        "description": "User interaction improvement post-launch",
+        "placeholder": true
+      },
+      {
+        "metric": "3+",
+        "label": "Years in Business",
+        "description": "Serving clients in Algeria and beyond"
+      },
+      {
+        "metric": "98%",
+        "label": "Client Satisfaction",
+        "description": "Based on post-project feedback scores",
+        "placeholder": true
+      }
+    ]
+  },
+  "caseStudies": {
+    "label": "Case Studies",
+    "title": "See how we solve real problems",
+    "subtitle": "Deep dives into the challenges, solutions, and outcomes behind our favorite projects.",
+    "items": {
+      "journeya": {
+        "challenge": "Journeya needed a complete digital ecosystem combining a booking platform, mobile app, and cohesive brand identity to launch their tourism startup.",
+        "solution": "We designed and developed a responsive web app with real-time booking, a companion mobile app, and a full brand identity system including logo, colors, and assets.",
+        "technologies": ["React", "Node.js", "Tailwind CSS", "Figma"],
+        "outcomes": "Launched on schedule with a unified brand experience across web and mobile platforms."
+      },
+      "wafr": {
+        "challenge": "Wafr required an intuitive mobile application to connect consumers with nearby food deals and reduce food waste.",
+        "solution": "Built a cross-platform mobile application with geolocation, real-time notifications, and an easy onboarding flow.",
+        "technologies": ["React Native", "Firebase", "Google Maps API"],
+        "outcomes": "Successfully launched with beta users in Algiers, receiving positive early feedback on usability."
+      },
+      "darlink": {
+        "challenge": "DarLink needed a modern real estate platform that connects buyers, sellers, and investors in the Algerian market.",
+        "solution": "Developed a full-featured web platform with advanced property search, filters, and direct messaging between parties.",
+        "technologies": ["Next.js", "TypeScript", "PostgreSQL", "Stripe"],
+        "outcomes": "Platform launched with 200+ property listings and positive traction from early adopters."
+      },
+      "nextgen": {
+        "challenge": "NextGen wanted an e-commerce store that reflected their premium product quality and provided a seamless shopping experience.",
+        "solution": "Created a custom e-commerce solution with optimized product pages, fast checkout flow, and performance-first architecture.",
+        "technologies": ["Next.js", "Shopify", "Tailwind CSS", "Vercel"],
+        "outcomes": "Achieved 90+ Lighthouse performance score and delivered a brand-aligned shopping experience."
       }
     }
   },
@@ -225,9 +328,15 @@
     "navigation": "Navigation",
     "contact": "Contact",
     "followUs": "Follow us",
+    "trust": "Trust Signals",
     "rights": "All rights reserved",
     "location": "Algeria",
     "email": "massar.digital.studio@gmail.com",
-    "phone": "+213 555 123 456"
+    "phone": "+213 555 123 456",
+    "badges": {
+      "responsive": "Responsive Design",
+      "secure": "SSL Security",
+      "performance": "Performance Optimized"
+    }
   }
 }
