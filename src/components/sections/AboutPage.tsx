@@ -12,6 +12,7 @@ import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { FloatingContact } from '@/components/layout/FloatingContact'
 import { navigateToSection } from '@/lib/navigate'
+import { trackPageView, trackEvent } from '@/lib/analytics'
 import Logo3D from '@/assets/images/logo3d.jpg'
 
 const SITE_URL = 'https://massardigital.com'
@@ -64,11 +65,11 @@ function AboutHero() {
               {hero.subtitleMicro}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button size="lg" onClick={() => navigateToSection('projects')}>
+              <Button size="lg" onClick={() => { navigateToSection('projects'); trackEvent('cta_click', { cta_location: 'about_hero', cta_text: hero.cta }) }}>
                 {hero.cta}
                 <Arrow className="h-4 w-4" aria-hidden="true" />
               </Button>
-              <Button size="lg" variant="secondary" href="mailto:massar.digital.studio@gmail.com">
+              <Button size="lg" variant="secondary" href="mailto:massar.digital.studio@gmail.com" onClick={() => trackEvent('outbound_click', { outbound_type: 'email', outbound_label: 'about_hero' })}>
                 {hero.ctaSecondary}
               </Button>
             </div>
@@ -645,11 +646,11 @@ function AboutPageCTA() {
             {cta.micro}
           </p>
           <div className="mt-9 flex flex-wrap items-center justify-center gap-4 sm:mt-10">
-            <Button size="lg" href="mailto:massar.digital.studio@gmail.com">
+            <Button size="lg" href="mailto:massar.digital.studio@gmail.com" onClick={() => trackEvent('cta_click', { cta_location: 'about_cta', cta_text: cta.button })}>
               {cta.button}
               <Arrow className="h-4 w-4" aria-hidden="true" />
             </Button>
-            <Button size="lg" variant="secondary" onClick={() => navigateToSection('projects')}>
+            <Button size="lg" variant="secondary" onClick={() => { navigateToSection('projects'); trackEvent('cta_click', { cta_location: 'about_cta', cta_text: cta.buttonSecondary }) }}>
               {cta.buttonSecondary}
             </Button>
           </div>
@@ -726,6 +727,7 @@ export function AboutPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    trackPageView('/about', 'About - Massar Digital Studio')
   }, [])
 
   useEffect(() => {

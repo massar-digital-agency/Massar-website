@@ -6,6 +6,7 @@ import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { fadeUp } from '@/hooks/useAnimationVariants'
 import { useTransparentImage } from '@/hooks/useTransparentImage'
+import { trackEvent } from '@/lib/analytics'
 import MascotSrc from '@/assets/images/logo-3d-alt.png'
 
 const marqueeKeys = ['web', 'apps', 'branding', 'uiux', 'automation', 'ai'] as const
@@ -57,11 +58,11 @@ export function Hero() {
               transition={{ delay: 0.15 }}
               className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:mt-10 lg:justify-start"
             >
-              <Button size="lg" href="#contact">
+              <Button size="lg" href="#contact" onClick={() => trackEvent('cta_click', { cta_location: 'hero', cta_text: t('hero.cta'), cta_type: 'primary' })}>
                 {t('hero.cta')}
                 <Arrow className="h-4 w-4" aria-hidden="true" />
               </Button>
-              <Button variant="secondary" size="lg" href="#projects">
+              <Button variant="secondary" size="lg" href="#projects" onClick={() => trackEvent('cta_click', { cta_location: 'hero', cta_text: t('hero.ctaSecondary'), cta_type: 'secondary' })}>
                 {t('hero.ctaSecondary')}
               </Button>
             </motion.div>

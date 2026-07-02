@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { trackEvent } from '@/lib/analytics'
 
 interface FilterOption {
   value: string
@@ -28,7 +29,7 @@ export function PortfolioFilters({ activeFilter, onFilterChange }: PortfolioFilt
           <button
             key={filter.value}
             type="button"
-            onClick={() => onFilterChange(filter.value)}
+            onClick={() => { onFilterChange(filter.value); trackEvent('project_filter_click', { filter_name: filter.value }) }}
             className={`rounded-lg border px-3.5 py-1.5 text-[13px] font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 ${
               activeFilter === filter.value
                 ? 'border-[#8B5CF6] bg-[#F3F0FF] text-[#8B5CF6]'

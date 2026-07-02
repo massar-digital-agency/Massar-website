@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { Mail } from 'lucide-react'
+import { trackEvent } from '@/lib/analytics'
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -43,7 +44,8 @@ export function FloatingContact() {
           href={href}
           target={external ? '_blank' : undefined}
           rel={external ? 'noopener noreferrer' : undefined}
-              aria-label={external ? `${label} (opens in new tab)` : label}
+          onClick={() => trackEvent('outbound_click', { outbound_type: key, outbound_label: label })}
+          aria-label={external ? `${label} (opens in new tab)` : label}
           animate={{ y: [0, -6, 0] }}
           transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut', delay: i * 0.3 }}
           className={`flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full text-white ${bg}`}

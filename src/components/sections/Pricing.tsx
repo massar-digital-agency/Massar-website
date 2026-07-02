@@ -7,6 +7,7 @@ import { Section } from '@/components/ui/Section'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { Button } from '@/components/ui/Button'
 import { Accordion } from '@/components/ui/Accordion'
+import { trackEvent } from '@/lib/analytics'
 
 const packages = ['website', 'growth', 'custom'] as const
 
@@ -183,6 +184,7 @@ export function Pricing() {
                     size="lg"
                     className="w-full justify-center"
                     href="#contact"
+                    onClick={() => trackEvent('pricing_cta_click', { package_name: t(`pricing.packages.${pkg}.name`), package_price: t(`pricing.packages.${pkg}.price`) })}
                   >
                     {t('pricing.packages.cta')}
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -192,6 +194,7 @@ export function Pricing() {
                     size="sm"
                     className="w-full justify-center text-[13px]"
                     href="#contact"
+                    onClick={() => trackEvent('pricing_cta_click', { package_name: t(`pricing.packages.${pkg}.name`), cta_type: 'custom' })}
                   >
                     {t('pricing.packages.ctaCustom')}
                     <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
@@ -307,11 +310,11 @@ export function Pricing() {
                 {t('pricing.custom.ctaSubtitle')}
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
-                <Button size="lg" href="#contact">
+                <Button size="lg" href="#contact" onClick={() => trackEvent('pricing_cta_click', { package_name: 'custom', cta_type: 'custom_project' })}>
                   {t('pricing.custom.cta')}
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Button>
-                <Button variant="secondary" size="lg" href="https://calendly.com">
+                <Button variant="secondary" size="lg" href="https://calendly.com" onClick={() => trackEvent('schedule_call_click', { source: 'pricing_custom' })}>
                   <Calendar className="h-4.5 w-4.5" aria-hidden="true" />
                   {t('pricing.custom.ctaSchedule')}
                   <ArrowUpRight className="h-4 w-4" aria-hidden="true" />

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { fadeUp } from '@/hooks/useAnimationVariants'
 import { ArrowLeft, ArrowRight, Clock, Users } from 'lucide-react'
 import { navigateToSection } from '@/lib/navigate'
+import { trackEvent } from '@/lib/analytics'
 
 interface CaseStudyHeroProps {
   slug: string
@@ -33,7 +34,7 @@ export function CaseStudyHero({ slug, color }: CaseStudyHeroProps) {
               <li>
                 <button
                   type="button"
-                  onClick={() => navigateToSection('projects')}
+                  onClick={() => { navigateToSection('projects'); trackEvent('nav_click', { nav_section: 'projects', nav_label: t('projects.label') }) }}
                   className="hover:text-[#8B5CF6] transition-colors underline-offset-2 hover:underline"
                 >
                   {t('projects.label')}

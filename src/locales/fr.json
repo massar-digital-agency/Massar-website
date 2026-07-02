@@ -13,6 +13,7 @@
     "about": "À propos",
     "contact": "Contact",
     "cta": "Démarrer votre projet",
+    "faq": "FAQ",
     "ctaMicro": "Appel découverte gratuit • Sans engagement • Réponse sous 24h"
   },
   "hero": {
@@ -690,20 +691,78 @@
   },
   "footer": {
     "description": "Studio digital spécialisé dans la création d'expériences digitales qui aident les entreprises à grandir.",
-    "cta": "Prêt à construire quelque chose de grand ?",
-    "ctaMicro": "Démarrez votre projet et obtenez une proposition sur mesure sous 24 heures.",
-    "navigation": "Navigation",
-    "contact": "Contact",
-    "followUs": "Suivez-nous",
-    "trust": "Gages de confiance",
+    "companyHeading": "Entreprise",
+    "resourcesHeading": "Ressources",
+    "legalHeading": "Mentions légales",
+    "socialHeading": "Réseaux sociaux",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "process": "Notre processus",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "cookies": "Politique des cookies",
+    "hours": "Dim – Jeu, 9h00 – 18h00",
     "rights": "Tous droits réservés",
-    "location": "Algérie",
     "email": "massar.digital.studio@gmail.com",
     "phone": "+213 555 123 456",
+    "location": "Algérie",
+    "ctaPrimary": "Réserver un appel découverte",
+    "ctaSecondary": "Demander un devis",
     "badges": {
       "responsive": "Design Responsive",
       "secure": "Sécurité SSL",
       "performance": "Performances Optimisées"
+    },
+    "social": {
+      "instagram": "https://www.instagram.com/massar.digital.studio",
+      "linkedin": "#",
+      "github": "#",
+      "behance": "#",
+      "dribbble": "#"
+    }
+  },
+  "cookieBanner": {
+    "title": "Consentement aux Cookies",
+    "description": "Nous utilisons des cookies et technologies similaires pour améliorer votre expérience de navigation, analyser le trafic et personnaliser le contenu. Choisissez vos préférences ci-dessous.",
+    "acceptAll": "Tout Accepter",
+    "rejectAll": "Refuser les Non-Essentiels",
+    "managePrefs": "Gérer les Préférences",
+    "prefsTitle": "Gérer les Préférences de Cookies",
+    "prefsDesc": "Sélectionnez les catégories de cookies que vous souhaitez autoriser. Les cookies essentiels sont toujours activés.",
+    "savePrefs": "Enregistrer les Préférences",
+    "essentialLabel": "Essentiel",
+    "essentialDesc": "Nécessaire au fonctionnement de base du site. Ils ne peuvent pas être désactivés.",
+    "analyticsLabel": "Analytique",
+    "analyticsDesc": "Nous aident à comprendre comment les visiteurs interagissent avec notre site en collectant des données anonymes.",
+    "functionalLabel": "Fonctionnel",
+    "functionalDesc": "Mémorisent vos préférences et paramètres linguistiques pour offrir une expérience personnalisée.",
+    "marketingLabel": "Marketing",
+    "marketingDesc": "Utilisés pour suivre vos habitudes de navigation à des fins publicitaires ciblées.",
+    "alwaysActive": "Toujours Actif",
+    "active": "Actif",
+    "close": "Fermer la bannière de cookies",
+    "moreInfo": "Pour plus d'informations, consultez notre",
+    "privacyLink": "Politique de Confidentialité",
+    "cookiesLink": "Politique de Cookies"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Politique de Confidentialité | Massar Digital Studio",
+      "description": "Politique de Confidentialité de Massar Digital Studio — comment nous collectons, utilisons et protégeons vos informations personnelles.",
+      "ogTitle": "Politique de Confidentialité | Massar Digital Studio",
+      "ogDescription": "Découvrez comment Massar Digital Studio collecte, utilise et protège vos informations personnelles."
+    },
+    "terms": {
+      "title": "Conditions d'Utilisation | Massar Digital Studio",
+      "description": "Conditions d'Utilisation de Massar Digital Studio — les conditions régissant l'utilisation de notre site web et de nos services.",
+      "ogTitle": "Conditions d'Utilisation | Massar Digital Studio",
+      "ogDescription": "Lisez les conditions d'utilisation de Massar Digital Studio."
+    },
+    "cookies": {
+      "title": "Politique de Cookies | Massar Digital Studio",
+      "description": "Politique de Cookies de Massar Digital Studio — comment nous utilisons les cookies et technologies de suivi.",
+      "ogTitle": "Politique de Cookies | Massar Digital Studio",
+      "ogDescription": "Découvrez comment Massar Digital Studio utilise les cookies sur notre site web."
     }
   }
 }

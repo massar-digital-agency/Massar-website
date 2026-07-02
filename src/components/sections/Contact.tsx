@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Mail, Phone, MapPin, Clock, Calendar, CheckCircle2, AlertCircle, Copy, Check, Star, ArrowUpRight } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { fadeUp, stagger } from '@/hooks/useAnimationVariants'
+import { trackEvent } from '@/lib/analytics'
 
 interface FormState {
   name: string
@@ -34,6 +35,14 @@ export function Contact() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [copiedEmail, setCopiedEmail] = useState(false)
   const [copiedPhone, setCopiedPhone] = useState(false)
+  const formStarted = useRef(false)
+
+  const trackFormStarted = () => {
+    if (!formStarted.current) {
+      formStarted.current = true
+      trackEvent('form_started', { form_name: 'contact' })
+    }
+  }
 
   const copyToClipboard = (text: string, type: 'email' | 'phone') => {
     navigator.clipboard.writeText(text)
@@ -44,6 +53,7 @@ export function Contact() {
       setCopiedPhone(true)
       setTimeout(() => setCopiedPhone(false), 2000)
     }
+    trackEvent('copy_to_clipboard', { field: type })
   }
 
   const validate = () => {
@@ -58,11 +68,16 @@ export function Contact() {
     if (!form.description.trim()) tempErrors.description = t('contact.form.errors.description')
 
     setErrors(tempErrors)
-    return Object.keys(tempErrors).length === 0
+    const hasErrors = Object.keys(tempErrors).length > 0
+    if (hasErrors) {
+      trackEvent('form_validation_error', { form_name: 'contact', error_count: Object.keys(tempErrors).length })
+    }
+    return !hasErrors
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    trackEvent('form_submit_attempt', { form_name: 'contact' })
     if (!validate()) return
 
     setStatus('loading')
@@ -71,8 +86,11 @@ export function Contact() {
       await new Promise((resolve) => setTimeout(resolve, 1500))
       setStatus('success')
       setForm(initialFormState)
+      trackEvent('generate_lead', { lead_type: 'contact_form', lead_source: 'organic' })
+      trackEvent('form_submit_success', { form_name: 'contact' })
     } catch {
       setStatus('error')
+      trackEvent('form_submit_error', { form_name: 'contact' })
     }
   }
 
@@ -142,7 +160,7 @@ export function Contact() {
                     aria-invalid={!!errors.name}
                     aria-describedby={errors.name ? getErrorId('name') : undefined}
                     value={form.name}
-                    onChange={(e) => setForm({ ...form, name: e.target.value })}
+                    onChange={(e) => { trackFormStarted(); setForm({ ...form, name: e.target.value }) }}
                     className={getInputClassName('name')}
                     placeholder={t('contact.form.namePlaceholder')}
                   />
@@ -166,7 +184,7 @@ export function Contact() {
                     aria-invalid={!!errors.email}
                     aria-describedby={errors.email ? getErrorId('email') : undefined}
                     value={form.email}
-                    onChange={(e) => setForm({ ...form, email: e.target.value })}
+                    onChange={(e) => { trackFormStarted(); setForm({ ...form, email: e.target.value }) }}
                     className={getInputClassName('email')}
                     placeholder="you@company.com"
                   />
@@ -188,7 +206,7 @@ export function Contact() {
                     type="text"
                     id="company"
                     value={form.company}
-                    onChange={(e) => setForm({ ...form, company: e.target.value })}
+                    onChange={(e) => { trackFormStarted(); setForm({ ...form, company: e.target.value }) }}
                     className="w-full h-11 px-4 text-[14px] rounded-lg border border-[#E4E4E7] bg-[#FAFAF9] transition-all duration-200 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#8B5CF6]/20 focus:border-[#8B5CF6]"
                     placeholder="Acme Corp"
                   />
@@ -202,7 +220,7 @@ export function Contact() {
                     type="text"
                     id="website"
                     value={form.website}
-                    onChange={(e) => setForm({ ...form, website: e.target.value })}
+                    onChange={(e) => { trackFormStarted(); setForm({ ...form, website: e.target.value }) }}
                     className="w-full h-11 px-4 text-[14px] rounded-lg border border-[#E4E4E7] bg-[#FAFAF9] transition-all duration-200 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#8B5CF6]/20 focus:border-[#8B5CF6]"
                     placeholder="https://example.com"
                   />
@@ -221,7 +239,7 @@ export function Contact() {
                     aria-invalid={!!errors.service}
                     aria-describedby={errors.service ? getErrorId('service') : undefined}
                     value={form.service}
-                    onChange={(e) => setForm({ ...form, service: e.target.value })}
+                    onChange={(e) => { trackFormStarted(); trackEvent('form_field_interaction', { form_name: 'contact', field_name: 'service' }); setForm({ ...form, service: e.target.value }) }}
                     className={getInputClassName('service')}
                   >
                     <option value="" disabled>{t('contact.form.serviceSelect')}</option>
@@ -246,7 +264,7 @@ export function Contact() {
                   <select
                     id="budget"
                     value={form.budget}
-                    onChange={(e) => setForm({ ...form, budget: e.target.value })}
+                    onChange={(e) => { trackFormStarted(); trackEvent('form_field_interaction', { form_name: 'contact', field_name: 'budget' }); setForm({ ...form, budget: e.target.value }) }}
                     className="w-full h-11 px-4 text-[14px] rounded-lg border border-[#E4E4E7] bg-[#FAFAF9] transition-all duration-200 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#8B5CF6]/20 focus:border-[#8B5CF6]"
                   >
                     <option value="" disabled>{t('contact.form.budgetSelect')}</option>
@@ -270,9 +288,9 @@ export function Contact() {
                   aria-invalid={!!errors.description}
                   aria-describedby={errors.description ? getErrorId('description') : undefined}
                   rows={4}
-                  value={form.description}
-                  onChange={(e) => setForm({ ...form, description: e.target.value })}
-                  className={getInputClassName('description')}
+                    value={form.description}
+                    onChange={(e) => { trackFormStarted(); setForm({ ...form, description: e.target.value }) }}
+                    className={getInputClassName('description')}
                   placeholder={t('contact.form.descriptionPlaceholder')}
                 />
                 {errors.description && (
@@ -539,6 +557,7 @@ export function Contact() {
               size="lg"
               className="bg-white text-[#0A0A0A] hover:bg-neutral-100 border-none shadow-md"
               href="https://calendly.com"
+              onClick={() => trackEvent('schedule_call_click', { source: 'contact_cta' })}
             >
               <Calendar className="h-4.5 w-4.5" aria-hidden="true" />
               {t('contact.cta.schedule')}

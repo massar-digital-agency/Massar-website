@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Plus, Minus } from 'lucide-react'
+import { trackEvent } from '@/lib/analytics'
 
 interface AccordionItemProps {
   question: string
@@ -102,14 +103,20 @@ function AccordionItem({
 
 interface AccordionProps {
   items: { question: string; answer: string }[]
+  accordionId?: string
 }
 
-export function Accordion({ items }: AccordionProps) {
+export function Accordion({ items, accordionId = 'faq' }: AccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   const closePanel = useCallback(() => {
     setOpenIndex(null)
   }, [])
+
+  const handleToggle = (index: number, isOpen: boolean) => {
+    setOpenIndex(isOpen ? null : index)
+    trackEvent('faq_toggle', { accordion_id: accordionId, question_index: index, action: isOpen ? 'close' : 'open' })
+  }
 
   return (
     <div data-accordion>
@@ -119,9 +126,9 @@ export function Accordion({ items }: AccordionProps) {
           question={item.question}
           answer={item.answer}
           isOpen={openIndex === index}
-          onToggle={() => setOpenIndex(openIndex === index ? null : index)}
-          buttonId={`faq-button-${index}`}
-          panelId={`faq-panel-${index}`}
+          onToggle={() => handleToggle(index, openIndex === index)}
+          buttonId={`${accordionId}-button-${index}`}
+          panelId={`${accordionId}-panel-${index}`}
           onRequestClose={closePanel}
         />
       ))}

@@ -4,6 +4,7 @@ import { fadeUp } from '@/hooks/useAnimationVariants'
 import { Container } from '@/components/ui/Container'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { navigateToCaseStudy, navigateToSection } from '@/lib/navigate'
+import { trackEvent } from '@/lib/analytics'
 
 interface CaseStudyNavProps {
   slug: string
@@ -33,7 +34,7 @@ export function CaseStudyNav({ slug }: CaseStudyNavProps) {
               {prev ? (
                 <button
                   type="button"
-                  onClick={() => navigateToCaseStudy(prev)}
+                  onClick={() => { navigateToCaseStudy(prev); trackEvent('case_study_nav', { direction: 'previous', case_study: prev, label: t(`projects.items.${prev}.title`) }) }}
                   className="group flex items-center gap-2 text-left"
                   aria-label={`Previous project: ${t(`projects.items.${prev}.title`)}`}
                 >
@@ -54,7 +55,7 @@ export function CaseStudyNav({ slug }: CaseStudyNavProps) {
 
             <button
               type="button"
-              onClick={() => navigateToSection('projects')}
+              onClick={() => { navigateToSection('projects'); trackEvent('cta_click', { cta_location: 'case_study_nav', cta_text: 'View All Projects' }) }}
               className="hidden sm:block text-[13px] font-medium text-[#71717A] hover:text-[#8B5CF6] transition-colors underline-offset-2 hover:underline whitespace-nowrap"
             >
               {t('projects.viewProject')}
@@ -64,7 +65,7 @@ export function CaseStudyNav({ slug }: CaseStudyNavProps) {
               {next ? (
                 <button
                   type="button"
-                  onClick={() => navigateToCaseStudy(next)}
+                  onClick={() => { navigateToCaseStudy(next); trackEvent('case_study_nav', { direction: 'next', case_study: next, label: t(`projects.items.${next}.title`) }) }}
                   className="group flex items-center gap-2 text-right"
                   aria-label={`Next project: ${t(`projects.items.${next}.title`)}`}
                 >

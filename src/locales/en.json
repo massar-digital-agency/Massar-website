@@ -13,6 +13,7 @@
     "about": "About",
     "contact": "Contact",
     "cta": "Start your project",
+    "faq": "FAQ",
     "ctaMicro": "Free discovery call • Response within 24h"
   },
   "hero": {
@@ -748,20 +749,78 @@
   },
   "footer": {
     "description": "A digital studio specializing in building digital experiences that help businesses grow.",
-    "cta": "Ready to build something great?",
-    "ctaMicro": "Start a project and get a tailored proposal within 24 hours.",
-    "navigation": "Navigation",
-    "contact": "Contact",
-    "followUs": "Follow us",
-    "trust": "Trust Signals",
+    "companyHeading": "Company",
+    "resourcesHeading": "Resources",
+    "legalHeading": "Legal",
+    "socialHeading": "Social",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "process": "Our Process",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy",
+    "hours": "Sun – Thu, 9:00 AM – 6:00 PM",
     "rights": "All rights reserved",
-    "location": "Algeria",
     "email": "massar.digital.studio@gmail.com",
     "phone": "+213 555 123 456",
+    "location": "Algeria",
+    "ctaPrimary": "Book a Discovery Call",
+    "ctaSecondary": "Request a Proposal",
     "badges": {
       "responsive": "Responsive Design",
       "secure": "SSL Security",
       "performance": "Performance Optimized"
+    },
+    "social": {
+      "instagram": "https://www.instagram.com/massar.digital.studio",
+      "linkedin": "#",
+      "github": "#",
+      "behance": "#",
+      "dribbble": "#"
+    }
+  },
+  "cookieBanner": {
+    "title": "Cookie Consent",
+    "description": "We use cookies and similar technologies to improve your browsing experience, analyze traffic, and personalize content. Choose your preferences below.",
+    "acceptAll": "Accept All",
+    "rejectAll": "Reject Non-Essential",
+    "managePrefs": "Manage Preferences",
+    "prefsTitle": "Manage Cookie Preferences",
+    "prefsDesc": "Select which cookie categories you want to allow. Essential cookies are always enabled.",
+    "savePrefs": "Save Preferences",
+    "essentialLabel": "Essential",
+    "essentialDesc": "Required for the basic operation of the website. These cannot be disabled.",
+    "analyticsLabel": "Analytics",
+    "analyticsDesc": "Help us understand how visitors interact with our website by collecting anonymous usage data.",
+    "functionalLabel": "Functional",
+    "functionalDesc": "Remember your preferences and language settings to provide a personalized experience.",
+    "marketingLabel": "Marketing",
+    "marketingDesc": "Used to track your browsing habits across websites for targeted advertising purposes.",
+    "alwaysActive": "Always Active",
+    "active": "Active",
+    "close": "Close cookie banner",
+    "moreInfo": "For more information, read our",
+    "privacyLink": "Privacy Policy",
+    "cookiesLink": "Cookie Policy"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy | Massar Digital Studio",
+      "description": "Privacy Policy of Massar Digital Studio — how we collect, use, and protect your personal information.",
+      "ogTitle": "Privacy Policy | Massar Digital Studio",
+      "ogDescription": "Learn how Massar Digital Studio collects, uses, and protects your personal information."
+    },
+    "terms": {
+      "title": "Terms of Service | Massar Digital Studio",
+      "description": "Terms of Service of Massar Digital Studio — the terms governing the use of our website and services.",
+      "ogTitle": "Terms of Service | Massar Digital Studio",
+      "ogDescription": "Read the Terms of Service governing the use of Massar Digital Studio's website and services."
+    },
+    "cookies": {
+      "title": "Cookie Policy | Massar Digital Studio",
+      "description": "Cookie Policy of Massar Digital Studio — how we use cookies and similar tracking technologies.",
+      "ogTitle": "Cookie Policy | Massar Digital Studio",
+      "ogDescription": "Learn how Massar Digital Studio uses cookies and tracking technologies on our website."
     }
   }
 }

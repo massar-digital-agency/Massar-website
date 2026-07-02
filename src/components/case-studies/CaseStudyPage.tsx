@@ -15,6 +15,7 @@ import { CaseStudyNav } from './CaseStudyNav'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { FloatingContact } from '@/components/layout/FloatingContact'
+import { trackPageView } from '@/lib/analytics'
 
 const projectColors: Record<string, { bg: string; text: string }> = {
   journeya: { bg: '#ECFDF5', text: '#059669' },
@@ -33,6 +34,7 @@ export function CaseStudyPage({ slug }: CaseStudyPageProps) {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    trackPageView(`/case-studies/${slug}`, `${slug} Case Study - Massar Digital Studio`)
   }, [slug])
 
   useEffect(() => {

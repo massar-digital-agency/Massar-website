@@ -9,6 +9,7 @@ import { SectionHeader } from '@/components/ui/SectionHeader'
 import { Button } from '@/components/ui/Button'
 import { PortfolioFilters } from './PortfolioFilters'
 import { navigateToCaseStudy } from '@/lib/navigate'
+import { trackEvent } from '@/lib/analytics'
 
 const projectKeys = ['journeya', 'wafr', 'darlink', 'nextgen'] as const
 
@@ -78,6 +79,7 @@ export function Projects() {
                 href={`#/case-studies/${key}`}
                 onClick={(e) => {
                   e.preventDefault()
+                  trackEvent('project_card_click', { project_name: t(`projects.items.${key}.title`), project_category: t(`projects.items.${key}.category`) })
                   navigateToCaseStudy(key)
                 }}
                 className="group flex flex-col rounded-2xl border border-[#E4E4E7] bg-[#FAFAF9] transition-all duration-300 hover:border-[#D4D4D8] hover:shadow-lg hover:shadow-black/[0.04] overflow-hidden cursor-pointer"
@@ -157,7 +159,7 @@ export function Projects() {
           <p className="text-[14px] leading-[1.7] text-[#71717A] mb-5 sm:text-[15px]">
             {t('projects.ctaMicro')}
           </p>
-          <Button size="lg" href="#contact">
+          <Button size="lg" href="#contact" onClick={() => trackEvent('cta_click', { cta_location: 'projects', cta_text: t('projects.cta') })}>
             {t('projects.cta')}
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Button>

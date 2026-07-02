@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Globe } from 'lucide-react'
+import { trackEvent } from '@/lib/analytics'
 
 const languages = [
   { code: 'ar', label: 'العربية' },
@@ -30,6 +31,7 @@ export function LanguageSwitcher() {
 
   const switchLanguage = useCallback((code: string) => {
     i18n.changeLanguage(code)
+    trackEvent('language_switch', { language: code })
     setOpen(false)
     setActiveIndex(-1)
     triggerRef.current?.focus()

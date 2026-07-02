@@ -91,7 +91,7 @@ export function Process() {
     hovered === segmentIndex || hovered === segmentIndex + 1
 
   return (
-    <Section>
+    <Section id="process">
       <Container>
         <SectionHeader
           label={t('process.label')}
