@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { useDirection } from '@/hooks/useDirection'
+import { SEOHead } from '@/components/layout/SEOHead'
+import { StructuredData } from '@/components/layout/StructuredData'
 import { LoadingScreen } from '@/components/layout/LoadingScreen'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
@@ -19,6 +21,8 @@ export default function App() {
 
   return (
     <>
+      <SEOHead />
+      <StructuredData />
       {loading && <LoadingScreen onFinish={() => setLoading(false)} />}
       <Navbar />
       <main>

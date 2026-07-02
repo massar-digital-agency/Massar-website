@@ -1,4 +1,11 @@
 {
+  "seo": {
+    "title": "Massar Digital Studio | Digital Agency & Web Development in Algeria",
+    "description": "Massar Digital Studio is a specialized digital agency in Algeria. We build custom websites, mobile apps, brand identities, UI/UX design, and AI solutions that drive real business growth.",
+    "ogTitle": "Massar Digital Studio | Digital Agency & Web Development in Algeria",
+    "ogDescription": "Custom digital experiences that help businesses grow — websites, mobile apps, branding, UI/UX, and AI. Based in Algeria, serving the world.",
+    "twitterTitle": "Massar Digital Studio | Digital Agency Algeria"
+  },
   "nav": {
     "services": "Services",
     "projects": "Work",
