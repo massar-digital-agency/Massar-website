@@ -2,10 +2,11 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { fadeUp, stagger } from '@/hooks/useAnimationVariants'
-import { ArrowUpRight, Code2, Clock } from 'lucide-react'
+import { ArrowUpRight, Code2, Clock, ArrowRight } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 import { SectionHeader } from '@/components/ui/SectionHeader'
+import { Button } from '@/components/ui/Button'
 import { PortfolioFilters } from './PortfolioFilters'
 import { navigateToCaseStudy } from '@/lib/navigate'
 
@@ -145,6 +146,22 @@ export function Projects() {
             No projects match the selected filter.
           </p>
         )}
+
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-60px' }}
+          className="mt-12 sm:mt-16 text-center"
+        >
+          <p className="text-[14px] leading-[1.7] text-[#71717A] mb-5 sm:text-[15px]">
+            {t('projects.ctaMicro')}
+          </p>
+          <Button size="lg" href="#contact">
+            {t('projects.cta')}
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Button>
+        </motion.div>
       </Container>
     </Section>
   )

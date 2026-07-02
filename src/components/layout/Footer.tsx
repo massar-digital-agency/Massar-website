@@ -1,6 +1,8 @@
 import { useTranslation } from 'react-i18next'
+import { motion } from 'framer-motion'
 import { Container } from '@/components/ui/Container'
-import { Mail, MapPin, Phone, Monitor, ShieldCheck, Zap } from 'lucide-react'
+import { Button } from '@/components/ui/Button'
+import { Mail, MapPin, Phone, Monitor, ShieldCheck, Zap, ArrowRight } from 'lucide-react'
 import { HoverSlideText } from '@/components/ui/HoverSlideText'
 import Logo from '@/assets/images/Logo.svg'
 
@@ -10,6 +12,26 @@ export function Footer() {
   return (
     <footer className="border-t border-[#E4E4E7]">
       <Container>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12 sm:mb-16 text-center rounded-2xl border border-[#E4E4E7] bg-white px-8 py-10 sm:px-12 sm:py-12"
+        >
+          <h3 className="text-[20px] font-bold text-[#0A0A0A] sm:text-[24px]">
+            {t('footer.cta')}
+          </h3>
+          <p className="mt-3 text-[14px] text-[#71717A] sm:text-[15px]">
+            {t('footer.ctaMicro')}
+          </p>
+          <div className="mt-6">
+            <Button size="lg" href="#contact">
+              {t('nav.cta')}
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Button>
+          </div>
+        </motion.div>
+
         <div className="grid gap-12 py-16 sm:py-20 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
             <a href="#" className="inline-flex items-center gap-2.5 mb-5">

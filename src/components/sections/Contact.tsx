@@ -292,6 +292,9 @@ export function Contact() {
                 >
                   {status === 'loading' ? t('contact.form.submitting') : t('contact.form.submit')}
                 </Button>
+                <p className="mt-2 text-center text-[12px] text-[#A1A1AA]">
+                  {t('contact.form.submitMicro')}
+                </p>
               </div>
 
               <AnimatePresence>

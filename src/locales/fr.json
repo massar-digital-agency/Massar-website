@@ -12,7 +12,8 @@
     "pricing": "Tarifs",
     "about": "À propos",
     "contact": "Contact",
-    "cta": "Démarrer un projet"
+    "cta": "Démarrer votre projet",
+    "ctaMicro": "Appel découverte gratuit • Sans engagement • Réponse sous 24h"
   },
   "hero": {
     "badge": "Studio digital — Algérie",
@@ -21,6 +22,7 @@
     "subtitle": "Nous commençons par vos objectifs, pas par un template. Grâce à la stratégie, un travail soigné et une livraison transparente, nous créons des sites, applications et identités visuelles qui transforment les visiteurs en clients et les idées en croissance.",
     "trustStatement": "Approuvé par Journeya, DarLink, et des entreprises à travers l'Algérie.",
     "cta": "Démarrer votre projet",
+    "ctaMicro": "Appel découverte gratuit de 15 min • Sans engagement • Réponse sous 24h",
     "ctaSecondary": "Voir nos réalisations",
     "trust": {
       "projects": "15+ Projets",
@@ -73,7 +75,9 @@
         "title": "Solutions IA",
         "description": "Intégrez l'intelligence artificielle dans vos opérations pour des décisions plus rapides et plus éclairées."
       }
-    }
+    },
+    "cta": "Transformez l'un de ces services en votre prochain projet",
+    "ctaMicro": "Nous discuterons de vos objectifs, du périmètre et vous fournirons un devis transparent — sans engagement."
   },
   "why": {
     "label": "Pourquoi Massar ?",
@@ -104,13 +108,17 @@
       "develop": { "title": "Développement", "description": "Construire des solutions techniques robustes avec les standards actuels." },
       "launch": { "title": "Lancement", "description": "Déployer votre projet après des tests rigoureux pour garantir la qualité." },
       "support": { "title": "Support", "description": "Fournir un support continu et des mises à jour pour une croissance durable." }
-    }
+    },
+    "cta": "Prêt à démarrer votre projet ?",
+    "ctaMicro": "La plupart des projets passent de la découverte au lancement en 2 à 12 semaines selon le périmètre."
   },
   "projects": {
     "label": "Nos réalisations",
     "title": "Des projets construits avec soin",
     "subtitle": "Chaque projet est le fruit d'une collaboration étroite avec nos clients et d'une attention profonde aux détails.",
     "viewProject": "Voir le projet",
+    "cta": "Vous avez un projet en tête ?",
+    "ctaMicro": "Parlez-nous de vos objectifs et nous vous fournirons une proposition sur mesure sous 24 heures.",
     "items": {
       "journeya": {
         "title": "Journeya",
@@ -368,12 +376,16 @@
         "description": "Basé sur les scores de feedback post-projet",
         "placeholder": true
       }
-    ]
+    ],
+    "cta": "Voir les projets que nous avons livrés",
+    "ctaMicro": "Explorez des études de cas réelles avec défis, solutions et résultats mesurables."
   },
   "caseStudies": {
     "label": "Études de cas",
     "title": "Découvrez comment nous résolvons des problèmes concrets",
     "subtitle": "Plongez au cœur des défis, solutions et résultats de nos projets préférés.",
+    "cta": "Un projet similaire en tête ?",
+    "ctaMicro": "Discutons de la façon dont nous pouvons vous aider à créer une expérience digitale qui génère des résultats concrets.",
     "items": {
       "journeya": {
         "challenge": "Journeya avait besoin d'un écosystème numérique complet combinant plateforme de réservation, application mobile et identité de marque cohérente.",
@@ -570,6 +582,8 @@
   "faq": {
     "label": "FAQ",
     "title": "Tout ce que vous devez savoir",
+    "cta": "Encore des questions ?",
+    "ctaMicro": "Nous sommes là pour vous aider. Contactez-nous et nous vous répondrons sous 24 heures.",
     "items": [
       {
         "question": "Combien de temps faut-il pour créer un site professionnel ?",
@@ -620,8 +634,9 @@
       },
       "description": "Détails du projet",
       "descriptionPlaceholder": "Parlez-nous de votre projet, de vos objectifs et de vos délais...",
-      "submit": "Envoyer la demande",
-      "submitting": "Envoi en cours...",
+      "submit": "Envoyer le brief projet",
+      "submitMicro": "Nous examinerons votre projet et vous répondrons sous 24 heures avec une proposition sur mesure.",
+      "submitting": "Envoi du brief...",
       "successTitle": "Message envoyé !",
       "successDesc": "Merci de nous avoir contactés. Nous allons examiner les détails de votre projet et vous recontacter rapidement.",
       "errorTitle": "Une erreur est survenue",
@@ -675,6 +690,8 @@
   },
   "footer": {
     "description": "Studio digital spécialisé dans la création d'expériences digitales qui aident les entreprises à grandir.",
+    "cta": "Prêt à construire quelque chose de grand ?",
+    "ctaMicro": "Démarrez votre projet et obtenez une proposition sur mesure sous 24 heures.",
     "navigation": "Navigation",
     "contact": "Contact",
     "followUs": "Suivez-nous",

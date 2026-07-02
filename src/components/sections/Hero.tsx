@@ -76,11 +76,21 @@ export function Hero() {
               {t('hero.trustStatement')}
             </motion.p>
 
-            <motion.div
+            <motion.p
               variants={fadeUp}
               initial="hidden"
               animate="visible"
               transition={{ delay: 0.2 }}
+              className="mt-4 text-center text-[12px] text-[#A1A1AA] lg:text-start"
+            >
+              {t('hero.ctaMicro')}
+            </motion.p>
+
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.22 }}
               className="mt-6 flex flex-wrap items-center justify-center gap-6 lg:justify-start"
             >
               <div className="flex items-center gap-2 text-[13px] text-[#71717A]">

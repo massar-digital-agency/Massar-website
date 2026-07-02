@@ -43,27 +43,27 @@ Items that should be fixed immediately.
 
 # High Priority
 
-- [ ] Turn the portfolio into real case studies instead of summary cards.
+- [X] Turn the portfolio into real case studies instead of summary cards.
   Explanation: The current projects section describes work at a high level, but it does not explain the problem, process, constraints, deliverables, or results.
   Expected impact: High
 
-- [ ] Add a standalone pricing or starting-price page/section.
+- [X] Add a standalone pricing or starting-price page/section.
   Explanation: Prospects need a budget anchor to self-qualify. Without it, the site feels evasive and can attract unqualified inquiries.
   Expected impact: High
 
-- [ ] Strengthen the hero with a sharper positioning statement.
+- [X] Strengthen the hero with a sharper positioning statement.
   Explanation: The current hero is polished but still generic. It says what you do, not why a buyer should choose you over another agency.
   Expected impact: High
 
-- [ ] Add a clearer primary CTA path and a secondary qualification CTA.
+- [X] Add a clearer primary CTA path and a secondary qualification CTA.
   Explanation: The site has multiple contact points, but no guided funnel. A high-converting agency site usually offers both a direct booking path and a lower-friction audit/discovery option.
   Expected impact: High
 
-- [ ] Add an About page or expand the About section substantially.
+- [X] Add an About page or expand the About section substantially.
   Explanation: The current About content is really a short “Why us” block, not a credible founder/team/story section.
   Expected impact: High
 
-- [ ] Add structured trust messaging around process, timelines, and deliverables.
+- [X] Add structured trust messaging around process, timelines, and deliverables.
   Explanation: Buyers want to know what happens after they inquire, what they receive, and how long it takes.
   Expected impact: High
 
