@@ -1,7 +1,12 @@
 const CASE_STUDY_PREFIX = '#/case-studies/'
+const ABOUT_PAGE_HASH = '#/about'
 
 export function isOnCaseStudyPage(): boolean {
   return window.location.hash.startsWith(CASE_STUDY_PREFIX)
+}
+
+export function isOnAboutPage(): boolean {
+  return window.location.hash === ABOUT_PAGE_HASH
 }
 
 export function getActiveCaseStudySlug(): string | null {
@@ -14,13 +19,18 @@ export function navigateToCaseStudy(slug: string) {
   window.scrollTo(0, 0)
 }
 
+export function navigateToAboutPage() {
+  window.location.hash = ABOUT_PAGE_HASH
+  window.scrollTo(0, 0)
+}
+
 export function navigateHome() {
   window.location.hash = ''
   window.scrollTo(0, 0)
 }
 
 export function navigateToSection(sectionId: string) {
-  if (isOnCaseStudyPage()) {
+  if (isOnCaseStudyPage() || isOnAboutPage()) {
     window.location.hash = ''
     setTimeout(() => {
       document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })

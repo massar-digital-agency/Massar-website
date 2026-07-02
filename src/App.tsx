@@ -18,7 +18,8 @@ import { Results } from '@/components/sections/Results'
 import { FAQ } from '@/components/sections/FAQ'
 import { Contact } from '@/components/sections/Contact'
 import { CaseStudyPage } from '@/components/case-studies/CaseStudyPage'
-import { getActiveCaseStudySlug } from '@/lib/navigate'
+import { AboutPage } from '@/components/sections/AboutPage'
+import { getActiveCaseStudySlug, isOnAboutPage } from '@/lib/navigate'
 
 const validSlugs = ['journeya', 'wafr', 'darlink', 'nextgen']
 
@@ -26,14 +27,23 @@ export default function App() {
   useDirection()
   const [loading, setLoading] = useState(true)
   const [activeCaseStudy, setActiveCaseStudy] = useState<string | null>(null)
+  const [showAbout, setShowAbout] = useState(false)
 
   useEffect(() => {
     const handleHashChange = () => {
+      if (isOnAboutPage()) {
+        setShowAbout(true)
+        setActiveCaseStudy(null)
+        return
+      }
+
       const slug = getActiveCaseStudySlug()
       if (slug && validSlugs.includes(slug)) {
         setActiveCaseStudy(slug)
+        setShowAbout(false)
       } else {
         setActiveCaseStudy(null)
+        setShowAbout(false)
       }
     }
 
@@ -44,6 +54,10 @@ export default function App() {
 
   if (activeCaseStudy) {
     return <CaseStudyPage key={activeCaseStudy} slug={activeCaseStudy} />
+  }
+
+  if (showAbout) {
+    return <AboutPage />
   }
 
   return (

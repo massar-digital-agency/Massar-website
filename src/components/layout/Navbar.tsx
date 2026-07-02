@@ -6,7 +6,7 @@ import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { HoverSlideText } from '@/components/ui/HoverSlideText'
-import { navigateToSection, navigateHome } from '@/lib/navigate'
+import { navigateToSection, navigateHome, navigateToAboutPage, isOnAboutPage } from '@/lib/navigate'
 import Logo from '@/assets/images/Logo.svg'
 
 const navLinks = ['services', 'projects', 'pricing', 'about', 'contact'] as const
@@ -67,7 +67,15 @@ export function Navbar() {
   const handleNavClick = (sectionId: string) => (e: React.MouseEvent) => {
     e.preventDefault()
     handleCloseMenu()
-    navigateToSection(sectionId)
+    if (sectionId === 'about') {
+      if (isOnAboutPage()) {
+        navigateToSection('about')
+      } else {
+        navigateToAboutPage()
+      }
+    } else {
+      navigateToSection(sectionId)
+    }
   }
 
   return (
@@ -105,9 +113,14 @@ export function Navbar() {
 
           <div className="hidden items-center gap-3 md:flex">
             <LanguageSwitcher />
-            <Button size="sm" href="mailto:massar.digital.studio@gmail.com">
-              {t('nav.cta')}
-            </Button>
+            <div className="flex flex-col items-end">
+              <Button size="sm" href="#contact">
+                {t('nav.cta')}
+              </Button>
+              <span className="mt-1 text-[10px] text-[#A1A1AA] whitespace-nowrap">
+                {t('nav.ctaMicro')}
+              </span>
+            </div>
           </div>
 
           <button
@@ -153,9 +166,14 @@ export function Navbar() {
                 ))}
                 <div className="mt-4 flex items-center gap-3 border-t border-[#E4E4E7] pt-5">
                   <LanguageSwitcher />
-                  <Button size="sm" href="mailto:massar.digital.studio@gmail.com" className="flex-1" onClick={handleCloseMenu}>
-                    {t('nav.cta')}
-                  </Button>
+                  <div className="flex-1">
+                    <Button size="sm" href="#contact" className="w-full justify-center" onClick={handleCloseMenu}>
+                      {t('nav.cta')}
+                    </Button>
+                    <span className="mt-1 block text-center text-[10px] text-[#A1A1AA]">
+                      {t('nav.ctaMicro')}
+                    </span>
+                  </div>
                 </div>
               </div>
             </Container>
