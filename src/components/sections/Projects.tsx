@@ -1,10 +1,13 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { fadeUp, stagger } from '@/hooks/useAnimationVariants'
-import { ArrowUpRight, Code2 } from 'lucide-react'
+import { ArrowUpRight, Code2, Clock } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 import { SectionHeader } from '@/components/ui/SectionHeader'
+import { PortfolioFilters } from './PortfolioFilters'
+import { navigateToCaseStudy } from '@/lib/navigate'
 
 const projectKeys = ['journeya', 'wafr', 'darlink', 'nextgen'] as const
 
@@ -15,8 +18,26 @@ const projectColors: Record<string, { bg: string; text: string }> = {
   nextgen: { bg: '#F3F0FF', text: '#8B5CF6' },
 }
 
+const estimatedReadingTime: Record<string, number> = {
+  journeya: 8,
+  wafr: 7,
+  darlink: 8,
+  nextgen: 7,
+}
+
 export function Projects() {
   const { t } = useTranslation()
+  const [activeFilter, setActiveFilter] = useState('all')
+
+  const filteredKeys = projectKeys.filter((key) => {
+    if (activeFilter === 'all') return true
+    const project = t(`projects.items.${key}`, { returnObjects: true }) as {
+      title: string
+      category: string
+      description: string
+    }
+    return project.category === activeFilter
+  })
 
   return (
     <Section id="projects" className="bg-white border-y border-[#E4E4E7]">
@@ -26,6 +47,12 @@ export function Projects() {
           title={t('projects.title')}
           subtitle={t('projects.subtitle')}
         />
+
+        <PortfolioFilters
+          activeFilter={activeFilter}
+          onFilterChange={setActiveFilter}
+        />
+
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -33,7 +60,7 @@ export function Projects() {
           viewport={{ once: true, margin: '-60px' }}
           className="grid gap-5 sm:gap-6 sm:grid-cols-2"
         >
-          {projectKeys.map((key) => {
+          {filteredKeys.map((key) => {
             const color = projectColors[key]
             const cs = t(`caseStudies.items.${key}`, { returnObjects: true }) as {
               challenge: string
@@ -41,13 +68,18 @@ export function Projects() {
               technologies: string[]
               outcomes: string
             } | undefined
+            const readingTime = estimatedReadingTime[key]
 
             return (
               <motion.a
                 key={key}
                 variants={fadeUp}
-                href="#"
-                className="group flex flex-col rounded-2xl border border-[#E4E4E7] bg-[#FAFAF9] transition-all duration-300 hover:border-[#D4D4D8] hover:shadow-lg hover:shadow-black/[0.04] overflow-hidden"
+                href={`#/case-studies/${key}`}
+                onClick={(e) => {
+                  e.preventDefault()
+                  navigateToCaseStudy(key)
+                }}
+                className="group flex flex-col rounded-2xl border border-[#E4E4E7] bg-[#FAFAF9] transition-all duration-300 hover:border-[#D4D4D8] hover:shadow-lg hover:shadow-black/[0.04] overflow-hidden cursor-pointer"
               >
                 <div className="flex-1 p-7 sm:p-8">
                   <div
@@ -57,9 +89,18 @@ export function Projects() {
                     {t(`projects.items.${key}.title`).charAt(0)}
                   </div>
 
-                  <span className="mb-2 inline-block text-[12px] font-semibold tracking-[0.08em] text-[#8B5CF6] uppercase">
-                    {t(`projects.items.${key}.category`)}
-                  </span>
+                  <div className="mb-3 flex items-center justify-between">
+                    <span className="text-[12px] font-semibold tracking-[0.08em] text-[#8B5CF6] uppercase">
+                      {t(`projects.items.${key}.category`)}
+                    </span>
+                    {readingTime && (
+                      <span className="inline-flex items-center gap-1 text-[11px] text-[#A1A1AA]">
+                        <Clock className="h-3 w-3" aria-hidden="true" />
+                        {readingTime} min read
+                      </span>
+                    )}
+                  </div>
+
                   <h3 className="mb-2.5 text-[19px] font-bold text-[#0A0A0A] sm:text-[21px]">
                     {t(`projects.items.${key}.title`)}
                   </h3>
@@ -98,6 +139,12 @@ export function Projects() {
             )
           })}
         </motion.div>
+
+        {filteredKeys.length === 0 && (
+          <p className="mt-8 text-center text-[14px] text-[#A1A1AA]">
+            No projects match the selected filter.
+          </p>
+        )}
       </Container>
     </Section>
   )

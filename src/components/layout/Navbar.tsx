@@ -6,9 +6,10 @@ import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { HoverSlideText } from '@/components/ui/HoverSlideText'
+import { navigateToSection, navigateHome } from '@/lib/navigate'
 import Logo from '@/assets/images/Logo.svg'
 
-const navLinks = ['services', 'projects', 'about', 'contact'] as const
+const navLinks = ['services', 'projects', 'pricing', 'about', 'contact'] as const
 
 export function Navbar() {
   const { t } = useTranslation()
@@ -63,6 +64,12 @@ export function Navbar() {
     }
   }
 
+  const handleNavClick = (sectionId: string) => (e: React.MouseEvent) => {
+    e.preventDefault()
+    handleCloseMenu()
+    navigateToSection(sectionId)
+  }
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
@@ -73,7 +80,12 @@ export function Navbar() {
     >
       <Container>
         <nav className="flex h-[72px] items-center justify-between gap-8" aria-label="Main navigation">
-          <a href="#" className="flex items-center gap-2.5 shrink-0" aria-label="Massar Digital Studio">
+          <a
+            href="#"
+            onClick={(e) => { e.preventDefault(); handleCloseMenu(); navigateHome() }}
+            className="flex items-center gap-2.5 shrink-0"
+            aria-label="Massar Digital Studio — Home"
+          >
             <img src={Logo} alt="" className="h-8 w-auto" />
             <span className="text-[17px] font-bold tracking-tight text-[#0A0A0A]">Massar</span>
           </a>
@@ -83,6 +95,7 @@ export function Navbar() {
               <a
                 key={key}
                 href={`#${key}`}
+                onClick={handleNavClick(key)}
                 className="group text-[14px] font-medium text-[#71717A]"
               >
                 <HoverSlideText>{t(`nav.${key}`)}</HoverSlideText>
@@ -92,7 +105,7 @@ export function Navbar() {
 
           <div className="hidden items-center gap-3 md:flex">
             <LanguageSwitcher />
-            <Button size="sm" href="#contact">
+            <Button size="sm" href="mailto:massar.digital.studio@gmail.com">
               {t('nav.cta')}
             </Button>
           </div>
@@ -132,15 +145,15 @@ export function Navbar() {
                   <a
                     key={key}
                     href={`#${key}`}
+                    onClick={handleNavClick(key)}
                     className="rounded-xl px-4 py-3 text-[15px] font-medium text-[#52525B] transition-colors hover:bg-[#F4F4F5] hover:text-[#0A0A0A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-inset"
-                    onClick={handleCloseMenu}
                   >
                     {t(`nav.${key}`)}
                   </a>
                 ))}
                 <div className="mt-4 flex items-center gap-3 border-t border-[#E4E4E7] pt-5">
                   <LanguageSwitcher />
-                  <Button size="sm" href="#contact" className="flex-1" onClick={handleCloseMenu}>
+                  <Button size="sm" href="mailto:massar.digital.studio@gmail.com" className="flex-1" onClick={handleCloseMenu}>
                     {t('nav.cta')}
                   </Button>
                 </div>
