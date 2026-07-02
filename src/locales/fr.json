@@ -129,6 +129,183 @@
       }
     }
   },
+  "pricing": {
+    "label": "Tarifs",
+    "title": "Des tarifs transparents pour chaque projet",
+    "subtitle": "Choisissez le forfait qui correspond à vos besoins, ou demandez un devis personnalisé pour les projets plus complexes.",
+    "trust": {
+      "projects": "Projets réalisés",
+      "satisfaction": "Satisfaction client",
+      "response": "Délai de réponse estimé"
+    },
+    "packages": {
+      "popular": "Le plus populaire",
+      "fromLabel": "À partir de",
+      "timelineLabel": "Délai estimé",
+      "includesLabel": "Ce qui est inclus",
+      "addonsLabel": "Options supplémentaires",
+      "todoWarning": "Mettez à jour ces prix pour refléter vos tarifs réels avant la mise en ligne.",
+      "cta": "Commencer",
+      "ctaCustom": "Demander un devis personnalisé",
+      "idealLabel": "Idéal pour",
+      "website": {
+        "name": "Forfait Site Web",
+        "price": "2 500 $",
+        "description": "Un site professionnel et responsive, construit avec les technologies modernes pour établir votre présence en ligne.",
+        "ideal": "PME, freelances et start-ups",
+        "timeline": "2–3 semaines",
+        "features": [
+          "Jusqu'à 5 pages",
+          "Design responsive (mobile + tablette + desktop)",
+          "SEO de base (balises, sitemap, vitesse)",
+          "Formulaire de contact avec validation",
+          "Optimisation des performances (90+ Lighthouse)",
+          "Configuration analytics de base"
+        ],
+        "addons": [
+          "Système de gestion de contenu (CMS) — +500 $",
+          "Section blog/actualités — +400 $",
+          "Intégration e-commerce — à partir de 2 000 $",
+          "Animations personnalisées — à partir de 300 $"
+        ]
+      },
+      "growth": {
+        "name": "Forfait Croissance",
+        "price": "5 000 $",
+        "description": "Un site complet avec CMS, fonctionnalités avancées et tout ce qu'il faut pour développer votre présence en ligne.",
+        "ideal": "Entreprises en croissance, sociétés de services et start-ups",
+        "timeline": "3–5 semaines",
+        "features": [
+          "Jusqu'à 10 pages",
+          "Tout ce qui est inclus dans le Forfait Site Web",
+          "Système de gestion de contenu (CMS)",
+          "Animations et transitions avancées",
+          "Section blog / actualités",
+          "Configuration Google Analytics + Search Console",
+          "Conformité cookies et RGPD"
+        ],
+        "addons": [
+          "Intégration e-commerce — à partir de 2 000 $",
+          "Support multilingue — +800 $",
+          "Développement de fonctionnalités sur mesure — sur devis",
+          "Forfait maintenance (mensuel) — à partir de 150 $/mois"
+        ]
+      },
+      "custom": {
+        "name": "Projet Sur Mesure",
+        "price": "10 000 $",
+        "description": "Une application web, plateforme ou produit numérique entièrement personnalisé selon vos besoins uniques.",
+        "ideal": "SaaS, places de marché et entreprises",
+        "timeline": "6–12 semaines",
+        "features": [
+          "Design UI/UX personnalisé de zéro",
+          "Développement full-stack (frontend + backend)",
+          "Conception et optimisation de base de données",
+          "Authentification et autorisation des utilisateurs",
+          "Tableau de bord admin avec analytics",
+          "Intégrations API (paiement, CRM, etc.)",
+          "Tests de charge et audit de sécurité",
+          "Déploiement et pipeline CI/CD"
+        ],
+        "addons": [
+          "Développement d'application mobile — sur devis",
+          "Intégration IA / ML — sur devis",
+          "Extension d'équipe dédiée — sur devis",
+          "Maintenance et support continus — sur devis"
+        ]
+      }
+    },
+    "comparison": {
+      "label": "Comparaison",
+      "title": "Comparez les forfaits côte à côte",
+      "subtitle": "Chaque forfait est conçu pour un besoin spécifique. Trouvez celui qui correspond le mieux à votre projet.",
+      "headers": {
+        "feature": "Fonctionnalité"
+      },
+      "features": [
+        { "feature": "Pages / Routes", "starter": "Jusqu'à 5", "growth": "Jusqu'à 10", "custom": "Illimité" },
+        { "feature": "Design Responsive", "starter": "✓", "growth": "✓", "custom": "✓" },
+        { "feature": "Optimisation SEO", "starter": "De base", "growth": "Avancé", "custom": "Avancé" },
+        { "feature": "Gestion de Contenu", "starter": "—", "growth": "✓", "custom": "✓" },
+        { "feature": "Design Personnalisé", "starter": "Templates", "growth": "Personnalisé", "custom": "Entièrement sur mesure" },
+        { "feature": "Animations", "starter": "De base", "growth": "Avancées", "custom": "Sur mesure" },
+        { "feature": "Configuration Analytics", "starter": "De base", "growth": "Avancé", "custom": "Sur mesure" },
+        { "feature": "Intégration CMS", "starter": "—", "growth": "✓", "custom": "✓" },
+        { "feature": "E-commerce", "starter": "Option", "growth": "Option", "custom": "Inclus" },
+        { "feature": "Comptes Utilisateurs", "starter": "—", "growth": "—", "custom": "✓" },
+        { "feature": "Intégrations API", "starter": "—", "growth": "—", "custom": "✓" },
+        { "feature": "Tableau de Bord Admin", "starter": "—", "growth": "—", "custom": "✓" },
+        { "feature": "Objectif Performance", "starter": "90+", "growth": "95+", "custom": "95+" },
+        { "feature": "Audit de Sécurité", "starter": "De base", "growth": "Standard", "custom": "Avancé" },
+        { "feature": "Révisions Design", "starter": "2 séries", "growth": "3 séries", "custom": "Selon périmètre" },
+        { "feature": "Déploiement", "starter": "✓", "growth": "✓", "custom": "✓" },
+        { "feature": "Support Post-lancement", "starter": "2 semaines", "growth": "1 mois", "custom": "Sur mesure" },
+        { "feature": "Délai de réalisation", "starter": "2–3 sem.", "growth": "3–5 sem.", "custom": "6–12 sem." }
+      ]
+    },
+    "custom": {
+      "label": "Projet Sur Mesure",
+      "title": "Vous avez un projet unique ? Construisons-le ensemble.",
+      "description": "Tous les projets ne rentrent pas dans un forfait prédéfini. Si votre projet nécessite une approche sur mesure, nous proposons des devis personnalisés selon vos besoins spécifiques.",
+      "factors": [
+        "Intégrations complexes avec des API tierces ou des systèmes existants",
+        "Fonctionnalités avancées au-delà des standards",
+        "Sécurité, conformité et performance de niveau entreprise",
+        "Livraison multi-plateforme (web + mobile + desktop)",
+        "Partenariat à long terme avec développement et support continus",
+        "Traitement de données à grande échelle, IA/ML ou automatisation"
+      ],
+      "ctaSubtitle": "Décrivez votre projet et nous vous répondrons sous 24 heures avec une proposition détaillée.",
+      "cta": "Demander un devis",
+      "ctaSchedule": "Réserver un appel découverte"
+    },
+    "testimonial": {
+      "text": "Nous avons choisi Massar pour le développement de notre plateforme et la transparence des prix a été une bouffée d'air frais. Ils ont livré exactement ce qui était promis, dans les temps et dans le budget. Le support continu a été exceptionnel.",
+      "author": "Nom du client",
+      "role": "Entreprise — Fonction",
+      "initials": "NC"
+    },
+    "faq": {
+      "label": "FAQ Tarifs",
+      "title": "Questions fréquentes sur les tarifs",
+      "moreQuestions": "Encore des questions ?",
+      "contactLink": "Contactez-nous",
+      "items": [
+        {
+          "question": "Pourquoi chaque projet n'a-t-il pas le même prix ?",
+          "answer": "Chaque projet est unique par sa portée, sa complexité et ses exigences. Un site vitrine simple nécessite moins de temps et de ressources qu'une application web personnalisée avec comptes utilisateurs et intégrations API. Nos prix reflètent l'effort réel nécessaire pour fournir un travail de qualité."
+        },
+        {
+          "question": "Qu'est-ce qui est inclus dans le prix indiqué ?",
+          "answer": "Nos devis couvrent la stratégie, le design, le développement, les tests et le déploiement. Nous sommes transparents sur ce qui est inclus et ce qui ne l'est pas, pour éviter les surprises. Chaque proposition comprend une répartition claire des livrables, du calendrier et du plan de paiement."
+        },
+        {
+          "question": "Comment sont gérés les paiements ?",
+          "answer": "Nous travaillons généralement avec un paiement échelonné selon les jalons du projet. Un acompte est requis pour commencer, suivi de paiements aux étapes clés. Le solde final est dû à l'achèvement et à l'approbation. Nous sommes flexibles sur les échéances."
+        },
+        {
+          "question": "Proposez-vous la maintenance après le lancement ?",
+          "answer": "Oui, nous proposons des forfaits de maintenance et de support continus. Cela inclut les mises à jour de sécurité, la surveillance des performances, les mises à jour de contenu et le support technique. Les options mensuelles commencent à 150 $/mois."
+        },
+        {
+          "question": "Les révisions sont-elles incluses ?",
+          "answer": "Oui, nos forfaits incluent un nombre défini de cycles de révision pendant la phase de design (généralement 2 à 3 cycles). Les révisions supplémentaires au-delà du périmètre convenu sont facturées à notre tarif horaire standard."
+        },
+        {
+          "question": "Combien de temps prend un projet typique ?",
+          "answer": "Les délais varient selon la complexité. Un site standard (2–3 semaines), un forfait croissance (3–5 semaines) et les applications personnalisées (6–12 semaines). Nous fournissons un calendrier détaillé dans chaque proposition."
+        },
+        {
+          "question": "Le prix peut-il changer après le début du projet ?",
+          "answer": "Une fois le périmètre convenu et le contrat signé, le prix reste fixe. Si vous demandez des fonctionnalités supplémentaires non prévues, nous discuterons de l'impact sur le calendrier et le budget avant de procéder."
+        },
+        {
+          "question": "Travaillez-vous avec des clients internationaux ?",
+          "answer": "Absolument. Nous travaillons avec des clients du monde entier et sommes à l'aise avec la collaboration à distance. Nous utilisons des outils modernes (Slack, WhatsApp, Notion, Figma) et sommes habitués à travailler dans différents fuseaux horaires."
+        }
+      ]
+    }
+  },
   "testimonials": {
     "label": "Témoignages",
     "title": "Ce que disent nos clients",

@@ -66,12 +66,60 @@ export function StructuredData() {
     })),
   }
 
+  const pricingSchemas = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: 'Website Package - Massar Digital Studio',
+      description: 'Professional responsive website package starting at $2,500.',
+      offers: {
+        '@type': 'Offer',
+        price: '2500',
+        priceCurrency: 'USD',
+        priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
+        availability: 'https://schema.org/InStock',
+        url: SITE_URL,
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: 'Growth Bundle - Massar Digital Studio',
+      description: 'Full-featured website with CMS starting at $5,000.',
+      offers: {
+        '@type': 'Offer',
+        price: '5000',
+        priceCurrency: 'USD',
+        priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
+        availability: 'https://schema.org/InStock',
+        url: SITE_URL,
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: 'Custom Development - Massar Digital Studio',
+      description: 'Fully custom web application starting at $10,000.',
+      offers: {
+        '@type': 'Offer',
+        price: '10000',
+        priceCurrency: 'USD',
+        priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
+        availability: 'https://schema.org/InStock',
+        url: SITE_URL,
+      },
+    },
+  ]
+
   return (
     <Helmet>
       <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      {pricingSchemas.map((schema, i) => (
+        <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
+      ))}
     </Helmet>
   )
 }

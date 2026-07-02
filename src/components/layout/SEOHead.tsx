@@ -24,6 +24,7 @@ export function SEOHead() {
       <html lang={lang} />
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta name="keywords" content="web development pricing, Algeria digital agency, website cost, web development Algeria, UI UX design pricing, branding packages, custom web application cost" />
       <link rel="canonical" href={SITE_URL} />
 
       {/* Favicon */}
