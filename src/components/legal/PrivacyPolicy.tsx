@@ -5,32 +5,37 @@ import { Footer } from '@/components/layout/Footer'
 import { FloatingContact } from '@/components/layout/FloatingContact'
 import { LegalLayout, LegalSection, LegalSubsection, LegalParagraph, LegalList, LegalNotice } from './LegalLayout'
 import { useEffect } from 'react'
-
-const SITE_URL = 'https://massardigital.com'
+import { SEO_CONFIG } from '@/lib/seo'
 
 function PrivacySEO() {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
   const pp = t('legal.privacy', { returnObjects: true }) as Record<string, string>
+  const canonical = `${SEO_CONFIG.siteUrl}/#/privacy`
+  const locale = lang === 'ar' ? 'ar_DZ' : lang === 'fr' ? 'fr_DZ' : 'en_US'
 
   return (
     <Helmet prioritizeSeoTags>
       <html lang={lang} />
       <title>{pp.title}</title>
       <meta name="description" content={pp.description} />
-      <link rel="canonical" href={`${SITE_URL}/#/privacy`} />
+      <link rel="canonical" href={canonical} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={pp.ogTitle || pp.title} />
       <meta property="og:description" content={pp.ogDescription || pp.description} />
-      <meta property="og:url" content={`${SITE_URL}/#/privacy`} />
-      <meta property="og:locale" content={lang === 'ar' ? 'ar_DZ' : lang === 'fr' ? 'fr_DZ' : 'en_US'} />
+      <meta property="og:image" content={SEO_CONFIG.ogImage} />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:site_name" content={SEO_CONFIG.siteName} />
+      <meta property="og:locale" content={locale} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={pp.ogTitle || pp.title} />
       <meta name="twitter:description" content={pp.ogDescription || pp.description} />
-      <link rel="alternate" hrefLang="ar" href={`${SITE_URL}/#/privacy`} />
-      <link rel="alternate" hrefLang="fr" href={`${SITE_URL}/#/privacy`} />
-      <link rel="alternate" hrefLang="en" href={`${SITE_URL}/#/privacy`} />
-      <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/#/privacy`} />
+      <meta name="twitter:image" content={SEO_CONFIG.ogImage} />
+      <meta name="twitter:site" content={SEO_CONFIG.twitterHandle} />
+      <link rel="alternate" hrefLang="ar" href={canonical} />
+      <link rel="alternate" hrefLang="fr" href={canonical} />
+      <link rel="alternate" hrefLang="en" href={canonical} />
+      <link rel="alternate" hrefLang="x-default" href={canonical} />
     </Helmet>
   )
 }

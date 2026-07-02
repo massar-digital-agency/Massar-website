@@ -1,8 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
-
-const SITE_URL = 'https://massardigital.com'
-const SITE_NAME = 'Massar Digital Studio'
+import { SEO_CONFIG } from '@/lib/seo'
 
 export function StructuredData() {
   const { t } = useTranslation()
@@ -10,9 +8,9 @@ export function StructuredData() {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: SITE_NAME,
-    url: SITE_URL,
-    logo: `${SITE_URL}/favicon.svg`,
+    name: SEO_CONFIG.siteName,
+    url: SEO_CONFIG.siteUrl,
+    logo: `${SEO_CONFIG.siteUrl}/favicon.svg`,
     description: t('seo.description'),
     contactPoint: {
       '@type': 'ContactPoint',
@@ -30,18 +28,18 @@ export function StructuredData() {
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: SITE_NAME,
-    url: SITE_URL,
+    name: SEO_CONFIG.siteName,
+    url: SEO_CONFIG.siteUrl,
     description: t('seo.description'),
-    inLanguage: [t('seo.title').includes('مسار') ? 'ar' : 'en'],
+    inLanguage: ['ar', 'fr', 'en'],
   }
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: SITE_NAME,
-    image: `${SITE_URL}/og-image.jpg`,
-    url: SITE_URL,
+    name: SEO_CONFIG.siteName,
+    image: SEO_CONFIG.ogImage,
+    url: SEO_CONFIG.siteUrl,
     telephone: '+213-555-123-456',
     email: 'massar.digital.studio@gmail.com',
     address: {
@@ -78,7 +76,7 @@ export function StructuredData() {
         priceCurrency: 'USD',
         priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
         availability: 'https://schema.org/InStock',
-        url: SITE_URL,
+        url: SEO_CONFIG.siteUrl,
       },
     },
     {
@@ -92,7 +90,7 @@ export function StructuredData() {
         priceCurrency: 'USD',
         priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
         availability: 'https://schema.org/InStock',
-        url: SITE_URL,
+        url: SEO_CONFIG.siteUrl,
       },
     },
     {
@@ -106,7 +104,7 @@ export function StructuredData() {
         priceCurrency: 'USD',
         priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
         availability: 'https://schema.org/InStock',
-        url: SITE_URL,
+        url: SEO_CONFIG.siteUrl,
       },
     },
   ]

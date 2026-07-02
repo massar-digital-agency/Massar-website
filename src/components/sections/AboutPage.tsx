@@ -13,10 +13,8 @@ import { Footer } from '@/components/layout/Footer'
 import { FloatingContact } from '@/components/layout/FloatingContact'
 import { navigateToSection } from '@/lib/navigate'
 import { trackPageView, trackEvent } from '@/lib/analytics'
+import { SEO_CONFIG } from '@/lib/seo'
 import Logo3D from '@/assets/images/logo3d.jpg'
-
-const SITE_URL = 'https://massardigital.com'
-const SITE_NAME = 'Massar Digital Studio'
 
 const valueIcons: Record<string, React.ReactNode> = {
   craft: <Sparkles className="h-5 w-5" strokeWidth={1.75} />,
@@ -671,9 +669,9 @@ function AboutSEO() {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: SITE_NAME,
-    url: SITE_URL,
-    logo: `${SITE_URL}/favicon.svg`,
+    name: SEO_CONFIG.siteName,
+    url: SEO_CONFIG.siteUrl,
+    logo: `${SEO_CONFIG.siteUrl}/favicon.svg`,
     description: seo.description,
     foundingDate: '2022',
     contactPoint: {
@@ -689,31 +687,35 @@ function AboutSEO() {
     knowsAbout: ['Web Development', 'Mobile App Development', 'Brand Identity', 'UI/UX Design', 'AI Solutions'],
   }
 
+  const canonical = `${SEO_CONFIG.siteUrl}/#/about`
+  const locale = lang === 'ar' ? 'ar_DZ' : lang === 'fr' ? 'fr_DZ' : 'en_US'
+
   return (
     <Helmet prioritizeSeoTags>
       <html lang={lang} />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
-      <link rel="canonical" href={`${SITE_URL}/#/about`} />
+      <link rel="canonical" href={canonical} />
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
       <meta property="og:type" content="website" />
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />
-      <meta property="og:image" content={`${SITE_URL}/og-image.jpg`} />
-      <meta property="og:url" content={`${SITE_URL}/#/about`} />
-      <meta property="og:site_name" content={SITE_NAME} />
-      <meta property="og:locale" content={lang === 'ar' ? 'ar_DZ' : lang === 'fr' ? 'fr_DZ' : 'en_US'} />
+      <meta property="og:image" content={SEO_CONFIG.ogImage} />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:site_name" content={SEO_CONFIG.siteName} />
+      <meta property="og:locale" content={locale} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
-      <meta name="twitter:image" content={`${SITE_URL}/og-image.jpg`} />
+      <meta name="twitter:image" content={SEO_CONFIG.ogImage} />
+      <meta name="twitter:site" content={SEO_CONFIG.twitterHandle} />
 
-      <link rel="alternate" hrefLang="ar" href={`${SITE_URL}/#/about`} />
-      <link rel="alternate" hrefLang="fr" href={`${SITE_URL}/#/about`} />
-      <link rel="alternate" hrefLang="en" href={`${SITE_URL}/#/about`} />
-      <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}/#/about`} />
+      <link rel="alternate" hrefLang="ar" href={canonical} />
+      <link rel="alternate" hrefLang="fr" href={canonical} />
+      <link rel="alternate" hrefLang="en" href={canonical} />
+      <link rel="alternate" hrefLang="x-default" href={canonical} />
 
       <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
     </Helmet>
