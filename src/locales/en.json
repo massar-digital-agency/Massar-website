@@ -134,6 +134,85 @@
     "subtitle": "Get in touch today and let's see how we can help.",
     "button": "Get in touch"
   },
+  "contact": {
+    "hero": {
+      "badge": "Start a project",
+      "title": "Let's build something",
+      "titleAccent": "extraordinary together.",
+      "subtitle": "Have an idea or a project in mind? Fill out the form or reach out directly, and we will get back to you within 24 hours."
+    },
+    "form": {
+      "title": "Send us a message",
+      "name": "Full Name",
+      "namePlaceholder": "John Doe",
+      "email": "Work Email",
+      "company": "Company Name",
+      "website": "Company Website",
+      "service": "Service of Interest",
+      "serviceSelect": "Select a service...",
+      "budget": "Estimated Budget",
+      "budgetSelect": "Select a budget range...",
+      "budgets": {
+        "under_5k": "Under $5,000",
+        "5k_10k": "$5,000 - $10,000",
+        "10k_25k": "$10,000 - $25,000",
+        "above_25k": "Above $25,000"
+      },
+      "description": "Project Details",
+      "descriptionPlaceholder": "Tell us about your project, goals, and timeline...",
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "successTitle": "Message Sent!",
+      "successDesc": "Thank you for reaching out. We will review your project details and get back to you soon.",
+      "errorTitle": "Something went wrong",
+      "errorDesc": "Please try again later or email us directly.",
+      "errors": {
+        "name": "Name is required",
+        "email": "Email is required",
+        "emailInvalid": "Please enter a valid email address",
+        "service": "Please select a service",
+        "description": "Please describe your project"
+      }
+    },
+    "info": {
+      "emailLabel": "Email Us",
+      "phoneLabel": "Call or WhatsApp",
+      "locationLabel": "Our Office",
+      "hoursLabel": "Business Hours",
+      "hoursVal": "Sunday - Thursday, 9:00 AM - 6:00 PM",
+      "responseExpected": "Expected response within 24 hours"
+    },
+    "social": {
+      "testimonialText": "Massar delivered our web app ahead of schedule and with incredible attention to detail. Their communication was flawless throughout.",
+      "testimonialAuthor": "Amine Rahmani",
+      "testimonialCompany": "Co-founder, Journeya",
+      "projectsLabel": "Projects Done",
+      "experienceLabel": "Years Experience"
+    },
+    "why": {
+      "label": "Why Massar",
+      "title": "A partnership geared for your growth",
+      "items": {
+        "communication": {
+          "title": "Ultra-Fast Communication",
+          "description": "No endless wait times. We provide updates via Slack/WhatsApp and are always a quick call away."
+        },
+        "process": {
+          "title": "Transparent Process",
+          "description": "Track milestones and progression interactively from onboarding to launch."
+        },
+        "outcomes": {
+          "title": "Outcomes Over Deliverables",
+          "description": "We build with clear business conversion goals, speed optimization, and growth in mind."
+        }
+      }
+    },
+    "cta": {
+      "title": "Prefer a direct face-to-face video call?",
+      "subtitle": "Schedule a 15-minute discovery call directly on our calendar. We'll discuss your goals and how we can help.",
+      "schedule": "Book a Free Session"
+    }
+  },
   "footer": {
     "description": "A digital studio specializing in building digital experiences that help businesses grow.",
     "navigation": "Navigation",

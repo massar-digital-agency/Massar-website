@@ -11,7 +11,7 @@ import { WhyUs } from '@/components/sections/WhyUs'
 import { Process } from '@/components/sections/Process'
 import { Projects } from '@/components/sections/Projects'
 import { FAQ } from '@/components/sections/FAQ'
-import { CTA } from '@/components/sections/CTA'
+import { Contact } from '@/components/sections/Contact'
 
 export default function App() {
   useDirection()
@@ -29,7 +29,7 @@ export default function App() {
         <Process />
         <Projects />
         <FAQ />
-        <CTA />
+        <Contact />
       </main>
       <Footer />
       <FloatingContact />

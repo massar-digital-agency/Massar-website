@@ -134,6 +134,85 @@
     "subtitle": "Contactez-nous aujourd'hui et voyons ensemble comment nous pouvons vous aider.",
     "button": "Contactez-nous"
   },
+  "contact": {
+    "hero": {
+      "badge": "Démarrer un projet",
+      "title": "Créons quelque chose",
+      "titleAccent": "d'extraordinaire ensemble.",
+      "subtitle": "Vous avez une idée ou un projet en tête ? Remplissez le formulaire ou contactez-nous directement, et nous vous répondrons sous 24 heures."
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "name": "Nom Complet",
+      "namePlaceholder": "Jean Dupont",
+      "email": "E-mail Professionnel",
+      "company": "Nom de l'entreprise",
+      "website": "Site internet",
+      "service": "Service d'intérêt",
+      "serviceSelect": "Sélectionnez un service...",
+      "budget": "Budget estimé",
+      "budgetSelect": "Sélectionnez une tranche budgétaire...",
+      "budgets": {
+        "under_5k": "Moins de 5 000 $",
+        "5k_10k": "5 000 $ - 10 000 $",
+        "10k_25k": "10 000 $ - 25 000 $",
+        "above_25k": "Plus de 25 000 $"
+      },
+      "description": "Détails du projet",
+      "descriptionPlaceholder": "Parlez-nous de votre projet, de vos objectifs et de vos délais...",
+      "submit": "Envoyer la demande",
+      "submitting": "Envoi en cours...",
+      "successTitle": "Message envoyé !",
+      "successDesc": "Merci de nous avoir contactés. Nous allons examiner les détails de votre projet et vous recontacter rapidement.",
+      "errorTitle": "Une erreur est survenue",
+      "errorDesc": "Veuillez réessayer plus tard ou nous envoyer un e-mail directement.",
+      "errors": {
+        "name": "Le nom est requis",
+        "email": "L'adresse e-mail est requise",
+        "emailInvalid": "Veuillez entrer une adresse e-mail valide",
+        "service": "Veuillez sélectionner un service",
+        "description": "Veuillez décrire votre projet"
+      }
+    },
+    "info": {
+      "emailLabel": "Écrivez-nous",
+      "phoneLabel": "Appel ou WhatsApp",
+      "locationLabel": "Notre Bureau",
+      "hoursLabel": "Heures d'ouverture",
+      "hoursVal": "Dimanche - Jeudi, 9h00 - 18h00",
+      "responseExpected": "Réponse attendue sous 24 heures"
+    },
+    "social": {
+      "testimonialText": "Massar a livré notre application web en avance sur le calendrier et avec une attention incroyable aux détails. Leur communication a été impeccable tout au long.",
+      "testimonialAuthor": "Amine Rahmani",
+      "testimonialCompany": "Co-fondateur, Journeya",
+      "projectsLabel": "Projets Réalisés",
+      "experienceLabel": "Années d'expérience"
+    },
+    "why": {
+      "label": "Pourquoi Massar",
+      "title": "Un partenariat orienté vers votre croissance",
+      "items": {
+        "communication": {
+          "title": "Communication Ultra-Rapide",
+          "description": "Pas d'attente interminable. Nous fournissons des mises à jour via Slack/WhatsApp et sommes toujours joignables."
+        },
+        "process": {
+          "title": "Processus Transparent",
+          "description": "Suivez chaque jalon et étape de l'onboarding jusqu'au lancement de manière interactive."
+        },
+        "outcomes": {
+          "title": "La Performance avant tout",
+          "description": "Nous développons avec des objectifs clairs de conversion business, d'optimisation de vitesse et de croissance."
+        }
+      }
+    },
+    "cta": {
+      "title": "Vous préférez un appel vidéo direct ?",
+      "subtitle": "Planifiez un appel de découverte de 15 minutes directement sur notre calendrier pour discuter de vos objectifs et de la façon dont nous pouvons vous aider.",
+      "schedule": "Réserver une session gratuite"
+    }
+  },
   "footer": {
     "description": "Studio digital spécialisé dans la création d'expériences digitales qui aident les entreprises à grandir.",
     "navigation": "Navigation",
