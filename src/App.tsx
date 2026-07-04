@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDirection } from '@/hooks/useDirection'
 import { useCookieConsent } from '@/hooks/useCookieConsent'
@@ -27,121 +27,15 @@ import { CaseStudyPage } from '@/components/case-studies/CaseStudyPage'
 import { AboutPage } from '@/components/sections/AboutPage'
 import { trackPageView } from '@/lib/analytics'
 import { useScrollDepth } from '@/hooks/useScrollDepth'
-import { getActiveCaseStudySlug, isOnAboutPage } from '@/lib/navigate'
+import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom'
 
-const validSlugs = ['journeya', 'wafr', 'darlink', 'nextgen']
-
-function getPagePath(): string {
-  if (isOnAboutPage()) return '/about'
-  const slug = getActiveCaseStudySlug()
-  if (slug) return `/case-studies/${slug}`
-  const hash = window.location.hash
-  if (hash === '#/privacy') return '/privacy'
-  if (hash === '#/terms') return '/terms'
-  if (hash === '#/cookies') return '/cookies'
-  return '/'
-}
-
-function getPageTitle(): string {
-  if (isOnAboutPage()) return 'About - Massar Digital Studio'
-  const slug = getActiveCaseStudySlug()
-  if (slug) {
-    const titles: Record<string, string> = {
-      journeya: 'Journeya Case Study',
-      wafr: 'Wafr Case Study',
-      darlink: 'Darlink Case Study',
-      nextgen: 'NextGen Case Study',
-    }
-    return `${titles[slug] || slug} - Massar Digital Studio`
-  }
-  return 'Massar Digital Studio'
-}
-
-function getActiveLegalPage(): string | null {
-  const hash = window.location.hash
-  if (hash === '#/privacy') return 'privacy'
-  if (hash === '#/terms') return 'terms'
-  if (hash === '#/cookies') return 'cookies'
-  return null
-}
-
-export default function App() {
-  useDirection()
+function HomePage() {
   const { i18n } = useTranslation()
-  const consent = useCookieConsent()
   const [loading, setLoading] = useState(true)
-  const [activeCaseStudy, setActiveCaseStudy] = useState<string | null>(null)
-  const [showAbout, setShowAbout] = useState(false)
-  const [activeLegalPage, setActiveLegalPage] = useState<string | null>(null)
-
-  useScrollDepth()
-
-  const trackCurrentPage = useCallback(() => {
-    trackPageView(getPagePath(), getPageTitle())
-  }, [])
 
   useEffect(() => {
-    const handleHashChange = () => {
-      const legalPage = getActiveLegalPage()
-      if (legalPage) {
-        setActiveLegalPage(legalPage)
-        setShowAbout(false)
-        setActiveCaseStudy(null)
-        return
-      }
-
-      if (isOnAboutPage()) {
-        setShowAbout(true)
-        setActiveCaseStudy(null)
-        setActiveLegalPage(null)
-        return
-      }
-
-      const slug = getActiveCaseStudySlug()
-      if (slug && validSlugs.includes(slug)) {
-        setActiveCaseStudy(slug)
-        setShowAbout(false)
-        setActiveLegalPage(null)
-      } else {
-        setActiveCaseStudy(null)
-        setShowAbout(false)
-        setActiveLegalPage(null)
-      }
-    }
-
-    handleHashChange()
-    trackCurrentPage()
-    window.addEventListener('hashchange', () => {
-      handleHashChange()
-      trackCurrentPage()
-    })
-    return () => window.removeEventListener('hashchange', trackCurrentPage)
-  }, [trackCurrentPage])
-
-  // Track initial page view after language is known
-  useEffect(() => {
-    trackCurrentPage()
-  }, [i18n.language, trackCurrentPage])
-
-  if (activeLegalPage === 'privacy') {
-    return <PrivacyPolicy />
-  }
-
-  if (activeLegalPage === 'terms') {
-    return <TermsOfService />
-  }
-
-  if (activeLegalPage === 'cookies') {
-    return <CookiePolicy />
-  }
-
-  if (activeCaseStudy) {
-    return <CaseStudyPage key={activeCaseStudy} slug={activeCaseStudy} />
-  }
-
-  if (showAbout) {
-    return <AboutPage />
-  }
+    trackPageView('/', 'Massar Digital Studio')
+  }, [i18n.language])
 
   return (
     <>
@@ -164,7 +58,53 @@ export default function App() {
       </main>
       <Footer />
       <FloatingContact />
-      <CookieBanner consent={consent} />
+      <CookieBanner consent={useCookieConsent()} />
     </>
   )
+}
+
+function LegalWrapper({ page }: { page: string }) {
+  const ComponentMap: Record<string, React.ReactNode> = {
+    privacy: <PrivacyPolicy />,
+    terms: <TermsOfService />,
+    cookies: <CookiePolicy />,
+  }
+  return <>{ComponentMap[page] ?? null}</>
+}
+
+export default function App() {
+  useDirection()
+  const consent = useCookieConsent()
+  const [loading, setLoading] = useState(true)
+  const [activeCaseStudy, setActiveCaseStudy] = useState<string | null>(null)
+
+  useScrollDepth()
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/privacy" element={<LegalWrapper page="privacy" />} />
+        <Route path="/terms" element={<LegalWrapper page="terms" />} />
+        <Route path="/cookies" element={<LegalWrapper page="cookies" />} />
+        <Route
+          path="/case-studies/:slug"
+          element={<CaseStudyPageWrapper setLoading={setLoading} setActiveCaseStudy={setActiveCaseStudy} />}
+        />
+      </Routes>
+      <FloatingContact />
+      <CookieBanner consent={consent} />
+    </BrowserRouter>
+  )
+}
+
+function CaseStudyPageWrapper({ setLoading, setActiveCaseStudy }: { setLoading: (v: boolean) => void; setActiveCaseStudy: (s: string | null) => void }) {
+  const { slug } = useParams<{ slug: string }>()
+  useEffect(() => {
+    setActiveCaseStudy(slug || null)
+    setLoading(false)
+    trackPageView(`/case-studies/${slug}`, `${slug} - Massar Digital Studio`)
+  }, [slug])
+  return <CaseStudyPage key={slug} slug={slug as string} />
 }
