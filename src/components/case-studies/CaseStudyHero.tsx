@@ -30,7 +30,7 @@ export function CaseStudyHero({ slug, color }: CaseStudyHeroProps) {
           className="max-w-[800px]"
         >
           <nav className="mb-8" aria-label="Breadcrumb">
-            <ol className="flex items-center gap-2 text-[13px] text-[#71717A]">
+            <ol className="flex items-center gap-2 text-[13px] text-[#52525B]">
               <li>
                 <button
                   type="button"
@@ -40,7 +40,7 @@ export function CaseStudyHero({ slug, color }: CaseStudyHeroProps) {
                   {t('projects.label')}
                 </button>
               </li>
-              <li aria-hidden="true" className="text-[#A1A1AA]">/</li>
+              <li aria-hidden="true" className="text-[#71717A]">/</li>
               <li className="text-[#0A0A0A] font-medium" aria-current="page">
                 {project.title}
               </li>
@@ -66,14 +66,14 @@ export function CaseStudyHero({ slug, color }: CaseStudyHeroProps) {
             {project.description}
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-5 text-[13px] text-[#71717A]">
+          <div className="mt-8 flex flex-wrap items-center gap-5 text-[13px] text-[#52525B]">
             <span className="inline-flex items-center gap-1.5">
-              <Clock className="h-4 w-4 text-[#A1A1AA]" aria-hidden="true" />
+              <Clock className="h-4 w-4 text-[#71717A]" aria-hidden="true" />
               {/* TODO: Replace with actual project duration */}
               <span>{t('caseStudies.label')} — 2024</span>
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <Users className="h-4 w-4 text-[#A1A1AA]" aria-hidden="true" />
+              <Users className="h-4 w-4 text-[#71717A]" aria-hidden="true" />
               {/* TODO: Replace with actual team size */}
               <span>3–4 team members</span>
             </span>

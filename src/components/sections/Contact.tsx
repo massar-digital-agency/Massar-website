@@ -128,7 +128,7 @@ export function Contact() {
               {t('contact.hero.title')}{' '}
               <span className="text-[#8B5CF6]">{t('contact.hero.titleAccent')}</span>
             </h2>
-            <p className="mx-auto max-w-[600px] text-[15px] leading-[1.75] text-[#71717A] sm:text-[18px]">
+            <p className="mx-auto max-w-[600px] text-[15px] leading-[1.75] text-[#52525B] sm:text-[18px]">
               {t('contact.hero.subtitle')}
             </p>
           </motion.div>
@@ -310,7 +310,7 @@ export function Contact() {
                 >
                   {status === 'loading' ? t('contact.form.submitting') : t('contact.form.submit')}
                 </Button>
-                <p className="mt-2 text-center text-[12px] text-[#A1A1AA]">
+                <p className="mt-2 text-center text-[12px] text-[#71717A]">
                   {t('contact.form.submitMicro')}
                 </p>
               </div>
@@ -371,7 +371,7 @@ export function Contact() {
                       <Mail className="h-4.5 w-4.5" aria-hidden="true" />
                     </div>
                     <div>
-                      <span className="text-[12px] font-semibold tracking-[0.08em] text-[#71717A] uppercase">
+                      <span className="text-[12px] font-semibold tracking-[0.08em] text-[#52525B] uppercase">
                         {t('contact.info.emailLabel')}
                       </span>
                       <p className="text-[14px] font-semibold text-[#0A0A0A] mt-1 break-all">
@@ -382,7 +382,7 @@ export function Contact() {
                   <button
                     type="button"
                     onClick={() => copyToClipboard('massar.digital.studio@gmail.com', 'email')}
-                    className="h-8 w-8 rounded-lg flex items-center justify-center hover:bg-[#F4F4F5] text-[#71717A] hover:text-[#0A0A0A]"
+                    className="h-8 w-8 rounded-lg flex items-center justify-center hover:bg-[#F4F4F5] text-[#52525B] hover:text-[#0A0A0A]"
                     aria-label={copiedEmail ? 'Email copied to clipboard' : 'Copy email address'}
                     title="Copy Email"
                   >
@@ -401,7 +401,7 @@ export function Contact() {
                       <Phone className="h-4.5 w-4.5" aria-hidden="true" />
                     </div>
                     <div>
-                      <span className="text-[12px] font-semibold tracking-[0.08em] text-[#71717A] uppercase">
+                      <span className="text-[12px] font-semibold tracking-[0.08em] text-[#52525B] uppercase">
                         {t('contact.info.phoneLabel')}
                       </span>
                       <p className="text-[14px] font-semibold text-[#0A0A0A] mt-1" dir="ltr">
@@ -412,7 +412,7 @@ export function Contact() {
                   <button
                     type="button"
                     onClick={() => copyToClipboard('+213 555 123 456', 'phone')}
-                    className="h-8 w-8 rounded-lg flex items-center justify-center hover:bg-[#F4F4F5] text-[#71717A] hover:text-[#0A0A0A]"
+                    className="h-8 w-8 rounded-lg flex items-center justify-center hover:bg-[#F4F4F5] text-[#52525B] hover:text-[#0A0A0A]"
                     aria-label={copiedPhone ? 'Phone number copied to clipboard' : 'Copy phone number'}
                     title="Copy Phone Number"
                   >
@@ -430,9 +430,9 @@ export function Contact() {
                     <MapPin className="h-4.5 w-4.5" aria-hidden="true" />
                   </div>
                   <div>
-                    <span className="text-[12px] font-semibold tracking-[0.08em] text-[#71717A] uppercase">
-                      {t('contact.info.locationLabel')}
-                    </span>
+                      <span className="text-[12px] font-semibold tracking-[0.08em] text-[#52525B] uppercase">
+                        {t('contact.info.locationLabel')}
+                      </span>
                     <p className="text-[14px] font-semibold text-[#0A0A0A] mt-1">
                       {t('footer.location')}
                     </p>
@@ -449,15 +449,15 @@ export function Contact() {
                     <Clock className="h-4.5 w-4.5" aria-hidden="true" />
                   </div>
                   <div>
-                    <span className="text-[12px] font-semibold tracking-[0.08em] text-[#71717A] uppercase">
-                      {t('contact.info.hoursLabel')}
-                    </span>
-                    <p className="text-[14px] font-semibold text-[#0A0A0A] mt-1">
-                      {t('contact.info.hoursVal')}
-                    </p>
-                    <p className="text-[12px] text-[#71717A] mt-0.5">
-                      {t('contact.info.responseExpected')}
-                    </p>
+                      <span className="text-[12px] font-semibold tracking-[0.08em] text-[#52525B] uppercase">
+                        {t('contact.info.hoursLabel')}
+                      </span>
+                      <p className="text-[14px] font-semibold text-[#0A0A0A] mt-1">
+                        {t('contact.info.hoursVal')}
+                      </p>
+                      <p className="text-[12px] text-[#52525B] mt-0.5">
+                        {t('contact.info.responseExpected')}
+                      </p>
                   </div>
                 </div>
               </motion.div>
@@ -487,7 +487,7 @@ export function Contact() {
                   <h4 className="text-[14px] font-bold text-[#0A0A0A]">
                     {t('contact.social.testimonialAuthor')}
                   </h4>
-                  <p className="text-[12px] text-[#71717A]">
+                  <p className="text-[12px] text-[#52525B]">
                     {t('contact.social.testimonialCompany')}
                   </p>
                 </div>
@@ -496,13 +496,13 @@ export function Contact() {
               <div className="mt-8 grid grid-cols-2 gap-4 border-t border-[#E4E4E7] pt-6 text-center">
                 <div>
                   <span className="block text-[22px] font-extrabold text-[#8B5CF6]">15+</span>
-                  <span className="text-[11px] font-medium text-[#71717A] uppercase tracking-wider">
+                  <span className="text-[11px] font-medium text-[#52525B] uppercase tracking-wider">
                     {t('contact.social.projectsLabel')}
                   </span>
                 </div>
                 <div>
                   <span className="block text-[22px] font-extrabold text-[#8B5CF6]">3+</span>
-                  <span className="text-[11px] font-medium text-[#71717A] uppercase tracking-wider">
+                  <span className="text-[11px] font-medium text-[#52525B] uppercase tracking-wider">
                     {t('contact.social.experienceLabel')}
                   </span>
                 </div>
@@ -530,7 +530,7 @@ export function Contact() {
                 <h4 className="text-[16px] font-bold text-[#0A0A0A]">
                   {t(`contact.why.items.${key}.title`)}
                 </h4>
-                <p className="mt-3 text-[14px] leading-[1.7] text-[#71717A]">
+                <p className="mt-3 text-[14px] leading-[1.7] text-[#52525B]">
                   {t(`contact.why.items.${key}.description`)}
                 </p>
               </div>
