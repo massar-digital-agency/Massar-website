@@ -1,0 +1,10 @@
+// src/content/case-studies/sample-study.json
+{
+  "slug": "sample-study",
+  "title": "Sample Case Study",
+  "excerpt": "A brief overview of the sample case study showcasing our work.",
+  "thumbnail": "/assets/case-studies/sample-thumbnail.jpg",
+  "industry": "Technology",
+  "tags": ["AI", "Automation"],
+  "year": 2025
+}
