@@ -8,9 +8,8 @@ export function SEOHead() {
   const lang = i18n.language
   const location = useLocation()
 
-  const path = location.pathname === '/' ? '' : `/#${location.pathname}`
-  const pageUrl = `${SEO_CONFIG.siteUrl}${path}`
-  const hreflangLinks = getHreflangLinks(pageUrl)
+  const pagePath = location.pathname === '/' ? '' : `/#${location.pathname}`
+  const hreflangLinks = getHreflangLinks(pagePath)
   const locale = lang === 'ar' ? 'ar_DZ' : lang === 'fr' ? 'fr_DZ' : 'en_US'
 
   return (
