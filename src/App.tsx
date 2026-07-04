@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Helmet } from 'react-helmet-async'
 import { useDirection } from '@/hooks/useDirection'
 import { useCookieConsent } from '@/hooks/useCookieConsent'
 import { SEOHead } from '@/components/layout/SEOHead'
@@ -28,9 +29,10 @@ import { AboutPage } from '@/components/sections/AboutPage'
 import { trackPageView } from '@/lib/analytics'
 import { useScrollDepth } from '@/hooks/useScrollDepth'
 import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom'
+import { SEO_CONFIG } from '@/lib/seo'
 
 function HomePage() {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -39,7 +41,21 @@ function HomePage() {
 
   return (
     <>
-      <SEOHead />
+      <Helmet>
+        <title>{t('seo.title')}</title>
+        <meta name="description" content={t('seo.description')} />
+        <link rel="canonical" href={SEO_CONFIG.siteUrl} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={t('seo.ogTitle')} />
+        <meta property="og:description" content={t('seo.ogDescription')} />
+        <meta property="og:url" content={SEO_CONFIG.siteUrl} />
+        <meta property="og:site_name" content={SEO_CONFIG.siteName} />
+
+        <meta name="twitter:title" content={t('seo.twitterTitle')} />
+        <meta name="twitter:description" content={t('seo.description')} />
+        <meta name="twitter:image" content={SEO_CONFIG.ogImage} />
+      </Helmet>
       <StructuredData />
       {loading && <LoadingScreen onFinish={() => setLoading(false)} />}
       <Navbar />
@@ -80,6 +96,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
+      <SEOHead />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />

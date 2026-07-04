@@ -59,7 +59,7 @@ function AboutHero() {
             <p className="mt-5 max-w-[560px] text-[15px] leading-[1.8] text-[#52525B] sm:text-[17px]">
               {hero.subtitle}
             </p>
-            <p className="mt-3 text-[13px] text-[#A1A1AA]">
+            <p className="mt-3 text-[13px] text-[#71717A]">
               {hero.subtitleMicro}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -661,10 +661,9 @@ function AboutPageCTA() {
 /* ───── SEO ───── */
 
 function AboutSEO() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const about = t('aboutPage', { returnObjects: true }) as Record<string, unknown>
   const seo = about.seo as Record<string, string>
-  const lang = i18n.language
 
   const organizationSchema = {
     '@context': 'https://schema.org',
@@ -688,34 +687,21 @@ function AboutSEO() {
   }
 
   const canonical = `${SEO_CONFIG.siteUrl}/#/about`
-  const locale = lang === 'ar' ? 'ar_DZ' : lang === 'fr' ? 'fr_DZ' : 'en_US'
 
   return (
     <Helmet prioritizeSeoTags>
-      <html lang={lang} />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <link rel="canonical" href={canonical} />
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
       <meta property="og:type" content="website" />
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />
-      <meta property="og:image" content={SEO_CONFIG.ogImage} />
       <meta property="og:url" content={canonical} />
       <meta property="og:site_name" content={SEO_CONFIG.siteName} />
-      <meta property="og:locale" content={locale} />
 
-      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
-      <meta name="twitter:image" content={SEO_CONFIG.ogImage} />
-      <meta name="twitter:site" content={SEO_CONFIG.twitterHandle} />
-
-      <link rel="alternate" hrefLang="ar" href={canonical} />
-      <link rel="alternate" hrefLang="fr" href={canonical} />
-      <link rel="alternate" hrefLang="en" href={canonical} />
-      <link rel="alternate" hrefLang="x-default" href={canonical} />
 
       <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
     </Helmet>

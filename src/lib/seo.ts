@@ -99,12 +99,12 @@ export function getCaseStudySEO(
   }
 }
 
-export function getHreflangLinks(pagePath: string): Array<{ lang: string; href: string }> {
-  const base = SITE_URL
+export function getHreflangLinks(pageUrl: string): Array<{ lang: string; href: string }> {
+  const separator = pageUrl.includes('?') ? '&' : '?'
   return [
-    { lang: 'ar', href: `${base}${pagePath}` },
-    { lang: 'fr', href: `${base}${pagePath}` },
-    { lang: 'en', href: `${base}${pagePath}` },
-    { lang: 'x-default', href: `${base}${pagePath}` },
+    { lang: 'ar', href: `${pageUrl}${separator}lang=ar` },
+    { lang: 'fr', href: `${pageUrl}${separator}lang=fr` },
+    { lang: 'en', href: `${pageUrl}${separator}lang=en` },
+    { lang: 'x-default', href: pageUrl },
   ]
 }
