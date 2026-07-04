@@ -1,7 +1,7 @@
 import type { ReactNode, ButtonHTMLAttributes } from 'react'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'ghost'
+  variant?: 'primary' | 'secondary' | 'ghost' | 'accent'
   size?: 'sm' | 'md' | 'lg'
   children: ReactNode
   href?: string
@@ -16,6 +16,8 @@ const variants = {
     'bg-transparent text-[#0A0A0A] border border-[#E4E4E7] hover:border-[#A1A1AA] hover:bg-white active:bg-[#F8F7F4]',
   ghost:
     'bg-transparent text-[#52525B] hover:text-[#0A0A0A] hover:bg-[#F4F4F5]',
+  accent:
+    'bg-[#8B5CF6] text-white hover:bg-[#7C3AED] active:bg-[#6D28D9] shadow-md',
 }
 
 const sizes = {

@@ -24,7 +24,7 @@ export function Hero() {
         <div className="grid w-full items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
           <div className="mx-auto max-w-[640px] text-center lg:mx-0 lg:max-w-none lg:text-start">
             <motion.div variants={fadeUp} initial="hidden" animate="visible">
-              <span className="mb-6 inline-flex items-center gap-2 text-[13px] font-medium text-[#71717A]">
+              <span className="mb-6 inline-flex items-center gap-2 text-[13px] font-medium text-[#52525B]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#8B5CF6]" />
                 {t('hero.badge')}
               </span>
@@ -46,7 +46,7 @@ export function Hero() {
               initial="hidden"
               animate="visible"
               transition={{ delay: 0.1 }}
-              className="mx-auto mt-5 max-w-[460px] text-[14px] leading-[1.8] text-[#71717A] sm:text-[16px] lg:mx-0"
+              className="mx-auto mt-5 max-w-[460px] text-[14px] leading-[1.8] text-[#52525B] sm:text-[16px] lg:mx-0"
             >
               {t('hero.subtitle')}
             </motion.p>
@@ -58,7 +58,7 @@ export function Hero() {
               transition={{ delay: 0.15 }}
               className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:mt-10 lg:justify-start"
             >
-              <Button size="lg" href="#contact" onClick={() => trackEvent('cta_click', { cta_location: 'hero', cta_text: t('hero.cta'), cta_type: 'primary' })}>
+              <Button variant="accent" size="lg" href="#contact" onClick={() => trackEvent('cta_click', { cta_location: 'hero', cta_text: t('hero.cta'), cta_type: 'accent' })}>
                 {t('hero.cta')}
                 <Arrow className="h-4 w-4" aria-hidden="true" />
               </Button>
@@ -72,7 +72,7 @@ export function Hero() {
               initial="hidden"
               animate="visible"
               transition={{ delay: 0.18 }}
-              className="mt-6 text-center text-[13px] text-[#71717A] lg:text-start"
+              className="mt-6 text-center text-[13px] text-[#52525B] lg:text-start"
             >
               {t('hero.trustStatement')}
             </motion.p>
@@ -82,7 +82,7 @@ export function Hero() {
               initial="hidden"
               animate="visible"
               transition={{ delay: 0.2 }}
-              className="mt-4 text-center text-[12px] text-[#A1A1AA] lg:text-start"
+              className="mt-4 text-center text-[12px] text-[#71717A] lg:text-start"
             >
               {t('hero.ctaMicro')}
             </motion.p>
@@ -94,15 +94,15 @@ export function Hero() {
               transition={{ delay: 0.22 }}
               className="mt-6 flex flex-wrap items-center justify-center gap-6 lg:justify-start"
             >
-              <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
+              <div className="flex items-center gap-2 text-[13px] text-[#52525B]">
                 <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
                 {t('hero.trust.projects')}
               </div>
-              <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
+              <div className="flex items-center gap-2 text-[13px] text-[#52525B]">
                 <span className="flex h-1.5 w-1.5 rounded-full bg-[#8B5CF6]" />
                 {t('hero.trust.experience')}
               </div>
-              <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
+              <div className="flex items-center gap-2 text-[13px] text-[#52525B]">
                 <span className="flex h-1.5 w-1.5 rounded-full bg-amber-500" />
                 {t('hero.trust.clients')}
               </div>
@@ -115,15 +115,15 @@ export function Hero() {
               transition={{ delay: 0.22 }}
               className="mt-5 flex flex-wrap items-center justify-center gap-6 lg:justify-start"
             >
-              <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
+              <div className="flex items-center gap-2 text-[13px] text-[#52525B]">
                 <span className="flex h-1.5 w-1.5 rounded-full bg-sky-500" />
                 {t('hero.process.discovery')}
               </div>
-              <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
+              <div className="flex items-center gap-2 text-[13px] text-[#52525B]">
                 <span className="flex h-1.5 w-1.5 rounded-full bg-sky-500" />
                 {t('hero.process.delivery')}
               </div>
-              <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
+              <div className="flex items-center gap-2 text-[13px] text-[#52525B]">
                 <span className="flex h-1.5 w-1.5 rounded-full bg-sky-500" />
                 {t('hero.process.support')}
               </div>
@@ -165,7 +165,7 @@ export function Hero() {
           {[...marqueeKeys, ...marqueeKeys, ...marqueeKeys, ...marqueeKeys].map((key, i) => (
             <span
               key={`${key}-${i}`}
-              className="flex items-center gap-10 text-[14px] font-medium text-[#A1A1AA]"
+              className="flex items-center gap-10 text-[14px] font-medium text-[#71717A]"
             >
               {t(`services.items.${key}.title`)}
               <span className="h-1 w-1 rounded-full bg-[#D4D4D8]" />
