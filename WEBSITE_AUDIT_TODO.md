@@ -67,15 +67,15 @@ Items that should be fixed immediately.
   Explanation: Buyers want to know what happens after they inquire, what they receive, and how long it takes.
   Expected impact: High
 
-- [ ] Add analytics and conversion tracking.
+- [X] Add analytics and conversion tracking.
   Explanation: There is no visible evidence of event tracking, CTA tracking, form tracking, or funnel attribution.
   Expected impact: High
 
-- [ ] Add a privacy policy, terms of service, and cookie policy.
+- [X] Add a privacy policy, terms of service, and cookie policy.
   Explanation: These are basic trust and compliance pages for a business website that collects leads and likely uses analytics.
   Expected impact: High
 
-- [ ] Replace footer and navigation links that point to weak or missing destinations.
+- [X] Replace footer and navigation links that point to weak or missing destinations.
   Explanation: The footer references sections like About and Contact, but the experience still feels incomplete because there are no full pages behind them and some links are not backed by a conversion strategy.
   Expected impact: High
 
@@ -104,7 +104,7 @@ Items that should be fixed immediately.
 - [ ] Add social proof beyond testimonials.
   Explanation: Awards, certifications, partner badges, founder credentials, and publication mentions all help reduce risk.
 
-- [ ] Add canonical URLs, robots.txt, and sitemap.xml.
+- [X] Add canonical URLs, robots.txt, and sitemap.xml.
   Explanation: The site needs a standard SEO foundation before organic growth can scale.
 
 - [ ] Improve internal linking depth.
