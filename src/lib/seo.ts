@@ -5,6 +5,16 @@ const OG_IMAGE_WIDTH = '3027'
 const OG_IMAGE_HEIGHT = '2439'
 const TWITTER_HANDLE = '@massardigital'
 
+export const META_DESCRIPTION_MAX_LENGTH = 160
+
+/** Pre-optimized hero mascot (LCP image) — AVIF preferred, WebP fallback. */
+export const HERO_MASCOT = {
+  avif: '/images/hero-mascot.avif',
+  webp: '/images/hero-mascot.webp',
+  width: 800,
+  height: 800,
+} as const
+
 export const SEO_CONFIG = {
   siteUrl: SITE_URL,
   siteName: SITE_NAME,
@@ -82,10 +92,14 @@ export function getCaseStudySEO(
   }
 
   const descriptions: Record<string, string> = {
-    journeya: 'Discover how Massar built Journeya\'s complete tourism ecosystem \u2014 a booking platform, mobile app, and brand identity \u2014 launched on schedule for a seamless user experience across web and mobile.',
-    wafr: 'See how Massar developed Wafr, a cross-platform food waste reduction app connecting consumers with surplus food deals through geolocation and real-time notifications in Algeria.',
-    darlink: 'Explore how Massar created DarLink, a modern real estate platform connecting buyers, sellers, and investors in Algeria with 200+ property listings, advanced search, and direct messaging.',
-    nextgen: 'Learn how Massar delivered a premium e-commerce experience for NextGen with 90+ Lighthouse scores, optimized checkout flow, and performance-first architecture built for conversions.',
+    journeya:
+      'How Massar built Journeya\u2019s tourism ecosystem \u2014 booking platform, mobile app, and brand identity \u2014 for seamless web and mobile experiences.',
+    wafr:
+      'How Massar built Wafr, a food waste app in Algeria connecting consumers to surplus food deals via geolocation and real-time alerts.',
+    darlink:
+      'How Massar created DarLink, an Algerian real estate platform with 200+ listings, advanced search, and direct messaging for buyers and sellers.',
+    nextgen:
+      'How Massar delivered NextGen\u2019s premium e-commerce store with 90+ Lighthouse scores, optimized checkout, and performance-first architecture.',
   }
 
   const title = `${titles[slug] || projectTitle || slug} | ${SITE_NAME}`

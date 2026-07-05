@@ -53,7 +53,7 @@ function HomePage() {
         <meta property="og:site_name" content={SEO_CONFIG.siteName} />
 
         <meta name="twitter:title" content={t('seo.twitterTitle')} />
-        <meta name="twitter:description" content={t('seo.description')} />
+        <meta name="twitter:description" content={t('seo.ogDescription')} />
         <meta name="twitter:image" content={SEO_CONFIG.ogImage} />
       </Helmet>
       <StructuredData />
