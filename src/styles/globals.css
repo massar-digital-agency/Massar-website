@@ -87,3 +87,15 @@ html[lang="ar"] body,
 [aria-busy="true"] {
   cursor: progress;
 }
+
+img,
+video {
+  /* Let the browser reserve space using width/height attributes before CSS loads.
+     The 'auto' value means fall back to the intrinsic aspect ratio from the attributes. */
+  aspect-ratio: auto;
+}
+
+img[loading="lazy"] {
+  /* Ensure lazy images at least get a default sizing context before loading */
+  content-visibility: auto;
+}

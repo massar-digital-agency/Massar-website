@@ -11,4 +11,18 @@ export default defineConfig({
       'react-helmet-async': path.resolve(__dirname, './src/lib/react-helmet-async.tsx'),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id: string) {
+          if (id.includes('node_modules/react-dom') || id.includes('node_modules/react/')) return 'vendor-react'
+          if (id.includes('node_modules/react-router')) return 'vendor-router'
+          if (id.includes('node_modules/framer-motion')) return 'vendor-animation'
+          if (id.includes('node_modules/i18next')) return 'vendor-i18n'
+          if (id.includes('node_modules/lucide-react')) return 'vendor-icons'
+          if (id.includes('node_modules/react-helmet-async')) return 'vendor-helmet'
+        },
+      },
+    },
+  },
 })

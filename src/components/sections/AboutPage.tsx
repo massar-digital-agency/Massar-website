@@ -82,6 +82,8 @@ function AboutHero() {
             <img
               src={Logo3D}
               alt="Massar Digital Studio — 3D logo"
+              width={4126}
+              height={3552}
               className="w-full max-w-[340px] mx-auto rounded-2xl"
               loading="eager"
             />
