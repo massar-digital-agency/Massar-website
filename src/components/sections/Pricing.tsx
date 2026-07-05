@@ -348,9 +348,9 @@ export function Pricing() {
                 {t('pricing.testimonial.initials')}
               </div>
               <div className="text-start">
-                <h4 className="text-[14px] font-bold text-[#0A0A0A]">
+                <h3 className="text-[14px] font-bold text-[#0A0A0A]">
                   {t('pricing.testimonial.author')}
-                </h4>
+                </h3>
                 <p className="text-[12px] text-[#71717A]">
                   {t('pricing.testimonial.role')}
                 </p>

@@ -19,9 +19,9 @@ const socialNetworks = ['instagram', 'linkedin', 'github', 'behance', 'dribbble'
 function FooterColumn({ heading, children }: { heading: string; children: React.ReactNode }) {
   return (
     <div>
-      <h4 className="mb-5 text-[13px] font-semibold tracking-[0.08em] text-[#0A0A0A] uppercase">
+      <h3 className="mb-5 text-[13px] font-semibold tracking-[0.08em] text-[#0A0A0A] uppercase">
         {heading}
-      </h4>
+      </h3>
       <div className="flex flex-col gap-3">
         {children}
       </div>
@@ -72,9 +72,9 @@ export function Footer() {
           viewport={{ once: true }}
           className="mb-12 sm:mb-16 text-center rounded-2xl border border-[#E4E4E7] bg-white px-8 py-10 sm:px-12 sm:py-12"
         >
-          <h3 className="text-[20px] font-bold text-[#0A0A0A] sm:text-[24px]">
+          <h2 className="text-[20px] font-bold text-[#0A0A0A] sm:text-[24px]">
             {t('footer.cta')}
-          </h3>
+          </h2>
           <p className="mt-3 text-[14px] text-[#71717A] sm:text-[15px]">
             {t('footer.ctaMicro')}
           </p>
@@ -91,7 +91,7 @@ export function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <a href="#" onClick={() => trackEvent('logo_click', { location: 'footer' })} className="inline-flex items-center gap-2.5 mb-5">
-              <img src={Logo} alt="" className="h-8 w-auto" />
+              <img src={Logo} alt="Massar Digital Studio" className="h-8 w-auto" />
               <span className="text-[16px] font-bold text-[#0A0A0A]">Massar</span>
             </a>
             <p className="text-[14px] leading-[1.75] text-[#71717A] max-w-[260px]">
