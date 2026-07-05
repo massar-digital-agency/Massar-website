@@ -6,7 +6,50 @@
     "ogDescription": "Création de site web, apps mobiles et référencement SEO pour les entreprises algériennes — des produits digitaux stratégiques pensés pour des résultats mesurables.",
     "twitterTitle": "Massar Digital Studio | Agence digitale Algérie"
   },
+  "blog": {
+    "seo": {
+      "title": "Blog | Massar Digital Studio",
+      "description": "Lisez des articles d'experts sur le développement web, le SEO, le design et la stratégie numérique de Massar Digital Studio.",
+      "ogTitle": "Blog | Massar Digital Studio",
+      "ogDescription": "Articles d'experts sur le développement web, le SEO, le design et la stratégie numérique."
+    },
+    "index": {
+      "label": "Notre Blog",
+      "title": "Connaissances & expertise",
+      "subtitle": "Des articles sur le développement web, le SEO, le design et la stratégie numérique pour aider votre entreprise à se développer.",
+      "readMore": "Lire l'article",
+      "publishedOn": "Publié le",
+      "readingTime": "min de lecture",
+      "by": "par",
+      "noArticles": "Pas encore d'articles.",
+      "notFound": "Article non trouvé",
+      "notFoundDesc": "L'article que vous cherchez n'existe pas ou a été supprimé.",
+      "page": "Page",
+      "of": "sur",
+      "previous": "Précédent",
+      "next": "Suivant",
+      "relatedArticles": "Articles connexes",
+      "backToBlog": "Retour au blog",
+      "breadcrumbs": "Fil d'Ariane",
+      "pagination": "Navigation de pagination",
+      "testimonial": "Témoignage",
+      "testimonialIndicators": "Indicateurs de témoignage",
+      "goToTestimonial": "Aller au témoignage",
+      "showingTestimonial": "Affichage du témoignage",
+      "resumeAutoplay": "Reprendre la lecture automatique",
+      "pauseAutoplay": "Mettre en pause la lecture automatique"
+    },
+    "contact": {
+      "seo": {
+        "title": "Contactez-nous | Massar Digital Studio",
+        "description": "Contactez Massar Digital Studio. Lancez votre projet de développement web, SEO ou numérique dès aujourd'hui.",
+        "ogTitle": "Contactez-nous | Massar Digital Studio",
+        "ogDescription": "Contactez Massar Digital Studio. Lancez votre projet dès aujourd'hui."
+      }
+    }
+  },
   "nav": {
+    "home": "Accueil",
     "services": "Services",
     "projects": "Projets",
     "pricing": "Tarifs",
@@ -707,6 +750,19 @@
       "schedule": "Réserver une session gratuite"
     }
   },
+  "breadcrumbs": {
+    "ariaLabel": "Fil d'Ariane",
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "caseStudy": "Étude de cas",
+    "blog": "Blog",
+    "contact": "Contact",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "cookies": "Politique de cookies"
+  },
   "footer": {
     "description": "Agence digitale algérienne orientée stratégie — création de site web, référencement SEO et applications mobiles pour votre croissance.",
     "companyHeading": "Entreprise",
@@ -738,6 +794,9 @@
       "behance": "#",
       "dribbble": "#"
     }
+  },
+  "mobileStickyCta": {
+    "label": "Planifier un appel"
   },
   "cookieBanner": {
     "title": "Consentement aux Cookies",

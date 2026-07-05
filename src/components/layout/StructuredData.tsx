@@ -2,7 +2,17 @@ import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { SEO_CONFIG } from '@/lib/seo'
 
-export function StructuredData() {
+interface StructuredDataProps {
+  /** Additional JSON-LD objects rendered as separate script tags. */
+  additionalSchemas?: Record<string, unknown>[]
+  /** When false, skip default homepage schemas (for page-specific structured data). */
+  includeDefaults?: boolean
+}
+
+export function StructuredData({
+  additionalSchemas = [],
+  includeDefaults = true,
+}: StructuredDataProps = {}) {
   const { t } = useTranslation()
 
   const organizationSchema = {
@@ -120,13 +130,17 @@ export function StructuredData() {
     },
   ]
 
+  const defaultSchemas = includeDefaults
+    ? [organizationSchema, websiteSchema, localBusinessSchema, faqSchema, ...pricingSchemas]
+    : []
+
+  const allSchemas = [...defaultSchemas, ...additionalSchemas]
+
+  if (allSchemas.length === 0) return null
+
   return (
     <Helmet>
-      <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
-      <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
-      <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
-      <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      {pricingSchemas.map((schema, i) => (
+      {allSchemas.map((schema, i) => (
         <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
       ))}
     </Helmet>

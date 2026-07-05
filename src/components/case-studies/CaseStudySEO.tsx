@@ -1,6 +1,8 @@
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { SEO_CONFIG, getCaseStudySEO } from '@/lib/seo'
+import { StructuredData } from '@/components/layout/StructuredData'
+import { buildCaseStudyStructuredData } from '@/lib/structured-data'
 
 interface CaseStudySEOProps {
   slug: string
@@ -21,6 +23,7 @@ export function CaseStudySEO({ slug }: CaseStudySEOProps) {
     solution: string
     technologies: string[]
     outcomes: string
+    summary?: string
   }
 
   const seoMeta = t(`caseStudies.seo.${slug}`, { returnObjects: true }) as {
@@ -30,47 +33,35 @@ export function CaseStudySEO({ slug }: CaseStudySEOProps) {
 
   const seo = getCaseStudySEO(slug, lang, seoMeta, project.title, project.description)
 
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
+  const caseStudySchema = buildCaseStudyStructuredData({
+    slug,
+    lang,
     headline: seo.title,
     description: seo.description,
-    image: SEO_CONFIG.ogImage,
-    author: {
-      '@type': 'Organization',
-      name: SEO_CONFIG.siteName,
-      url: SEO_CONFIG.siteUrl,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: SEO_CONFIG.siteName,
-      logo: `${SEO_CONFIG.siteUrl}/favicon.svg`,
-    },
-    url: seo.canonical,
-    about: {
-      '@type': 'Thing',
-      name: project.title,
-      description: project.category,
-    },
-    keywords: [...cs.technologies, project.category, 'case study', 'portfolio'].join(', '),
-  }
+    projectTitle: project.title,
+    projectCategory: project.category,
+    projectDescription: project.description,
+    technologies: cs.technologies,
+    summary: cs.summary,
+  })
 
   return (
-    <Helmet prioritizeSeoTags>
-      <title>{seo.title}</title>
-      <meta name="description" content={seo.description} />
-      <link rel="canonical" href={seo.canonical} />
+    <>
+      <Helmet prioritizeSeoTags>
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} />
+        <link rel="canonical" href={seo.canonical} />
 
-      <meta property="og:type" content="article" />
-      <meta property="og:title" content={seo.title} />
-      <meta property="og:description" content={seo.description} />
-      <meta property="og:url" content={seo.canonical} />
-      <meta property="og:site_name" content={SEO_CONFIG.siteName} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:description" content={seo.description} />
+        <meta property="og:url" content={seo.canonical} />
+        <meta property="og:site_name" content={SEO_CONFIG.siteName} />
 
-      <meta name="twitter:title" content={seo.title} />
-      <meta name="twitter:description" content={seo.description} />
-
-      <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
-    </Helmet>
+        <meta name="twitter:title" content={seo.title} />
+        <meta name="twitter:description" content={seo.description} />
+      </Helmet>
+      <StructuredData includeDefaults={false} additionalSchemas={[caseStudySchema]} />
+    </>
   )
 }

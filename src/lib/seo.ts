@@ -88,6 +88,30 @@ export function getPageSEO(
   return pages[page] || pages.home
 }
 
+export function getBlogSEO(
+  slug: string,
+  translations?: { title?: string; description?: string }
+): PageSEO {
+  const title = translations?.title || `Blog | ${SITE_NAME}`
+  const description = translations?.description || 'Read expert articles about web development, SEO, design, and digital strategy.'
+
+  return {
+    title,
+    description: truncateMetaDescription(description),
+    canonical: `${SITE_URL}/blog/${slug}`,
+    ogType: 'article',
+  }
+}
+
+export function getBlogIndexSEO(): PageSEO {
+  return {
+    title: `Blog | ${SITE_NAME}`,
+    description: 'Read expert articles about web development, SEO, design, and digital strategy from Massar Digital Studio.',
+    canonical: `${SITE_URL}/blog`,
+    ogType: 'website',
+  }
+}
+
 export function getCaseStudySEO(
   slug: string,
   _lang: string,
@@ -107,6 +131,8 @@ export function getCaseStudySEO(
     ogType: 'article',
   }
 }
+
+export { CASE_STUDY_SLUGS } from '@/lib/routes'
 
 export function getHreflangLinks(pagePath: string): Array<{ lang: string; href: string }> {
   const absoluteUrl = `${SITE_URL}${pagePath}`

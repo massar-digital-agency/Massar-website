@@ -6,7 +6,50 @@
     "ogDescription": "Custom website development, mobile apps, and SEO services for Algerian businesses — strategy-first digital products built for measurable growth.",
     "twitterTitle": "Massar Digital Studio | Digital Agency Algeria"
   },
+  "blog": {
+    "seo": {
+      "title": "Blog | Massar Digital Studio",
+      "description": "Read expert articles about web development, SEO, design, and digital strategy from Massar Digital Studio.",
+      "ogTitle": "Blog | Massar Digital Studio",
+      "ogDescription": "Expert articles about web development, SEO, design, and digital strategy."
+    },
+    "index": {
+      "label": "Our Blog",
+      "title": "Insights & expertise",
+      "subtitle": "Articles about web development, SEO, design, and digital strategy to help your business grow.",
+      "readMore": "Read article",
+      "publishedOn": "Published on",
+      "readingTime": "min read",
+      "by": "by",
+      "noArticles": "No articles yet.",
+      "notFound": "Article not found",
+      "notFoundDesc": "The article you're looking for doesn't exist or has been removed.",
+      "page": "Page",
+      "of": "of",
+      "previous": "Previous",
+      "next": "Next",
+      "relatedArticles": "Related articles",
+      "backToBlog": "Back to blog",
+      "breadcrumbs": "Breadcrumbs",
+      "pagination": "Pagination navigation",
+      "testimonial": "Testimonial",
+      "testimonialIndicators": "Testimonial indicators",
+      "goToTestimonial": "Go to testimonial",
+      "showingTestimonial": "Showing testimonial",
+      "resumeAutoplay": "Resume auto-play",
+      "pauseAutoplay": "Pause auto-play"
+    },
+    "contact": {
+      "seo": {
+        "title": "Contact Us | Massar Digital Studio",
+        "description": "Get in touch with Massar Digital Studio. Start your web development, SEO, or digital project today. Free discovery call available.",
+        "ogTitle": "Contact Us | Massar Digital Studio",
+        "ogDescription": "Get in touch with Massar Digital Studio. Start your project today."
+      }
+    }
+  },
   "nav": {
+    "home": "Home",
     "services": "Services",
     "projects": "Work",
     "pricing": "Pricing",
@@ -769,6 +812,19 @@
       "schedule": "Book a Free Session"
     }
   },
+  "breadcrumbs": {
+    "ariaLabel": "Breadcrumb",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "caseStudy": "Case Study",
+    "blog": "Blog",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy"
+  },
   "footer": {
     "description": "Algeria's strategy-first digital agency — custom website development, SEO services, and mobile apps built for growth.",
     "companyHeading": "Company",
@@ -800,6 +856,9 @@
       "behance": "#",
       "dribbble": "#"
     }
+  },
+  "mobileStickyCta": {
+    "label": "Schedule a Call"
   },
   "cookieBanner": {
     "title": "Cookie Consent",

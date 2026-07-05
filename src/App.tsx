@@ -22,12 +22,15 @@ import { WhyUs } from '@/components/sections/WhyUs'
 import { Process } from '@/components/sections/Process'
 import { Projects } from '@/components/sections/Projects'
 import { Pricing } from '@/components/sections/Pricing'
-import { Testimonials } from '@/components/sections/Testimonials'
 import { Results } from '@/components/sections/Results'
 import { FAQ } from '@/components/sections/FAQ'
 import { Contact } from '@/components/sections/Contact'
 import { CaseStudyPage } from '@/components/case-studies/CaseStudyPage'
 import { AboutPage } from '@/components/sections/AboutPage'
+import { BlogIndex } from '@/pages/BlogIndex'
+import { BlogPost } from '@/pages/BlogPost'
+import { ContactPage } from '@/pages/ContactPage'
+import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel'
 import { trackPageView } from '@/lib/analytics'
 import { useScrollDepth } from '@/hooks/useScrollDepth'
 import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom'
@@ -67,7 +70,7 @@ function HomePage() {
         <Services />
         <WhyUs />
         <Process />
-        <Testimonials />
+        <TestimonialsCarousel />
         <Results />
         <Projects />
         <Pricing />
@@ -107,6 +110,9 @@ export default function App() {
         <Route path="/terms" element={<LegalWrapper page="terms" />} />
         <Route path="/cookies" element={<LegalWrapper page="cookies" />} />
         <Route path="/case-studies/:slug" element={<CaseStudyPageWrapper />} />
+        <Route path="/blog" element={<BlogIndex />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <MobileStickyCTA />
       <FloatingContact />

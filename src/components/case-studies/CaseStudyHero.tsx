@@ -2,8 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { fadeUp } from '@/hooks/useAnimationVariants'
 import { ArrowLeft, ArrowRight, Clock, Users } from 'lucide-react'
-import { navigateToSection } from '@/lib/navigate'
-import { trackEvent } from '@/lib/analytics'
+import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 
 interface CaseStudyHeroProps {
   slug: string
@@ -29,23 +28,7 @@ export function CaseStudyHero({ slug, color }: CaseStudyHeroProps) {
           animate="visible"
           className="max-w-[800px]"
         >
-          <nav className="mb-8" aria-label="Breadcrumb">
-            <ol className="flex items-center gap-2 text-[13px] text-[#52525B]">
-              <li>
-                  <button
-                    type="button"
-                    onClick={() => { navigateToSection('projects'); trackEvent('nav_click', { nav_section: 'projects', nav_label: t('projects.label') }) }}
-                    className="hover:text-[#8B5CF6] transition-colors underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded"
-                  >
-                    {t('projects.label')}
-                  </button>
-              </li>
-              <li aria-hidden="true" className="text-[#52525B]">/</li>
-              <li className="text-[#0A0A0A] font-medium" aria-current="page">
-                {project.title}
-              </li>
-            </ol>
-          </nav>
+          <Breadcrumbs />
 
           <div
             className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl text-[22px] font-bold"

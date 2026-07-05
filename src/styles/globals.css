@@ -99,6 +99,43 @@ img[loading="lazy"] {
   content-visibility: auto;
 }
 
+/* Blog prose: preserve code block scroll for accessibility */
+.prose pre {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.prose pre > code {
+  display: block;
+  min-width: fit-content;
+}
+
+/* Ensure table captions / screen-reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Blog highlighted code line */
+.prose .code-line {
+  display: block;
+  padding: 0 1rem;
+}
+
+/* Blog article link focus visible */
+.prose a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 @media (max-width: 639px) {
   #main-content {
     padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
