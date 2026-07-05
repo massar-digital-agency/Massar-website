@@ -5,12 +5,13 @@ import { Calendar, Clock, User, ArrowLeft, ArrowUpRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
-import { Breadcrumbs } from '@/components/blog/Breadcrumbs'
+import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import { BlogSEO } from '@/components/blog/BlogSEO'
 import { RelatedArticles } from '@/components/blog/RelatedArticles'
 import { Section } from '@/components/ui/Section'
 import { fadeUp } from '@/hooks/useAnimationVariants'
 import { getBlogPost, getRelatedPosts } from '@/lib/blog'
+import { SEO_CONFIG } from '@/lib/seo'
 import { trackPageView, trackEvent } from '@/lib/analytics'
 
 export function BlogPost() {
@@ -59,8 +60,9 @@ export function BlogPost() {
           <Container narrow>
             <Breadcrumbs
               items={[
-                { label: t('blog.index.title'), href: '/blog' },
-                { label: meta.title },
+                { label: t('breadcrumbs.home'), to: '/', canonicalUrl: SEO_CONFIG.siteUrl },
+                { label: t('breadcrumbs.blog'), to: '/blog', canonicalUrl: `${SEO_CONFIG.siteUrl}/blog` },
+                { label: meta.title, canonicalUrl: `${SEO_CONFIG.siteUrl}/blog/${meta.slug}`, isCurrent: true },
               ]}
             />
 

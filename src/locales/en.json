@@ -177,21 +177,25 @@
       "journeya": {
         "title": "Journeya",
         "category": "Website + App + Branding",
+        "industry": "Travel & Tourism",
         "description": "A complete tourism platform combining smart booking and destination discovery."
       },
       "wafr": {
         "title": "Wafr",
         "category": "Website + App + Branding",
+        "industry": "Food & Sustainability",
         "description": "A food waste reduction app connecting consumers with nearby deals."
       },
       "darlink": {
         "title": "DarLink",
         "category": "Website + App + Branding",
+        "industry": "Real Estate",
         "description": "A modern real estate platform seamlessly connecting buyers, sellers, and investors."
       },
       "nextgen": {
         "title": "NextGen",
         "category": "Website development",
+        "industry": "E-commerce",
         "description": "A modern e-commerce store with a seamless shopping experience and design that reflects product quality."
       }
     }
