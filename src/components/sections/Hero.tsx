@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
@@ -5,6 +6,7 @@ import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { fadeUp } from '@/hooks/useAnimationVariants'
 import { useTransparentImage } from '@/hooks/useTransparentImage'
+import { trackEvent } from '@/lib/analytics'
 import MascotSrc from '@/assets/images/logo-3d-alt.png'
 
 const marqueeKeys = ['web', 'apps', 'branding', 'uiux', 'automation', 'ai'] as const
@@ -14,6 +16,7 @@ export function Hero() {
   const isRTL = i18n.language === 'ar'
   const Arrow = isRTL ? ArrowLeft : ArrowRight
   const Mascot = useTransparentImage(MascotSrc)
+  const [marqueePaused, setMarqueePaused] = useState(false)
 
   return (
     <section className="relative flex min-h-[100svh] flex-col pt-24 pb-8 sm:pt-28">
@@ -55,13 +58,75 @@ export function Hero() {
               transition={{ delay: 0.15 }}
               className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:mt-10 lg:justify-start"
             >
-              <Button size="lg" href="#contact">
+              <Button size="lg" href="#contact" onClick={() => trackEvent('cta_click', { cta_location: 'hero', cta_text: t('hero.cta'), cta_type: 'primary' })}>
                 {t('hero.cta')}
-                <Arrow className="h-4 w-4" />
+                <Arrow className="h-4 w-4" aria-hidden="true" />
               </Button>
-              <Button variant="secondary" size="lg" href="#projects">
+              <Button variant="secondary" size="lg" href="#projects" onClick={() => trackEvent('cta_click', { cta_location: 'hero', cta_text: t('hero.ctaSecondary'), cta_type: 'secondary' })}>
                 {t('hero.ctaSecondary')}
               </Button>
+            </motion.div>
+
+            <motion.p
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.18 }}
+              className="mt-6 text-center text-[13px] text-[#71717A] lg:text-start"
+            >
+              {t('hero.trustStatement')}
+            </motion.p>
+
+            <motion.p
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.2 }}
+              className="mt-4 text-center text-[12px] text-[#A1A1AA] lg:text-start"
+            >
+              {t('hero.ctaMicro')}
+            </motion.p>
+
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.22 }}
+              className="mt-6 flex flex-wrap items-center justify-center gap-6 lg:justify-start"
+            >
+              <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
+                <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                {t('hero.trust.projects')}
+              </div>
+              <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
+                <span className="flex h-1.5 w-1.5 rounded-full bg-[#8B5CF6]" />
+                {t('hero.trust.experience')}
+              </div>
+              <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
+                <span className="flex h-1.5 w-1.5 rounded-full bg-amber-500" />
+                {t('hero.trust.clients')}
+              </div>
+            </motion.div>
+
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.22 }}
+              className="mt-5 flex flex-wrap items-center justify-center gap-6 lg:justify-start"
+            >
+              <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
+                <span className="flex h-1.5 w-1.5 rounded-full bg-sky-500" />
+                {t('hero.process.discovery')}
+              </div>
+              <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
+                <span className="flex h-1.5 w-1.5 rounded-full bg-sky-500" />
+                {t('hero.process.delivery')}
+              </div>
+              <div className="flex items-center gap-2 text-[13px] text-[#71717A]">
+                <span className="flex h-1.5 w-1.5 rounded-full bg-sky-500" />
+                {t('hero.process.support')}
+              </div>
             </motion.div>
           </div>
 
@@ -86,10 +151,15 @@ export function Hero() {
         </div>
       </Container>
 
-      <div className="mt-12 overflow-hidden border-t border-[#E4E4E7] py-6 sm:mt-16">
+      <div
+        className="mt-12 overflow-hidden border-t border-[#E4E4E7] py-6 sm:mt-16"
+        onMouseEnter={() => setMarqueePaused(true)}
+        onMouseLeave={() => setMarqueePaused(false)}
+      >
         <motion.div
-          animate={{ x: isRTL ? ['0%', '50%'] : ['0%', '-50%'] }}
-          transition={{ duration: 22, repeat: Infinity, ease: 'linear' }}
+          initial={false}
+          animate={marqueePaused ? { x: 0 } : { x: isRTL ? ['0%', '50%'] : ['0%', '-50%'] }}
+          transition={marqueePaused ? { duration: 0 } : { duration: 22, repeat: Infinity, ease: 'linear' }}
           className="flex w-max items-center gap-10 whitespace-nowrap"
         >
           {[...marqueeKeys, ...marqueeKeys, ...marqueeKeys, ...marqueeKeys].map((key, i) => (

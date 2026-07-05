@@ -4,6 +4,7 @@ import { fadeUp } from '@/hooks/useAnimationVariants'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
+import { trackEvent } from '@/lib/analytics'
 
 export function CTA() {
   const { t, i18n } = useTranslation()
@@ -26,9 +27,9 @@ export function CTA() {
             {t('cta.subtitle')}
           </p>
           <div className="mt-9 sm:mt-10">
-            <Button size="lg" href="mailto:massar.digital.studio@gmail.com">
+            <Button size="lg" href="mailto:massar.digital.studio@gmail.com" onClick={() => trackEvent('cta_click', { cta_location: 'cta_section', cta_text: t('cta.button') })}>
               {t('cta.button')}
-              <Arrow className="h-4 w-4" />
+              <Arrow className="h-4 w-4" aria-hidden="true" />
             </Button>
           </div>
         </motion.div>

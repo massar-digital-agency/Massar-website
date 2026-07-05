@@ -1,24 +1,46 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useDirection } from '@/hooks/useDirection'
+import { useCookieConsent } from '@/hooks/useCookieConsent'
+import { SEOHead } from '@/components/layout/SEOHead'
+import { StructuredData } from '@/components/layout/StructuredData'
 import { LoadingScreen } from '@/components/layout/LoadingScreen'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { FloatingContact } from '@/components/layout/FloatingContact'
+import { CookieBanner } from '@/components/layout/CookieBanner'
+import { PrivacyPolicy } from '@/components/legal/PrivacyPolicy'
+import { TermsOfService } from '@/components/legal/TermsOfService'
+import { CookiePolicy } from '@/components/legal/CookiePolicy'
 import { Hero } from '@/components/sections/Hero'
 import { TrustedBy } from '@/components/sections/TrustedBy'
 import { Services } from '@/components/sections/Services'
 import { WhyUs } from '@/components/sections/WhyUs'
 import { Process } from '@/components/sections/Process'
 import { Projects } from '@/components/sections/Projects'
+import { Pricing } from '@/components/sections/Pricing'
+import { Testimonials } from '@/components/sections/Testimonials'
+import { Results } from '@/components/sections/Results'
 import { FAQ } from '@/components/sections/FAQ'
-import { CTA } from '@/components/sections/CTA'
+import { Contact } from '@/components/sections/Contact'
+import { CaseStudyPage } from '@/components/case-studies/CaseStudyPage'
+import { AboutPage } from '@/components/sections/AboutPage'
+import { trackPageView } from '@/lib/analytics'
+import { useScrollDepth } from '@/hooks/useScrollDepth'
+import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom'
 
-export default function App() {
-  useDirection()
+function HomePage() {
+  const { i18n } = useTranslation()
   const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    trackPageView('/', 'Massar Digital Studio')
+  }, [i18n.language])
 
   return (
     <>
+      <SEOHead />
+      <StructuredData />
       {loading && <LoadingScreen onFinish={() => setLoading(false)} />}
       <Navbar />
       <main>
@@ -27,12 +49,62 @@ export default function App() {
         <Services />
         <WhyUs />
         <Process />
+        <Testimonials />
+        <Results />
         <Projects />
+        <Pricing />
         <FAQ />
-        <CTA />
+        <Contact />
       </main>
       <Footer />
       <FloatingContact />
+      <CookieBanner consent={useCookieConsent()} />
     </>
   )
+}
+
+function LegalWrapper({ page }: { page: string }) {
+  const ComponentMap: Record<string, React.ReactNode> = {
+    privacy: <PrivacyPolicy />,
+    terms: <TermsOfService />,
+    cookies: <CookiePolicy />,
+  }
+  return <>{ComponentMap[page] ?? null}</>
+}
+
+export default function App() {
+  useDirection()
+  const consent = useCookieConsent()
+  const [loading, setLoading] = useState(true)
+  const [activeCaseStudy, setActiveCaseStudy] = useState<string | null>(null)
+
+  useScrollDepth()
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/privacy" element={<LegalWrapper page="privacy" />} />
+        <Route path="/terms" element={<LegalWrapper page="terms" />} />
+        <Route path="/cookies" element={<LegalWrapper page="cookies" />} />
+        <Route
+          path="/case-studies/:slug"
+          element={<CaseStudyPageWrapper setLoading={setLoading} setActiveCaseStudy={setActiveCaseStudy} />}
+        />
+      </Routes>
+      <FloatingContact />
+      <CookieBanner consent={consent} />
+    </BrowserRouter>
+  )
+}
+
+function CaseStudyPageWrapper({ setLoading, setActiveCaseStudy }: { setLoading: (v: boolean) => void; setActiveCaseStudy: (s: string | null) => void }) {
+  const { slug } = useParams<{ slug: string }>()
+  useEffect(() => {
+    setActiveCaseStudy(slug || null)
+    setLoading(false)
+    trackPageView(`/case-studies/${slug}`, `${slug} - Massar Digital Studio`)
+  }, [slug])
+  return <CaseStudyPage key={slug} slug={slug as string} />
 }

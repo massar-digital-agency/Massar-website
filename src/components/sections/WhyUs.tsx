@@ -57,7 +57,7 @@ export function WhyUs() {
                 className="flex gap-5 rounded-2xl border border-[#E4E4E7] bg-[#FAFAF9] p-6 sm:p-7"
               >
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-[#8B5CF6] border border-[#E4E4E7]">
-                  <Icon className="h-5 w-5" strokeWidth={1.75} />
+                  <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />
                 </div>
                 <div>
                   <h3 className="text-[16px] font-semibold text-[#0A0A0A]">

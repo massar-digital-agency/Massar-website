@@ -4,11 +4,13 @@ import { fadeUp, stagger } from '@/hooks/useAnimationVariants'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 import { SectionHeader } from '@/components/ui/SectionHeader'
+import { Button } from '@/components/ui/Button'
 import {
   Globe, Smartphone, Palette, Layers,
-  Zap, Brain,
+  Zap, Brain, ArrowRight,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
+import { trackEvent } from '@/lib/analytics'
 
 const serviceKeys = ['web', 'apps', 'branding', 'uiux', 'automation', 'ai'] as const
 
@@ -45,10 +47,11 @@ export function Services() {
               <motion.div
                 key={key}
                 variants={fadeUp}
-                className="group rounded-2xl border border-[#E4E4E7] bg-white p-7 sm:p-8 transition-all duration-300 hover:border-[#D4D4D8] hover:shadow-lg hover:shadow-black/[0.04]"
+                onClick={() => trackEvent('service_card_click', { service: t(`services.items.${key}.title`) })}
+                className="group rounded-2xl border border-[#E4E4E7] bg-white p-7 sm:p-8 transition-all duration-300 hover:border-[#D4D4D8] hover:shadow-lg hover:shadow-black/[0.04] cursor-pointer"
               >
                 <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-[#F3F0FF] text-[#8B5CF6]">
-                  <Icon className="h-5 w-5" strokeWidth={1.75} />
+                  <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />
                 </div>
                 <h3 className="mb-2 text-[16px] font-semibold text-[#0A0A0A] sm:text-[17px]">
                   {t(`services.items.${key}.title`)}
@@ -59,6 +62,22 @@ export function Services() {
               </motion.div>
             )
           })}
+        </motion.div>
+
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-60px' }}
+          className="mt-12 sm:mt-16 text-center"
+        >
+          <p className="text-[14px] leading-[1.7] text-[#71717A] mb-5 sm:text-[15px]">
+            {t('services.ctaMicro')}
+          </p>
+          <Button size="lg" href="#contact" onClick={() => trackEvent('cta_click', { cta_location: 'services', cta_text: t('services.cta') })}>
+            {t('services.cta')}
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Button>
         </motion.div>
       </Container>
     </Section>

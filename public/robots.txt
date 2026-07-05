@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+
+# Crawl-delay for polite bots (optional)
+# Crawl-delay: 1
+
+Sitemap: https://massardigital.com/sitemap.xml

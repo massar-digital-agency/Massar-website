@@ -1,21 +1,51 @@
 {
+  "seo": {
+    "title": "Massar Digital Studio | Agence web & digitale en Algérie",
+    "description": "Massar Digital Studio est une agence digitale spécialisée en Algérie. Développement web, applications mobiles, branding, design UI/UX et solutions IA. Des expériences digitales qui font grandir votre entreprise.",
+    "ogTitle": "Massar Digital Studio | Agence web & digitale en Algérie",
+    "ogDescription": "Des expériences digitales sur mesure — sites web, apps mobiles, branding, UI/UX et IA. Basée en Algérie, au service des entreprises du monde entier.",
+    "twitterTitle": "Massar Digital Studio | Agence digitale Algérie"
+  },
   "nav": {
     "services": "Services",
     "projects": "Projets",
+    "pricing": "Tarifs",
     "about": "À propos",
     "contact": "Contact",
-    "cta": "Démarrer un projet"
+    "cta": "Démarrer votre projet",
+    "faq": "FAQ",
+    "ctaMicro": "Appel découverte gratuit • Sans engagement • Réponse sous 24h"
   },
   "hero": {
-    "badge": "Studio digital spécialisé",
-    "title": "Nous créons des expériences digitales",
-    "titleAccent": "qui font grandir votre business.",
-    "subtitle": "Nous concevons et développons des sites, applications et identités visuelles qui reflètent le professionnalisme de votre marque et convertissent les visiteurs en clients.",
+    "badge": "Studio digital — Algérie",
+    "title": "Des produits digitaux stratégiques",
+    "titleAccent": "pour une croissance mesurable.",
+    "subtitle": "Nous commençons par vos objectifs, pas par un template. Grâce à la stratégie, un travail soigné et une livraison transparente, nous créons des sites, applications et identités visuelles qui transforment les visiteurs en clients et les idées en croissance.",
+    "trustStatement": "Approuvé par Journeya, DarLink, et des entreprises à travers l'Algérie.",
     "cta": "Démarrer votre projet",
-    "ctaSecondary": "Voir nos réalisations"
+    "ctaMicro": "Appel découverte gratuit de 15 min • Sans engagement • Réponse sous 24h",
+    "ctaSecondary": "Voir nos réalisations",
+    "trust": {
+      "projects": "15+ Projets",
+      "experience": "3+ Années",
+      "clients": "10+ Clients"
+    },
+    "process": {
+      "discovery": "Séance découverte gratuite",
+      "delivery": "Livraison sous 2–12 semaines",
+      "support": "Support continu"
+    }
   },
   "trusted": {
-    "title": "Conçu pour les entreprises ambitieuses"
+    "title": "Approuvé par des entreprises innovantes",
+    "logos": {
+      "placeholder1": { "name": "TechFlow", "alt": "Logo TechFlow" },
+      "placeholder2": { "name": "NestCode", "alt": "Logo NestCode" },
+      "placeholder3": { "name": "BrightPath", "alt": "Logo BrightPath" },
+      "placeholder4": { "name": "DataSphere", "alt": "Logo DataSphere" },
+      "placeholder5": { "name": "CloudPulse", "alt": "Logo CloudPulse" },
+      "placeholder6": { "name": "VertexLab", "alt": "Logo VertexLab" }
+    }
   },
   "services": {
     "label": "Nos services",
@@ -46,7 +76,9 @@
         "title": "Solutions IA",
         "description": "Intégrez l'intelligence artificielle dans vos opérations pour des décisions plus rapides et plus éclairées."
       }
-    }
+    },
+    "cta": "Transformez l'un de ces services en votre prochain projet",
+    "ctaMicro": "Nous discuterons de vos objectifs, du périmètre et vous fournirons un devis transparent — sans engagement."
   },
   "why": {
     "label": "Pourquoi Massar ?",
@@ -77,13 +109,17 @@
       "develop": { "title": "Développement", "description": "Construire des solutions techniques robustes avec les standards actuels." },
       "launch": { "title": "Lancement", "description": "Déployer votre projet après des tests rigoureux pour garantir la qualité." },
       "support": { "title": "Support", "description": "Fournir un support continu et des mises à jour pour une croissance durable." }
-    }
+    },
+    "cta": "Prêt à démarrer votre projet ?",
+    "ctaMicro": "La plupart des projets passent de la découverte au lancement en 2 à 12 semaines selon le périmètre."
   },
   "projects": {
     "label": "Nos réalisations",
     "title": "Des projets construits avec soin",
     "subtitle": "Chaque projet est le fruit d'une collaboration étroite avec nos clients et d'une attention profonde aux détails.",
     "viewProject": "Voir le projet",
+    "cta": "Vous avez un projet en tête ?",
+    "ctaMicro": "Parlez-nous de vos objectifs et nous vous fournirons une proposition sur mesure sous 24 heures.",
     "items": {
       "journeya": {
         "title": "Journeya",
@@ -107,9 +143,448 @@
       }
     }
   },
+  "pricing": {
+    "label": "Tarifs",
+    "title": "Des tarifs transparents pour chaque projet",
+    "subtitle": "Choisissez le forfait qui correspond à vos besoins, ou demandez un devis personnalisé pour les projets plus complexes.",
+    "trust": {
+      "projects": "Projets réalisés",
+      "satisfaction": "Satisfaction client",
+      "response": "Délai de réponse estimé"
+    },
+    "packages": {
+      "popular": "Le plus populaire",
+      "fromLabel": "À partir de",
+      "timelineLabel": "Délai estimé",
+      "includesLabel": "Ce qui est inclus",
+      "addonsLabel": "Options supplémentaires",
+      "todoWarning": "Mettez à jour ces prix pour refléter vos tarifs réels avant la mise en ligne.",
+      "cta": "Commencer",
+      "ctaCustom": "Demander un devis personnalisé",
+      "idealLabel": "Idéal pour",
+      "website": {
+        "name": "Forfait Site Web",
+        "price": "2 500 $",
+        "description": "Un site professionnel et responsive, construit avec les technologies modernes pour établir votre présence en ligne.",
+        "ideal": "PME, freelances et start-ups",
+        "timeline": "2–3 semaines",
+        "features": [
+          "Jusqu'à 5 pages",
+          "Design responsive (mobile + tablette + desktop)",
+          "SEO de base (balises, sitemap, vitesse)",
+          "Formulaire de contact avec validation",
+          "Optimisation des performances (90+ Lighthouse)",
+          "Configuration analytics de base"
+        ],
+        "addons": [
+          "Système de gestion de contenu (CMS) — +500 $",
+          "Section blog/actualités — +400 $",
+          "Intégration e-commerce — à partir de 2 000 $",
+          "Animations personnalisées — à partir de 300 $"
+        ]
+      },
+      "growth": {
+        "name": "Forfait Croissance",
+        "price": "5 000 $",
+        "description": "Un site complet avec CMS, fonctionnalités avancées et tout ce qu'il faut pour développer votre présence en ligne.",
+        "ideal": "Entreprises en croissance, sociétés de services et start-ups",
+        "timeline": "3–5 semaines",
+        "features": [
+          "Jusqu'à 10 pages",
+          "Tout ce qui est inclus dans le Forfait Site Web",
+          "Système de gestion de contenu (CMS)",
+          "Animations et transitions avancées",
+          "Section blog / actualités",
+          "Configuration Google Analytics + Search Console",
+          "Conformité cookies et RGPD"
+        ],
+        "addons": [
+          "Intégration e-commerce — à partir de 2 000 $",
+          "Support multilingue — +800 $",
+          "Développement de fonctionnalités sur mesure — sur devis",
+          "Forfait maintenance (mensuel) — à partir de 150 $/mois"
+        ]
+      },
+      "custom": {
+        "name": "Projet Sur Mesure",
+        "price": "10 000 $",
+        "description": "Une application web, plateforme ou produit numérique entièrement personnalisé selon vos besoins uniques.",
+        "ideal": "SaaS, places de marché et entreprises",
+        "timeline": "6–12 semaines",
+        "features": [
+          "Design UI/UX personnalisé de zéro",
+          "Développement full-stack (frontend + backend)",
+          "Conception et optimisation de base de données",
+          "Authentification et autorisation des utilisateurs",
+          "Tableau de bord admin avec analytics",
+          "Intégrations API (paiement, CRM, etc.)",
+          "Tests de charge et audit de sécurité",
+          "Déploiement et pipeline CI/CD"
+        ],
+        "addons": [
+          "Développement d'application mobile — sur devis",
+          "Intégration IA / ML — sur devis",
+          "Extension d'équipe dédiée — sur devis",
+          "Maintenance et support continus — sur devis"
+        ]
+      }
+    },
+    "comparison": {
+      "label": "Comparaison",
+      "title": "Comparez les forfaits côte à côte",
+      "subtitle": "Chaque forfait est conçu pour un besoin spécifique. Trouvez celui qui correspond le mieux à votre projet.",
+      "headers": {
+        "feature": "Fonctionnalité"
+      },
+      "features": [
+        { "feature": "Pages / Routes", "starter": "Jusqu'à 5", "growth": "Jusqu'à 10", "custom": "Illimité" },
+        { "feature": "Design Responsive", "starter": "✓", "growth": "✓", "custom": "✓" },
+        { "feature": "Optimisation SEO", "starter": "De base", "growth": "Avancé", "custom": "Avancé" },
+        { "feature": "Gestion de Contenu", "starter": "—", "growth": "✓", "custom": "✓" },
+        { "feature": "Design Personnalisé", "starter": "Templates", "growth": "Personnalisé", "custom": "Entièrement sur mesure" },
+        { "feature": "Animations", "starter": "De base", "growth": "Avancées", "custom": "Sur mesure" },
+        { "feature": "Configuration Analytics", "starter": "De base", "growth": "Avancé", "custom": "Sur mesure" },
+        { "feature": "Intégration CMS", "starter": "—", "growth": "✓", "custom": "✓" },
+        { "feature": "E-commerce", "starter": "Option", "growth": "Option", "custom": "Inclus" },
+        { "feature": "Comptes Utilisateurs", "starter": "—", "growth": "—", "custom": "✓" },
+        { "feature": "Intégrations API", "starter": "—", "growth": "—", "custom": "✓" },
+        { "feature": "Tableau de Bord Admin", "starter": "—", "growth": "—", "custom": "✓" },
+        { "feature": "Objectif Performance", "starter": "90+", "growth": "95+", "custom": "95+" },
+        { "feature": "Audit de Sécurité", "starter": "De base", "growth": "Standard", "custom": "Avancé" },
+        { "feature": "Révisions Design", "starter": "2 séries", "growth": "3 séries", "custom": "Selon périmètre" },
+        { "feature": "Déploiement", "starter": "✓", "growth": "✓", "custom": "✓" },
+        { "feature": "Support Post-lancement", "starter": "2 semaines", "growth": "1 mois", "custom": "Sur mesure" },
+        { "feature": "Délai de réalisation", "starter": "2–3 sem.", "growth": "3–5 sem.", "custom": "6–12 sem." }
+      ]
+    },
+    "custom": {
+      "label": "Projet Sur Mesure",
+      "title": "Vous avez un projet unique ? Construisons-le ensemble.",
+      "description": "Tous les projets ne rentrent pas dans un forfait prédéfini. Si votre projet nécessite une approche sur mesure, nous proposons des devis personnalisés selon vos besoins spécifiques.",
+      "factors": [
+        "Intégrations complexes avec des API tierces ou des systèmes existants",
+        "Fonctionnalités avancées au-delà des standards",
+        "Sécurité, conformité et performance de niveau entreprise",
+        "Livraison multi-plateforme (web + mobile + desktop)",
+        "Partenariat à long terme avec développement et support continus",
+        "Traitement de données à grande échelle, IA/ML ou automatisation"
+      ],
+      "ctaSubtitle": "Décrivez votre projet et nous vous répondrons sous 24 heures avec une proposition détaillée.",
+      "cta": "Demander un devis",
+      "ctaSchedule": "Réserver un appel découverte"
+    },
+    "testimonial": {
+      "text": "Nous avons choisi Massar pour le développement de notre plateforme et la transparence des prix a été une bouffée d'air frais. Ils ont livré exactement ce qui était promis, dans les temps et dans le budget. Le support continu a été exceptionnel.",
+      "author": "Nom du client",
+      "role": "Entreprise — Fonction",
+      "initials": "NC"
+    },
+    "faq": {
+      "label": "FAQ Tarifs",
+      "title": "Questions fréquentes sur les tarifs",
+      "moreQuestions": "Encore des questions ?",
+      "contactLink": "Contactez-nous",
+      "items": [
+        {
+          "question": "Pourquoi chaque projet n'a-t-il pas le même prix ?",
+          "answer": "Chaque projet est unique par sa portée, sa complexité et ses exigences. Un site vitrine simple nécessite moins de temps et de ressources qu'une application web personnalisée avec comptes utilisateurs et intégrations API. Nos prix reflètent l'effort réel nécessaire pour fournir un travail de qualité."
+        },
+        {
+          "question": "Qu'est-ce qui est inclus dans le prix indiqué ?",
+          "answer": "Nos devis couvrent la stratégie, le design, le développement, les tests et le déploiement. Nous sommes transparents sur ce qui est inclus et ce qui ne l'est pas, pour éviter les surprises. Chaque proposition comprend une répartition claire des livrables, du calendrier et du plan de paiement."
+        },
+        {
+          "question": "Comment sont gérés les paiements ?",
+          "answer": "Nous travaillons généralement avec un paiement échelonné selon les jalons du projet. Un acompte est requis pour commencer, suivi de paiements aux étapes clés. Le solde final est dû à l'achèvement et à l'approbation. Nous sommes flexibles sur les échéances."
+        },
+        {
+          "question": "Proposez-vous la maintenance après le lancement ?",
+          "answer": "Oui, nous proposons des forfaits de maintenance et de support continus. Cela inclut les mises à jour de sécurité, la surveillance des performances, les mises à jour de contenu et le support technique. Les options mensuelles commencent à 150 $/mois."
+        },
+        {
+          "question": "Les révisions sont-elles incluses ?",
+          "answer": "Oui, nos forfaits incluent un nombre défini de cycles de révision pendant la phase de design (généralement 2 à 3 cycles). Les révisions supplémentaires au-delà du périmètre convenu sont facturées à notre tarif horaire standard."
+        },
+        {
+          "question": "Combien de temps prend un projet typique ?",
+          "answer": "Les délais varient selon la complexité. Un site standard (2–3 semaines), un forfait croissance (3–5 semaines) et les applications personnalisées (6–12 semaines). Nous fournissons un calendrier détaillé dans chaque proposition."
+        },
+        {
+          "question": "Le prix peut-il changer après le début du projet ?",
+          "answer": "Une fois le périmètre convenu et le contrat signé, le prix reste fixe. Si vous demandez des fonctionnalités supplémentaires non prévues, nous discuterons de l'impact sur le calendrier et le budget avant de procéder."
+        },
+        {
+          "question": "Travaillez-vous avec des clients internationaux ?",
+          "answer": "Absolument. Nous travaillons avec des clients du monde entier et sommes à l'aise avec la collaboration à distance. Nous utilisons des outils modernes (Slack, WhatsApp, Notion, Figma) et sommes habitués à travailler dans différents fuseaux horaires."
+        }
+      ]
+    }
+  },
+  "testimonials": {
+    "label": "Témoignages",
+    "title": "Ce que disent nos clients",
+    "subtitle": "Nous collaborons avec des fondateurs et des équipes qui attachent de l'importance à la qualité. Voici ce qu'ils disent de notre collaboration.",
+    "items": [
+      {
+        "text": "Massar a livré notre application web en avance sur le calendrier et avec une attention incroyable aux détails. Leur communication a été impeccable tout au long.",
+        "author": "Amine Rahmani",
+        "role": "Co-fondateur",
+        "company": "Journeya",
+        "rating": 5
+      },
+      {
+        "text": "Travailler avec Massar a été un véritable tournant pour notre marque. Ils ont pris le temps de comprendre notre vision et l'ont traduite en une expérience numérique magnifique.",
+        "author": "Sarah Khelif",
+        "role": "CEO",
+        "company": "NestCode",
+        "rating": 5,
+        "placeholder": true
+      },
+      {
+        "text": "Massar a entièrement repensé notre plateforme. Le résultat a été une amélioration de 40% de l'engagement utilisateur et un look moderne qui reflète parfaitement nos valeurs.",
+        "author": "Mehdi Lounis",
+        "role": "Responsable Produit",
+        "company": "DataSphere",
+        "rating": 5,
+        "placeholder": true
+      }
+    ]
+  },
+  "results": {
+    "label": "Résultats",
+    "title": "Un impact mesurable, des résultats concrets",
+    "subtitle": "Nous construisons avec des objectifs business en tête. Chaque projet est conçu et mesuré pour la performance, l'engagement et la croissance.",
+    "items": [
+      {
+        "metric": "15+",
+        "label": "Projets Livrés",
+        "description": "En web, mobile, branding et IA"
+      },
+      {
+        "metric": "40%",
+        "label": "Amélioration d'engagement",
+        "description": "Amélioration de l'interaction utilisateur après le lancement",
+        "placeholder": true
+      },
+      {
+        "metric": "3+",
+        "label": "Années d'expérience",
+        "description": "Au service des clients en Algérie et au-delà"
+      },
+      {
+        "metric": "98%",
+        "label": "Satisfaction Client",
+        "description": "Basé sur les scores de feedback post-projet",
+        "placeholder": true
+      }
+    ],
+    "cta": "Voir les projets que nous avons livrés",
+    "ctaMicro": "Explorez des études de cas réelles avec défis, solutions et résultats mesurables."
+  },
+  "caseStudies": {
+    "label": "Études de cas",
+    "title": "Découvrez comment nous résolvons des problèmes concrets",
+    "subtitle": "Plongez au cœur des défis, solutions et résultats de nos projets préférés.",
+    "cta": "Un projet similaire en tête ?",
+    "ctaMicro": "Discutons de la façon dont nous pouvons vous aider à créer une expérience digitale qui génère des résultats concrets.",
+    "items": {
+      "journeya": {
+        "challenge": "Journeya avait besoin d'un écosystème numérique complet combinant plateforme de réservation, application mobile et identité de marque cohérente.",
+        "solution": "Nous avons conçu et développé une application web responsive avec réservation en temps réel, une application mobile et un système d'identité visuelle complet.",
+        "technologies": ["React", "Node.js", "Tailwind CSS", "Figma"],
+        "outcomes": "Lancé dans les délais avec une expérience de marque unifiée sur le web et le mobile."
+      },
+      "wafr": {
+        "challenge": "Wafr avait besoin d'une application mobile intuitive pour connecter les consommateurs aux offres alimentaires à proximité et réduire le gaspillage.",
+        "solution": "Nous avons construit une application mobile cross-platform avec géolocalisation, notifications en temps réel et un parcours d'inscription simplifié.",
+        "technologies": ["React Native", "Firebase", "Google Maps API"],
+        "outcomes": "Lancé avec succès avec des utilisateurs bêta à Alger."
+      },
+      "darlink": {
+        "challenge": "DarLink avait besoin d'une plateforme immobilière moderne connectant acheteurs, vendeurs et investisseurs sur le marché algérien.",
+        "solution": "Développement d'une plateforme web complète avec recherche avancée de propriétés, filtres et messagerie directe.",
+        "technologies": ["Next.js", "TypeScript", "PostgreSQL", "Stripe"],
+        "outcomes": "Plateforme lancée avec plus de 200 annonces immobilières."
+      },
+      "nextgen": {
+        "challenge": "NextGen souhaitait une boutique en ligne reflétant la qualité premium de ses produits avec une expérience d'achat fluide.",
+        "solution": "Création d'une solution e-commerce sur mesure avec pages produit optimisées et processus de paiement rapide.",
+        "technologies": ["Next.js", "Shopify", "Tailwind CSS", "Vercel"],
+        "outcomes": "Score de performance Lighthouse de 90+ et expérience d'achat alignée sur la marque."
+      }
+    }
+  },
+  "aboutPage": {
+    "seo": {
+      "title": "À propos | Massar Digital Studio | Agence web & digitale en Algérie",
+      "description": "Découvrez Massar Digital Studio — une agence digitale spécialisée en Algérie qui crée des sites web, apps mobiles, identités visuelles et solutions IA pour la croissance des entreprises."
+    },
+    "hero": {
+      "badge": "À propos",
+      "title": "Un studio digital",
+      "titleAccent": "bâti sur l'excellence et la confiance.",
+      "subtitle": "Nous sommes une petite équipe spécialisée basée en Algérie, qui crée des expériences digitales pour aider les entreprises à grandir. De la stratégie au design en passant par le développement — chaque projet est un partenariat.",
+      "cta": "Voir nos réalisations",
+      "ctaSecondary": "Démarrer un projet",
+      "subtitleMicro": "Développement orienté stratégie • Processus transparent • Réponse sous 24h"
+    },
+    "story": {
+      "title": "Notre histoire",
+      "intro": "Massar Digital Studio est né d'une conviction simple : les grandes expériences digitales doivent être construites avec stratégie, soin et transparence — pas avec des raccourcis.",
+      "paragraphs": [
+        "Nous avons commencé comme une petite équipe de designers et développeurs frustrés par le nombre d'agences qui livraient de beaux sites sans réellement aider les entreprises à se développer. Nous savions qu'il y avait une meilleure façon de faire.",
+        "Aujourd'hui, nous travaillons avec des startups, des entreprises en croissance et des sociétés établies en Algérie et au-delà. Chaque projet — site web, application mobile, identité de marque ou solution IA — suit la même philosophie : comprendre l'objectif d'abord, concevoir avec intention, et construire pour la performance.",
+        "Nous sommes fiers du travail accompli et des relations que nous avons bâties. Mais nous n'en sommes qu'au début."
+      ],
+      "note": "TODO: Ajouter la date de fondation vérifiée, les étapes clés et l'historique de l'entreprise",
+      "placeholder": true
+    },
+    "founder": {
+      "title": "Rencontrez le fondateur",
+      "subtitle": "Derrière chaque grande agence se cache quelqu'un qui a refusé de se contenter de la moyenne.",
+      "placeholder": true,
+      "placeholderNote": "TODO: Ajouter le nom, la photo, la biographie, l'expérience et le lien LinkedIn du fondateur"
+    },
+    "mission": {
+      "title": "Mission, vision & valeurs",
+      "subtitle": "Ces principes guident chaque décision et chaque projet que nous livrons.",
+      "mission": {
+        "label": "Notre mission",
+        "text": "Aider les entreprises à se développer en créant des expériences digitales stratégiquement solides, magnifiquement conçues et techniquement excellentes."
+      },
+      "vision": {
+        "label": "Notre vision",
+        "text": "Devenir le partenaire digital le plus fiable pour les entreprises en Algérie et au-delà — reconnu pour notre savoir-faire, notre transparence et nos résultats concrets."
+      },
+      "values": {
+        "label": "Valeurs fondamentales",
+        "items": [
+          {
+            "title": "L'excellence dans chaque détail",
+            "description": "Chaque pixel, chaque interaction, chaque ligne de code est intentionnelle. Nous ne prenons pas de raccourcis car votre réputation est la nôtre.",
+            "icon": "craft"
+          },
+          {
+            "title": "La stratégie avant tout",
+            "description": "Nous ne commençons jamais par le design ou le code. Nous commençons par comprendre vos objectifs, votre audience et votre marché — la bonne stratégie rend tout le reste plus facile.",
+            "icon": "strategy"
+          },
+          {
+            "title": "Transparence radicale",
+            "description": "Pas de jargon, pas de frais cachés, pas de surprises. Nous communiquons clairement, partageons les progrès régulièrement et traitons votre budget comme le nôtre.",
+            "icon": "transparency"
+          },
+          {
+            "title": "La performance non négociable",
+            "description": "Un beau site qui charge lentement est un mauvais investissement. Nous construisons pour la vitesse, l'accessibilité et le SEO dès la première ligne de code.",
+            "icon": "performance"
+          },
+          {
+            "title": "Vision à long terme",
+            "description": "Nous construisons des partenariats, pas seulement des projets. Le meilleur travail émerge quand nous comprenons profondément votre entreprise — cela prend du temps et de la confiance.",
+            "icon": "reliability"
+          }
+        ]
+      }
+    },
+    "why": {
+      "title": "Pourquoi les clients nous choisissent",
+      "subtitle": "Nous ne prétendons pas être la plus grande agence. Mais nous travaillons dur pour être la plus fiable.",
+      "items": [
+        {
+          "title": "Approche stratégique",
+          "description": "Nous n'ouvrons pas Figma avant d'avoir compris vos objectifs commerciaux, votre public cible et votre paysage concurrentiel. Chaque décision de design est fondée sur la recherche."
+        },
+        {
+          "title": "Expertise technique moderne",
+          "description": "Nous construisons avec React, Next.js, TypeScript et Tailwind CSS — des technologies modernes qui offrent des résultats rapides, maintenables et évolutifs."
+        },
+        {
+          "title": "Obsession de la performance",
+          "description": "Nous visons des scores Lighthouse de 90+ sur chaque projet. La rapidité améliore l'expérience utilisateur, le référencement et les taux de conversion."
+        },
+        {
+          "title": "Communication claire et honnête",
+          "description": "Vous ne vous demanderez jamais où en est votre projet. Nous fournissons des mises à jour régulières via Slack ou WhatsApp, répondons en quelques heures et sommes toujours disponibles."
+        },
+        {
+          "title": "Accessibilité par défaut",
+          "description": "Nous construisons selon les normes WCAG 2.2 AA car un design inclusif est un bon design. Chaque projet prend en compte la navigation au clavier, les lecteurs d'écran et le contraste des couleurs."
+        },
+        {
+          "title": "Partenariat post-lancement",
+          "description": "Nous ne disparaissons pas après le lancement. Nous offrons un support continu, de la maintenance et de l'optimisation pour assurer la performance continue de votre présence digitale."
+        }
+      ]
+    },
+    "process": {
+      "title": "Comment nous travaillons",
+      "subtitle": "Un processus éprouvé qui accompagne votre projet de l'idée au lancement avec clarté et confiance.",
+      "note": "La section processus réutilise les 6 étapes existantes de la page d'accueil."
+    },
+    "team": {
+      "title": "Rencontrez l'équipe",
+      "subtitle": "Une petite équipe concentrée avec de grandes ambitions.",
+      "placeholder": true,
+      "placeholderNote": "TODO: Ajouter les profils des membres de l'équipe avec photos, rôles, bios et compétences",
+      "members": []
+    },
+    "achievements": {
+      "title": "Expérience & réalisations",
+      "subtitle": "Des chiffres qui reflètent notre engagement envers la qualité.",
+      "items": [
+        {
+          "metric": "15+",
+          "label": "Projets réalisés",
+          "description": "En web, mobile, branding et IA"
+        },
+        {
+          "metric": "3+",
+          "label": "Années d'expérience",
+          "description": "Au service des clients en Algérie et au-delà",
+          "placeholder": false
+        },
+        {
+          "metric": "10+",
+          "label": "Clients satisfaits",
+          "description": "Des startups aux entreprises établies",
+          "placeholder": false
+        },
+        {
+          "metric": "98%",
+          "label": "Satisfaction client",
+          "description": "Basé sur les retours post-projet",
+          "placeholder": true
+        }
+      ],
+      "placeholderNote": "TODO: Ajouter les récompenses, certifications et réalisations vérifiées",
+      "hasPlaceholders": true
+    },
+    "techStack": {
+      "title": "Notre stack technologique",
+      "subtitle": "Des outils modernes pour construire des produits digitaux rapides, fiables et évolutifs.",
+      "categories": [
+        { "label": "Frontend", "items": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"] },
+        { "label": "Backend", "items": ["Node.js", "Firebase", "Supabase", "REST APIs", "GraphQL"] },
+        { "label": "Base de données", "items": ["PostgreSQL", "Firestore", "SQLite"] },
+        { "label": "Design", "items": ["Figma", "Adobe Creative Suite", "Prototyping"] },
+        { "label": "Déploiement", "items": ["Vercel", "Netlify", "Git", "CI/CD"] }
+      ],
+      "note": "TODO: Vérifier et enrichir la liste des technologies selon l'expérience réelle"
+    },
+    "cta": {
+      "title": "Prêt à collaborer ?",
+      "subtitle": "Parlez-nous de vos objectifs et nous vous fournirons une proposition personnalisée sous 24 heures. Aucun engagement, juste une conversation.",
+      "button": "Démarrer votre projet",
+      "buttonSecondary": "Voir nos réalisations",
+      "micro": "Appel découverte gratuit • Sans engagement • Réponse sous 24h"
+    }
+  },
   "faq": {
     "label": "FAQ",
     "title": "Tout ce que vous devez savoir",
+    "cta": "Encore des questions ?",
+    "ctaMicro": "Nous sommes là pour vous aider. Contactez-nous et nous vous répondrons sous 24 heures.",
     "items": [
       {
         "question": "Combien de temps faut-il pour créer un site professionnel ?",
@@ -134,14 +609,160 @@
     "subtitle": "Contactez-nous aujourd'hui et voyons ensemble comment nous pouvons vous aider.",
     "button": "Contactez-nous"
   },
+  "contact": {
+    "hero": {
+      "badge": "Démarrer un projet",
+      "title": "Créons quelque chose",
+      "titleAccent": "d'extraordinaire ensemble.",
+      "subtitle": "Vous avez une idée ou un projet en tête ? Remplissez le formulaire ou contactez-nous directement, et nous vous répondrons sous 24 heures."
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "name": "Nom Complet",
+      "namePlaceholder": "Jean Dupont",
+      "email": "E-mail Professionnel",
+      "company": "Nom de l'entreprise",
+      "website": "Site internet",
+      "service": "Service d'intérêt",
+      "serviceSelect": "Sélectionnez un service...",
+      "budget": "Budget estimé",
+      "budgetSelect": "Sélectionnez une tranche budgétaire...",
+      "budgets": {
+        "under_5k": "Moins de 5 000 $",
+        "5k_10k": "5 000 $ - 10 000 $",
+        "10k_25k": "10 000 $ - 25 000 $",
+        "above_25k": "Plus de 25 000 $"
+      },
+      "description": "Détails du projet",
+      "descriptionPlaceholder": "Parlez-nous de votre projet, de vos objectifs et de vos délais...",
+      "submit": "Envoyer le brief projet",
+      "submitMicro": "Nous examinerons votre projet et vous répondrons sous 24 heures avec une proposition sur mesure.",
+      "submitting": "Envoi du brief...",
+      "successTitle": "Message envoyé !",
+      "successDesc": "Merci de nous avoir contactés. Nous allons examiner les détails de votre projet et vous recontacter rapidement.",
+      "errorTitle": "Une erreur est survenue",
+      "errorDesc": "Veuillez réessayer plus tard ou nous envoyer un e-mail directement.",
+      "errors": {
+        "name": "Le nom est requis",
+        "email": "L'adresse e-mail est requise",
+        "emailInvalid": "Veuillez entrer une adresse e-mail valide",
+        "service": "Veuillez sélectionner un service",
+        "description": "Veuillez décrire votre projet"
+      }
+    },
+    "info": {
+      "emailLabel": "Écrivez-nous",
+      "phoneLabel": "Appel ou WhatsApp",
+      "locationLabel": "Notre Bureau",
+      "hoursLabel": "Heures d'ouverture",
+      "hoursVal": "Dimanche - Jeudi, 9h00 - 18h00",
+      "responseExpected": "Réponse attendue sous 24 heures"
+    },
+    "social": {
+      "testimonialText": "Massar a livré notre application web en avance sur le calendrier et avec une attention incroyable aux détails. Leur communication a été impeccable tout au long.",
+      "testimonialAuthor": "Amine Rahmani",
+      "testimonialCompany": "Co-fondateur, Journeya",
+      "projectsLabel": "Projets Réalisés",
+      "experienceLabel": "Années d'expérience"
+    },
+    "why": {
+      "label": "Pourquoi Massar",
+      "title": "Un partenariat orienté vers votre croissance",
+      "items": {
+        "communication": {
+          "title": "Communication Ultra-Rapide",
+          "description": "Pas d'attente interminable. Nous fournissons des mises à jour via Slack/WhatsApp et sommes toujours joignables."
+        },
+        "process": {
+          "title": "Processus Transparent",
+          "description": "Suivez chaque jalon et étape de l'onboarding jusqu'au lancement de manière interactive."
+        },
+        "outcomes": {
+          "title": "La Performance avant tout",
+          "description": "Nous développons avec des objectifs clairs de conversion business, d'optimisation de vitesse et de croissance."
+        }
+      }
+    },
+    "cta": {
+      "title": "Vous préférez un appel vidéo direct ?",
+      "subtitle": "Planifiez un appel de découverte de 15 minutes directement sur notre calendrier pour discuter de vos objectifs et de la façon dont nous pouvons vous aider.",
+      "schedule": "Réserver une session gratuite"
+    }
+  },
   "footer": {
     "description": "Studio digital spécialisé dans la création d'expériences digitales qui aident les entreprises à grandir.",
-    "navigation": "Navigation",
-    "contact": "Contact",
-    "followUs": "Suivez-nous",
+    "companyHeading": "Entreprise",
+    "resourcesHeading": "Ressources",
+    "legalHeading": "Mentions légales",
+    "socialHeading": "Réseaux sociaux",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "process": "Notre processus",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "cookies": "Politique des cookies",
+    "hours": "Dim – Jeu, 9h00 – 18h00",
     "rights": "Tous droits réservés",
-    "location": "Algérie",
     "email": "massar.digital.studio@gmail.com",
-    "phone": "+213 555 123 456"
+    "phone": "+213 555 123 456",
+    "location": "Algérie",
+    "ctaPrimary": "Réserver un appel découverte",
+    "ctaSecondary": "Demander un devis",
+    "badges": {
+      "responsive": "Design Responsive",
+      "secure": "Sécurité SSL",
+      "performance": "Performances Optimisées"
+    },
+    "social": {
+      "instagram": "https://www.instagram.com/massar.digital.studio",
+      "linkedin": "#",
+      "github": "#",
+      "behance": "#",
+      "dribbble": "#"
+    }
+  },
+  "cookieBanner": {
+    "title": "Consentement aux Cookies",
+    "description": "Nous utilisons des cookies et technologies similaires pour améliorer votre expérience de navigation, analyser le trafic et personnaliser le contenu. Choisissez vos préférences ci-dessous.",
+    "acceptAll": "Tout Accepter",
+    "rejectAll": "Refuser les Non-Essentiels",
+    "managePrefs": "Gérer les Préférences",
+    "prefsTitle": "Gérer les Préférences de Cookies",
+    "prefsDesc": "Sélectionnez les catégories de cookies que vous souhaitez autoriser. Les cookies essentiels sont toujours activés.",
+    "savePrefs": "Enregistrer les Préférences",
+    "essentialLabel": "Essentiel",
+    "essentialDesc": "Nécessaire au fonctionnement de base du site. Ils ne peuvent pas être désactivés.",
+    "analyticsLabel": "Analytique",
+    "analyticsDesc": "Nous aident à comprendre comment les visiteurs interagissent avec notre site en collectant des données anonymes.",
+    "functionalLabel": "Fonctionnel",
+    "functionalDesc": "Mémorisent vos préférences et paramètres linguistiques pour offrir une expérience personnalisée.",
+    "marketingLabel": "Marketing",
+    "marketingDesc": "Utilisés pour suivre vos habitudes de navigation à des fins publicitaires ciblées.",
+    "alwaysActive": "Toujours Actif",
+    "active": "Actif",
+    "close": "Fermer la bannière de cookies",
+    "moreInfo": "Pour plus d'informations, consultez notre",
+    "privacyLink": "Politique de Confidentialité",
+    "cookiesLink": "Politique de Cookies"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Politique de Confidentialité | Massar Digital Studio",
+      "description": "Politique de Confidentialité de Massar Digital Studio — comment nous collectons, utilisons et protégeons vos informations personnelles.",
+      "ogTitle": "Politique de Confidentialité | Massar Digital Studio",
+      "ogDescription": "Découvrez comment Massar Digital Studio collecte, utilise et protège vos informations personnelles."
+    },
+    "terms": {
+      "title": "Conditions d'Utilisation | Massar Digital Studio",
+      "description": "Conditions d'Utilisation de Massar Digital Studio — les conditions régissant l'utilisation de notre site web et de nos services.",
+      "ogTitle": "Conditions d'Utilisation | Massar Digital Studio",
+      "ogDescription": "Lisez les conditions d'utilisation de Massar Digital Studio."
+    },
+    "cookies": {
+      "title": "Politique de Cookies | Massar Digital Studio",
+      "description": "Politique de Cookies de Massar Digital Studio — comment nous utilisons les cookies et technologies de suivi.",
+      "ogTitle": "Politique de Cookies | Massar Digital Studio",
+      "ogDescription": "Découvrez comment Massar Digital Studio utilise les cookies sur notre site web."
+    }
   }
 }

@@ -1,10 +1,12 @@
 import { Fragment, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
+import { ArrowRight } from 'lucide-react'
 import { fadeUp } from '@/hooks/useAnimationVariants'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 import { SectionHeader } from '@/components/ui/SectionHeader'
+import { Button } from '@/components/ui/Button'
 
 const stepKeys = ['discover', 'plan', 'design', 'develop', 'launch', 'support'] as const
 
@@ -26,7 +28,11 @@ function Node({
     <div
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
-      className="flex flex-col items-center text-center lg:w-[150px] lg:shrink-0"
+      onFocus={onEnter}
+      onBlur={onLeave}
+      tabIndex={0}
+      role="tabpanel"
+      className="flex flex-col items-center text-center lg:w-[150px] lg:shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded-xl"
     >
       <motion.div
         animate={{
@@ -85,7 +91,7 @@ export function Process() {
     hovered === segmentIndex || hovered === segmentIndex + 1
 
   return (
-    <Section>
+    <Section id="process">
       <Container>
         <SectionHeader
           label={t('process.label')}
@@ -124,7 +130,11 @@ export function Process() {
               <div
                 onMouseEnter={() => setHovered(i)}
                 onMouseLeave={() => setHovered(null)}
-                className="flex items-start gap-5"
+                onFocus={() => setHovered(i)}
+                onBlur={() => setHovered(null)}
+                tabIndex={0}
+                role="tabpanel"
+                className="flex items-start gap-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded-xl"
               >
                 <motion.div
                   animate={{
@@ -148,6 +158,22 @@ export function Process() {
               {i < stepKeys.length - 1 && <VerticalConnector active={isLinkActive(i)} />}
             </Fragment>
           ))}
+        </motion.div>
+
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-60px' }}
+          className="mt-16 sm:mt-20 text-center"
+        >
+          <p className="text-[14px] leading-[1.7] text-[#71717A] mb-5 sm:text-[15px]">
+            {t('process.ctaMicro')}
+          </p>
+          <Button size="lg" href="#contact">
+            {t('process.cta')}
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Button>
         </motion.div>
       </Container>
     </Section>
