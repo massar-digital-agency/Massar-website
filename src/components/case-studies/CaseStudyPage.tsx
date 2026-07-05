@@ -45,7 +45,7 @@ export function CaseStudyPage({ slug }: CaseStudyPageProps) {
     <>
       <CaseStudySEO slug={slug} />
       <Navbar />
-      <main>
+      <main id="main-content">
         <CaseStudyHero slug={slug} color={color} />
         <CaseStudyTOC />
         <CaseStudyOverview slug={slug} />

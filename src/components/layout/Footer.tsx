@@ -106,7 +106,7 @@ export function Footer() {
                 key={key}
                 type="button"
                 onClick={handleCompanyClick(key)}
-                className="group text-[14px] text-[#71717A] w-fit text-left"
+                className="group text-[14px] text-[#71717A] w-fit text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded"
               >
                 <HoverSlideText>{t(`nav.${key}`)}</HoverSlideText>
               </button>
@@ -122,7 +122,7 @@ export function Footer() {
                     key={key}
                     href="#"
                     onClick={() => trackEvent('footer_link_click', { link_type: 'resource', link_text: 'blog' })}
-                    className="group text-[14px] text-[#71717A] w-fit"
+                    className="group text-[14px] text-[#71717A] w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded"
                     aria-label={`${t('footer.blog')} (opens in new tab)`}
                   >
                     <HoverSlideText>{t('footer.blog')}</HoverSlideText>
@@ -134,7 +134,7 @@ export function Footer() {
                   key={key}
                   type="button"
                   onClick={handleResourceClick(key)}
-                  className="group text-[14px] text-[#71717A] w-fit text-left"
+                  className="group text-[14px] text-[#71717A] w-fit text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded"
                 >
                   <HoverSlideText>{t(`footer.${key}`)}</HoverSlideText>
                 </button>
@@ -153,7 +153,7 @@ export function Footer() {
                   trackEvent('footer_link_click', { link_type: 'legal', link_text: key })
                   navigateToLegalPage(key as 'privacy' | 'terms' | 'cookies')
                 }}
-                className="group text-[14px] text-[#71717A] w-fit"
+                className="group text-[14px] text-[#71717A] w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded"
               >
                 <HoverSlideText>{t(`footer.${key}`)}</HoverSlideText>
               </a>
@@ -170,7 +170,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackSocial(network)}
-                  className="group text-[14px] text-[#71717A] w-fit"
+                  className="group text-[14px] text-[#71717A] w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded"
                   aria-label={`${network.charAt(0).toUpperCase() + network.slice(1)} (opens in new tab)`}
                 >
                   <HoverSlideText>{network.charAt(0).toUpperCase() + network.slice(1)}</HoverSlideText>
@@ -181,7 +181,7 @@ export function Footer() {
               <a
                 href={`mailto:${email}`}
                 onClick={() => trackOutbound('email', email)}
-                className="flex items-center gap-2.5 text-[14px] text-[#71717A] transition-colors duration-200 hover:text-[#0A0A0A]"
+                className="flex items-center gap-2.5 text-[14px] text-[#71717A] transition-colors duration-200 hover:text-[#0A0A0A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded"
               >
                 <Mail className="h-4 w-4 shrink-0" aria-hidden="true" />
                 <span>{email}</span>
@@ -189,7 +189,7 @@ export function Footer() {
               <a
                 href={`tel:${phone}`}
                 onClick={() => trackOutbound('phone', phone)}
-                className="flex items-center gap-2.5 text-[14px] text-[#71717A] transition-colors duration-200 hover:text-[#0A0A0A]"
+                className="flex items-center gap-2.5 text-[14px] text-[#71717A] transition-colors duration-200 hover:text-[#0A0A0A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded"
               >
                 <Phone className="h-4 w-4 shrink-0" aria-hidden="true" />
                 <span dir="ltr">{phone}</span>

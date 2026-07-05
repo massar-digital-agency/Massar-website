@@ -600,7 +600,7 @@ function AboutContactInfo() {
                 {'href' in item && item.href ? (
                   <a
                     href={item.href}
-                    className="text-[14px] font-medium text-[#52525B] hover:text-[#8B5CF6] transition-colors underline-offset-2 hover:underline"
+                    className="text-[14px] font-medium text-[#52525B] hover:text-[#8B5CF6] transition-colors underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded"
                   >
                     {item.label}
                   </a>
@@ -728,7 +728,7 @@ export function AboutPage() {
     <>
       <AboutSEO />
       <Navbar />
-      <main>
+      <main id="main-content">
         <AboutHero />
         <AboutStory />
         <AboutFounder />

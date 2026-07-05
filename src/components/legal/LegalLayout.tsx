@@ -12,7 +12,7 @@ interface LegalLayoutProps {
 
 export function LegalLayout({ title, subtitle, children, lastUpdated }: LegalLayoutProps) {
   return (
-    <main className="pt-[72px]">
+    <main id="main-content" className="pt-[72px]">
       <article className="py-16 sm:py-20 lg:py-28">
         <Container narrow>
           <motion.div variants={fadeUp} initial="hidden" animate="visible">

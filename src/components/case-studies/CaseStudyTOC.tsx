@@ -65,7 +65,7 @@ export function CaseStudyTOC() {
             <a
               href={`#${section.id}`}
               onClick={handleClick(section.id)}
-              className={`group flex items-center gap-3 transition-all duration-200 ${
+              className={`group flex items-center gap-3 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded-lg ${
                 activeId === section.id ? 'opacity-100' : 'opacity-40 hover:opacity-70'
               }`}
               aria-current={activeId === section.id ? 'true' : undefined}
