@@ -6,6 +6,7 @@ import { useCookieConsent } from '@/hooks/useCookieConsent'
 import { SEOHead } from '@/components/layout/SEOHead'
 import { StructuredData } from '@/components/layout/StructuredData'
 import { LoadingScreen } from '@/components/layout/LoadingScreen'
+import { SkipNav } from '@/components/layout/SkipNav'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { FloatingContact } from '@/components/layout/FloatingContact'
@@ -59,7 +60,7 @@ function HomePage() {
       <StructuredData />
       {loading && <LoadingScreen onFinish={() => setLoading(false)} />}
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
         <TrustedBy />
         <Services />
@@ -96,6 +97,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
+      <SkipNav />
       <SEOHead />
       <Routes>
         <Route path="/" element={<HomePage />} />

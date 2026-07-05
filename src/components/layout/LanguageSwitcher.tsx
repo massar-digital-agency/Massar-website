@@ -10,7 +10,7 @@ const languages = [
 ] as const
 
 export function LanguageSwitcher() {
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
   const [open, setOpen] = useState(false)
   const [activeIndex, setActiveIndex] = useState(-1)
   const ref = useRef<HTMLDivElement>(null)
@@ -87,6 +87,7 @@ export function LanguageSwitcher() {
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-controls="language-listbox"
+        aria-label={t('languageSwitcher.ariaLabel', { defaultValue: 'Select language' })}
         aria-activedescendant={open && activeIndex >= 0 ? `language-option-${languages[activeIndex].code}` : undefined}
         onKeyDown={handleTriggerKeyDown}
         className="flex h-9 items-center gap-1.5 rounded-lg border border-[#E4E4E7] px-3 text-[13px] font-medium text-[#52525B] transition-all duration-200 hover:border-[#A1A1AA] hover:text-[#0A0A0A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2"

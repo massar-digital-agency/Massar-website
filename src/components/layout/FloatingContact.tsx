@@ -48,7 +48,7 @@ export function FloatingContact() {
           aria-label={external ? `${label} (opens in new tab)` : label}
           animate={{ y: [0, -6, 0] }}
           transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut', delay: i * 0.3 }}
-          className={`flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full text-white ${bg}`}
+          className={`flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full text-white ${bg} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2`}
         >
           {icon}
         </motion.a>

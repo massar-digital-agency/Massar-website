@@ -32,13 +32,13 @@ export function CaseStudyHero({ slug, color }: CaseStudyHeroProps) {
           <nav className="mb-8" aria-label="Breadcrumb">
             <ol className="flex items-center gap-2 text-[13px] text-[#52525B]">
               <li>
-                <button
-                  type="button"
-                  onClick={() => { navigateToSection('projects'); trackEvent('nav_click', { nav_section: 'projects', nav_label: t('projects.label') }) }}
-                  className="hover:text-[#8B5CF6] transition-colors underline-offset-2 hover:underline"
-                >
-                  {t('projects.label')}
-                </button>
+                  <button
+                    type="button"
+                    onClick={() => { navigateToSection('projects'); trackEvent('nav_click', { nav_section: 'projects', nav_label: t('projects.label') }) }}
+                    className="hover:text-[#8B5CF6] transition-colors underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded"
+                  >
+                    {t('projects.label')}
+                  </button>
               </li>
               <li aria-hidden="true" className="text-[#52525B]">/</li>
               <li className="text-[#0A0A0A] font-medium" aria-current="page">
@@ -82,7 +82,7 @@ export function CaseStudyHero({ slug, color }: CaseStudyHeroProps) {
           <div className="mt-10">
             <a
               href="#case-study-overview"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#0A0A0A] px-6 py-3 text-[14px] font-medium text-white transition-all duration-200 hover:bg-[#1A1A1A]"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#0A0A0A] px-6 py-3 text-[14px] font-medium text-white transition-all duration-200 hover:bg-[#1A1A1A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2"
             >
               {t('projects.viewProject')}
               <Arrow className="h-4 w-4" aria-hidden="true" />

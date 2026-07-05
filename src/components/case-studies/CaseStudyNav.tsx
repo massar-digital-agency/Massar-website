@@ -35,7 +35,7 @@ export function CaseStudyNav({ slug }: CaseStudyNavProps) {
                 <button
                   type="button"
                   onClick={() => { navigateToCaseStudy(prev); trackEvent('case_study_nav', { direction: 'previous', case_study: prev, label: t(`projects.items.${prev}.title`) }) }}
-                  className="group flex items-center gap-2 text-left"
+                  className="group flex items-center gap-2 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded-lg"
                   aria-label={`Previous project: ${t(`projects.items.${prev}.title`)}`}
                 >
                   <ArrowBack className="h-4 w-4 text-[#A1A1AA] transition-colors group-hover:text-[#8B5CF6]" aria-hidden="true" />
@@ -56,7 +56,7 @@ export function CaseStudyNav({ slug }: CaseStudyNavProps) {
             <button
               type="button"
               onClick={() => { navigateToSection('projects'); trackEvent('cta_click', { cta_location: 'case_study_nav', cta_text: 'View All Projects' }) }}
-              className="hidden sm:block text-[13px] font-medium text-[#71717A] hover:text-[#8B5CF6] transition-colors underline-offset-2 hover:underline whitespace-nowrap"
+              className="hidden sm:block text-[13px] font-medium text-[#71717A] hover:text-[#8B5CF6] transition-colors underline-offset-2 hover:underline whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded-lg"
             >
               {t('projects.viewProject')}
             </button>
@@ -66,7 +66,7 @@ export function CaseStudyNav({ slug }: CaseStudyNavProps) {
                 <button
                   type="button"
                   onClick={() => { navigateToCaseStudy(next); trackEvent('case_study_nav', { direction: 'next', case_study: next, label: t(`projects.items.${next}.title`) }) }}
-                  className="group flex items-center gap-2 text-right"
+                  className="group flex items-center gap-2 text-right focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded-lg"
                   aria-label={`Next project: ${t(`projects.items.${next}.title`)}`}
                 >
                   <div>

@@ -106,7 +106,7 @@ export function Navbar() {
                 key={key}
                 href={`#${key}`}
                 onClick={handleNavClick(key)}
-                className="group text-[14px] font-medium text-[#71717A]"
+                className="group text-[14px] font-medium text-[#71717A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded"
               >
                 <HoverSlideText>{t(`nav.${key}`)}</HoverSlideText>
               </a>
