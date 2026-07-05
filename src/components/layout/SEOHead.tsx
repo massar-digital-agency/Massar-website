@@ -3,6 +3,11 @@ import { useTranslation } from 'react-i18next'
 import { useLocation } from 'react-router-dom'
 import { SEO_CONFIG, HERO_MASCOT, getHreflangLinks } from '@/lib/seo'
 
+const RESOURCE_HINTS = [
+  { href: 'https://cdn.jsdelivr.net', rel: 'preconnect' as const },
+  { href: 'https://www.googletagmanager.com', rel: 'preconnect' as const, crossOrigin: 'anonymous' as const },
+] as const
+
 export function SEOHead() {
   const { i18n } = useTranslation()
   const lang = i18n.language
@@ -41,6 +46,13 @@ export function SEOHead() {
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content={SEO_CONFIG.twitterHandle} />
+
+      {RESOURCE_HINTS.map((hint) => (
+        <link key={hint.href} rel={hint.rel} href={hint.href} {...('crossOrigin' in hint ? { crossOrigin: hint.crossOrigin } : {})} />
+      ))}
+
+      <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+      <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
       {hreflangLinks.map((link) => (
         <link key={link.lang} rel="alternate" hrefLang={link.lang} href={link.href} />
