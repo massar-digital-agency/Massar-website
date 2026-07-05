@@ -96,6 +96,11 @@ video {
 }
 
 img[loading="lazy"] {
-  /* Ensure lazy images at least get a default sizing context before loading */
   content-visibility: auto;
+}
+
+@media (max-width: 639px) {
+  #main-content {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+  }
 }

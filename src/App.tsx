@@ -10,6 +10,7 @@ import { SkipNav } from '@/components/layout/SkipNav'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { FloatingContact } from '@/components/layout/FloatingContact'
+import { MobileStickyCTA } from '@/components/layout/MobileStickyCTA'
 import { CookieBanner } from '@/components/layout/CookieBanner'
 import { PrivacyPolicy } from '@/components/legal/PrivacyPolicy'
 import { TermsOfService } from '@/components/legal/TermsOfService'
@@ -107,6 +108,7 @@ export default function App() {
         <Route path="/cookies" element={<LegalWrapper page="cookies" />} />
         <Route path="/case-studies/:slug" element={<CaseStudyPageWrapper />} />
       </Routes>
+      <MobileStickyCTA />
       <FloatingContact />
       <CookieBanner consent={consent} />
     </BrowserRouter>

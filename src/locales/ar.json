@@ -763,6 +763,9 @@
     "privacyLink": "سياسة الخصوصية",
     "cookiesLink": "سياسة الكوكيز"
   },
+  "mobileStickyCta": {
+    "label": "احجز مكالمة"
+  },
   "legal": {
     "privacy": {
       "title": "سياسة الخصوصية | مسار | استوديو رقمي",

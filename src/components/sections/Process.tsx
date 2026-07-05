@@ -31,7 +31,7 @@ function Node({
       onFocus={onEnter}
       onBlur={onLeave}
       tabIndex={0}
-      role="tabpanel"
+      aria-current={active ? 'step' : undefined}
       className="flex flex-col items-center text-center lg:w-[150px] lg:shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded-xl"
     >
       <motion.div
@@ -133,7 +133,7 @@ export function Process() {
                 onFocus={() => setHovered(i)}
                 onBlur={() => setHovered(null)}
                 tabIndex={0}
-                role="tabpanel"
+                aria-current={hovered === i ? 'step' : undefined}
                 className="flex items-start gap-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded-xl"
               >
                 <motion.div

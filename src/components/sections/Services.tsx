@@ -48,9 +48,7 @@ export function Services() {
                 key={key}
                 variants={fadeUp}
                 onClick={() => trackEvent('service_card_click', { service: t(`services.items.${key}.title`) })}
-                onKeyDown={(e: React.KeyboardEvent) => { if (e.key === 'Enter' || e.key === ' ') trackEvent('service_card_click', { service: t(`services.items.${key}.title`) }) }}
-                role="button"
-                tabIndex={0}
+                role="article"
                 className="group rounded-2xl border border-[#E4E4E7] bg-white p-7 sm:p-8 transition-all duration-300 hover:border-[#D4D4D8] hover:shadow-lg hover:shadow-black/[0.04] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded-xl"
               >
                 <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-[#F3F0FF] text-[#8B5CF6]">
