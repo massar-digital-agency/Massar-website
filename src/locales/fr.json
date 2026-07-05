@@ -1,9 +1,9 @@
 {
   "seo": {
-    "title": "Massar Digital Studio | Agence web & digitale en Algérie",
-    "description": "Massar Digital Studio, agence digitale en Algérie : sites web, apps mobiles, branding, UI/UX et IA pour faire grandir votre entreprise.",
-    "ogTitle": "Massar Digital Studio | Agence web & digitale en Algérie",
-    "ogDescription": "Des expériences digitales sur mesure — sites web, apps mobiles, branding, UI/UX et IA. Basée en Algérie, au service des entreprises du monde entier.",
+    "title": "Massar Digital Studio | Agence digitale & développement web Algérie",
+    "description": "Création de site web et référencement SEO en Algérie. Massar conçoit des sites sur mesure, apps mobiles et identité visuelle pour votre croissance.",
+    "ogTitle": "Massar Digital Studio | Agence digitale & développement web Algérie",
+    "ogDescription": "Création de site web, apps mobiles et référencement SEO pour les entreprises algériennes — des produits digitaux stratégiques pensés pour des résultats mesurables.",
     "twitterTitle": "Massar Digital Studio | Agence digitale Algérie"
   },
   "nav": {
@@ -17,11 +17,11 @@
     "ctaMicro": "Appel découverte gratuit • Sans engagement • Réponse sous 24h"
   },
   "hero": {
-    "badge": "Studio digital — Algérie",
-    "title": "Des produits digitaux stratégiques",
-    "titleAccent": "pour une croissance mesurable.",
-    "subtitle": "Nous commençons par vos objectifs, pas par un template. Grâce à la stratégie, un travail soigné et une livraison transparente, nous créons des sites, applications et identités visuelles qui transforment les visiteurs en clients et les idées en croissance.",
-    "trustStatement": "Approuvé par Journeya, DarLink, et des entreprises à travers l'Algérie.",
+    "badge": "Agence digitale — Algérie",
+    "title": "Création de site web",
+    "titleAccent": "pensée pour une croissance mesurable.",
+    "subtitle": "Agence digitale algérienne orientée stratégie. Nous concevons et développons des sites sur mesure, applications mobiles et identités visuelles qui transforment vos visiteurs en clients — avec SEO, performance et conversion intégrés dès le départ.",
+    "trustStatement": "Approuvé par Journeya, DarLink et des entreprises en croissance à travers l'Algérie.",
     "cta": "Obtenez un devis gratuit",
     "ctaMicro": "Appel découverte gratuit de 15 min • Sans engagement • Réponse sous 24h",
     "ctaSecondary": "Voir nos réalisations",
@@ -49,32 +49,32 @@
   },
   "services": {
     "label": "Nos services",
-    "title": "Tout ce qu'il faut pour une présence digitale complète",
-    "subtitle": "Du design au développement et à la stratégie — nous couvrons tous les aspects de votre transformation digitale.",
+    "title": "Développement web & services digitaux en Algérie",
+    "subtitle": "De la création de site web au référencement SEO et aux applications mobiles — tout ce qu'il faut pour développer votre activité en ligne.",
     "items": {
       "web": {
-        "title": "Développement Web",
-        "description": "Des sites rapides et modernes, construits avec les dernières technologies, conçus pour convertir les visiteurs en clients."
+        "title": "Création de site web",
+        "description": "Sites rapides et orientés conversion, construits avec des technologies modernes. Optimisés pour le SEO, la vitesse et la transformation de visiteurs en clients."
       },
       "apps": {
         "title": "Applications Web & Mobile",
-        "description": "Des applications performantes qui simplifient vos opérations et offrent une expérience fluide sur tous les appareils."
+        "description": "Applications performantes qui simplifient vos opérations et offrent une expérience fluide sur tous les appareils."
       },
       "branding": {
-        "title": "Identité Visuelle",
-        "description": "Une identité de marque cohérente qui inspire confiance et distingue votre entreprise dans un marché concurrentiel."
+        "title": "Identité visuelle",
+        "description": "Une identité de marque cohérente qui inspire confiance et distingue votre entreprise sur le marché algérien."
       },
       "uiux": {
         "title": "Design UI/UX",
-        "description": "Des interfaces élégantes et réfléchies, centrées sur la simplicité et la facilité d'utilisation."
+        "description": "Interfaces centrées utilisateur, conçues pour la clarté, l'accessibilité et un meilleur taux de conversion."
       },
       "automation": {
         "title": "Automatisation",
-        "description": "Automatisez vos processus répétitifs pour gagner du temps, réduire les coûts et vous concentrer sur l'essentiel."
+        "description": "Automatisez vos tâches répétitives pour gagner du temps, réduire les coûts et vous concentrer sur la croissance."
       },
       "ai": {
         "title": "Solutions IA",
-        "description": "Intégrez l'intelligence artificielle dans vos opérations pour des décisions plus rapides et plus éclairées."
+        "description": "Intégrations IA concrètes pour accélérer vos décisions et optimiser vos opérations."
       }
     },
     "cta": "Transformez l'un de ces services en votre prochain projet",
@@ -82,8 +82,8 @@
   },
   "why": {
     "label": "Pourquoi Massar ?",
-    "title": "Nous ne créons pas que des sites — nous construisons de vrais outils de croissance",
-    "subtitle": "Chaque projet reçoit le même niveau d'attention aux détails et de qualité. Nous croyons que le bon design est un investissement, pas un coût.",
+    "title": "Une agence digitale qui construit pour la croissance, pas seulement pour le design",
+    "subtitle": "Chaque projet est pensé pour la performance, le référencement SEO et des résultats concrets — car le bon design est un investissement, pas un coût.",
     "pillars": {
       "craft": {
         "title": "L'excellence dans chaque détail",
@@ -383,10 +383,28 @@
   },
   "caseStudies": {
     "label": "Études de cas",
-    "title": "Découvrez comment nous résolvons des problèmes concrets",
-    "subtitle": "Plongez au cœur des défis, solutions et résultats de nos projets préférés.",
+    "title": "Des projets concrets, des résultats mesurables",
+    "subtitle": "Découvrez comment notre développement web et notre référencement SEO ont aidé des entreprises algériennes à se lancer et à convertir.",
     "cta": "Un projet similaire en tête ?",
-    "ctaMicro": "Discutons de la façon dont nous pouvons vous aider à créer une expérience digitale qui génère des résultats concrets.",
+    "ctaMicro": "Parlez-nous de vos objectifs — nous vous montrerons comment une création de site web sur mesure génère des résultats.",
+    "seo": {
+      "journeya": {
+        "title": "Étude de cas Journeya | Plateforme touristique | Massar Digital Studio",
+        "description": "Comment Journeya a lancé sa plateforme de réservation, app mobile et identité visuelle avec Massar — développement web en Algérie."
+      },
+      "wafr": {
+        "title": "Étude de cas Wafr | App anti-gaspillage | Massar Digital Studio",
+        "description": "Comment Massar a créé l'app Wafr en Algérie : géolocalisation, alertes en temps réel et lancement bêta réussi à Alger."
+      },
+      "darlink": {
+        "title": "Étude de cas DarLink | Plateforme immobilière | Massar Digital Studio",
+        "description": "DarLink atteint 200+ annonces immobilières avec recherche avancée et messagerie — plateforme créée par Massar en Algérie."
+      },
+      "nextgen": {
+        "title": "Étude de cas NextGen | Boutique e-commerce | Massar Digital Studio",
+        "description": "NextGen atteint 90+ sur Lighthouse avec une boutique e-commerce sur mesure par Massar — checkout rapide et UX premium."
+      }
+    },
     "items": {
       "journeya": {
         "challenge": "Journeya avait besoin d'un écosystème numérique complet combinant plateforme de réservation, application mobile et identité de marque cohérente.",
@@ -416,8 +434,8 @@
   },
   "aboutPage": {
     "seo": {
-      "title": "À propos | Massar Digital Studio | Agence web & digitale en Algérie",
-      "description": "Découvrez Massar Digital Studio — agence digitale algérienne en sites web, apps mobiles, identité visuelle et solutions IA pour la croissance."
+      "title": "À propos | Agence digitale & développement web Algérie | Massar",
+      "description": "Découvrez Massar Digital Studio — agence digitale algérienne spécialisée en création de site web, référencement SEO, apps mobiles et identité visuelle."
     },
     "hero": {
       "badge": "À propos",
@@ -612,9 +630,9 @@
   "contact": {
     "hero": {
       "badge": "Démarrer un projet",
-      "title": "Créons quelque chose",
-      "titleAccent": "d'extraordinaire ensemble.",
-      "subtitle": "Vous avez une idée ou un projet en tête ? Remplissez le formulaire ou contactez-nous directement, et nous vous répondrons sous 24 heures."
+      "title": "Créons votre",
+      "titleAccent": "prochain site ou application.",
+      "subtitle": "Besoin d'une création de site web ou de référencement SEO en Algérie ? Décrivez votre projet — nous vous répondons sous 24h avec une proposition sur mesure."
     },
     "form": {
       "title": "Envoyez-nous un message",
@@ -690,7 +708,7 @@
     }
   },
   "footer": {
-    "description": "Studio digital spécialisé dans la création d'expériences digitales qui aident les entreprises à grandir.",
+    "description": "Agence digitale algérienne orientée stratégie — création de site web, référencement SEO et applications mobiles pour votre croissance.",
     "companyHeading": "Entreprise",
     "resourcesHeading": "Ressources",
     "legalHeading": "Mentions légales",
