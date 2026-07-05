@@ -763,6 +763,9 @@
     "privacyLink": "Politique de Confidentialité",
     "cookiesLink": "Politique de Cookies"
   },
+  "mobileStickyCta": {
+    "label": "Planifier un appel"
+  },
   "legal": {
     "privacy": {
       "title": "Politique de Confidentialité | Massar Digital Studio",

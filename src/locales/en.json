@@ -825,6 +825,9 @@
     "privacyLink": "Privacy Policy",
     "cookiesLink": "Cookie Policy"
   },
+  "mobileStickyCta": {
+    "label": "Schedule a Call"
+  },
   "legal": {
     "privacy": {
       "title": "Privacy Policy | Massar Digital Studio",

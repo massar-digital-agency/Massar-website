@@ -37,7 +37,7 @@ export function FloatingContact() {
   ]
 
   return (
-    <div className="fixed bottom-6 end-6 z-40 flex flex-col items-center gap-3">
+    <div className="fixed bottom-24 sm:bottom-6 end-6 z-40 flex flex-col items-center gap-3">
       {actions.map(({ key, href, external, icon, bg, label }, i) => (
         <motion.a
           key={key}
