@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import { useSearchParams } from 'react-router-dom'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
-import { Breadcrumbs } from '@/components/blog/Breadcrumbs'
+import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import { BlogCard } from '@/components/blog/BlogCard'
 import { BlogSEO } from '@/components/blog/BlogSEO'
 import { stagger } from '@/hooks/useAnimationVariants'
@@ -35,7 +35,7 @@ export function BlogIndex() {
       <main id="main-content">
         <section className="py-24 sm:py-32">
           <Container>
-            <Breadcrumbs items={[{ label: t('blog.index.title'), href: '/blog' }]} />
+            <Breadcrumbs />
 
             <div className="mx-auto max-w-[700px] text-center mb-16">
               <span className="mb-4 inline-block text-[12px] font-semibold tracking-[0.12em] text-[#8B5CF6] uppercase">

@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet-async'
 import { Container } from '@/components/ui/Container'
-import { Breadcrumbs } from '@/components/blog/Breadcrumbs'
+import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import { Contact } from '@/components/sections/Contact'
 import { SEO_CONFIG } from '@/lib/seo'
 import { trackPageView } from '@/lib/analytics'
@@ -54,7 +54,7 @@ export function ContactPage() {
       <main id="main-content">
         <section className="pt-16 sm:pt-20 pb-0">
           <Container>
-            <Breadcrumbs items={[{ label: t('nav.contact'), href: '/contact' }]} />
+            <Breadcrumbs />
           </Container>
         </section>
         <Contact />

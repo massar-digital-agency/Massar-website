@@ -167,21 +167,25 @@
       "journeya": {
         "title": "Journeya",
         "category": "Site + App + Identité visuelle",
+        "industry": "Travel & Tourism",
         "description": "Plateforme touristique complète combinant réservation intelligente et découverte de destinations."
       },
       "wafr": {
         "title": "Wafr",
         "category": "Site + App + Identité visuelle",
+        "industry": "Food & Sustainability",
         "description": "Application anti-gaspillage alimentaire connectant les consommateurs aux offres à proximité."
       },
       "darlink": {
         "title": "DarLink",
         "category": "Site + App + Identité visuelle",
+        "industry": "Real Estate",
         "description": "Plateforme immobilière moderne connectant acheteurs, vendeurs et investisseurs de manière fluide."
       },
       "nextgen": {
         "title": "NextGen",
         "category": "Développement web",
+        "industry": "E-commerce",
         "description": "Boutique en ligne moderne avec une expérience d'achat fluide et un design qui reflète la qualité des produits."
       }
     }

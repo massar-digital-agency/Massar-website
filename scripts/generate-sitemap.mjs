@@ -2,8 +2,8 @@
  * Generates sitemap.xml with multilingual hreflang alternates.
  * Run automatically as part of the production build.
  */
-import { writeFileSync, mkdirSync } from 'node:fs'
-import { dirname, resolve } from 'node:path'
+import { writeFileSync, mkdirSync, readdirSync } from 'node:fs'
+import { dirname, resolve, basename, extname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -12,8 +12,22 @@ const SITE_URL = 'https://massardigital.com'
 const LANGUAGES = ['en', 'fr', 'ar']
 const CASE_STUDY_SLUGS = ['journeya', 'wafr', 'darlink', 'nextgen']
 
-/** @type {Array<{ path: string; changefreq: string; priority: string }>} */
-const BLOG_SLUGS = ['how-to-improve-seo', 'react-performance-guide']
+const CONTENT_DIR = resolve(__dirname, '../src/content/blog')
+
+/** Read blog post slugs dynamically from MDX files in the content directory. */
+function getBlogSlugs() {
+  try {
+    const files = readdirSync(CONTENT_DIR)
+    return files
+      .filter((f) => extname(f) === '.mdx')
+      .map((f) => basename(f, '.mdx'))
+  } catch {
+    console.warn('⚠ Blog content directory not found; using fallback slugs.')
+    return ['how-to-improve-seo', 'react-performance-guide']
+  }
+}
+
+const BLOG_SLUGS = getBlogSlugs()
 
 const ROUTES = [
   { path: '', changefreq: 'monthly', priority: '1.0' },

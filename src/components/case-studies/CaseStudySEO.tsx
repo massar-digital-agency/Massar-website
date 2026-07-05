@@ -15,6 +15,7 @@ export function CaseStudySEO({ slug }: CaseStudySEOProps) {
   const project = t(`projects.items.${slug}`, { returnObjects: true }) as {
     title: string
     category: string
+    industry: string
     description: string
   }
 
@@ -42,6 +43,8 @@ export function CaseStudySEO({ slug }: CaseStudySEOProps) {
     projectCategory: project.category,
     projectDescription: project.description,
     technologies: cs.technologies,
+    clientName: project.title,
+    industry: project.industry,
     summary: cs.summary,
   })
 

@@ -167,21 +167,25 @@
       "journeya": {
         "title": "Journeya",
         "category": "موقع + تطبيق + هوية بصرية",
+        "industry": "Travel & Tourism",
         "description": "منصة سياحية متكاملة تجمع بين الحجز الذكي واكتشاف الوجهات السياحية."
       },
       "wafr": {
         "title": "Wafr",
         "category": "موقع + تطبيق + هوية بصرية",
+        "industry": "Food & Sustainability",
         "description": "تطبيق لتقليل الهدر الغذائي يربط المستهلكين بالعروض القريبة منهم."
       },
       "darlink": {
         "title": "DarLink",
         "category": "موقع + تطبيق + هوية بصرية",
+        "industry": "Real Estate",
         "description": "منصة عقارية حديثة تربط المشترين والبائعين والمستثمرين بطريقة سلسة."
       },
       "nextgen": {
         "title": "NextGen",
         "category": "تطوير موقع",
+        "industry": "E-commerce",
         "description": "متجر إلكتروني عصري بتجربة تسوّق سلسة وتصميم يعكس جودة المنتجات."
       }
     }
