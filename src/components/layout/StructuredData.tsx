@@ -12,6 +12,8 @@ export function StructuredData() {
     url: SEO_CONFIG.siteUrl,
     logo: `${SEO_CONFIG.siteUrl}/favicon.svg`,
     description: t('seo.description'),
+    email: 'massar.digital.studio@gmail.com',
+    telephone: '+213-555-123-456',
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+213-555-123-456',
@@ -20,9 +22,18 @@ export function StructuredData() {
     },
     address: {
       '@type': 'PostalAddress',
+      streetAddress: '13 Rue Mohamed Khoudi, El Biar',
+      addressLocality: 'Algiers',
+      addressRegion: 'Algiers Province',
+      postalCode: '16000',
       addressCountry: 'DZ',
     },
-    sameAs: [],
+    sameAs: [
+      'https://www.linkedin.com/company/massardigital',
+      'https://twitter.com/massardigital',
+      'https://www.facebook.com/massardigital',
+      'https://www.instagram.com/massardigital',
+    ],
   }
 
   const websiteSchema = {

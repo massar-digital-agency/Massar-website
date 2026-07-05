@@ -32,6 +32,7 @@ export function Contact() {
 
   const [form, setForm] = useState<FormState>(initialFormState)
   const [errors, setErrors] = useState<Partial<FormState>>({})
+  const [touched, setTouched] = useState<Partial<Record<keyof FormState, boolean>>>({})
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [copiedEmail, setCopiedEmail] = useState(false)
   const [copiedPhone, setCopiedPhone] = useState(false)
@@ -56,16 +57,67 @@ export function Contact() {
     trackEvent('copy_to_clipboard', { field: type })
   }
 
-  const validate = () => {
-    const tempErrors: Partial<FormState> = {}
-    if (!form.name.trim()) tempErrors.name = t('contact.form.errors.name')
-    if (!form.email.trim()) {
-      tempErrors.email = t('contact.form.errors.email')
-    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
-      tempErrors.email = t('contact.form.errors.emailInvalid')
+  const validateField = (field: keyof FormState, value: string): string | undefined => {
+    switch (field) {
+      case 'name':
+        if (!value.trim()) return t('contact.form.errors.name')
+        return undefined
+      case 'email':
+        if (!value.trim()) return t('contact.form.errors.email')
+        if (!/\S+@\S+\.\S+/.test(value)) return t('contact.form.errors.emailInvalid')
+        return undefined
+      case 'service':
+        if (!value) return t('contact.form.errors.service')
+        return undefined
+      case 'description':
+        if (!value.trim()) return t('contact.form.errors.description')
+        return undefined
+      default:
+        return undefined
     }
-    if (!form.service) tempErrors.service = t('contact.form.errors.service')
-    if (!form.description.trim()) tempErrors.description = t('contact.form.errors.description')
+  }
+
+  const handleBlur = (field: keyof FormState) => {
+    setTouched((prev) => ({ ...prev, [field]: true }))
+    const error = validateField(field, form[field])
+    setErrors((prev) => {
+      const next = { ...prev }
+      if (error) {
+        next[field] = error
+      } else {
+        delete next[field]
+      }
+      return next
+    })
+  }
+
+  const handleChange = (field: keyof FormState, value: string) => {
+    trackFormStarted()
+    setForm((prev) => ({ ...prev, [field]: value }))
+    if (touched[field]) {
+      const error = validateField(field, value)
+      setErrors((prev) => {
+        const next = { ...prev }
+        if (error) {
+          next[field] = error
+        } else {
+          delete next[field]
+        }
+        return next
+      })
+    }
+  }
+
+  const validate = () => {
+    const requiredFields: (keyof FormState)[] = ['name', 'email', 'service', 'description']
+    const allTouched = requiredFields.reduce((acc, field) => ({ ...acc, [field]: true }), {} as Partial<Record<keyof FormState, boolean>>)
+    setTouched((prev) => ({ ...prev, ...allTouched }))
+
+    const tempErrors: Partial<FormState> = {}
+    requiredFields.forEach((field) => {
+      const error = validateField(field, form[field])
+      if (error) tempErrors[field] = error
+    })
 
     setErrors(tempErrors)
     const hasErrors = Object.keys(tempErrors).length > 0
@@ -160,7 +212,8 @@ export function Contact() {
                     aria-invalid={!!errors.name}
                     aria-describedby={errors.name ? getErrorId('name') : undefined}
                     value={form.name}
-                    onChange={(e) => { trackFormStarted(); setForm({ ...form, name: e.target.value }) }}
+                    onChange={(e) => handleChange('name', e.target.value)}
+                    onBlur={() => handleBlur('name')}
                     className={getInputClassName('name')}
                     placeholder={t('contact.form.namePlaceholder')}
                   />
@@ -184,7 +237,8 @@ export function Contact() {
                     aria-invalid={!!errors.email}
                     aria-describedby={errors.email ? getErrorId('email') : undefined}
                     value={form.email}
-                    onChange={(e) => { trackFormStarted(); setForm({ ...form, email: e.target.value }) }}
+                    onChange={(e) => handleChange('email', e.target.value)}
+                    onBlur={() => handleBlur('email')}
                     className={getInputClassName('email')}
                     placeholder="you@company.com"
                   />
@@ -206,7 +260,7 @@ export function Contact() {
                     type="text"
                     id="company"
                     value={form.company}
-                    onChange={(e) => { trackFormStarted(); setForm({ ...form, company: e.target.value }) }}
+                    onChange={(e) => { trackFormStarted(); setForm((prev) => ({ ...prev, company: e.target.value })) }}
                     className="w-full h-11 px-4 text-[14px] rounded-lg border border-[#E4E4E7] bg-[#FAFAF9] transition-all duration-200 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#8B5CF6]/20 focus:border-[#8B5CF6]"
                     placeholder="Acme Corp"
                   />
@@ -220,7 +274,7 @@ export function Contact() {
                     type="text"
                     id="website"
                     value={form.website}
-                    onChange={(e) => { trackFormStarted(); setForm({ ...form, website: e.target.value }) }}
+                    onChange={(e) => { trackFormStarted(); setForm((prev) => ({ ...prev, website: e.target.value })) }}
                     className="w-full h-11 px-4 text-[14px] rounded-lg border border-[#E4E4E7] bg-[#FAFAF9] transition-all duration-200 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#8B5CF6]/20 focus:border-[#8B5CF6]"
                     placeholder="https://example.com"
                   />
@@ -239,7 +293,8 @@ export function Contact() {
                     aria-invalid={!!errors.service}
                     aria-describedby={errors.service ? getErrorId('service') : undefined}
                     value={form.service}
-                    onChange={(e) => { trackFormStarted(); trackEvent('form_field_interaction', { form_name: 'contact', field_name: 'service' }); setForm({ ...form, service: e.target.value }) }}
+                    onChange={(e) => { trackEvent('form_field_interaction', { form_name: 'contact', field_name: 'service' }); handleChange('service', e.target.value) }}
+                    onBlur={() => handleBlur('service')}
                     className={getInputClassName('service')}
                   >
                     <option value="" disabled>{t('contact.form.serviceSelect')}</option>
@@ -264,7 +319,7 @@ export function Contact() {
                   <select
                     id="budget"
                     value={form.budget}
-                    onChange={(e) => { trackFormStarted(); trackEvent('form_field_interaction', { form_name: 'contact', field_name: 'budget' }); setForm({ ...form, budget: e.target.value }) }}
+                    onChange={(e) => { trackFormStarted(); trackEvent('form_field_interaction', { form_name: 'contact', field_name: 'budget' }); setForm((prev) => ({ ...prev, budget: e.target.value })) }}
                     className="w-full h-11 px-4 text-[14px] rounded-lg border border-[#E4E4E7] bg-[#FAFAF9] transition-all duration-200 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#8B5CF6]/20 focus:border-[#8B5CF6]"
                   >
                     <option value="" disabled>{t('contact.form.budgetSelect')}</option>
@@ -289,7 +344,8 @@ export function Contact() {
                   aria-describedby={errors.description ? getErrorId('description') : undefined}
                   rows={4}
                     value={form.description}
-                    onChange={(e) => { trackFormStarted(); setForm({ ...form, description: e.target.value }) }}
+                    onChange={(e) => handleChange('description', e.target.value)}
+                    onBlur={() => handleBlur('description')}
                     className={getInputClassName('description')}
                   placeholder={t('contact.form.descriptionPlaceholder')}
                 />

@@ -33,6 +33,21 @@ function AccordionItem({
       return
     }
 
+    if (e.key === 'Home' || e.key === 'End') {
+      e.preventDefault()
+      const container = buttonRef.current?.closest('[data-accordion]')
+      if (!container) return
+
+      const buttons = Array.from(
+        container.querySelectorAll<HTMLButtonElement>('[data-accordion-trigger]'),
+      )
+      if (buttons.length === 0) return
+
+      const targetIndex = e.key === 'Home' ? 0 : buttons.length - 1
+      buttons[targetIndex].focus()
+      return
+    }
+
     if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
       e.preventDefault()
       const container = buttonRef.current?.closest('[data-accordion]')
