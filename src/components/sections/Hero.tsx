@@ -144,7 +144,7 @@ export function Hero() {
                 <source srcSet={HERO_MASCOT.webp} type="image/webp" />
                 <img
                   src={HERO_MASCOT.webp}
-                  alt="Massar"
+                  alt="Massar Digital Studio brand mascot"
                   width={HERO_MASCOT.width}
                   height={HERO_MASCOT.height}
                   fetchPriority="high"

@@ -540,9 +540,9 @@ export function Contact() {
                   A
                 </div>
                 <div>
-                  <h4 className="text-[14px] font-bold text-[#0A0A0A]">
+                  <h3 className="text-[14px] font-bold text-[#0A0A0A]">
                     {t('contact.social.testimonialAuthor')}
-                  </h4>
+                  </h3>
                   <p className="text-[12px] text-[#52525B]">
                     {t('contact.social.testimonialCompany')}
                   </p>

@@ -105,9 +105,9 @@ export function CaseStudyTestimonial({ slug }: CaseStudyTestimonialProps) {
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <h4 className="text-[14px] font-bold text-[#0A0A0A]">
+                  <h3 className="text-[14px] font-bold text-[#0A0A0A]">
                     {testimonial.author}
-                  </h4>
+                  </h3>
                   {testimonial.placeholder && (
                     <span className="rounded bg-[#F3F0FF] px-2 py-0.5 text-[10px] font-medium text-[#8B5CF6]">
                       Placeholder

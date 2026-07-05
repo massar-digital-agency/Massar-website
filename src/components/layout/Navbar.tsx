@@ -96,7 +96,7 @@ export function Navbar() {
             className="flex items-center gap-2.5 shrink-0"
             aria-label="Massar Digital Studio — Home"
           >
-            <img src={Logo} alt="" className="h-8 w-auto" />
+            <img src={Logo} alt="Massar Digital Studio" className="h-8 w-auto" />
             <span className="text-[17px] font-bold tracking-tight text-[#0A0A0A]">Massar</span>
           </a>
 
