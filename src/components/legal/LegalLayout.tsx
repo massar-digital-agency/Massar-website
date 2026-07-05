@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import { Container } from '@/components/ui/Container'
+import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import { fadeUp } from '@/hooks/useAnimationVariants'
 
 interface LegalLayoutProps {
@@ -16,6 +17,7 @@ export function LegalLayout({ title, subtitle, children, lastUpdated }: LegalLay
       <article className="py-16 sm:py-20 lg:py-28">
         <Container narrow>
           <motion.div variants={fadeUp} initial="hidden" animate="visible">
+            <Breadcrumbs />
             <h1 className="text-[30px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0A0A0A] sm:text-[40px] lg:text-[48px] mb-4">
               {title}
             </h1>

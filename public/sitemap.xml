@@ -1,99 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- Homepage -->
   <url>
     <loc>https://massardigital.com</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com?lang=ar" />
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- About Page -->
   <url>
-    <loc>https://massardigital.com/#/about</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/#/about" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/#/about" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/#/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com/#/about" />
+    <loc>https://massardigital.com#services</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com#services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com#services?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com#services?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com#services?lang=ar" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://massardigital.com#projects</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com#projects" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com#projects?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com#projects?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com#projects?lang=ar" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://massardigital.com#contact</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com#contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com#contact?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com#contact?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com#contact?lang=ar" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Case Studies -->
+  <url>
+    <loc>https://massardigital.com/#/about</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com/#/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/#/about?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/#/about?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/#/about?lang=ar" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://massardigital.com/#/case-studies/journeya</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/#/case-studies/journeya" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/#/case-studies/journeya" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/#/case-studies/journeya" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com/#/case-studies/journeya" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/#/case-studies/journeya?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/#/case-studies/journeya?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/#/case-studies/journeya?lang=ar" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://massardigital.com/#/case-studies/wafr</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/#/case-studies/wafr" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/#/case-studies/wafr" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/#/case-studies/wafr" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com/#/case-studies/wafr" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/#/case-studies/wafr?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/#/case-studies/wafr?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/#/case-studies/wafr?lang=ar" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://massardigital.com/#/case-studies/darlink</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/#/case-studies/darlink" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/#/case-studies/darlink" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/#/case-studies/darlink" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com/#/case-studies/darlink" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/#/case-studies/darlink?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/#/case-studies/darlink?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/#/case-studies/darlink?lang=ar" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://massardigital.com/#/case-studies/nextgen</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/#/case-studies/nextgen" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/#/case-studies/nextgen" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/#/case-studies/nextgen" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com/#/case-studies/nextgen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/#/case-studies/nextgen?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/#/case-studies/nextgen?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/#/case-studies/nextgen?lang=ar" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Legal Pages -->
+  <url>
+    <loc>https://massardigital.com/blog</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/blog?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/blog?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/blog?lang=ar" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://massardigital.com/blog/how-to-improve-seo</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com/blog/how-to-improve-seo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/blog/how-to-improve-seo?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/blog/how-to-improve-seo?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/blog/how-to-improve-seo?lang=ar" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://massardigital.com/blog/react-performance-guide</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com/blog/react-performance-guide" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/blog/react-performance-guide?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/blog/react-performance-guide?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/blog/react-performance-guide?lang=ar" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://massardigital.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/contact?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/contact?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/contact?lang=ar" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://massardigital.com/#/privacy</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/#/privacy" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/#/privacy" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/#/privacy" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com/#/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/#/privacy?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/#/privacy?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/#/privacy?lang=ar" />
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://massardigital.com/#/terms</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/#/terms" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/#/terms" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/#/terms" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com/#/terms" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/#/terms?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/#/terms?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/#/terms?lang=ar" />
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://massardigital.com/#/cookies</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/#/cookies" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/#/cookies" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/#/cookies" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com/#/cookies" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/#/cookies?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/#/cookies?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/#/cookies?lang=ar" />
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
 </urlset>

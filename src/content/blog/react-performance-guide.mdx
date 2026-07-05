@@ -1,0 +1,175 @@
+export const meta = {
+  slug: 'react-performance-guide',
+  title: 'A Comprehensive Guide to React Performance Optimization',
+  description: 'Master React performance optimization techniques including memoization, code splitting, lazy loading, and bundle analysis. Real-world patterns for production apps.',
+  publishedAt: '2026-07-01T10:00:00Z',
+  readingTime: '10 min read',
+  author: { name: 'Massar Team' },
+  tags: ['React', 'Performance', 'Web Development', 'JavaScript'],
+  featuredImage: '/images/blog/react-performance.jpg',
+  featuredImageAlt: 'React performance optimization diagram',
+}
+
+# A Comprehensive Guide to React Performance Optimization
+
+React 19 brings significant performance improvements out of the box, but building truly fast applications still requires deliberate optimization. This guide covers the techniques that matter most in production.
+
+## Why Performance Matters
+
+Performance directly impacts your bottom line. A one-second delay in page load time can reduce conversions by 20%. For React applications, performance isn't just about initial load — it's about maintaining 60fps interactions throughout the user session.
+
+## Measuring Before Optimizing
+
+Before making any changes, establish baseline metrics:
+
+```bash
+# Run Lighthouse CI for consistent measurements
+npx lighthouse https://your-site.com --output-path=./reports
+```
+
+Key metrics to track:
+
+- **LCP (Largest Contentful Paint)**: Target < 2.5s
+- **TBT (Total Blocking Time)**: Target < 200ms
+- **CLS (Cumulative Layout Shift)**: Target < 0.1
+- **FID (First Input Delay)**: Target < 100ms (deprecated, use INP)
+- **INP (Interaction to Next Paint)**: Target < 200ms
+
+## React 19 Performance Features
+
+### The New Compiler
+
+React 19's compiler automatically memoizes components and hooks, reducing the need for manual `useMemo` and `useCallback`. However, understanding when the compiler works best — and when it doesn't — remains important.
+
+### use() Hook
+
+The new `use()` hook enables reading async resources directly in render, simplifying data fetching patterns and reducing unnecessary re-renders:
+
+```tsx
+function BlogPost({ postId }: { postId: string }) {
+  const post = use(fetchPost(postId))
+  return <article>{post.title}</article>
+}
+```
+
+### Server Components
+
+React Server Components (RSC) allow rendering components on the server, sending only the interactive parts to the client. This dramatically reduces bundle size for content-heavy pages.
+
+## Code Splitting
+
+### Dynamic Imports
+
+Split your application into smaller chunks that load on demand:
+
+```tsx
+import { lazy, Suspense } from 'react'
+
+const BlogEditor = lazy(() => import('./BlogEditor'))
+
+function App() {
+  return (
+    <Suspense fallback={<LoadingSkeleton />}>
+      <BlogEditor />
+    </Suspense>
+  )
+}
+```
+
+### Route-Based Splitting
+
+Combine dynamic imports with your router for optimal loading:
+
+```tsx
+const BlogIndex = lazy(() => import('./pages/BlogIndex'))
+const BlogPost = lazy(() => import('./pages/BlogPost'))
+```
+
+## Memoization Strategies
+
+### When to Use React.memo
+
+Not every component needs memoization. Apply `React.memo` when:
+
+1. The component renders often (list items, cards, table rows)
+2. The component receives the same props frequently
+3. The component's render is computationally expensive
+
+```tsx
+export const BlogCard = React.memo(function BlogCard({ post }: { post: BlogPost }) {
+  return (
+    <article>
+      <h2>{post.title}</h2>
+      <p>{post.excerpt}</p>
+    </article>
+  )
+})
+```
+
+### useMemo and useCallback
+
+Use sparingly. Premature optimization with these hooks often adds complexity without measurable benefit. Profile first, then optimize.
+
+## Image Optimization
+
+Images account for over 50% of page weight on most websites. Follow these practices:
+
+- Use responsive images with `srcSet`
+- Serve modern formats (WebP, AVIF)
+- Lazy load below-the-fold images
+- Set explicit width and height to prevent layout shift
+- Use blur-up placeholders for a smoother experience
+
+```tsx
+function OptimizedImage({ src, alt, sizes }: ImageProps) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+      sizes={sizes}
+      style={{ aspectRatio: '16 / 9' }}
+    />
+  )
+}
+```
+
+## Bundle Analysis
+
+Regularly analyze your bundle to identify optimization opportunities:
+
+```bash
+# Use Vite's build analysis
+npm install rollup-plugin-visualizer
+
+# Or use source-map-explorer
+npx source-map-explorer dist/assets/*.js
+```
+
+Look for:
+
+- Large dependencies that could be tree-shaken
+- Duplicate code across chunks
+- Opportunities to lazy-load heavy libraries
+
+## Common Pitfalls
+
+### Avoiding Unnecessary Re-renders
+
+Watch out for these patterns:
+
+- Inline functions in render
+- Object/array literals as props
+- Lifted state that should be local
+- Missing keys in lists
+
+### State Management
+
+Keep state as close to where it's used as possible. Avoid global state for UI-specific concerns. Use React Context sparingly — it causes all consumers to re-render when the value changes.
+
+## Conclusion
+
+React performance optimization is about applying the right technique at the right time. Start with measurement, identify real bottlenecks, and apply targeted optimizations. The goal isn't to make every component maximally optimized — it's to deliver a fast, smooth experience for your users.
+
+For expert assistance building high-performance React applications, [get in touch with our team](/contact).

@@ -115,20 +115,19 @@ export function Footer() {
 
           {/* Resources */}
           <FooterColumn heading={t('footer.resourcesHeading')}>
-            {resourceKeys.map((key) => {
-              if (key === 'blog') {
-                return (
-                  <a
-                    key={key}
-                    href="#"
-                    onClick={() => trackEvent('footer_link_click', { link_type: 'resource', link_text: 'blog' })}
-                    className="group text-[14px] text-[#71717A] w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded"
-                    aria-label={`${t('footer.blog')} (opens in new tab)`}
-                  >
-                    <HoverSlideText>{t('footer.blog')}</HoverSlideText>
-                  </a>
-                )
-              }
+              {resourceKeys.map((key) => {
+                if (key === 'blog') {
+                  return (
+                    <a
+                      key={key}
+                      href="/blog"
+                      onClick={() => trackEvent('footer_link_click', { link_type: 'resource', link_text: 'blog' })}
+                      className="group text-[14px] text-[#71717A] w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded"
+                    >
+                      <HoverSlideText>{t('footer.blog')}</HoverSlideText>
+                    </a>
+                  )
+                }
               return (
                 <button
                   key={key}

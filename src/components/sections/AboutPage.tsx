@@ -14,6 +14,7 @@ import { FloatingContact } from '@/components/layout/FloatingContact'
 import { navigateToSection } from '@/lib/navigate'
 import { trackPageView, trackEvent } from '@/lib/analytics'
 import { SEO_CONFIG } from '@/lib/seo'
+import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import Logo3D from '@/assets/images/logo3d.jpg'
 
 const valueIcons: Record<string, React.ReactNode> = {
@@ -49,6 +50,7 @@ function AboutHero() {
       <Container>
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] items-center py-16 sm:py-20 lg:py-28">
           <motion.div variants={fadeUp} initial="hidden" animate="visible">
+            <Breadcrumbs />
             <span className="mb-4 inline-block text-[12px] font-semibold tracking-[0.12em] text-[#8B5CF6] uppercase">
               {hero.badge}
             </span>
