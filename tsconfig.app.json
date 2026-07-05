@@ -8,7 +8,8 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "react-helmet-async": ["./src/lib/react-helmet-async"]
     },
     "ignoreDeprecations": "6.0",
 

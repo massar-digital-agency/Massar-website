@@ -1,0 +1,9 @@
+[
+  {
+    "slug": "sample-study",
+    "title": "Sample Case Study",
+    "excerpt": "A brief overview of the sample case study showcasing our work.",
+    "thumbnail": "/assets/case-studies/sample-thumbnail.jpg",
+    "tags": ["AI", "Automation"]
+  }
+]
