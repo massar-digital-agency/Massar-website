@@ -23,7 +23,12 @@ export function CaseStudySEO({ slug }: CaseStudySEOProps) {
     outcomes: string
   }
 
-  const seo = getCaseStudySEO(slug, lang, project.title, project.description)
+  const seoMeta = t(`caseStudies.seo.${slug}`, { returnObjects: true }) as {
+    title: string
+    description: string
+  }
+
+  const seo = getCaseStudySEO(slug, lang, seoMeta, project.title, project.description)
 
   const articleSchema = {
     '@context': 'https://schema.org',

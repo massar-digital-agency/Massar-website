@@ -5,7 +5,17 @@ const OG_IMAGE_WIDTH = '3027'
 const OG_IMAGE_HEIGHT = '2439'
 const TWITTER_HANDLE = '@massardigital'
 
-export const META_DESCRIPTION_MAX_LENGTH = 160
+export const META_DESCRIPTION_MAX_LENGTH = 155
+
+export function truncateMetaDescription(description: string, maxLength = META_DESCRIPTION_MAX_LENGTH): string {
+  if (description.length <= maxLength) return description
+  const truncated = description.slice(0, maxLength - 1).trimEnd()
+  const lastSpace = truncated.lastIndexOf(' ')
+  if (lastSpace > maxLength * 0.6) {
+    return `${truncated.slice(0, lastSpace)}…`
+  }
+  return `${truncated}…`
+}
 
 /** Pre-optimized hero mascot (LCP image) — AVIF preferred, WebP fallback. */
 export const HERO_MASCOT = {
@@ -81,29 +91,14 @@ export function getPageSEO(
 export function getCaseStudySEO(
   slug: string,
   _lang: string,
+  translations?: { title?: string; description?: string },
   projectTitle?: string,
   projectDescription?: string
 ): PageSEO {
-  const titles: Record<string, string> = {
-    journeya: 'Journeya — Tourism Booking Platform',
-    wafr: 'Wafr — Food Waste Reduction App',
-    darlink: 'DarLink — Real Estate Platform',
-    nextgen: 'NextGen — E-Commerce Store',
-  }
-
-  const descriptions: Record<string, string> = {
-    journeya:
-      'How Massar built Journeya\u2019s tourism ecosystem \u2014 booking platform, mobile app, and brand identity \u2014 for seamless web and mobile experiences.',
-    wafr:
-      'How Massar built Wafr, a food waste app in Algeria connecting consumers to surplus food deals via geolocation and real-time alerts.',
-    darlink:
-      'How Massar created DarLink, an Algerian real estate platform with 200+ listings, advanced search, and direct messaging for buyers and sellers.',
-    nextgen:
-      'How Massar delivered NextGen\u2019s premium e-commerce store with 90+ Lighthouse scores, optimized checkout, and performance-first architecture.',
-  }
-
-  const title = `${titles[slug] || projectTitle || slug} | ${SITE_NAME}`
-  const description = descriptions[slug] || projectDescription || ''
+  const title = translations?.title || `${projectTitle || slug} | ${SITE_NAME}`
+  const description = truncateMetaDescription(
+    translations?.description || projectDescription || ''
+  )
 
   return {
     title,

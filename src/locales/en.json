@@ -1,9 +1,9 @@
 {
   "seo": {
-    "title": "Massar Digital Studio | Digital Agency & Web Development in Algeria",
-    "description": "Massar Digital Studio is a specialized digital agency in Algeria. We build custom websites, mobile apps, brand identities, UI/UX, and AI solutions for growth.",
-    "ogTitle": "Massar Digital Studio | Digital Agency & Web Development in Algeria",
-    "ogDescription": "Custom digital experiences that help businesses grow — websites, mobile apps, branding, UI/UX, and AI. Based in Algeria, serving the world.",
+    "title": "Massar Digital Studio | Web Development & Digital Agency Algeria",
+    "description": "Custom website development and SEO services in Algeria. Massar builds high-performance websites, mobile apps, branding, and AI solutions that drive growth.",
+    "ogTitle": "Massar Digital Studio | Web Development & Digital Agency Algeria",
+    "ogDescription": "Custom website development, mobile apps, and SEO services for Algerian businesses — strategy-first digital products built for measurable growth.",
     "twitterTitle": "Massar Digital Studio | Digital Agency Algeria"
   },
   "nav": {
@@ -17,11 +17,11 @@
     "ctaMicro": "Free discovery call • Response within 24h"
   },
   "hero": {
-    "badge": "Digital studio — Algeria",
-    "title": "Strategy-first digital products",
+    "badge": "Digital agency — Algeria",
+    "title": "Custom website development",
     "titleAccent": "built for measurable growth.",
-    "subtitle": "We start with your goals, not a template. Through strategy, careful craft, and transparent delivery, we build websites, apps, and brand identities that turn visitors into customers and ideas into growth.",
-    "trustStatement": "Trusted by Journeya, DarLink, and businesses across Algeria.",
+    "subtitle": "Algeria's strategy-first digital agency. We design and build custom websites, mobile apps, and brand identities that turn visitors into customers — with SEO, performance, and conversion baked in from day one.",
+    "trustStatement": "Trusted by Journeya, DarLink, and growing businesses across Algeria.",
     "cta": "Get a free quote",
     "ctaMicro": "Free 15-min discovery call • No obligation • Response within 24h",
     "ctaSecondary": "View our work",
@@ -49,39 +49,39 @@
   },
   "services": {
     "label": "Services",
-    "title": "Everything you need for a complete digital presence",
-    "subtitle": "From design to development and strategy — we cover every aspect of your digital transformation.",
+    "title": "Web development & digital services in Algeria",
+    "subtitle": "From custom website development to SEO and mobile apps — everything your business needs to grow online.",
     "items": {
       "web": {
-        "title": "Website Development",
-        "description": "Fast, modern websites built with the latest technologies, designed to convert visitors into real customers."
+        "title": "Custom Website Development",
+        "description": "Fast, conversion-focused websites built with modern tech. Optimized for SEO, speed, and turning visitors into paying customers."
       },
       "apps": {
         "title": "Web & Mobile Applications",
-        "description": "High-performance applications that streamline your operations and deliver a seamless experience across all devices."
+        "description": "High-performance apps that streamline operations and deliver a seamless experience on every device."
       },
       "branding": {
         "title": "Brand Identity",
-        "description": "A cohesive brand identity that builds trust and sets your business apart in a crowded market."
+        "description": "A cohesive brand identity that builds trust and sets your business apart in Algeria's competitive market."
       },
       "uiux": {
         "title": "UI/UX Design",
-        "description": "Elegant, thoughtful interfaces centered on simplicity and ease of use."
+        "description": "User-centered interfaces designed for clarity, accessibility, and higher conversion rates."
       },
       "automation": {
         "title": "Automation",
-        "description": "Automate repetitive processes to save time, reduce costs, and focus your efforts on what matters."
+        "description": "Automate repetitive workflows to save time, cut costs, and focus on what drives revenue."
       },
       "ai": {
         "title": "AI Solutions",
-        "description": "Integrate artificial intelligence into your operations for faster, smarter decisions."
+        "description": "Practical AI integrations that speed up decisions and unlock smarter business operations."
       }
     }
   },
   "why": {
     "label": "Why Massar?",
-    "title": "We don't just build websites — we build real growth tools",
-    "subtitle": "Every project receives the same level of attention to detail and quality. We believe good design is an investment, not a cost.",
+    "title": "A digital agency that builds for growth, not just looks",
+    "subtitle": "Every project is engineered for performance, SEO, and real business outcomes — because good design is an investment, not a cost.",
     "pillars": {
       "craft": {
         "title": "Craft in every detail",
@@ -393,10 +393,28 @@
   },
   "caseStudies": {
     "label": "Case Studies",
-    "title": "See how we solve real problems",
-    "subtitle": "Deep dives into the challenges, solutions, and outcomes behind our favorite projects.",
+    "title": "Real projects, measurable results",
+    "subtitle": "See how our web development and SEO work helped Algerian businesses launch, grow, and convert.",
     "cta": "Have a similar project?",
-    "ctaMicro": "Let's discuss how we can help you build a digital experience that drives real results.",
+    "ctaMicro": "Tell us your goals — we'll show you how custom website development can drive real results.",
+    "seo": {
+      "journeya": {
+        "title": "Journeya Case Study | Tourism Platform & App | Massar Digital Studio",
+        "description": "How Journeya launched a tourism booking platform, mobile app, and brand identity with Massar — custom web development in Algeria."
+      },
+      "wafr": {
+        "title": "Wafr Case Study | Food Waste App | Massar Digital Studio",
+        "description": "See how Massar built Wafr's food waste app in Algeria with geolocation, real-time alerts, and a successful beta launch in Algiers."
+      },
+      "darlink": {
+        "title": "DarLink Case Study | Real Estate Platform | Massar Digital Studio",
+        "description": "DarLink reached 200+ property listings with advanced search and messaging — a real estate platform built by Massar in Algeria."
+      },
+      "nextgen": {
+        "title": "NextGen Case Study | E-Commerce Store | Massar Digital Studio",
+        "description": "NextGen hit 90+ Lighthouse scores with a custom e-commerce store by Massar — fast checkout, premium UX, and SEO-ready architecture."
+      }
+    },
     "items": {
       "journeya": {
         "challenge": "Journeya needed a complete digital ecosystem combining a booking platform, mobile app, and cohesive brand identity to launch their tourism startup.",
@@ -430,8 +448,8 @@
   },
   "aboutPage": {
     "seo": {
-      "title": "About Massar Digital Studio | Digital Agency & Web Development in Algeria",
-      "description": "Learn about Massar Digital Studio — an Algerian digital agency building custom websites, mobile apps, brand identities, and AI solutions that drive growth."
+      "title": "About Massar | Digital Agency & Web Development Algeria",
+      "description": "Meet Massar Digital Studio — an Algerian digital agency specializing in custom website development, SEO services, mobile apps, and brand identity."
     },
     "hero": {
       "badge": "About us",
@@ -641,9 +659,9 @@
   "contact": {
     "hero": {
       "badge": "Start a project",
-      "title": "Let's build something",
-      "titleAccent": "extraordinary together.",
-      "subtitle": "Have an idea or a project in mind? Fill out the form or reach out directly, and we will get back to you within 24 hours."
+      "title": "Let's build your",
+      "titleAccent": "next website or app.",
+      "subtitle": "Need custom website development or SEO services in Algeria? Tell us about your project — we'll respond within 24 hours with a tailored proposal."
     },
     "form": {
       "title": "Send us a message",
@@ -696,32 +714,32 @@
     },
   "services": {
     "label": "Services",
-    "title": "Everything you need for a complete digital presence",
-    "subtitle": "From design to development and strategy — we cover every aspect of your digital transformation.",
+    "title": "Web development & digital services in Algeria",
+    "subtitle": "From custom website development to SEO and mobile apps — everything your business needs to grow online.",
     "items": {
       "web": {
-        "title": "Website Development",
-        "description": "Fast, modern websites built with the latest technologies, designed to convert visitors into real customers."
+        "title": "Custom Website Development",
+        "description": "Fast, conversion-focused websites built with modern tech. Optimized for SEO, speed, and turning visitors into paying customers."
       },
       "apps": {
         "title": "Web & Mobile Applications",
-        "description": "High-performance applications that streamline your operations and deliver a seamless experience across all devices."
+        "description": "High-performance apps that streamline operations and deliver a seamless experience on every device."
       },
       "branding": {
         "title": "Brand Identity",
-        "description": "A cohesive brand identity that builds trust and sets your business apart in a crowded market."
+        "description": "A cohesive brand identity that builds trust and sets your business apart in Algeria's competitive market."
       },
       "uiux": {
         "title": "UI/UX Design",
-        "description": "Elegant, thoughtful interfaces centered on simplicity and ease of use."
+        "description": "User-centered interfaces designed for clarity, accessibility, and higher conversion rates."
       },
       "automation": {
         "title": "Automation",
-        "description": "Automate repetitive processes to save time, reduce costs, and focus your efforts on what matters."
+        "description": "Automate repetitive workflows to save time, cut costs, and focus on what drives revenue."
       },
       "ai": {
         "title": "AI Solutions",
-        "description": "Integrate artificial intelligence into your operations for faster, smarter decisions."
+        "description": "Practical AI integrations that speed up decisions and unlock smarter business operations."
       }
     },
     "cta": "Turn one of these services into your next project",
@@ -752,7 +770,7 @@
     }
   },
   "footer": {
-    "description": "A digital studio specializing in building digital experiences that help businesses grow.",
+    "description": "Algeria's strategy-first digital agency — custom website development, SEO services, and mobile apps built for growth.",
     "companyHeading": "Company",
     "resourcesHeading": "Resources",
     "legalHeading": "Legal",
