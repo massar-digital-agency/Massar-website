@@ -5,9 +5,8 @@ import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { fadeUp } from '@/hooks/useAnimationVariants'
-import { useTransparentImage } from '@/hooks/useTransparentImage'
 import { trackEvent } from '@/lib/analytics'
-import MascotSrc from '@/assets/images/logo-3d-alt.png'
+import { HERO_MASCOT } from '@/lib/seo'
 
 const marqueeKeys = ['web', 'apps', 'branding', 'uiux', 'automation', 'ai'] as const
 
@@ -15,7 +14,6 @@ export function Hero() {
   const { t, i18n } = useTranslation()
   const isRTL = i18n.language === 'ar'
   const Arrow = isRTL ? ArrowLeft : ArrowRight
-  const Mascot = useTransparentImage(MascotSrc)
   const [marqueePaused, setMarqueePaused] = useState(false)
 
   return (
@@ -141,11 +139,19 @@ export function Hero() {
               transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
               className="relative block aspect-square w-full"
             >
-              <img
-                src={Mascot}
-                alt="Massar"
-                className="absolute inset-0 h-full w-full object-contain"
-              />
+              <picture>
+                <source srcSet={HERO_MASCOT.avif} type="image/avif" />
+                <source srcSet={HERO_MASCOT.webp} type="image/webp" />
+                <img
+                  src={HERO_MASCOT.webp}
+                  alt="Massar"
+                  width={HERO_MASCOT.width}
+                  height={HERO_MASCOT.height}
+                  fetchPriority="high"
+                  decoding="async"
+                  className="absolute inset-0 h-full w-full object-contain"
+                />
+              </picture>
             </motion.div>
           </motion.div>
         </div>

@@ -53,7 +53,7 @@ function HomePage() {
         <meta property="og:site_name" content={SEO_CONFIG.siteName} />
 
         <meta name="twitter:title" content={t('seo.twitterTitle')} />
-        <meta name="twitter:description" content={t('seo.description')} />
+        <meta name="twitter:description" content={t('seo.ogDescription')} />
         <meta name="twitter:image" content={SEO_CONFIG.ogImage} />
       </Helmet>
       <StructuredData />
@@ -91,8 +91,6 @@ function LegalWrapper({ page }: { page: string }) {
 export default function App() {
   useDirection()
   const consent = useCookieConsent()
-  const [loading, setLoading] = useState(true)
-  const [activeCaseStudy, setActiveCaseStudy] = useState<string | null>(null)
 
   useScrollDepth()
 
@@ -105,10 +103,7 @@ export default function App() {
         <Route path="/privacy" element={<LegalWrapper page="privacy" />} />
         <Route path="/terms" element={<LegalWrapper page="terms" />} />
         <Route path="/cookies" element={<LegalWrapper page="cookies" />} />
-        <Route
-          path="/case-studies/:slug"
-          element={<CaseStudyPageWrapper setLoading={setLoading} setActiveCaseStudy={setActiveCaseStudy} />}
-        />
+        <Route path="/case-studies/:slug" element={<CaseStudyPageWrapper />} />
       </Routes>
       <FloatingContact />
       <CookieBanner consent={consent} />
@@ -116,11 +111,9 @@ export default function App() {
   )
 }
 
-function CaseStudyPageWrapper({ setLoading, setActiveCaseStudy }: { setLoading: (v: boolean) => void; setActiveCaseStudy: (s: string | null) => void }) {
+function CaseStudyPageWrapper() {
   const { slug } = useParams<{ slug: string }>()
   useEffect(() => {
-    setActiveCaseStudy(slug || null)
-    setLoading(false)
     trackPageView(`/case-studies/${slug}`, `${slug} - Massar Digital Studio`)
   }, [slug])
   return <CaseStudyPage key={slug} slug={slug as string} />
