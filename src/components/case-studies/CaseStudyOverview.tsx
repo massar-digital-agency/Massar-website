@@ -27,6 +27,7 @@ export function CaseStudyOverview({ slug }: CaseStudyOverviewProps) {
     solution: string
     technologies: string[]
     outcomes: string
+    summary?: string
   }
 
   const services = defaultServices[slug] || []
@@ -52,6 +53,17 @@ export function CaseStudyOverview({ slug }: CaseStudyOverviewProps) {
           <h2 className="text-[22px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0A0A0A] sm:text-[26px] lg:text-[32px]">
             {t('caseStudies.title')}
           </h2>
+
+          {cs.summary && (
+            <div className="mt-6 rounded-xl border border-[#E4E4E7] bg-white p-5 sm:p-6">
+              <h3 className="mb-2 text-[14px] font-bold text-[#0A0A0A]">
+                Executive Summary
+              </h3>
+              <p className="text-[14px] leading-[1.8] text-[#52525B] sm:text-[15px]">
+                {cs.summary}
+              </p>
+            </div>
+          )}
 
           {/* Project Metadata Grid */}
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
