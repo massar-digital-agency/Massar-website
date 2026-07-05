@@ -40,7 +40,7 @@ export function CaseStudyHero({ slug, color }: CaseStudyHeroProps) {
                   {t('projects.label')}
                 </button>
               </li>
-              <li aria-hidden="true" className="text-[#71717A]">/</li>
+              <li aria-hidden="true" className="text-[#52525B]">/</li>
               <li className="text-[#0A0A0A] font-medium" aria-current="page">
                 {project.title}
               </li>
@@ -68,7 +68,7 @@ export function CaseStudyHero({ slug, color }: CaseStudyHeroProps) {
 
           <div className="mt-8 flex flex-wrap items-center gap-5 text-[13px] text-[#52525B]">
             <span className="inline-flex items-center gap-1.5">
-              <Clock className="h-4 w-4 text-[#71717A]" aria-hidden="true" />
+              <Clock className="h-4 w-4 text-[#52525B]" aria-hidden="true" />
               {/* TODO: Replace with actual project duration */}
               <span>{t('caseStudies.label')} — 2024</span>
             </span>

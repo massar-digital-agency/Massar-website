@@ -82,7 +82,7 @@ export function Hero() {
               initial="hidden"
               animate="visible"
               transition={{ delay: 0.2 }}
-              className="mt-4 text-center text-[12px] text-[#71717A] lg:text-start"
+              className="mt-4 text-center text-[12px] text-[#52525B] lg:text-start"
             >
               {t('hero.ctaMicro')}
             </motion.p>
@@ -165,7 +165,7 @@ export function Hero() {
           {[...marqueeKeys, ...marqueeKeys, ...marqueeKeys, ...marqueeKeys].map((key, i) => (
             <span
               key={`${key}-${i}`}
-              className="flex items-center gap-10 text-[14px] font-medium text-[#71717A]"
+              className="flex items-center gap-10 text-[14px] font-medium text-[#52525B]"
             >
               {t(`services.items.${key}.title`)}
               <span className="h-1 w-1 rounded-full bg-[#D4D4D8]" />

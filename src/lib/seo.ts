@@ -82,10 +82,10 @@ export function getCaseStudySEO(
   }
 
   const descriptions: Record<string, string> = {
-    journeya: 'Case study: How we built a complete tourism ecosystem with smart booking, mobile app, and brand identity for Journeya.',
-    wafr: 'Case study: How we developed a cross-platform food waste reduction app connecting consumers with nearby deals.',
-    darlink: 'Case study: How we created a modern real estate platform connecting buyers, sellers, and investors in Algeria.',
-    nextgen: 'Case study: How we built a performant e-commerce store with premium design for NextGen.',
+    journeya: 'Discover how Massar built Journeya\'s complete tourism ecosystem \u2014 a booking platform, mobile app, and brand identity \u2014 launched on schedule for a seamless user experience across web and mobile.',
+    wafr: 'See how Massar developed Wafr, a cross-platform food waste reduction app connecting consumers with surplus food deals through geolocation and real-time notifications in Algeria.',
+    darlink: 'Explore how Massar created DarLink, a modern real estate platform connecting buyers, sellers, and investors in Algeria with 200+ property listings, advanced search, and direct messaging.',
+    nextgen: 'Learn how Massar delivered a premium e-commerce experience for NextGen with 90+ Lighthouse scores, optimized checkout flow, and performance-first architecture built for conversions.',
   }
 
   const title = `${titles[slug] || projectTitle || slug} | ${SITE_NAME}`
@@ -99,12 +99,13 @@ export function getCaseStudySEO(
   }
 }
 
-export function getHreflangLinks(pageUrl: string): Array<{ lang: string; href: string }> {
-  const separator = pageUrl.includes('?') ? '&' : '?'
+export function getHreflangLinks(pagePath: string): Array<{ lang: string; href: string }> {
+  const absoluteUrl = `${SITE_URL}${pagePath}`
+  const separator = absoluteUrl.includes('?') ? '&' : '?'
   return [
-    { lang: 'ar', href: `${pageUrl}${separator}lang=ar` },
-    { lang: 'fr', href: `${pageUrl}${separator}lang=fr` },
-    { lang: 'en', href: `${pageUrl}${separator}lang=en` },
-    { lang: 'x-default', href: pageUrl },
+    { lang: 'x-default', href: absoluteUrl },
+    { lang: 'en', href: `${absoluteUrl}${separator}lang=en` },
+    { lang: 'fr', href: `${absoluteUrl}${separator}lang=fr` },
+    { lang: 'ar', href: `${absoluteUrl}${separator}lang=ar` },
   ]
 }
