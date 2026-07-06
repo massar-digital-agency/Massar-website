@@ -1,0 +1,89 @@
+name: Lighthouse CI
+
+on:
+  pull_request:
+    branches: [main, master]
+    types: [opened, synchronize, reopened]
+
+concurrency:
+  group: lighthouse-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: '24'
+  LHCI_VERSION: '0.14.0'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  lighthouse:
+    name: Lighthouse Audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build production bundle
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli@${{ env.LHCI_VERSION }}
+
+      - name: Run Lighthouse CI
+        run: lhci autorun
+        continue-on-error: true
+        env:
+          LHCI_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload Lighthouse Reports as Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports-${{ github.sha }}
+          path: .lighthouseci/
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Check Assertion Results
+        if: always()
+        run: |
+          if [ -f ".lighthouseci/assertion-results.json" ]; then
+            echo "=== Lighthouse CI Assertion Results ==="
+            node -e "
+              const results = require('./.lighthouseci/assertion-results.json');
+              let failed = false;
+              for (const [url, assertions] of Object.entries(results)) {
+                console.log('\n--- ' + url + ' ---');
+                for (const [name, result] of Object.entries(assertions)) {
+                  const status = result.passed ? 'PASS' : 'FAIL';
+                  if (!result.passed) failed = true;
+                  console.log('  [' + status + '] ' + name + ': ' + (result.expectedValue || '') + ' (got: ' + (result.actualValue || '') + ')');
+                }
+              }
+              if (failed) {
+                console.log('\n❌ Some assertions failed. Check the uploaded artifacts for full reports.');
+                process.exit(1);
+              } else {
+                console.log('\n✅ All assertions passed!');
+              }
+            "
+          else
+            echo "No assertion results found. Check Lighthouse CI output above."
+            exit 1
+          fi

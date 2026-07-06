@@ -1,20 +1,67 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { fadeUp } from '@/hooks/useAnimationVariants'
-import { trackEvent } from '@/lib/analytics'
 import { HERO_MASCOT } from '@/lib/seo'
+import { useABTest } from '@/lib/ab-testing'
 
 const marqueeKeys = ['web', 'apps', 'branding', 'uiux', 'automation', 'ai'] as const
+const HERO_AB_TEST = 'hero_headline'
 
 export function Hero() {
   const { t, i18n } = useTranslation()
   const isRTL = i18n.language === 'ar'
   const Arrow = isRTL ? ArrowLeft : ArrowRight
   const [marqueePaused, setMarqueePaused] = useState(false)
+  const { variant, trackEvent: trackABEvent } = useABTest(HERO_AB_TEST)
+
+  const heroContent = useMemo(() => {
+    if (variant === 'B' && t(`hero.variantB.title`, { defaultValue: '' })) {
+      return {
+        badge: t('hero.variantB.badge'),
+        title: t('hero.variantB.title'),
+        titleAccent: t('hero.variantB.titleAccent'),
+        subtitle: t('hero.variantB.subtitle'),
+        cta: t('hero.variantB.cta'),
+        ctaSecondary: t('hero.variantB.ctaSecondary'),
+        trustStatement: t('hero.variantB.trustStatement'),
+        ctaMicro: t('hero.variantB.ctaMicro'),
+        trust: {
+          projects: t('hero.variantB.trust.projects'),
+          experience: t('hero.variantB.trust.experience'),
+          clients: t('hero.variantB.trust.clients'),
+        },
+        process: {
+          discovery: t('hero.variantB.process.discovery'),
+          delivery: t('hero.variantB.process.delivery'),
+          support: t('hero.variantB.process.support'),
+        },
+      }
+    }
+    return {
+      badge: t('hero.badge'),
+      title: t('hero.title'),
+      titleAccent: t('hero.titleAccent'),
+      subtitle: t('hero.subtitle'),
+      cta: t('hero.cta'),
+      ctaSecondary: t('hero.ctaSecondary'),
+      trustStatement: t('hero.trustStatement'),
+      ctaMicro: t('hero.ctaMicro'),
+      trust: {
+        projects: t('hero.trust.projects'),
+        experience: t('hero.trust.experience'),
+        clients: t('hero.trust.clients'),
+      },
+      process: {
+        discovery: t('hero.process.discovery'),
+        delivery: t('hero.process.delivery'),
+        support: t('hero.process.support'),
+      },
+    }
+  }, [variant, t])
 
   return (
     <section className="relative flex min-h-[100svh] flex-col pt-24 pb-8 sm:pt-28">
@@ -24,7 +71,7 @@ export function Hero() {
             <motion.div variants={fadeUp} initial="hidden" animate="visible">
               <span className="mb-6 inline-flex items-center gap-2 text-[13px] font-medium text-[#52525B]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#8B5CF6]" />
-                {t('hero.badge')}
+                {heroContent.badge}
               </span>
             </motion.div>
 
@@ -35,8 +82,8 @@ export function Hero() {
               transition={{ delay: 0.05 }}
               className="text-[30px] font-bold leading-[1.15] tracking-[-0.02em] text-[#0A0A0A] sm:text-[40px] lg:text-[52px]"
             >
-              {t('hero.title')}{' '}
-              <span className="text-[#8B5CF6]">{t('hero.titleAccent')}</span>
+              {heroContent.title}{' '}
+              <span className="text-[#8B5CF6]">{heroContent.titleAccent}</span>
             </motion.h1>
 
             <motion.p
@@ -46,7 +93,7 @@ export function Hero() {
               transition={{ delay: 0.1 }}
               className="mx-auto mt-5 max-w-[460px] text-[14px] leading-[1.8] text-[#52525B] sm:text-[16px] lg:mx-0"
             >
-              {t('hero.subtitle')}
+              {heroContent.subtitle}
             </motion.p>
 
             <motion.div
@@ -56,12 +103,12 @@ export function Hero() {
               transition={{ delay: 0.15 }}
               className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:mt-10 lg:justify-start"
             >
-              <Button variant="accent" size="lg" href="#contact" onClick={() => trackEvent('cta_click', { cta_location: 'hero', cta_text: t('hero.cta'), cta_type: 'accent' })}>
-                {t('hero.cta')}
+              <Button variant="accent" size="lg" href="#contact" onClick={() => trackABEvent('cta_click', { cta_location: 'hero', cta_text: heroContent.cta, cta_type: 'accent' })}>
+                {heroContent.cta}
                 <Arrow className="h-4 w-4" aria-hidden="true" />
               </Button>
-              <Button variant="secondary" size="lg" href="#projects" onClick={() => trackEvent('cta_click', { cta_location: 'hero', cta_text: t('hero.ctaSecondary'), cta_type: 'secondary' })}>
-                {t('hero.ctaSecondary')}
+              <Button variant="secondary" size="lg" href="#projects" onClick={() => trackABEvent('cta_click', { cta_location: 'hero', cta_text: heroContent.ctaSecondary, cta_type: 'secondary' })}>
+                {heroContent.ctaSecondary}
               </Button>
             </motion.div>
 
@@ -72,7 +119,7 @@ export function Hero() {
               transition={{ delay: 0.18 }}
               className="mt-6 text-center text-[13px] text-[#52525B] lg:text-start"
             >
-              {t('hero.trustStatement')}
+              {heroContent.trustStatement}
             </motion.p>
 
             <motion.p
@@ -82,7 +129,7 @@ export function Hero() {
               transition={{ delay: 0.2 }}
               className="mt-4 text-center text-[12px] text-[#52525B] lg:text-start"
             >
-              {t('hero.ctaMicro')}
+              {heroContent.ctaMicro}
             </motion.p>
 
             <motion.div
@@ -94,15 +141,15 @@ export function Hero() {
             >
               <div className="flex items-center gap-2 text-[13px] text-[#52525B]">
                 <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                {t('hero.trust.projects')}
+                {heroContent.trust.projects}
               </div>
               <div className="flex items-center gap-2 text-[13px] text-[#52525B]">
                 <span className="flex h-1.5 w-1.5 rounded-full bg-[#8B5CF6]" />
-                {t('hero.trust.experience')}
+                {heroContent.trust.experience}
               </div>
               <div className="flex items-center gap-2 text-[13px] text-[#52525B]">
                 <span className="flex h-1.5 w-1.5 rounded-full bg-amber-500" />
-                {t('hero.trust.clients')}
+                {heroContent.trust.clients}
               </div>
             </motion.div>
 
@@ -115,15 +162,15 @@ export function Hero() {
             >
               <div className="flex items-center gap-2 text-[13px] text-[#52525B]">
                 <span className="flex h-1.5 w-1.5 rounded-full bg-sky-500" />
-                {t('hero.process.discovery')}
+                {heroContent.process.discovery}
               </div>
               <div className="flex items-center gap-2 text-[13px] text-[#52525B]">
                 <span className="flex h-1.5 w-1.5 rounded-full bg-sky-500" />
-                {t('hero.process.delivery')}
+                {heroContent.process.delivery}
               </div>
               <div className="flex items-center gap-2 text-[13px] text-[#52525B]">
                 <span className="flex h-1.5 w-1.5 rounded-full bg-sky-500" />
-                {t('hero.process.support')}
+                {heroContent.process.support}
               </div>
             </motion.div>
           </div>
