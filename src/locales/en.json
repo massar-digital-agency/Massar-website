@@ -689,20 +689,52 @@
     "ctaMicro": "We're happy to help. Reach out and we'll get back to you within 24 hours.",
     "items": [
       {
-        "question": "How long does it take to build a professional website?",
-        "answer": "It depends on the project size. A simple showcase site takes 2 to 4 weeks, while advanced platforms may take 6 to 12 weeks."
+        "question": "How much does a professional website cost?",
+        "answer": "Our pricing is project-based and depends on scope, complexity, and features. A standard business website starts from $2,500, while more complex projects with custom functionality, e-commerce, or integrations are quoted individually. We provide a detailed breakdown in every proposal so you know exactly what you're paying for — no hidden fees, no surprises."
       },
       {
-        "question": "Do you offer maintenance after launch?",
-        "answer": "Yes, we offer support packages including security updates, performance optimization, and new feature additions."
+        "question": "Do you offer SEO services, and how are they priced?",
+        "answer": "Yes, SEO is built into every website we build — from technical fundamentals like meta tags, sitemaps, and structured data to performance optimization that boosts rankings. For ongoing SEO strategy, content optimization, and link building, we offer monthly retainer packages starting from $300/month. Every SEO engagement starts with a free audit of your current online presence."
       },
       {
-        "question": "What technologies do you use?",
-        "answer": "We use React, Next.js, TypeScript, and Tailwind CSS for frontend, with advanced cloud solutions for backend infrastructure."
+        "question": "What are your payment terms?",
+        "answer": "We work on a milestone-based payment structure. A 40% deposit is required to begin work, with subsequent payments tied to key deliverables: design approval, development completion, and final launch. This ensures you always know where your investment is going and never pay for work that hasn't been delivered. We're flexible on schedules and happy to discuss terms that work for your cash flow."
       },
       {
-        "question": "How do you determine project costs?",
-        "answer": "We start with a free discovery session to understand your needs, then provide a detailed quote tailored to the project scope."
+        "question": "How long does a typical project take from start to finish?",
+        "answer": "Timelines depend on project complexity. A standard brochure or business website takes 2–3 weeks from kickoff to launch. More advanced projects with custom development, user accounts, or e-commerce typically take 3–5 weeks. Large-scale platforms or web applications can range from 6–12 weeks. Every proposal includes a detailed timeline with milestones so you know exactly what to expect and when."
+      },
+      {
+        "question": "What does your delivery process look like?",
+        "answer": "We follow a structured six-phase process: Discovery, Planning, Design, Development, Launch, and Support. We start by understanding your business, audience, and goals in depth. After a strategy session, we design mockups for your approval, then build the site in stages with regular check-ins. Before launch, we run thorough testing for performance, accessibility, SEO, and cross-device compatibility."
+      },
+      {
+        "question": "How many revisions are included in the design phase?",
+        "answer": "Every package includes 2–3 rounds of revisions during the design phase, depending on the plan you choose. This gives us room to refine the look and feel until it aligns with your vision. If additional revisions are needed beyond the agreed scope, we accommodate them at our standard hourly rate. Our goal is your full satisfaction before we move into development."
+      },
+      {
+        "question": "What technology stack do you use to build websites?",
+        "answer": "We build on modern, battle-tested technologies: React, Next.js, TypeScript, and Tailwind CSS for fast, maintainable frontends. For backends, we use Node.js, Firebase, or Supabase depending on project requirements. This stack delivers excellent performance (90+ Lighthouse scores), strong SEO foundations, and easy scalability as your business grows. We avoid outdated page builders and bloated CMS platforms."
+      },
+      {
+        "question": "Will I be able to manage content on my own after the site is launched?",
+        "answer": "Absolutely. If your project includes a CMS, we set up an intuitive dashboard that lets you update text, images, blog posts, and other content without touching any code. For simpler sites without a CMS, we provide a handoff guide and are always available for quick content updates. We'll train you or your team on how to manage everything after launch."
+      },
+      {
+        "question": "Do you provide hosting, maintenance, and ongoing support?",
+        "answer": "Yes. We offer hosting setup and ongoing maintenance packages that include security monitoring, performance optimization, regular backups, plugin/ dependency updates, and priority technical support. Monthly maintenance starts at $150/month. We also provide emergency support for critical issues. Post-launch support is not an afterthought — it's a core part of how we build long-term partnerships."
+      },
+      {
+        "question": "Why should I choose Massar over other digital agencies in Algeria?",
+        "answer": "We combine global technical standards with deep understanding of the Algerian market. Every project is built with strategy first — we don't design or code until we understand your business goals, audience, and competitive landscape. We use modern technologies (React, Next.js, TypeScript), target 90+ Lighthouse scores, and follow WCAG accessibility standards. Our processes are transparent, our communication is responsive, and we treat every budget with respect."
+      },
+      {
+        "question": "Do you have experience working with businesses in Algeria?",
+        "answer": "Yes — Algeria is our home market, and we've built digital products for Algerian startups (Journeya, Wafr) and established businesses (DarLink) across travel, real estate, e-commerce, and sustainability sectors. We understand the local digital landscape, consumer behavior, and business challenges. We're based in Algeria, responsive in your time zone, and can communicate in Arabic, French, or English."
+      },
+      {
+        "question": "What guarantees do you offer, and what happens if I'm not satisfied?",
+        "answer": "We stand behind our work with a transparent revision policy during the design phase and a post-launch support period to address any issues. Our milestone-based payment structure means you only pay for completed, approved work. If at any point you feel the project isn't meeting expectations, we'll discuss adjustments openly. We've built our reputation on trust, and we treat every project as a long-term partnership."
       }
     ]
   },
@@ -761,62 +793,11 @@
       "responseExpected": "Expected response within 24 hours"
     },
     "social": {
-      "testimonialText": "Massar delivered our web app ahead of schedule and with incredible attention to detail. Their communication was flawless throughout.",
+      "testimonialText": "Massar delivered our web app ahead of schedule without sacrificing an ounce of quality. Their attention to detail and transparent communication made the entire process stress-free.",
       "testimonialAuthor": "Amine Rahmani",
       "testimonialCompany": "Co-founder, Journeya",
       "projectsLabel": "Projects Done",
       "experienceLabel": "Years Experience"
-    },
-  "services": {
-    "label": "Services",
-    "title": "Web development & digital services in Algeria",
-    "subtitle": "From custom website development to SEO and mobile apps — everything your business needs to grow online.",
-    "items": {
-      "web": {
-        "title": "Custom Website Development",
-        "description": "Fast, conversion-focused websites built with modern tech. Optimized for SEO, speed, and turning visitors into paying customers."
-      },
-      "apps": {
-        "title": "Web & Mobile Applications",
-        "description": "High-performance apps that streamline operations and deliver a seamless experience on every device."
-      },
-      "branding": {
-        "title": "Brand Identity",
-        "description": "A cohesive brand identity that builds trust and sets your business apart in Algeria's competitive market."
-      },
-      "uiux": {
-        "title": "UI/UX Design",
-        "description": "User-centered interfaces designed for clarity, accessibility, and higher conversion rates."
-      },
-      "automation": {
-        "title": "Automation",
-        "description": "Automate repetitive workflows to save time, cut costs, and focus on what drives revenue."
-      },
-      "ai": {
-        "title": "AI Solutions",
-        "description": "Practical AI integrations that speed up decisions and unlock smarter business operations."
-      }
-    },
-    "cta": "Turn one of these services into your next project",
-    "ctaMicro": "We'll discuss your goals, scope, and provide a transparent quote — no commitment required."
-  },
-  "why": {
-      "label": "Why Massar",
-      "title": "A partnership geared for your growth",
-      "items": {
-        "communication": {
-          "title": "Ultra-Fast Communication",
-          "description": "No endless wait times. We provide updates via Slack/WhatsApp and are always a quick call away."
-        },
-        "process": {
-          "title": "Transparent Process",
-          "description": "Track milestones and progression interactively from onboarding to launch."
-        },
-        "outcomes": {
-          "title": "Outcomes Over Deliverables",
-          "description": "We build with clear business conversion goals, speed optimization, and growth in mind."
-        }
-      }
     },
     "cta": {
       "title": "Prefer a direct face-to-face video call?",
@@ -895,9 +876,6 @@
     "moreInfo": "For more information, read our",
     "privacyLink": "Privacy Policy",
     "cookiesLink": "Cookie Policy"
-  },
-  "mobileStickyCta": {
-    "label": "Schedule a Call"
   },
   "floatingContact": {
     "ariaLabel": "Contact options — WhatsApp and email"
