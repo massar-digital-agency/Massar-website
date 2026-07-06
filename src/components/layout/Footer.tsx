@@ -91,7 +91,7 @@ export function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <a href="#" onClick={() => trackEvent('logo_click', { location: 'footer' })} className="inline-flex items-center gap-2.5 mb-5">
-              <img src={Logo} alt="Massar Digital Studio" className="h-8 w-auto" />
+              <img src={Logo} alt="Massar Digital Studio" loading="lazy" className="h-8 w-auto" />
               <span className="text-[16px] font-bold text-[#0A0A0A]">Massar</span>
             </a>
             <p className="text-[14px] leading-[1.75] text-[#71717A] max-w-[260px]">

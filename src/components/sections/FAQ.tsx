@@ -22,6 +22,7 @@ export function FAQ() {
       <img
         src={ChatShape}
         alt=""
+        loading="lazy"
         className="pointer-events-none absolute -top-10 end-[-80px] hidden h-[280px] w-auto opacity-[0.07] lg:block"
       />
       <Container narrow className="relative">
