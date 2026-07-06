@@ -12,6 +12,13 @@ dist
 dist-ssr
 *.local
 
+# Font subsetting artifacts — original downloads
+public/fonts/**/*.ttf
+public/fonts/**/original/
+
+# Lighthouse CI reports
+.lighthouseci/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

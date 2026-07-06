@@ -6,6 +6,8 @@ import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { fadeUp, stagger } from '@/hooks/useAnimationVariants'
 import { trackEvent } from '@/lib/analytics'
+import { useElementVisibility } from '@/hooks/useElementVisibility'
+import { useABTest } from '@/lib/ab-testing'
 
 interface FormState {
   name: string
@@ -37,6 +39,10 @@ export function Contact() {
   const [copiedEmail, setCopiedEmail] = useState(false)
   const [copiedPhone, setCopiedPhone] = useState(false)
   const formStarted = useRef(false)
+
+  const { trackEvent: trackABEvent } = useABTest('hero_headline')
+
+  useElementVisibility('contact', 'contact_form_visible')
 
   const trackFormStarted = () => {
     if (!formStarted.current) {
@@ -138,7 +144,7 @@ export function Contact() {
       await new Promise((resolve) => setTimeout(resolve, 1500))
       setStatus('success')
       setForm(initialFormState)
-      trackEvent('generate_lead', { lead_type: 'contact_form', lead_source: 'organic' })
+      trackABEvent('generate_lead', { lead_type: 'contact_form', lead_source: 'organic' })
       trackEvent('form_submit_success', { form_name: 'contact' })
     } catch {
       setStatus('error')
@@ -613,7 +619,7 @@ export function Contact() {
               size="lg"
               className="bg-white text-[#0A0A0A] hover:bg-neutral-100 border-none shadow-md"
               href="https://calendly.com"
-              onClick={() => trackEvent('schedule_call_click', { source: 'contact_cta' })}
+              onClick={() => trackABEvent('schedule_call_click', { source: 'contact_cta' })}
             >
               <Calendar className="h-4.5 w-4.5" aria-hidden="true" />
               {t('contact.cta.schedule')}
