@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet-async'
 import { useDirection } from '@/hooks/useDirection'
 import { useCookieConsent } from '@/hooks/useCookieConsent'
+import { useExitIntent } from '@/hooks/useExitIntent'
 import { SEOHead } from '@/components/layout/SEOHead'
 import { StructuredData } from '@/components/layout/StructuredData'
 import { LoadingScreen } from '@/components/layout/LoadingScreen'
@@ -12,6 +13,10 @@ import { Footer } from '@/components/layout/Footer'
 import { FloatingContact } from '@/components/layout/FloatingContact'
 import { MobileStickyCTA } from '@/components/layout/MobileStickyCTA'
 import { CookieBanner } from '@/components/layout/CookieBanner'
+
+const ExitIntentModal = lazy(() =>
+  import('@/components/layout/ExitIntentModal').then((m) => ({ default: m.ExitIntentModal })),
+)
 import { PrivacyPolicy } from '@/components/legal/PrivacyPolicy'
 import { TermsOfService } from '@/components/legal/TermsOfService'
 import { CookiePolicy } from '@/components/legal/CookiePolicy'
@@ -98,6 +103,7 @@ function LegalWrapper({ page }: { page: string }) {
 export default function App() {
   useDirection()
   const consent = useCookieConsent()
+  const exitIntent = useExitIntent()
 
   useScrollDepth()
 
@@ -119,6 +125,9 @@ export default function App() {
       <MobileStickyCTA />
       <FloatingContact />
       <CookieBanner consent={consent} />
+      <Suspense fallback={null}>
+        <ExitIntentModal show={exitIntent.show} onDismiss={exitIntent.dismiss} />
+      </Suspense>
     </BrowserRouter>
   )
 }
