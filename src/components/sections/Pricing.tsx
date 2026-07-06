@@ -317,7 +317,7 @@ export function Pricing() {
                   {t('pricing.custom.cta')}
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Button>
-                <Button variant="secondary" size="lg" href="https://calendly.com" onClick={() => trackEvent('schedule_call_click', { source: 'pricing_custom' })}>
+                <Button variant="accent" size="lg" href="https://calendly.com/massar-digital-studio/30min" className="shadow-lg shadow-[#8B5CF6]/30" onClick={() => trackEvent('schedule_call_click', { source: 'pricing_custom' })}>
                   <Calendar className="h-4.5 w-4.5" aria-hidden="true" />
                   {t('pricing.custom.ctaSchedule')}
                   <ArrowUpRight className="h-4 w-4" aria-hidden="true" />

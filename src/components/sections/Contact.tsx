@@ -620,13 +620,7 @@ export function Contact() {
             {t('contact.cta.subtitle')}
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <Button
-              variant="secondary"
-              size="lg"
-              className="bg-white text-[#0A0A0A] hover:bg-neutral-100 border-none shadow-md"
-              href="https://calendly.com"
-              onClick={() => trackABEvent('schedule_call_click', { source: 'contact_cta' })}
-            >
+            <Button variant="accent" size="lg" href="https://calendly.com/massar-digital-studio/30min" className="shadow-lg shadow-[#8B5CF6]/40" onClick={() => trackABEvent('schedule_call_click', { source: 'contact_cta' })}>
               <Calendar className="h-4.5 w-4.5" aria-hidden="true" />
               {t('contact.cta.schedule')}
               <ArrowUpRight className="h-4 w-4" aria-hidden="true" />

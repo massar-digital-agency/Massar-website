@@ -231,8 +231,8 @@
       "idealLabel": "Best for",
       "website": {
         "name": "Website Package",
-        "price": "35,000 DZD",
-        "description": "A professional, responsive website built with modern technology to establish your online presence.",
+        "price": "45,000 DZD",
+        "description": "A modern, responsive showcase website designed to establish your online presence with unbeatable value.",
         "ideal": "Small businesses, freelancers & startups",
         "timeline": "2–3 weeks",
         "features": [
@@ -252,8 +252,8 @@
       },
       "growth": {
         "name": "Growth Bundle",
-        "price": "120,000 DZD",
-        "description": "A full-featured website with CMS, advanced functionality, and everything you need to scale your online presence.",
+        "price": "145,000 DZD",
+        "description": "A full-featured website with CMS, blog, and advanced features to grow your business online.",
         "ideal": "Growing businesses, service companies & startups",
         "timeline": "3–5 weeks",
         "features": [
@@ -274,8 +274,8 @@
       },
       "custom": {
         "name": "Custom Project",
-        "price": "500,000 DZD",
-        "description": "A fully custom web application, platform, or digital product tailored to your unique business requirements.",
+        "price": "550,000 DZD",
+        "description": "A fully custom web platform or application, architected to power your most ambitious projects.",
         "ideal": "SaaS, platforms, marketplaces & enterprises",
         "timeline": "6–12 weeks",
         "features": [
@@ -304,24 +304,23 @@
         "feature": "Feature"
       },
       "features": [
-        { "feature": "Pages / Routes", "starter": "Up to 5", "growth": "Up to 10", "custom": "Unlimited" },
-        { "feature": "Responsive Design", "starter": "✓", "growth": "✓", "custom": "✓" },
+        { "feature": "Pages", "starter": "Up to 5", "growth": "Up to 10", "custom": "Unlimited" },
+        { "feature": "Responsive & Mobile-First", "starter": "✓", "growth": "✓", "custom": "✓" },
         { "feature": "SEO Optimization", "starter": "Basic", "growth": "Advanced", "custom": "Advanced" },
-        { "feature": "Content Management", "starter": "—", "growth": "✓", "custom": "✓" },
-        { "feature": "Custom Design", "starter": "Template-based", "growth": "Custom", "custom": "Full custom" },
-        { "feature": "Animations", "starter": "Basic", "growth": "Advanced", "custom": "Custom" },
-        { "feature": "Analytics Setup", "starter": "Basic", "growth": "Advanced", "custom": "Custom" },
-        { "feature": "CMS Integration", "starter": "—", "growth": "✓", "custom": "✓" },
-        { "feature": "E-commerce", "starter": "Add-on", "growth": "Add-on", "custom": "Included" },
-        { "feature": "User Accounts / Auth", "starter": "—", "growth": "—", "custom": "✓" },
+        { "feature": "CMS", "starter": "Optional", "growth": "Included", "custom": "Included per architecture" },
+        { "feature": "Custom Design", "starter": "Template-based", "growth": "Custom", "custom": "Fully bespoke" },
+        { "feature": "Animations & Transitions", "starter": "Basic", "growth": "Advanced", "custom": "Custom" },
+        { "feature": "Analytics & Tracking", "starter": "Basic", "growth": "Advanced", "custom": "Custom" },
+        { "feature": "E-commerce", "starter": "Optional", "growth": "Optional", "custom": "Quote-based / per scope" },
+        { "feature": "Auth & User Accounts", "starter": "—", "growth": "—", "custom": "✓" },
         { "feature": "API Integrations", "starter": "—", "growth": "—", "custom": "✓" },
         { "feature": "Admin Dashboard", "starter": "—", "growth": "—", "custom": "✓" },
-        { "feature": "Performance Target", "starter": "90+", "growth": "95+", "custom": "95+" },
-        { "feature": "Security Audit", "starter": "Basic", "growth": "Standard", "custom": "Advanced" },
-        { "feature": "Revisions", "starter": "2 rounds", "growth": "3 rounds", "custom": "Agreed scope" },
+        { "feature": "Performance (Lighthouse)", "starter": "90+", "growth": "95+", "custom": "95+" },
+        { "feature": "Security & Compliance", "starter": "Basic", "growth": "Standard", "custom": "Advanced" },
+        { "feature": "Design Revisions", "starter": "2 rounds", "growth": "3 rounds", "custom": "Per scope" },
         { "feature": "Deployment", "starter": "✓", "growth": "✓", "custom": "✓" },
-        { "feature": "Post-launch Support", "starter": "2 weeks", "growth": "1 month", "custom": "Custom" },
-        { "feature": "Timeline", "starter": "2–3 weeks", "growth": "3–5 weeks", "custom": "6–12 weeks" }
+        { "feature": "Post-launch Support", "starter": "14 days", "growth": "30 days", "custom": "Custom" },
+        { "feature": "Delivery Timeline", "starter": "2–3 wks", "growth": "3–5 wks", "custom": "6–12 wks" }
       ]
     },
     "custom": {

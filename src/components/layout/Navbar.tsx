@@ -10,7 +10,7 @@ import { navigateToSection, navigateHome, navigateToAboutPage, isOnAboutPage } f
 import { trackEvent } from '@/lib/analytics'
 import Logo from '@/assets/images/Logo.svg'
 
-const navLinks = ['services', 'projects', 'pricing', 'about', 'faq', 'contact'] as const
+const navLinks = ['services', 'about', 'projects', 'pricing', 'faq', 'contact'] as const
 
 export function Navbar() {
   const { t } = useTranslation()
@@ -69,15 +69,7 @@ export function Navbar() {
     e.preventDefault()
     handleCloseMenu()
     trackEvent('nav_click', { nav_section: sectionId, nav_label: t(`nav.${sectionId}`) })
-    if (sectionId === 'about') {
-      if (isOnAboutPage()) {
-        navigateToSection('about')
-      } else {
-        navigateToAboutPage()
-      }
-    } else {
-      navigateToSection(sectionId)
-    }
+    navigateToSection(sectionId)
   }
 
   return (

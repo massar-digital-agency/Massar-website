@@ -66,7 +66,7 @@
     "subtitle": "Agence digitale algérienne orientée stratégie. Nous concevons et développons des sites sur mesure, applications mobiles et identités visuelles qui transforment vos visiteurs en clients — avec SEO, performance et conversion intégrés dès le premier jour.",
     "trustStatement": "Approuvé par Journeya, DarLink et des entreprises en croissance à travers l'Algérie.",
     "cta": "Obtenez un devis gratuit",
-    "ctaMicro": "Appel découverte gratuit de 15 min • Sans engagement • Réponse sous 24h",
+    "ctaMicro": "Appel découverte gratuit de 45 min • Sans engagement • Réponse sous 24h",
     "ctaSecondary": "Voir nos réalisations",
     "trust": {
       "projects": "15+ Projets",
@@ -86,7 +86,7 @@
       "cta": "Commencer votre projet",
       "ctaSecondary": "Découvrir comment",
       "trustStatement": "Approuvé par Journeya, DarLink et des entreprises en croissance à travers l'Algérie.",
-      "ctaMicro": "Appel découverte gratuit de 15 min • Sans engagement • Réponse sous 24h",
+      "ctaMicro": "Appel découverte gratuit de 45 min • Sans engagement • Réponse sous 24h",
       "trust": {
         "projects": "15+ Projets",
         "experience": "3+ Années",
@@ -94,7 +94,7 @@
       },
       "process": {
         "discovery": "Séance découverte gratuite",
-"delivery": "Livraison en 2–12 semaines",
+        "delivery": "Livraison en 2–12 semaines",
         "support": "Support continu"
       }
     }
@@ -229,10 +229,10 @@
       "cta": "Commencer",
       "ctaCustom": "Demander un devis personnalisé",
       "idealLabel": "Idéal pour",
-      "website": {
+        "website": {
         "name": "Forfait Site Web",
-        "price": "35 000 DA",
-        "description": "Un site professionnel et responsive, construit avec les technologies modernes pour établir votre présence en ligne.",
+        "price": "45 000 DA",
+        "description": "Un site vitrine moderne et responsive, conçu pour établir votre présence en ligne avec un rapport qualité-prix imbattable.",
         "ideal": "PME, freelances et start-ups",
         "timeline": "2–3 semaines",
         "features": [
@@ -244,7 +244,7 @@
           "Configuration analytics de base"
         ],
         "addons": [
-          "Système de gestion de contenu (CMS) — +20 000 DA",
+          "CMS — +20 000 DA",
           "Section blog/actualités — +15 000 DA",
           "Intégration e-commerce — à partir de 80 000 DA",
           "Animations personnalisées — à partir de 10 000 DA"
@@ -252,8 +252,8 @@
       },
       "growth": {
         "name": "Forfait Croissance",
-        "price": "120 000 DA",
-        "description": "Un site complet avec CMS, fonctionnalités avancées et tout ce qu'il faut pour développer votre présence en ligne.",
+        "price": "145 000 DA",
+        "description": "Un site complet avec CMS, blog et fonctionnalités avancées pour développer votre activité en ligne.",
         "ideal": "Entreprises en croissance, sociétés de services et start-ups",
         "timeline": "3–5 semaines",
         "features": [
@@ -274,8 +274,8 @@
       },
       "custom": {
         "name": "Projet Sur Mesure",
-        "price": "500 000 DA",
-        "description": "Une application web, plateforme ou produit numérique entièrement personnalisé selon vos besoins uniques.",
+        "price": "550 000 DA",
+        "description": "Une plateforme ou application web entièrement personnalisée, pensée pour accompagner vos ambitions les plus complexes.",
         "ideal": "SaaS, places de marché et entreprises",
         "timeline": "6–12 semaines",
         "features": [
@@ -304,23 +304,22 @@
         "feature": "Fonctionnalité"
       },
       "features": [
-        { "feature": "Pages / Routes", "starter": "Jusqu'à 5", "growth": "Jusqu'à 10", "custom": "Illimité" },
-        { "feature": "Design Responsive", "starter": "✓", "growth": "✓", "custom": "✓" },
+        { "feature": "Pages", "starter": "Jusqu'à 5", "growth": "Jusqu'à 10", "custom": "Illimité" },
+        { "feature": "Design Responsive & Mobile", "starter": "✓", "growth": "✓", "custom": "✓" },
         { "feature": "Optimisation SEO", "starter": "De base", "growth": "Avancé", "custom": "Avancé" },
-        { "feature": "Gestion de Contenu", "starter": "—", "growth": "✓", "custom": "✓" },
-        { "feature": "Design Personnalisé", "starter": "Templates", "growth": "Personnalisé", "custom": "Entièrement sur mesure" },
-        { "feature": "Animations", "starter": "De base", "growth": "Avancées", "custom": "Sur mesure" },
-        { "feature": "Configuration Analytics", "starter": "De base", "growth": "Avancé", "custom": "Sur mesure" },
-        { "feature": "Intégration CMS", "starter": "—", "growth": "✓", "custom": "✓" },
-        { "feature": "E-commerce", "starter": "Option", "growth": "Option", "custom": "Inclus" },
-        { "feature": "Comptes Utilisateurs", "starter": "—", "growth": "—", "custom": "✓" },
+        { "feature": "CMS", "starter": "Optionnel", "growth": "Inclus", "custom": "Inclus selon architecture" },
+        { "feature": "Design sur mesure", "starter": "Sur templates", "growth": "Personnalisé", "custom": "Entièrement sur mesure" },
+        { "feature": "Animations & transitions", "starter": "De base", "growth": "Avancées", "custom": "Sur mesure" },
+        { "feature": "Analytics & suivi", "starter": "De base", "growth": "Avancé", "custom": "Sur mesure" },
+        { "feature": "E-commerce", "starter": "Option", "growth": "Option", "custom": "Sur devis / selon périmètre" },
+        { "feature": "Authentification & comptes", "starter": "—", "growth": "—", "custom": "✓" },
         { "feature": "Intégrations API", "starter": "—", "growth": "—", "custom": "✓" },
-        { "feature": "Tableau de Bord Admin", "starter": "—", "growth": "—", "custom": "✓" },
-        { "feature": "Objectif Performance", "starter": "90+", "growth": "95+", "custom": "95+" },
-        { "feature": "Audit de Sécurité", "starter": "De base", "growth": "Standard", "custom": "Avancé" },
-        { "feature": "Révisions Design", "starter": "2 séries", "growth": "3 séries", "custom": "Selon périmètre" },
+        { "feature": "Interface d'administration", "starter": "—", "growth": "—", "custom": "✓" },
+        { "feature": "Performance (Lighthouse)", "starter": "90+", "growth": "95+", "custom": "95+" },
+        { "feature": "Sécurité & conformité", "starter": "De base", "growth": "Standard", "custom": "Avancé" },
+        { "feature": "Cycles de révision", "starter": "2 séries", "growth": "3 séries", "custom": "Selon périmètre" },
         { "feature": "Déploiement", "starter": "✓", "growth": "✓", "custom": "✓" },
-        { "feature": "Support Post-lancement", "starter": "2 semaines", "growth": "1 mois", "custom": "Sur mesure" },
+        { "feature": "Support post-lancement", "starter": "14 jours", "growth": "30 jours", "custom": "Sur mesure" },
         { "feature": "Délai de réalisation", "starter": "2–3 sem.", "growth": "3–5 sem.", "custom": "6–12 sem." }
       ]
     },
@@ -827,7 +826,7 @@
     },
     "cta": {
       "title": "Vous préférez un appel vidéo direct ?",
-      "subtitle": "Planifiez un appel de découverte de 15 minutes directement sur notre calendrier pour discuter de vos objectifs et de la façon dont nous pouvons vous aider.",
+      "subtitle": "Planifiez un appel de découverte de 45 minutes directement sur notre calendrier pour discuter de vos objectifs et de la façon dont nous pouvons vous aider.",
       "schedule": "Réserver une session gratuite"
     }
   },
