@@ -35,6 +35,7 @@ import { AboutPage } from '@/components/sections/AboutPage'
 import { BlogIndex } from '@/pages/BlogIndex'
 import { BlogPost } from '@/pages/BlogPost'
 import { ContactPage } from '@/pages/ContactPage'
+import { CareersPage } from '@/pages/CareersPage'
 import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel'
 import { trackPageView } from '@/lib/analytics'
 import { useScrollDepth } from '@/hooks/useScrollDepth'
@@ -120,6 +121,7 @@ export default function App() {
         <Route path="/case-studies/:slug" element={<CaseStudyPageWrapper />} />
         <Route path="/blog" element={<BlogIndex />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/careers" element={<CareersPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <MobileStickyCTA />

@@ -76,6 +76,17 @@ export function getBreadcrumbsForRoute(
     ]
   }
 
+  if (pathname === '/careers') {
+    return [
+      homeCrumb(t),
+      {
+        label: t('breadcrumbs.careers'),
+        canonicalUrl: `${SEO_CONFIG.siteUrl}/careers`,
+        isCurrent: true,
+      },
+    ]
+  }
+
   if (pathname === '/blog') {
     return [
       homeCrumb(t),

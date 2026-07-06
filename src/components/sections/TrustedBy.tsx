@@ -1,10 +1,25 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
-import { stagger, fadeUp } from '@/hooks/useAnimationVariants'
 import { Container } from '@/components/ui/Container'
-import { Building2 } from 'lucide-react'
 
-const logoKeys = ['placeholder1', 'placeholder2', 'placeholder3', 'placeholder4', 'placeholder5', 'placeholder6'] as const
+const logoKeys = ['journeya', 'wafr', 'darlink', 'nextgen', 'nestcode', 'datasphere'] as const
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+  },
+}
+
+const stagger = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.08, delayChildren: 0.1 },
+  },
+}
 
 export function TrustedBy() {
   const { t } = useTranslation()
@@ -39,16 +54,10 @@ export function TrustedBy() {
               <motion.div
                 key={key}
                 variants={fadeUp}
-                className="group relative flex h-14 items-center gap-3 rounded-xl border border-[#E4E4E7] bg-white px-5 transition-all duration-200 hover:border-[#D4D4D8] hover:shadow-sm"
+                className="flex h-12 items-center rounded-lg px-5"
               >
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#F3F0FF] text-[#8B5CF6]">
-                  <Building2 className="h-4 w-4" aria-hidden="true" />
-                </div>
-                <span className="text-[14px] font-semibold text-[#A1A1AA]">
+                <span className="text-[16px] font-bold tracking-tight text-[#A1A1AA] transition-colors duration-200 hover:text-[#8B5CF6]">
                   {logo.name}
-                </span>
-                <span className="absolute -top-2 -end-2 rounded bg-amber-100 px-1.5 py-0.5 text-[9px] font-medium text-amber-700">
-                  TODO
                 </span>
               </motion.div>
             )

@@ -63,7 +63,7 @@
     "badge": "Agence digitale — Algérie",
     "title": "Création de site web",
     "titleAccent": "pensée pour une croissance mesurable.",
-    "subtitle": "Agence digitale algérienne orientée stratégie. Nous concevons et développons des sites sur mesure, applications mobiles et identités visuelles qui transforment vos visiteurs en clients — avec SEO, performance et conversion intégrés dès le départ.",
+    "subtitle": "Agence digitale algérienne orientée stratégie. Nous concevons et développons des sites sur mesure, applications mobiles et identités visuelles qui transforment vos visiteurs en clients — avec SEO, performance et conversion intégrés dès le premier jour.",
     "trustStatement": "Approuvé par Journeya, DarLink et des entreprises en croissance à travers l'Algérie.",
     "cta": "Obtenez un devis gratuit",
     "ctaMicro": "Appel découverte gratuit de 15 min • Sans engagement • Réponse sous 24h",
@@ -94,7 +94,7 @@
       },
       "process": {
         "discovery": "Séance découverte gratuite",
-        "delivery": "Livraison sous 2–12 semaines",
+"delivery": "Livraison en 2–12 semaines",
         "support": "Support continu"
       }
     }
@@ -140,8 +140,8 @@
         "description": "Intégrations IA concrètes pour accélérer vos décisions et optimiser vos opérations."
       }
     },
-    "cta": "Transformez l'un de ces services en votre prochain projet",
-    "ctaMicro": "Nous discuterons de vos objectifs, du périmètre et vous fournirons un devis transparent — sans engagement."
+    "cta": "Démarrer votre projet",
+    "ctaMicro": "Discutons de vos objectifs — nous vous fournirons un devis transparent, sans engagement."
   },
   "why": {
     "label": "Pourquoi Massar ?",
@@ -150,7 +150,7 @@
     "pillars": {
       "craft": {
         "title": "L'excellence dans chaque détail",
-        "description": "Chaque pixel est réfléchi, chaque interaction est soignée. Nous livrons un travail qui reflète le professionnalisme que votre entreprise mérite."
+        "description": "Chaque pixel est pensé, chaque interaction est soignée. Nous livrons un travail à la hauteur du professionnalisme de votre entreprise."
       },
       "strategy": {
         "title": "Réflexion stratégique",
@@ -720,6 +720,31 @@
         "answer": "Nous nous engageons sur la qualité de notre travail avec une politique de révision transparente pendant la phase de design et une période de support post-lancement pour traiter tout problème. Notre système de paiement par jalons signifie que vous ne payez que pour le travail achevé et approuvé. Si à tout moment le projet ne répond pas à vos attentes, nous en discutons ouvertement. Notre réputation est bâtie sur la confiance."
       }
     ]
+  },
+  "socialProof": {
+    "header": {
+      "label": "En chiffres",
+      "title": "Approuvé par des entreprises du monde entier",
+      "subtitle": "Nos réalisations parlent d'elles-mêmes."
+    },
+    "metrics": {
+      "projects": {
+        "label": "Projets réalisés",
+        "description": "En web, mobile, branding et IA"
+      },
+      "clients": {
+        "label": "Clients satisfaits",
+        "description": "Des startups aux grandes entreprises"
+      },
+      "experience": {
+        "label": "Années d'expérience",
+        "description": "Au service des clients en Algérie et au-delà"
+      },
+      "countries": {
+        "label": "Pays desservis",
+        "description": "Portée mondiale, expertise locale"
+      }
+    }
   },
   "cta": {
     "title": "Prêt à construire votre présence digitale ?",

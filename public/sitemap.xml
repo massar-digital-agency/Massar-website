@@ -122,6 +122,16 @@
   </url>
 
   <url>
+    <loc>https://massardigital.com/careers</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com/careers" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/careers?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://massardigital.com/careers?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://massardigital.com/careers?lang=ar" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://massardigital.com/contact</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://massardigital.com/contact" />
     <xhtml:link rel="alternate" hreflang="en" href="https://massardigital.com/contact?lang=en" />

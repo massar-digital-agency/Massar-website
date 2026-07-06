@@ -63,7 +63,7 @@
     "badge": "Digital agency — Algeria",
     "title": "Custom website development",
     "titleAccent": "built for measurable growth.",
-    "subtitle": "Algeria's strategy-first digital agency. We design and build custom websites, mobile apps, and brand identities that turn visitors into customers — with SEO, performance, and conversion baked in from day one.",
+    "subtitle": "Algeria's strategy-first digital agency. We design and build custom websites, mobile apps, and brand identities that turn visitors into customers — with SEO, performance, and conversion built in from day one.",
     "trustStatement": "Trusted by Journeya, DarLink, and growing businesses across Algeria.",
     "cta": "Get a free quote",
     "ctaMicro": "Free 15-min discovery call • No obligation • Response within 24h",
@@ -139,7 +139,9 @@
         "title": "AI Solutions",
         "description": "Practical AI integrations that speed up decisions and unlock smarter business operations."
       }
-    }
+    },
+    "cta": "Start your project",
+    "ctaMicro": "We'll discuss your goals and provide a transparent quote — no obligation."
   },
   "why": {
     "label": "Why Massar?",
@@ -737,6 +739,31 @@
         "answer": "We stand behind our work with a transparent revision policy during the design phase and a post-launch support period to address any issues. Our milestone-based payment structure means you only pay for completed, approved work. If at any point you feel the project isn't meeting expectations, we'll discuss adjustments openly. We've built our reputation on trust, and we treat every project as a long-term partnership."
       }
     ]
+  },
+  "socialProof": {
+    "header": {
+      "label": "By the Numbers",
+      "title": "Trusted by businesses worldwide",
+      "subtitle": "Our track record speaks for itself."
+    },
+    "metrics": {
+      "projects": {
+        "label": "Projects Delivered",
+        "description": "Across web, mobile, branding, and AI"
+      },
+      "clients": {
+        "label": "Satisfied Clients",
+        "description": "From startups to established enterprises"
+      },
+      "experience": {
+        "label": "Years of Experience",
+        "description": "Serving clients in Algeria and beyond"
+      },
+      "countries": {
+        "label": "Countries Served",
+        "description": "Global reach with local expertise"
+      }
+    }
   },
   "cta": {
     "title": "Ready to build your digital presence?",
