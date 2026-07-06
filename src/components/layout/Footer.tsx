@@ -4,7 +4,8 @@ import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { Mail, MapPin, Phone, Clock, Monitor, ShieldCheck, Zap, ArrowRight, Calendar, ExternalLink } from 'lucide-react'
 import { HoverSlideText } from '@/components/ui/HoverSlideText'
-import { navigateToSection, navigateToAboutPage, navigateToLegalPage } from '@/lib/navigate'
+import { useNavigate } from 'react-router-dom'
+import { navigateToSection, navigateToAboutPage } from '@/lib/navigate'
 import { trackEvent } from '@/lib/analytics'
 import Logo from '@/assets/images/Logo.svg'
 
@@ -31,6 +32,7 @@ function FooterColumn({ heading, children }: { heading: string; children: React.
 
 export function Footer() {
   const { t } = useTranslation()
+  const navigate = useNavigate()
   const email = t('footer.email')
   const phone = t('footer.phone')
 
@@ -128,11 +130,11 @@ export function Footer() {
             {legalKeys.map((key) => (
               <a
                 key={key}
-                href={`#/${key}`}
+                href={`/${key}`}
                 onClick={(e) => {
                   e.preventDefault()
                   trackEvent('footer_link_click', { link_type: 'legal', link_text: key })
-                  navigateToLegalPage(key as 'privacy' | 'terms' | 'cookies')
+                  navigate(`/${key}`)
                 }}
                 className="group text-[14px] text-[#71717A] w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded"
               >
