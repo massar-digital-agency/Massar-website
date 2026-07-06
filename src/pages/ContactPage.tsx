@@ -23,11 +23,11 @@ export function ContactPage() {
     mainEntity: {
       '@type': 'Organization',
       name: SEO_CONFIG.siteName,
-      telephone: '+213-555-123-456',
+      telephone: '+213 699 284 128',
       email: 'massar.digital.studio@gmail.com',
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+213-555-123-456',
+        telephone: '+213 699 284 128',
         contactType: 'customer service',
         email: 'massar.digital.studio@gmail.com',
         availableLanguage: ['English', 'French', 'Arabic'],

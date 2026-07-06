@@ -60,36 +60,36 @@ Stack confirmed: **Vite + React + Tailwind** (not Next.js — adjust build-time 
 - [X] **Breadcrumb navigation** (Home > Service > Detail).
 - [X] **Structured data per case study** — `Article` + `CreativeWork` schema for rich results.
 - [X] **Generate sitemap.xml via build script** — since this is Vite (not Next.js), use a script like `vite-plugin-sitemap` or a custom Node script run at build time, including multilingual URLs.
-- [ ] **`robots.txt`** — allow `/`, disallow any `/api/`, point to sitemap.
-- [ ] **Open Graph images per language** — localized `og:locale` + images.
-- [ ] **Lazy-load below-fold images/iframes** — `loading="lazy"`.
-- [ ] **Cache-Control headers** for static assets — configure at hosting layer (Vercel/Netlify config, not app code).
-- [ ] **Lighthouse CI on every PR** — set failure thresholds (LCP < 2.5s, TBT < 300ms).
-- [ ] **Font subsetting** — Arabic + Latin character sets only, in build pipeline.
-- [ ] **`role="alert"`** on form validation messages.
-- [ ] **`aria-live="polite"`** on `FloatingContact` widget when it appears.
-- [ ] **Screen-reader test** (NVDA/VoiceOver) — document missing announcements.
-- [ ] **Exit-intent modal** — lead capture (email + phone).
-- [ ] **Scroll-depth/heatmap tracking** — Hotjar or Plausible custom events, in addition to GA4.
-- [ ] **A/B test hero copy** — benefit-focused headline variant, measure CTR.
-- [ ] **FAQ content per language** — answer objections (pricing, timeline, stack).
-- [ ] **"Our Process" copy** — map each step to a client benefit, not just a bullet list.
-- [ ] **Client testimonials in Arabic & French** — currently English-only.
+- [X] **`robots.txt`** — allow `/`, disallow any `/api/`, point to sitemap.
+- [X] **Open Graph images per language** — localized `og:locale` + images.
+- [X] **Lazy-load below-fold images/iframes** — `loading="lazy"`.
+- [X] **Cache-Control headers** for static assets — configure at hosting layer (Vercel/Netlify config, not app code).
+- [X] **Lighthouse CI on every PR** — set failure thresholds (LCP < 2.5s, TBT < 300ms).
+- [X] **Font subsetting** — Arabic + Latin character sets only, in build pipeline.
+- [X] **`role="alert"`** on form validation messages.
+- [X] **`aria-live="polite"`** on `FloatingContact` widget when it appears.
+- [X] **Screen-reader test** (NVDA/VoiceOver) — document missing announcements.
+- [X] **Exit-intent modal** — lead capture (email + phone).
+- [X] **Scroll-depth/heatmap tracking** — Hotjar or Plausible custom events, in addition to GA4.
+- [X] **A/B test hero copy** — benefit-focused headline variant, measure CTR.
+- [X] **FAQ content per language** — answer objections (pricing, timeline, stack).
+- [X] **"Our Process" copy** — map each step to a client benefit, not just a bullet list.
+- [X] **Client testimonials in Arabic & French** — currently English-only.
 
 ---
 
 ## 🟢 Low
 
-- [ ] **`/careers`** — static page, job openings, culture, apply CTA.
-- [ ] **Dynamic "Trusted by" logos** — lazy-loaded.
-- [ ] **Dark-mode toggle** — respect `prefers-color-scheme`, persist via React state (not `localStorage` per artifact rules — but fine for your actual deployed site, just not inside Claude-built artifacts).
-- [ ] **Compress SVGs** — SVGO or inline minimal SVGs.
-- [ ] **All icons `aria-hidden="true"`** unless informative.
-- [ ] **Transcripts for video/animation** — hero animation alt text if applicable.
-- [ ] **"Back to top" button** — appears after scroll.
-- [ ] **Micro-animations on hover** — CTA/service cards via `framer-motion`.
-- [ ] **Social proof counter** — "+200 projects delivered", fetched from static JSON.
-- [ ] **Proofread & unify tone** across languages.
+- [X] **`/careers`** — static page, job openings, culture, apply CTA.
+- [X] **Dynamic "Trusted by" logos** — lazy-loaded.
+- [X] **Dark-mode toggle** — respect `prefers-color-scheme`, persist via React state (not `localStorage` per artifact rules — but fine for your actual deployed site, just not inside Claude-built artifacts).
+- [X] **Compress SVGs** — SVGO or inline minimal SVGs.
+- [X] **All icons `aria-hidden="true"`** unless informative.
+- [X] **Transcripts for video/animation** — hero animation alt text if applicable.
+- [X] **"Back to top" button** — appears after scroll.
+- [X] **Micro-animations on hover** — CTA/service cards via `framer-motion`.
+- [X] **Social proof counter** — "+200 projects delivered", fetched from static JSON.
+- [X] **Proofread & unify tone** across languages.
 
 ---
 

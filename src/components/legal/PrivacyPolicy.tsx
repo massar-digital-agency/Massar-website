@@ -256,7 +256,7 @@ function PrivacyContentEN() {
         <LegalList
           items={[
             'Email: massar.digital.studio@gmail.com',
-            'Phone: +213 555 123 456',
+            'Phone: +213 699 284 128',
             'Location: Algeria',
             '[MAILING ADDRESS — Insert physical mailing address if applicable.]',
             '[DATA PROTECTION OFFICER CONTACT — Insert DPO contact information if applicable.]',
@@ -492,7 +492,7 @@ function PrivacyContentFR() {
         <LegalList
           items={[
             'E-mail : massar.digital.studio@gmail.com',
-            'Téléphone : +213 555 123 456',
+            'Téléphone : +213 699 284 128',
             'Localisation : Algérie',
             '[ADRESSE POSTALE — Insérez l\'adresse postale si applicable.]',
             '[CONTACT DU DÉLÉGUÉ À LA PROTECTION DES DONNÉES — Insérez les coordonnées du DPO si applicable.]',
@@ -728,7 +728,7 @@ function PrivacyContentAR() {
         <LegalList
           items={[
             'البريد الإلكتروني: massar.digital.studio@gmail.com',
-            'الهاتف: +213 555 123 456',
+            'الهاتف: +213 699 284 128',
             'الموقع: الجزائر',
             '[العنوان البريدي — أدخل العنوان البريدي إذا كان ذلك مناسباً.]',
             '[معلومات الاتصال بمسؤول حماية البيانات — أدخل معلومات مسؤول حماية البيانات إذا كان ذلك مناسباً.]',

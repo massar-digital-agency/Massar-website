@@ -23,10 +23,10 @@ export function StructuredData({
     logo: `${SEO_CONFIG.siteUrl}/images/og-imageFavIcon.png`,
     description: t('seo.description'),
     email: 'massar.digital.studio@gmail.com',
-    telephone: '+213-555-123-456',
+    telephone: '+213 699 284 128, +213 697 750 967',
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+213-555-123-456',
+      telephone: '+213 699 284 128, +213 697 750 967',
       contactType: 'customer service',
       email: 'massar.digital.studio@gmail.com',
     },
@@ -39,7 +39,7 @@ export function StructuredData({
       addressCountry: 'DZ',
     },
     sameAs: [
-      'https://www.linkedin.com/company/massardigital',
+      'https://www.linkedin.com/company/massar-studio/',
       'https://twitter.com/massardigital',
       'https://www.facebook.com/massardigital',
       'https://www.instagram.com/massardigital',
@@ -61,7 +61,7 @@ export function StructuredData({
     name: SEO_CONFIG.siteName,
     image: SEO_CONFIG.ogImage,
     url: SEO_CONFIG.siteUrl,
-    telephone: '+213-555-123-456',
+    telephone: '+213 699 284 128, +213 697 750 967',
     email: 'massar.digital.studio@gmail.com',
     address: {
       '@type': 'PostalAddress',

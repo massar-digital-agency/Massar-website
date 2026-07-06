@@ -470,13 +470,13 @@ export function Contact() {
                         {t('contact.info.phoneLabel')}
                       </span>
                       <p className="text-[14px] font-semibold text-[#0A0A0A] mt-1" dir="ltr">
-                        +213 555 123 456
+                        +213 699 284 128
                       </p>
                     </div>
                   </div>
                   <button
                     type="button"
-                    onClick={() => copyToClipboard('+213 555 123 456', 'phone')}
+                    onClick={() => copyToClipboard('+213 699 284 128', 'phone')}
                     className="h-8 w-8 rounded-lg flex items-center justify-center hover:bg-[#F4F4F5] text-[#52525B] hover:text-[#0A0A0A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2"
                     aria-label={copiedPhone ? 'Phone number copied to clipboard' : 'Copy phone number'}
                     title="Copy Phone Number"

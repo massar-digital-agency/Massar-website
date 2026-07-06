@@ -15,8 +15,8 @@ i18n
       fr: { translation: fr },
       en: { translation: en },
     },
-    lng: localStorage.getItem('i18nextLng') || 'ar',
-    fallbackLng: 'ar',
+    lng: localStorage.getItem('i18nextLng') || 'fr',
+    fallbackLng: 'fr',
     interpolation: { escapeValue: false },
     detection: {
       order: ['localStorage'],

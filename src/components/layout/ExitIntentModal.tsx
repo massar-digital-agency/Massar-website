@@ -300,7 +300,7 @@ export function ExitIntentModal({ show, onDismiss }: ExitIntentModalProps) {
                           onChange={(e) => handlePhoneChange(e.target.value)}
                           onBlur={handlePhoneBlur}
                           className={`${getInputClass('phone')} ps-10`}
-                          placeholder="+213 555 123 456"
+                          placeholder="+213 699 284 128"
                         />
                       </div>
                       {errors.phone && (

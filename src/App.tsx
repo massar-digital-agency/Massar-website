@@ -7,7 +7,6 @@ import { useExitIntent } from '@/hooks/useExitIntent'
 import { SEOHead } from '@/components/layout/SEOHead'
 import { StructuredData } from '@/components/layout/StructuredData'
 import { LoadingScreen } from '@/components/layout/LoadingScreen'
-import { SkipNav } from '@/components/layout/SkipNav'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { FloatingContact } from '@/components/layout/FloatingContact'
@@ -22,7 +21,6 @@ import { PrivacyPolicy } from '@/components/legal/PrivacyPolicy'
 import { TermsOfService } from '@/components/legal/TermsOfService'
 import { CookiePolicy } from '@/components/legal/CookiePolicy'
 import { Hero } from '@/components/sections/Hero'
-import { TrustedBy } from '@/components/sections/TrustedBy'
 import { Services } from '@/components/sections/Services'
 import { WhyUs } from '@/components/sections/WhyUs'
 import { Process } from '@/components/sections/Process'
@@ -75,7 +73,6 @@ function HomePage() {
       <Navbar />
       <main id="main-content">
         <Hero />
-        <TrustedBy />
         <Services />
         <WhyUs />
         <Process />
@@ -111,7 +108,6 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <SkipNav />
       <SEOHead />
       <Routes>
         <Route path="/" element={<HomePage />} />

@@ -581,7 +581,7 @@ function AboutContactInfo() {
 
   const contactItems = [
     { icon: <Mail className="h-5 w-5" aria-hidden="true" />, label: t('footer.email'), href: 'mailto:massar.digital.studio@gmail.com' },
-    { icon: <Phone className="h-5 w-5" aria-hidden="true" />, label: t('footer.phone'), href: 'tel:+213555123456' },
+    { icon: <Phone className="h-5 w-5" aria-hidden="true" />, label: t('footer.phone'), href: 'tel:+213699284128' },
     { icon: <MapPin className="h-5 w-5" aria-hidden="true" />, label: `${t('footer.location')} — ${t('contact.info.locationVal' as any) || ''}` },
     { icon: <Clock className="h-5 w-5" aria-hidden="true" />, label: t('contact.info.hoursVal' as any) || 'Sunday - Thursday, 9:00 AM - 6:00 PM' },
   ]
@@ -679,7 +679,7 @@ function AboutSEO() {
     foundingDate: '2022',
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+213-555-123-456',
+      telephone: '+213 699 284 128',
       contactType: 'customer service',
       email: 'massar.digital.studio@gmail.com',
     },

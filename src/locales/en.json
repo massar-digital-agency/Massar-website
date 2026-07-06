@@ -231,7 +231,7 @@
       "idealLabel": "Best for",
       "website": {
         "name": "Website Package",
-        "price": "$2,500",
+        "price": "35,000 DZD",
         "description": "A professional, responsive website built with modern technology to establish your online presence.",
         "ideal": "Small businesses, freelancers & startups",
         "timeline": "2–3 weeks",
@@ -244,15 +244,15 @@
           "Basic analytics setup"
         ],
         "addons": [
-          "Content management system (CMS) — +$500",
-          "Blog/news section — +$400",
-          "E-commerce integration — from $2,000",
-          "Custom animations — from $300"
+          "Content management system (CMS) — +20,000 DZD",
+          "Blog/news section — +15,000 DZD",
+          "E-commerce integration — from 80,000 DZD",
+          "Custom animations — from 10,000 DZD"
         ]
       },
       "growth": {
         "name": "Growth Bundle",
-        "price": "$5,000",
+        "price": "120,000 DZD",
         "description": "A full-featured website with CMS, advanced functionality, and everything you need to scale your online presence.",
         "ideal": "Growing businesses, service companies & startups",
         "timeline": "3–5 weeks",
@@ -266,15 +266,15 @@
           "Cookie consent & GDPR compliance"
         ],
         "addons": [
-          "E-commerce integration — from $2,000",
-          "Multi-language support — +$800",
+          "E-commerce integration — from 80,000 DZD",
+          "Multi-language support — +25,000 DZD",
           "Custom feature development — quote based",
-          "Maintenance package (monthly) — from $150/mo"
+          "Maintenance package (monthly) — from 10,000 DZD/mo"
         ]
       },
       "custom": {
         "name": "Custom Project",
-        "price": "$10,000",
+        "price": "500,000 DZD",
         "description": "A fully custom web application, platform, or digital product tailored to your unique business requirements.",
         "ideal": "SaaS, platforms, marketplaces & enterprises",
         "timeline": "6–12 weeks",
@@ -366,7 +366,7 @@
         },
         {
           "question": "Do you offer maintenance after launch?",
-          "answer": "Yes, we offer ongoing maintenance and support packages. These include security updates, performance monitoring, content updates, and technical support. Monthly retainer options start at $150/month and can be tailored to your needs."
+          "answer": "Yes, we offer ongoing maintenance and support packages. These include security updates, performance monitoring, content updates, and technical support. Monthly retainer options start at 10,000 DZD/month and can be tailored to your needs."
         },
         {
           "question": "Are revisions included?",
@@ -692,11 +692,11 @@
     "items": [
       {
         "question": "How much does a professional website cost?",
-        "answer": "Our pricing is project-based and depends on scope, complexity, and features. A standard business website starts from $2,500, while more complex projects with custom functionality, e-commerce, or integrations are quoted individually. We provide a detailed breakdown in every proposal so you know exactly what you're paying for — no hidden fees, no surprises."
+        "answer": "Our pricing is project-based and depends on scope, complexity, and features. A standard business website starts from 35,000 DZD, while more complex projects with custom functionality, e-commerce, or integrations are quoted individually. We provide a detailed breakdown in every proposal so you know exactly what you're paying for — no hidden fees, no surprises."
       },
       {
         "question": "Do you offer SEO services, and how are they priced?",
-        "answer": "Yes, SEO is built into every website we build — from technical fundamentals like meta tags, sitemaps, and structured data to performance optimization that boosts rankings. For ongoing SEO strategy, content optimization, and link building, we offer monthly retainer packages starting from $300/month. Every SEO engagement starts with a free audit of your current online presence."
+        "answer": "Yes, SEO is built into every website we build — from technical fundamentals like meta tags, sitemaps, and structured data to performance optimization that boosts rankings. For ongoing SEO strategy, content optimization, and link building, we offer monthly retainer packages starting from 25,000 DZD/month. Every SEO engagement starts with a free audit of your current online presence."
       },
       {
         "question": "What are your payment terms?",
@@ -724,7 +724,7 @@
       },
       {
         "question": "Do you provide hosting, maintenance, and ongoing support?",
-        "answer": "Yes. We offer hosting setup and ongoing maintenance packages that include security monitoring, performance optimization, regular backups, plugin/ dependency updates, and priority technical support. Monthly maintenance starts at $150/month. We also provide emergency support for critical issues. Post-launch support is not an afterthought — it's a core part of how we build long-term partnerships."
+        "answer": "Yes. We offer hosting setup and ongoing maintenance packages that include security monitoring, performance optimization, regular backups, plugin/ dependency updates, and priority technical support. Monthly maintenance starts at 10,000 DZD/month. We also provide emergency support for critical issues. Post-launch support is not an afterthought — it's a core part of how we build long-term partnerships."
       },
       {
         "question": "Why should I choose Massar over other digital agencies in Algeria?",
@@ -789,10 +789,10 @@
       "budget": "Estimated Budget",
       "budgetSelect": "Select a budget range...",
       "budgets": {
-        "under_5k": "Under $5,000",
-        "5k_10k": "$5,000 - $10,000",
-        "10k_25k": "$10,000 - $25,000",
-        "above_25k": "Above $25,000"
+        "under_5k": "Under 100,000 DZD",
+        "5k_10k": "100,000 DZD - 300,000 DZD",
+        "10k_25k": "300,000 DZD - 700,000 DZD",
+        "above_25k": "Above 700,000 DZD"
       },
       "description": "Project Details",
       "descriptionPlaceholder": "Tell us about your project, goals, and timeline...",
@@ -860,7 +860,7 @@
     "hours": "Sun – Thu, 9:00 AM – 6:00 PM",
     "rights": "All rights reserved",
     "email": "massar.digital.studio@gmail.com",
-    "phone": "+213 555 123 456",
+    "phone": "+213 699 284 128",
     "location": "Algeria",
     "ctaPrimary": "Book a Discovery Call",
     "ctaSecondary": "Request a Proposal",

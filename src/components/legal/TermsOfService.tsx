@@ -262,7 +262,7 @@ function TermsContentEN() {
         <LegalList
           items={[
             'Email: massar.digital.studio@gmail.com',
-            'Phone: +213 555 123 456',
+            'Phone: +213 699 284 128',
             'Location: Algeria',
             '[MAILING ADDRESS — Insert physical mailing address if applicable.]',
           ]}
@@ -418,7 +418,7 @@ function TermsContentFR() {
         <LegalList
           items={[
             'E-mail : massar.digital.studio@gmail.com',
-            'Téléphone : +213 555 123 456',
+            'Téléphone : +213 699 284 128',
             'Localisation : Algérie',
             '[ADRESSE POSTALE — Insérez l\'adresse postale si applicable.]',
           ]}
@@ -544,7 +544,7 @@ function TermsContentAR() {
         <LegalList
           items={[
             'البريد الإلكتروني: massar.digital.studio@gmail.com',
-            'الهاتف: +213 555 123 456',
+            'الهاتف: +213 699 284 128',
             'الموقع: الجزائر',
             '[العنوان البريدي — أدخل العنوان البريدي إذا كان ذلك مناسباً.]',
           ]}

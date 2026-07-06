@@ -25,7 +25,7 @@ export const OG_IMAGE_MAP: Record<string, string> = {
 export const ALTERNATE_LOCALES = Object.values(LOCALE_MAP)
 
 export function getLocale(lang: string): string {
-  return LOCALE_MAP[lang] || 'en_US'
+  return LOCALE_MAP[lang] || 'fr_FR'
 }
 
 export function getOgImage(lang: string): string {

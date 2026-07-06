@@ -231,7 +231,7 @@
       "idealLabel": "Idéal pour",
       "website": {
         "name": "Forfait Site Web",
-        "price": "2 500 $",
+        "price": "35 000 DA",
         "description": "Un site professionnel et responsive, construit avec les technologies modernes pour établir votre présence en ligne.",
         "ideal": "PME, freelances et start-ups",
         "timeline": "2–3 semaines",
@@ -244,15 +244,15 @@
           "Configuration analytics de base"
         ],
         "addons": [
-          "Système de gestion de contenu (CMS) — +500 $",
-          "Section blog/actualités — +400 $",
-          "Intégration e-commerce — à partir de 2 000 $",
-          "Animations personnalisées — à partir de 300 $"
+          "Système de gestion de contenu (CMS) — +20 000 DA",
+          "Section blog/actualités — +15 000 DA",
+          "Intégration e-commerce — à partir de 80 000 DA",
+          "Animations personnalisées — à partir de 10 000 DA"
         ]
       },
       "growth": {
         "name": "Forfait Croissance",
-        "price": "5 000 $",
+        "price": "120 000 DA",
         "description": "Un site complet avec CMS, fonctionnalités avancées et tout ce qu'il faut pour développer votre présence en ligne.",
         "ideal": "Entreprises en croissance, sociétés de services et start-ups",
         "timeline": "3–5 semaines",
@@ -266,15 +266,15 @@
           "Conformité cookies et RGPD"
         ],
         "addons": [
-          "Intégration e-commerce — à partir de 2 000 $",
-          "Support multilingue — +800 $",
+          "Intégration e-commerce — à partir de 80 000 DA",
+          "Support multilingue — +25 000 DA",
           "Développement de fonctionnalités sur mesure — sur devis",
-          "Forfait maintenance (mensuel) — à partir de 150 $/mois"
+          "Forfait maintenance (mensuel) — à partir de 10 000 DA/mois"
         ]
       },
       "custom": {
         "name": "Projet Sur Mesure",
-        "price": "10 000 $",
+        "price": "500 000 DA",
         "description": "Une application web, plateforme ou produit numérique entièrement personnalisé selon vos besoins uniques.",
         "ideal": "SaaS, places de marché et entreprises",
         "timeline": "6–12 semaines",
@@ -366,7 +366,7 @@
         },
         {
           "question": "Proposez-vous la maintenance après le lancement ?",
-          "answer": "Oui, nous proposons des forfaits de maintenance et de support continus. Cela inclut les mises à jour de sécurité, la surveillance des performances, les mises à jour de contenu et le support technique. Les options mensuelles commencent à 150 $/mois."
+          "answer": "Oui, nous proposons des forfaits de maintenance et de support continus. Cela inclut les mises à jour de sécurité, la surveillance des performances, les mises à jour de contenu et le support technique. Les options mensuelles commencent à 10 000 DA/mois."
         },
         {
           "question": "Les révisions sont-elles incluses ?",
@@ -673,11 +673,11 @@
     "items": [
       {
         "question": "Combien coûte un site web professionnel ?",
-        "answer": "Nos tarifs sont basés sur chaque projet et dépendent du périmètre, de la complexité et des fonctionnalités. Un site vitrine pour entreprise commence à partir de 2 500 $, tandis que les projets plus complexes avec fonctionnalités sur mesure, e-commerce ou intégrations sont chiffrés individuellement. Chaque proposition inclut une ventilation détaillée — pas de frais cachés, pas de surprises."
+        "answer": "Nos tarifs sont basés sur chaque projet et dépendent du périmètre, de la complexité et des fonctionnalités. Un site vitrine pour entreprise commence à partir de 35 000 DA, tandis que les projets plus complexes avec fonctionnalités sur mesure, e-commerce ou intégrations sont chiffrés individuellement. Chaque proposition inclut une ventilation détaillée — pas de frais cachés, pas de surprises."
       },
       {
         "question": "Proposez-vous des services SEO et comment sont-ils tarifés ?",
-        "answer": "Oui, le référencement naturel est intégré dans chaque site que nous construisons — des fondamentaux techniques comme les balises meta, sitemaps et données structurées, jusqu'à l'optimisation des performances pour un meilleur classement. Pour une stratégie SEO continue et de l'optimisation de contenu, nous proposons des forfaits mensuels à partir de 300 $. Chaque projet SEO commence par un audit gratuit de votre présence en ligne."
+        "answer": "Oui, le référencement naturel est intégré dans chaque site que nous construisons — des fondamentaux techniques comme les balises meta, sitemaps et données structurées, jusqu'à l'optimisation des performances pour un meilleur classement. Pour une stratégie SEO continue et de l'optimisation de contenu, nous proposons des forfaits mensuels à partir de 25 000 DA. Chaque projet SEO commence par un audit gratuit de votre présence en ligne."
       },
       {
         "question": "Quelles sont vos conditions de paiement ?",
@@ -705,7 +705,7 @@
       },
       {
         "question": "Proposez-vous l'hébergement, la maintenance et le support continu ?",
-        "answer": "Oui. Nous proposons la configuration de l'hébergement et des forfaits de maintenance incluant la surveillance de la sécurité, l'optimisation des performances, les sauvegardes régulières, les mises à jour et le support technique prioritaire. La maintenance mensuelle commence à 150 $/mois. Nous proposons également un support d'urgence pour les problèmes critiques. Le support post-lancement fait partie intégrante de notre approche."
+        "answer": "Oui. Nous proposons la configuration de l'hébergement et des forfaits de maintenance incluant la surveillance de la sécurité, l'optimisation des performances, les sauvegardes régulières, les mises à jour et le support technique prioritaire. La maintenance mensuelle commence à 10 000 DA/mois. Nous proposons également un support d'urgence pour les problèmes critiques. Le support post-lancement fait partie intégrante de notre approche."
       },
       {
         "question": "Pourquoi choisir Massar plutôt qu'une autre agence digitale en Algérie ?",
@@ -770,10 +770,10 @@
       "budget": "Budget estimé",
       "budgetSelect": "Sélectionnez une tranche budgétaire...",
       "budgets": {
-        "under_5k": "Moins de 5 000 $",
-        "5k_10k": "5 000 $ - 10 000 $",
-        "10k_25k": "10 000 $ - 25 000 $",
-        "above_25k": "Plus de 25 000 $"
+        "under_5k": "Moins de 100 000 DA",
+        "5k_10k": "100 000 DA - 300 000 DA",
+        "10k_25k": "300 000 DA - 700 000 DA",
+        "above_25k": "Plus de 700 000 DA"
       },
       "description": "Détails du projet",
       "descriptionPlaceholder": "Parlez-nous de votre projet, de vos objectifs et de vos délais...",
@@ -859,7 +859,7 @@
     "hours": "Dim – Jeu, 9h00 – 18h00",
     "rights": "Tous droits réservés",
     "email": "massar.digital.studio@gmail.com",
-    "phone": "+213 555 123 456",
+    "phone": "+213 699 284 128",
     "location": "Algérie",
     "ctaPrimary": "Réserver un appel découverte",
     "ctaSecondary": "Demander un devis",

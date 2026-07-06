@@ -14,7 +14,7 @@ const resourceKeys = ['blog', 'faq', 'process'] as const
 
 const legalKeys = ['privacy', 'terms', 'cookies'] as const
 
-const socialNetworks = ['instagram', 'linkedin', 'github', 'behance', 'dribbble'] as const
+const socialNetworks = ['instagram', 'linkedin', 'github', 'tiktok'] as const
 
 function FooterColumn({ heading, children }: { heading: string; children: React.ReactNode }) {
   return (
@@ -66,25 +66,7 @@ export function Footer() {
     <footer className="border-t border-[#E4E4E7]">
       <Container>
         {/* ─── CTA Section ─── */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-12 sm:mb-16 text-center rounded-2xl border border-[#E4E4E7] bg-white px-8 py-10 sm:px-12 sm:py-12"
-        >
-          <h2 className="text-[20px] font-bold text-[#0A0A0A] sm:text-[24px]">
-            {t('footer.cta')}
-          </h2>
-          <p className="mt-3 text-[14px] text-[#71717A] sm:text-[15px]">
-            {t('footer.ctaMicro')}
-          </p>
-          <div className="mt-6">
-            <Button size="lg" href="#contact" onClick={() => trackEvent('cta_click', { cta_location: 'footer_banner', cta_text: t('nav.cta') })}>
-              {t('nav.cta')}
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </Button>
-          </div>
-        </motion.div>
+        
 
         {/* ─── Main Footer Grid ─── */}
         <div className="grid gap-10 py-16 sm:py-20 sm:grid-cols-2 lg:grid-cols-5">
@@ -206,17 +188,7 @@ export function Footer() {
         </div>
 
         {/* ─── Dual CTA Row ─── */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 py-10 border-t border-[#E4E4E7]">
-          <Button size="lg" href="#contact" onClick={() => trackEvent('cta_click', { cta_location: 'footer_cta_row', cta_text: t('footer.ctaPrimary') })}>
-            <Calendar className="h-4 w-4" aria-hidden="true" />
-            {t('footer.ctaPrimary')}
-            <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </Button>
-          <Button size="lg" variant="secondary" href="mailto:massar.digital.studio@gmail.com" onClick={() => trackOutbound('email', 'footer_cta_row')}>
-            <ExternalLink className="h-4 w-4" aria-hidden="true" />
-            {t('footer.ctaSecondary')}
-          </Button>
-        </div>
+        
 
         {/* ─── Copyright + Trust ─── */}
         <div className="flex flex-col items-center justify-between gap-3 border-t border-[#E4E4E7] py-7 sm:flex-row">
