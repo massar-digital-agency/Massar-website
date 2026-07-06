@@ -13,6 +13,7 @@ import { Footer } from '@/components/layout/Footer'
 import { FloatingContact } from '@/components/layout/FloatingContact'
 import { MobileStickyCTA } from '@/components/layout/MobileStickyCTA'
 import { CookieBanner } from '@/components/layout/CookieBanner'
+import { BackToTop } from '@/components/layout/BackToTop'
 
 const ExitIntentModal = lazy(() =>
   import('@/components/layout/ExitIntentModal').then((m) => ({ default: m.ExitIntentModal })),
@@ -124,6 +125,7 @@ export default function App() {
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
+      <BackToTop />
       <MobileStickyCTA />
       <FloatingContact />
       <CookieBanner consent={consent} />

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { fadeUp, stagger } from '@/hooks/useAnimationVariants'
 import { Container } from '@/components/ui/Container'
@@ -10,6 +10,7 @@ import { trackEvent } from '@/lib/analytics'
 
 export function Results() {
   const { t } = useTranslation()
+  const reducedMotion = useReducedMotion()
   const items = t('results.items', { returnObjects: true }) as Array<{
     metric: string
     label: string
@@ -39,6 +40,7 @@ export function Results() {
             <motion.div
               key={item.label}
               variants={fadeUp}
+              whileHover={reducedMotion ? {} : { y: -4, transition: { duration: 0.2 } }}
               className="relative rounded-2xl border border-[#E4E4E7] bg-white p-7 sm:p-8 text-center transition-all duration-200 hover:border-[#D4D4D8] hover:shadow-lg hover:shadow-black/[0.04]"
             >
               {item.placeholder && (

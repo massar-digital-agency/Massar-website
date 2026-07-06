@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { Check, ArrowRight, ArrowUpRight, Calendar, Star, Layout, Zap, Settings } from 'lucide-react'
 import { fadeUp, stagger, scaleUp } from '@/hooks/useAnimationVariants'
 import { Container } from '@/components/ui/Container'
@@ -15,6 +15,7 @@ const packageIcons = [Layout, Zap, Settings] as const
 
 export function Pricing() {
   const { t } = useTranslation()
+  const reducedMotion = useReducedMotion()
 
   const features = t('pricing.comparison.features', { returnObjects: true }) as Array<{
     feature: string
@@ -89,6 +90,7 @@ export function Pricing() {
               <motion.div
                 key={pkg}
                 variants={fadeUp}
+                whileHover={reducedMotion ? {} : { y: -3, transition: { duration: 0.2 } }}
                 className={`relative flex flex-col rounded-2xl border bg-white p-8 transition-all duration-300 ${
                   highlighted
                     ? 'border-[#8B5CF6] shadow-lg shadow-[#8B5CF6]/10 ring-1 ring-[#8B5CF6]/20'
@@ -293,15 +295,16 @@ export function Pricing() {
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {customFactors.map((factor, i) => (
-                <div
+                <motion.div
                   key={i}
+                  whileHover={reducedMotion ? {} : { y: -2, transition: { duration: 0.2 } }}
                   className="rounded-xl border border-[#E4E4E7] bg-[#FAFAF9] p-5 transition-all duration-200 hover:border-[#D4D4D8]"
                 >
                   <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#F3F0FF] text-[#8B5CF6]">
                     <span className="text-[13px] font-bold">{String(i + 1).padStart(2, '0')}</span>
                   </div>
                   <p className="mt-3 text-[14px] font-semibold text-[#0A0A0A]">{factor}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
 

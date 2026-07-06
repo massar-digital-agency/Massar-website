@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import { Mail, Phone, MapPin, Clock, Calendar, CheckCircle2, AlertCircle, Copy, Check, Star, ArrowUpRight } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
@@ -31,6 +31,7 @@ const initialFormState: FormState = {
 
 export function Contact() {
   const { t } = useTranslation()
+  const reducedMotion = useReducedMotion()
 
   const [form, setForm] = useState<FormState>(initialFormState)
   const [errors, setErrors] = useState<Partial<FormState>>({})
@@ -425,6 +426,7 @@ export function Contact() {
             >
               <motion.div
                 variants={fadeUp}
+                whileHover={reducedMotion ? {} : { y: -2, transition: { duration: 0.2 } }}
                 className="group relative rounded-xl border border-[#E4E4E7] bg-white p-5 transition-all duration-200 hover:border-[#D4D4D8]"
               >
                 <div className="flex items-start justify-between">
@@ -455,6 +457,7 @@ export function Contact() {
 
               <motion.div
                 variants={fadeUp}
+                whileHover={reducedMotion ? {} : { y: -2, transition: { duration: 0.2 } }}
                 className="group relative rounded-xl border border-[#E4E4E7] bg-white p-5 transition-all duration-200 hover:border-[#D4D4D8]"
               >
                 <div className="flex items-start justify-between">
@@ -485,6 +488,7 @@ export function Contact() {
 
               <motion.div
                 variants={fadeUp}
+                whileHover={reducedMotion ? {} : { y: -2, transition: { duration: 0.2 } }}
                 className="group relative rounded-xl border border-[#E4E4E7] bg-white p-5 transition-all duration-200 hover:border-[#D4D4D8]"
               >
                 <div className="flex gap-4">
@@ -504,6 +508,7 @@ export function Contact() {
 
               <motion.div
                 variants={fadeUp}
+                whileHover={reducedMotion ? {} : { y: -2, transition: { duration: 0.2 } }}
                 className="group relative rounded-xl border border-[#E4E4E7] bg-white p-5 transition-all duration-200 hover:border-[#D4D4D8]"
               >
                 <div className="flex gap-4">
@@ -585,8 +590,9 @@ export function Contact() {
 
           <div className="grid gap-6 md:grid-cols-3">
             {['communication', 'process', 'outcomes'].map((key) => (
-              <div
+              <motion.div
                 key={key}
+                whileHover={reducedMotion ? {} : { y: -2, transition: { duration: 0.2 } }}
                 className="rounded-xl border border-[#E4E4E7] bg-white p-6 transition-all duration-200 hover:border-[#D4D4D8] hover:shadow-sm"
               >
                 <h4 className="text-[16px] font-bold text-[#0A0A0A]">
@@ -595,7 +601,7 @@ export function Contact() {
                 <p className="mt-3 text-[14px] leading-[1.7] text-[#52525B]">
                   {t(`contact.why.items.${key}.description`)}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

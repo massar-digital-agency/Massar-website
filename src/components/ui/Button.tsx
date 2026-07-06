@@ -1,4 +1,5 @@
 import type { ReactNode, ButtonHTMLAttributes } from 'react'
+import { motion, useReducedMotion } from 'framer-motion'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'ghost' | 'accent'
@@ -34,19 +35,34 @@ export function Button({
   className = '',
   ...props
 }: ButtonProps) {
+  const reducedMotion = useReducedMotion()
   const classes = `${base} ${variants[variant]} ${sizes[size]} ${className}`
+
+  const motionProps = {
+    whileHover: reducedMotion ? {} : { scale: 1.02 },
+    whileTap: reducedMotion ? {} : { scale: 0.98 },
+    transition: { duration: 0.15, ease: 'easeOut' },
+  }
 
   if (href) {
     return (
-      <a href={href} className={classes}>
+      <motion.a
+        href={href}
+        className={classes}
+        {...motionProps}
+      >
         {children}
-      </a>
+      </motion.a>
     )
   }
 
   return (
-    <button className={classes} {...props}>
+    <motion.button
+      className={classes}
+      {...motionProps}
+      {...(props as React.ComponentProps<typeof motion.button>)}
+    >
       {children}
-    </button>
+    </motion.button>
   )
 }

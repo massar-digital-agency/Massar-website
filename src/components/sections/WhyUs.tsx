@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { fadeUp, stagger } from '@/hooks/useAnimationVariants'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
@@ -15,6 +15,7 @@ const pillars: { key: string; icon: LucideIcon }[] = [
 
 export function WhyUs() {
   const { t } = useTranslation()
+  const reducedMotion = useReducedMotion()
 
   return (
     <Section id="about" className="relative overflow-hidden bg-white border-y border-[#E4E4E7]">
@@ -55,6 +56,7 @@ export function WhyUs() {
               <motion.div
                 key={key}
                 variants={fadeUp}
+                whileHover={reducedMotion ? {} : { x: 4, transition: { duration: 0.2 } }}
                 className="flex gap-5 rounded-2xl border border-[#E4E4E7] bg-[#FAFAF9] p-6 sm:p-7"
               >
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-[#8B5CF6] border border-[#E4E4E7]">

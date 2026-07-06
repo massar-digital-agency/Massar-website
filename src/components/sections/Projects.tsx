@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { fadeUp, stagger } from '@/hooks/useAnimationVariants'
 import { ArrowUpRight, Code2, Clock, ArrowRight } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
@@ -29,6 +29,7 @@ const estimatedReadingTime: Record<string, number> = {
 
 export function Projects() {
   const { t } = useTranslation()
+  const reducedMotion = useReducedMotion()
   const [activeFilter, setActiveFilter] = useState('all')
 
   const filteredKeys = projectKeys.filter((key) => {
@@ -76,6 +77,8 @@ export function Projects() {
               <motion.a
                 key={key}
                 variants={fadeUp}
+                whileHover={reducedMotion ? {} : { y: -4, transition: { duration: 0.2 } }}
+                whileTap={reducedMotion ? {} : { scale: 0.99 }}
                 href={`#/case-studies/${key}`}
                 onClick={(e) => {
                   e.preventDefault()

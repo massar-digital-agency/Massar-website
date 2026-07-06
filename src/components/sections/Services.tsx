@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { fadeUp, stagger } from '@/hooks/useAnimationVariants'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
@@ -25,6 +25,7 @@ const icons: Record<string, LucideIcon> = {
 
 export function Services() {
   const { t } = useTranslation()
+  const reducedMotion = useReducedMotion()
 
   return (
     <Section id="services">
@@ -47,6 +48,8 @@ export function Services() {
               <motion.div
                 key={key}
                 variants={fadeUp}
+                whileHover={reducedMotion ? {} : { y: -4, transition: { duration: 0.2 } }}
+                whileTap={reducedMotion ? {} : { scale: 0.98 }}
                 onClick={() => trackEvent('service_card_click', { service: t(`services.items.${key}.title`) })}
                 role="article"
                 className="group rounded-2xl border border-[#E4E4E7] bg-white p-7 sm:p-8 transition-all duration-300 hover:border-[#D4D4D8] hover:shadow-lg hover:shadow-black/[0.04] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded-xl"

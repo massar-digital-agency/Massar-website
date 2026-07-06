@@ -1,0 +1,32 @@
+{
+  "metrics": [
+    {
+      "id": "projects",
+      "value": 200,
+      "suffix": "+",
+      "labelKey": "socialProof.metrics.projects.label",
+      "descriptionKey": "socialProof.metrics.projects.description"
+    },
+    {
+      "id": "clients",
+      "value": 100,
+      "suffix": "+",
+      "labelKey": "socialProof.metrics.clients.label",
+      "descriptionKey": "socialProof.metrics.clients.description"
+    },
+    {
+      "id": "experience",
+      "value": 3,
+      "suffix": "+",
+      "labelKey": "socialProof.metrics.experience.label",
+      "descriptionKey": "socialProof.metrics.experience.description"
+    },
+    {
+      "id": "countries",
+      "value": 5,
+      "suffix": "+",
+      "labelKey": "socialProof.metrics.countries.label",
+      "descriptionKey": "socialProof.metrics.countries.description"
+    }
+  ]
+}
