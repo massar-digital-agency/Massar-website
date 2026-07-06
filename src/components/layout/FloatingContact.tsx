@@ -1,5 +1,6 @@
+import { useRef, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { Mail } from 'lucide-react'
 import { trackEvent } from '@/lib/analytics'
 
@@ -16,6 +17,16 @@ export function FloatingContact() {
   const { t } = useTranslation()
   const email = t('footer.email')
   const phone = t('footer.phone').replace(/[^\d]/g, '')
+  const reducedMotion = useReducedMotion()
+  const announcedRef = useRef(false)
+  const liveRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!announcedRef.current && liveRef.current) {
+      announcedRef.current = true
+      liveRef.current.textContent = t('floatingContact.ariaLabel', 'Contact options — WhatsApp and email')
+    }
+  }, [t])
 
   const actions = [
     {
@@ -37,7 +48,12 @@ export function FloatingContact() {
   ]
 
   return (
-    <div className="fixed bottom-24 sm:bottom-6 end-6 z-40 flex flex-col items-center gap-3">
+    <div
+      className="fixed bottom-24 sm:bottom-6 end-6 z-40 flex flex-col items-center gap-3"
+      aria-live="polite"
+      aria-atomic="true"
+    >
+      <div ref={liveRef} className="sr-only" />
       {actions.map(({ key, href, external, icon, bg, label }, i) => (
         <motion.a
           key={key}
@@ -46,8 +62,8 @@ export function FloatingContact() {
           rel={external ? 'noopener noreferrer' : undefined}
           onClick={() => trackEvent('outbound_click', { outbound_type: key, outbound_label: label })}
           aria-label={external ? `${label} (opens in new tab)` : label}
-          animate={{ y: [0, -6, 0] }}
-          transition={{ duration: 2.4, repeat: Infinity, ease: 'easeInOut', delay: i * 0.3 }}
+          animate={reducedMotion ? undefined : { y: [0, -6, 0] }}
+          transition={reducedMotion ? undefined : { duration: 2.4, repeat: Infinity, ease: 'easeInOut', delay: i * 0.3 }}
           className={`flex h-[52px] w-[52px] shrink-0 items-center justify-center rounded-full text-white ${bg} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2`}
         >
           {icon}

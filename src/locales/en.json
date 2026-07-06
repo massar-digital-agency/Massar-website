@@ -77,6 +77,26 @@
       "discovery": "Free discovery session",
       "delivery": "2–12 week delivery",
       "support": "Ongoing support"
+    },
+    "variantB": {
+      "badge": "Digital agency — Algeria",
+      "title": "Launch faster, grow stronger with",
+      "titleAccent": "a website built to convert.",
+      "subtitle": "Stop losing customers to slow, outdated sites. Get a high-performance website built for speed, SEO, and conversions — delivered in weeks, not months.",
+      "cta": "Start your project",
+      "ctaSecondary": "See how it works",
+      "trustStatement": "Trusted by Journeya, DarLink, and growing businesses across Algeria.",
+      "ctaMicro": "Free 15-min discovery call • No obligation • Response within 24h",
+      "trust": {
+        "projects": "15+ Projects",
+        "experience": "3+ Years",
+        "clients": "10+ Clients"
+      },
+      "process": {
+        "discovery": "Free discovery session",
+        "delivery": "2–12 week delivery",
+        "support": "Ongoing support"
+      }
     }
   },
   "trusted": {
@@ -144,24 +164,12 @@
     "label": "Our process",
     "title": "From idea to launch",
     "steps": {
-      "discover": { "title": "Discover", "description": "Deeply understand your business, goals, and target audience." },
-      "plan": { "title": "Plan", "description": "Define a clear action plan with milestones and a precise timeline." },
-      "design": { "title": "Design", "description": "Create elegant interfaces that reflect your brand identity." },
-      "develop": { "title": "Develop", "description": "Build robust technical solutions with current standards." },
-      "launch": { "title": "Launch", "description": "Deploy your project after rigorous testing to ensure quality." },
-      "support": { "title": "Support", "description": "Provide ongoing support and updates for sustainable growth." }
-    }
-  },
-  "process": {
-    "label": "Our process",
-    "title": "From idea to launch",
-    "steps": {
-      "discover": { "title": "Discover", "description": "Deeply understand your business, goals, and target audience." },
-      "plan": { "title": "Plan", "description": "Define a clear action plan with milestones and a precise timeline." },
-      "design": { "title": "Design", "description": "Create elegant interfaces that reflect your brand identity." },
-      "develop": { "title": "Develop", "description": "Build robust technical solutions with current standards." },
-      "launch": { "title": "Launch", "description": "Deploy your project after rigorous testing to ensure quality." },
-      "support": { "title": "Support", "description": "Provide ongoing support and updates for sustainable growth." }
+      "discover": { "title": "Discover", "description": "We learn your business, audience, and goals inside-out. This upfront clarity eliminates guesswork, reduces costly revisions, and sets your project up for success from day one." },
+      "plan": { "title": "Plan", "description": "We create a detailed roadmap with clear milestones, timelines, and deliverables. You'll always know what's happening and when — giving you full control and confidence in the process." },
+      "design": { "title": "Design", "description": "We craft beautiful, intuitive interfaces tailored to your brand. Every element is designed for engagement and conversion — so your users stay longer and act more." },
+      "develop": { "title": "Develop", "description": "We build with modern, scalable technology — delivering clean code that loads fast, ranks high on SEO, and scales seamlessly as your business grows." },
+      "launch": { "title": "Launch", "description": "We deploy after comprehensive testing across every device and browser. Your launch is smooth and bug-free — so you can start seeing results immediately." },
+      "support": { "title": "Support", "description": "We provide ongoing maintenance, updates, and optimization after launch. Your digital presence stays fast, secure, and up-to-date — with a partner who has your back." }
     },
     "cta": "Ready to start your project?",
     "ctaMicro": "Most projects move from discovery to launch in 2–12 weeks depending on scope."
@@ -383,14 +391,14 @@
     "subtitle": "We partner with founders and teams who care about quality. Here's what they have to say about working with us.",
     "items": [
       {
-        "text": "Massar delivered our web app ahead of schedule and with incredible attention to detail. Their communication was flawless throughout.",
+        "text": "Massar delivered our web app ahead of schedule without sacrificing an ounce of quality. Their attention to detail and transparent communication made the entire process stress-free. Our launch was seamless, and the results exceeded expectations.",
         "author": "Amine Rahmani",
         "role": "Co-founder",
         "company": "Journeya",
         "rating": 5
       },
       {
-        "text": "Working with Massar has been a game-changer for our brand. They took the time to understand our vision and translated it into a stunning digital experience.",
+        "text": "Partnering with Massar completely transformed our digital presence. They took the time to truly understand our vision and translate it into an experience our customers love. Since launch, engagement is up and our brand feels more premium than ever.",
         "author": "Sarah Khelif",
         "role": "CEO",
         "company": "NestCode",
@@ -398,7 +406,7 @@
         "placeholder": true
       },
       {
-        "text": "Massar redesigned our platform from the ground up. The result was a 40% improvement in user engagement and a modern look that perfectly reflects our values.",
+        "text": "Massar rebuilt our platform from the ground up — and the numbers speak for themselves. User engagement jumped 40%, load times dropped significantly, and our team finally has a tool that's a pleasure to use. Best investment we've made this year.",
         "author": "Mehdi Lounis",
         "role": "Product Lead",
         "company": "DataSphere",
@@ -890,6 +898,27 @@
   },
   "mobileStickyCta": {
     "label": "Schedule a Call"
+  },
+  "floatingContact": {
+    "ariaLabel": "Contact options — WhatsApp and email"
+  },
+  "exitIntentModal": {
+    "title": "Let's build something great together",
+    "subtitle": "Leave your contact details and we'll reach out within 24 hours with a custom proposal tailored to your project.",
+    "emailLabel": "Work Email",
+    "phoneLabel": "Phone Number",
+    "cta": "Get a Free Proposal",
+    "submitting": "Sending...",
+    "micro": "No obligation • Response within 24 hours",
+    "close": "Close",
+    "successTitle": "Thank you!",
+    "successDesc": "We've received your details and will get back to you within 24 hours.",
+    "errorTitle": "Something went wrong",
+    "errorDesc": "Please try again or email us directly at massar.digital.studio@gmail.com",
+    "errors": {
+      "emailInvalid": "Please enter a valid email address",
+      "phoneInvalid": "Please enter a valid phone number"
+    }
   },
   "legal": {
     "privacy": {

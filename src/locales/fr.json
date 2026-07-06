@@ -77,6 +77,26 @@
       "discovery": "Séance découverte gratuite",
       "delivery": "Livraison sous 2–12 semaines",
       "support": "Support continu"
+    },
+    "variantB": {
+      "badge": "Agence digitale — Algérie",
+      "title": "Lancez-vous plus vite, développez-vous avec",
+      "titleAccent": "un site conçu pour convertir.",
+      "subtitle": "Ne perdez plus de clients avec des sites lents et dépassés. Obtenez un site haute performance, optimisé SEO et livré en quelques semaines — pas en mois.",
+      "cta": "Commencer votre projet",
+      "ctaSecondary": "Découvrir comment",
+      "trustStatement": "Approuvé par Journeya, DarLink et des entreprises en croissance à travers l'Algérie.",
+      "ctaMicro": "Appel découverte gratuit de 15 min • Sans engagement • Réponse sous 24h",
+      "trust": {
+        "projects": "15+ Projets",
+        "experience": "3+ Années",
+        "clients": "10+ Clients"
+      },
+      "process": {
+        "discovery": "Séance découverte gratuite",
+        "delivery": "Livraison sous 2–12 semaines",
+        "support": "Support continu"
+      }
     }
   },
   "trusted": {
@@ -146,12 +166,12 @@
     "label": "Notre méthode",
     "title": "De l'idée au lancement",
     "steps": {
-      "discover": { "title": "Découverte", "description": "Comprendre en profondeur votre activité, vos objectifs et votre audience." },
-      "plan": { "title": "Planification", "description": "Définir un plan d'action clair avec des jalons et un calendrier précis." },
-      "design": { "title": "Design", "description": "Concevoir des interfaces élégantes qui reflètent l'identité de votre marque." },
-      "develop": { "title": "Développement", "description": "Construire des solutions techniques robustes avec les standards actuels." },
-      "launch": { "title": "Lancement", "description": "Déployer votre projet après des tests rigoureux pour garantir la qualité." },
-      "support": { "title": "Support", "description": "Fournir un support continu et des mises à jour pour une croissance durable." }
+      "discover": { "title": "Découverte", "description": "Nous analysons votre activité, votre audience et vos objectifs en profondeur. Cette clarté initiale élimine les suppositions, réduit les révisions coûteuses et prépare votre projet au succès dès le premier jour." },
+      "plan": { "title": "Planification", "description": "Nous élaborons une feuille de route détaillée avec des jalons clairs, des délais réalistes et des livrables précis. Vous savez toujours où en est votre projet — pour une tranquillité d'esprit totale." },
+      "design": { "title": "Design", "description": "Nous concevons des interfaces élégantes et intuitives qui reflètent votre marque. Chaque élément est pensé pour l'engagement et la conversion — vos utilisateurs restent plus longtemps et passent à l'action." },
+      "develop": { "title": "Développement", "description": "Nous construisons avec des technologies modernes et évolutives — un code propre, rapide et optimisé pour le SEO, qui s'adapte parfaitement à la croissance de votre entreprise." },
+      "launch": { "title": "Lancement", "description": "Nous déployons après des tests rigoureux sur tous les appareils et navigateurs. Votre lancement est fluide et sans bugs — pour des résultats immédiats, sans surprises." },
+      "support": { "title": "Support", "description": "Nous restons à vos côtés après le lancement. Maintenance, mises à jour et optimisation continue — votre présence numérique reste performante, sécurisée et à jour." }
     },
     "cta": "Prêt à démarrer votre projet ?",
     "ctaMicro": "La plupart des projets passent de la découverte au lancement en 2 à 12 semaines selon le périmètre."
@@ -373,14 +393,14 @@
     "subtitle": "Nous collaborons avec des fondateurs et des équipes qui attachent de l'importance à la qualité. Voici ce qu'ils disent de notre collaboration.",
     "items": [
       {
-        "text": "Massar a livré notre application web en avance sur le calendrier et avec une attention incroyable aux détails. Leur communication a été impeccable tout au long.",
+        "text": "Massar a livré notre application web avant la date prévue sans faire aucun compromis sur la qualité. Leur souci du détail et leur communication transparente ont rendu tout le processus sans stress. Notre lancement s'est déroulé sans accroc et les résultats ont dépassé nos attentes.",
         "author": "Amine Rahmani",
         "role": "Co-fondateur",
         "company": "Journeya",
         "rating": 5
       },
       {
-        "text": "Travailler avec Massar a été un véritable tournant pour notre marque. Ils ont pris le temps de comprendre notre vision et l'ont traduite en une expérience numérique magnifique.",
+        "text": "Travailler avec Massar a complètement transformé notre présence digitale. Ils ont pris le temps de vraiment comprendre notre vision pour la transformer en une expérience que nos clients adorent. Depuis le lancement, l'engagement a augmenté et notre marque n'a jamais semblé aussi premium.",
         "author": "Sarah Khelif",
         "role": "CEO",
         "company": "NestCode",
@@ -388,7 +408,7 @@
         "placeholder": true
       },
       {
-        "text": "Massar a entièrement repensé notre plateforme. Le résultat a été une amélioration de 40% de l'engagement utilisateur et un look moderne qui reflète parfaitement nos valeurs.",
+        "text": "Massar a reconstruit notre plateforme de zéro — et les chiffres parlent d'eux-mêmes. L'engagement utilisateur a grimpé de 40%, les temps de chargement ont chuté et notre équipe utilise enfin un outil qu'elle apprécie vraiment. Notre meilleur investissement de l'année.",
         "author": "Mehdi Lounis",
         "role": "Responsable Produit",
         "company": "DataSphere",
@@ -828,6 +848,27 @@
   },
   "mobileStickyCta": {
     "label": "Planifier un appel"
+  },
+  "floatingContact": {
+    "ariaLabel": "Options de contact — WhatsApp et e-mail"
+  },
+  "exitIntentModal": {
+    "title": "Construisons ensemble quelque chose de grand",
+    "subtitle": "Laissez vos coordonnées et nous vous contacterons sous 24 heures avec une proposition personnalisée.",
+    "emailLabel": "E-mail professionnel",
+    "phoneLabel": "Numéro de téléphone",
+    "cta": "Obtenir un devis gratuit",
+    "submitting": "Envoi en cours...",
+    "micro": "Sans engagement • Réponse sous 24h",
+    "close": "Fermer",
+    "successTitle": "Merci !",
+    "successDesc": "Nous avons reçu vos coordonnées et vous répondrons sous 24 heures.",
+    "errorTitle": "Une erreur est survenue",
+    "errorDesc": "Veuillez réessayer ou nous écrire à massar.digital.studio@gmail.com",
+    "errors": {
+      "emailInvalid": "Veuillez entrer une adresse e-mail valide",
+      "phoneInvalid": "Veuillez entrer un numéro de téléphone valide"
+    }
   },
   "legal": {
     "privacy": {
