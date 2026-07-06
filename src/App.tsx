@@ -34,11 +34,12 @@ import { TestimonialsCarousel } from '@/components/sections/TestimonialsCarousel
 import { trackPageView } from '@/lib/analytics'
 import { useScrollDepth } from '@/hooks/useScrollDepth'
 import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom'
-import { SEO_CONFIG } from '@/lib/seo'
+import { SEO_CONFIG, getOgImage } from '@/lib/seo'
 
 function HomePage() {
   const { t, i18n } = useTranslation()
   const [loading, setLoading] = useState(true)
+  const ogImage = getOgImage(i18n.language)
 
   useEffect(() => {
     trackPageView('/', 'Massar Digital Studio')
@@ -56,10 +57,11 @@ function HomePage() {
         <meta property="og:description" content={t('seo.ogDescription')} />
         <meta property="og:url" content={SEO_CONFIG.siteUrl} />
         <meta property="og:site_name" content={SEO_CONFIG.siteName} />
+        <meta property="og:image" content={ogImage} />
 
         <meta name="twitter:title" content={t('seo.twitterTitle')} />
         <meta name="twitter:description" content={t('seo.ogDescription')} />
-        <meta name="twitter:image" content={SEO_CONFIG.ogImage} />
+        <meta name="twitter:image" content={ogImage} />
       </Helmet>
       <StructuredData />
       {loading && <LoadingScreen onFinish={() => setLoading(false)} />}

@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async'
-import { SEO_CONFIG } from '@/lib/seo'
+import { useTranslation } from 'react-i18next'
+import { SEO_CONFIG, getOgImage } from '@/lib/seo'
 import type { BlogMeta } from '@/types/blog'
 
 interface BlogSEOProps {
@@ -8,10 +9,13 @@ interface BlogSEOProps {
 }
 
 export function BlogSEO({ meta, isIndex }: BlogSEOProps) {
+  const { i18n } = useTranslation()
+
   if (isIndex) {
     const url = `${SEO_CONFIG.siteUrl}/blog`
     const title = `Blog | ${SEO_CONFIG.siteName}`
     const description = 'Read expert articles about web development, SEO, design, and digital strategy from Massar Digital Studio.'
+    const ogImage = getOgImage(i18n.language)
     return (
       <Helmet>
         <title>{title}</title>
@@ -21,10 +25,10 @@ export function BlogSEO({ meta, isIndex }: BlogSEOProps) {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={url} />
-        <meta property="og:image" content={SEO_CONFIG.ogImage} />
+        <meta property="og:image" content={ogImage} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={SEO_CONFIG.ogImage} />
+        <meta name="twitter:image" content={ogImage} />
       </Helmet>
     )
   }
@@ -36,7 +40,7 @@ export function BlogSEO({ meta, isIndex }: BlogSEOProps) {
   const description = meta.description
   const ogImage = meta.featuredImage
     ? `${SEO_CONFIG.siteUrl}${meta.featuredImage}`
-    : SEO_CONFIG.ogImage
+    : getOgImage(i18n.language)
 
   const articleSchema = {
     '@context': 'https://schema.org',

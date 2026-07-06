@@ -1,11 +1,40 @@
 const SITE_URL = 'https://massardigital.com'
 const SITE_NAME = 'Massar Digital Studio'
 const OG_IMAGE = `${SITE_URL}/og-image.jpg`
+const OG_IMAGE_EN = `${SITE_URL}/og-image.jpg`
+const OG_IMAGE_FR = `${SITE_URL}/og-image.jpg`
+const OG_IMAGE_AR = `${SITE_URL}/og-image.jpg`
 const OG_IMAGE_WIDTH = '3027'
 const OG_IMAGE_HEIGHT = '2439'
 const TWITTER_HANDLE = '@massardigital'
 
 export const META_DESCRIPTION_MAX_LENGTH = 155
+
+export const LOCALE_MAP: Record<string, string> = {
+  en: 'en_US',
+  fr: 'fr_FR',
+  ar: 'ar_DZ',
+}
+
+export const OG_IMAGE_MAP: Record<string, string> = {
+  en: OG_IMAGE_EN,
+  fr: OG_IMAGE_FR,
+  ar: OG_IMAGE_AR,
+}
+
+export const ALTERNATE_LOCALES = Object.values(LOCALE_MAP)
+
+export function getLocale(lang: string): string {
+  return LOCALE_MAP[lang] || 'en_US'
+}
+
+export function getOgImage(lang: string): string {
+  return OG_IMAGE_MAP[lang] || OG_IMAGE
+}
+
+export function getAlternateLocales(currentLocale: string): string[] {
+  return ALTERNATE_LOCALES.filter((l) => l !== currentLocale)
+}
 
 export function truncateMetaDescription(description: string, maxLength = META_DESCRIPTION_MAX_LENGTH): string {
   if (description.length <= maxLength) return description

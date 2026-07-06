@@ -30,6 +30,7 @@ export function WhyUs() {
             <img
               src={FaceShape}
               alt=""
+              loading="lazy"
               className="pointer-events-none absolute -top-16 start-[-40px] -z-10 h-[320px] w-auto opacity-[0.06]"
             />
             <span className="mb-4 inline-block text-[13px] font-semibold tracking-[0.1em] text-[#8B5CF6] uppercase">
