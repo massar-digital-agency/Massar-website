@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { FloatingContact } from '@/components/layout/FloatingContact'
-import { LegalLayout, LegalSection, LegalSubsection, LegalParagraph, LegalList, LegalNotice } from './LegalLayout'
+import { LegalLayout, LegalSection, LegalSubsection, LegalParagraph, LegalList } from './LegalLayout'
 import { useEffect } from 'react'
 import { SEO_CONFIG } from '@/lib/seo'
 
@@ -32,216 +32,117 @@ function CookieContentEN() {
   return (
     <LegalLayout
       title="Cookie Policy"
-      subtitle="How Massar Digital Studio uses cookies and similar tracking technologies on our website."
-      lastUpdated="Last updated: [DATE — REVIEW AND UPDATE REGULARLY]"
+      subtitle="How Massar Agency uses cookies and similar tracking technologies on our website."
+      lastUpdated="Last updated: July 2026"
     >
-      <LegalNotice>
-        <strong>Note:</strong> This Cookie Policy template contains placeholders marked with square brackets <strong>[ ]</strong>. These must be completed by the website owner with accurate information. This document is not legal advice. Consult a qualified legal professional for compliance with applicable laws, including the EU ePrivacy Directive and GDPR requirements on cookie consent.
-      </LegalNotice>
-
-      <LegalSection title="1. What Are Cookies">
+      <LegalSection title="3.1 What Is a Cookie?">
         <LegalParagraph>
-          Cookies are small text files that are placed on your device (computer, tablet, smartphone) when you visit a website. They are widely used to make websites work more efficiently, enhance user experience, and provide information to website owners. Cookies may be set by the website you visit ("first-party cookies") or by third-party services embedded in the website ("third-party cookies").
-        </LegalParagraph>
-        <LegalParagraph>
-          Cookies can be "session cookies" (which expire when you close your browser) or "persistent cookies" (which remain on your device for a set period or until you delete them).
+          A cookie is a small text file placed on your device (computer, tablet, smartphone) while browsing our site. It allows us to collect information related to your browsing and provide you with a personalized experience.
         </LegalParagraph>
       </LegalSection>
 
-      <LegalSection title="2. Types of Cookies We Use">
+      <LegalSection title="3.2 Why Do We Use Cookies?">
         <LegalParagraph>
-          We categorize the cookies used on our website as follows:
+          Massar Agency uses cookies to:
         </LegalParagraph>
-
-        <LegalSubsection title="2.1 Essential Cookies (Strictly Necessary)">
-          <LegalParagraph>
-            These cookies are required for the basic operation of our website and cannot be disabled. They enable core functionality such as:
-          </LegalParagraph>
-          <LegalList
-            items={[
-              'Remembering your cookie consent preferences.',
-              'Maintaining session security and integrity.',
-              'Enabling basic page navigation and access to secure areas of the website.',
-            ]}
-          />
-          <LegalParagraph>
-            <strong>Examples:</strong> Cookie consent preference cookie (<code>massar_cookie_consent</code>), session management cookies.
-          </LegalParagraph>
-          <LegalParagraph>
-            <strong>Legal basis:</strong> These cookies are exempt from consent requirements under applicable law as they are strictly necessary for the functioning of the website.
-          </LegalParagraph>
-        </LegalSubsection>
-
-        <LegalSubsection title="2.2 Analytics Cookies">
-          <LegalParagraph>
-            These cookies help us understand how visitors interact with our website by collecting and reporting anonymous usage information. We use this data to:
-          </LegalParagraph>
-          <LegalList
-            items={[
-              'Count page visits and traffic sources.',
-              'Understand which pages are most and least popular.',
-              'Measure user behavior and navigation patterns.',
-              'Identify and fix technical issues.',
-              'Improve website performance and user experience.',
-            ]}
-          />
-          <LegalParagraph>
-            <strong>[ANALYTICS SERVICE NAME — e.g., Google Analytics, Plausible, Fathom. Include link to the service's privacy policy and cookie information.]</strong>
-          </LegalParagraph>
-          <LegalParagraph>
-            <strong>Data collected:</strong> Anonymized IP address, browser type, device type, pages visited, time spent on pages, referring website, and similar usage metrics.
-          </LegalParagraph>
-          <LegalParagraph>
-            <strong>Retention:</strong> Analytics data is retained for [RETENTION PERIOD — e.g., 26 months] before being anonymized or deleted.
-          </LegalParagraph>
-        </LegalSubsection>
-
-        <LegalSubsection title="2.3 Functional Cookies">
-          <LegalParagraph>
-            These cookies enable enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages. They allow the website to:
-          </LegalParagraph>
-          <LegalList
-            items={[
-              'Remember your language preferences.',
-              'Remember your region or location.',
-              'Provide personalized content recommendations.',
-            ]}
-          />
-          <LegalParagraph>
-            <strong>[LIST ANY FUNCTIONAL COOKIES USED, INCLUDING THIRD-PARTY SERVICES.]</strong>
-          </LegalParagraph>
-        </LegalSubsection>
-
-        <LegalSubsection title="2.4 Marketing Cookies">
-          <LegalParagraph>
-            These cookies track your browsing habits across websites to build a profile of your interests and show you relevant advertisements. They are typically placed by third-party advertising networks with our permission.
-          </LegalParagraph>
-          <LegalList
-            items={[
-              'They remember that you have visited our website and may share this information with other organizations.',
-              'They help us measure the effectiveness of our advertising campaigns.',
-              'They limit the number of times you see an advertisement.',
-            ]}
-          />
-          <LegalParagraph>
-            <strong>[LIST ANY MARKETING COOKIES USED. IF NONE ARE CURRENTLY USED, STATE: "We do not currently use marketing cookies. If we add marketing cookies in the future, we will update this policy and seek your consent as required by law."]</strong>
-          </LegalParagraph>
-        </LegalSubsection>
+        <LegalList
+          items={[
+            '<strong>Ensure the proper functioning of the site</strong> (essential cookies)',
+            '<strong>Analyze audience and visitor behavior</strong> (Google Analytics 4, Core Web Vitals measurement)',
+            '<strong>Remember your preferences</strong> (language, display settings)',
+            '<strong>Improve our SEO and technical performance</strong>',
+          ]}
+        />
       </LegalSection>
 
-      <LegalSection title="3. Specific Cookies We Use">
+      <LegalSection title="3.3 Types of Cookies Used">
         <LegalParagraph>
-          The table below lists the specific cookies that may be set on our website:
+          The table below lists the types of cookies used on our website:
         </LegalParagraph>
         <div className="overflow-x-auto mb-6">
           <table className="w-full text-[13px] sm:text-[14px] border-collapse">
             <thead>
               <tr className="border-b border-[#E4E4E7]">
-                <th className="text-start font-semibold text-[#0A0A0A] py-3 pr-4">Cookie Name</th>
-                <th className="text-start font-semibold text-[#0A0A0A] py-3 pr-4">Category</th>
+                <th className="text-start font-semibold text-[#0A0A0A] py-3 pr-4">Cookie Type</th>
                 <th className="text-start font-semibold text-[#0A0A0A] py-3 pr-4">Purpose</th>
-                <th className="text-start font-semibold text-[#0A0A0A] py-3">Duration</th>
+                <th className="text-start font-semibold text-[#0A0A0A] py-3">Retention Period</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[#E4E4E7]">
               <tr>
-                <td className="py-3 pr-4 text-[#52525B]"><code>massar_cookie_consent</code></td>
-                <td className="py-3 pr-4 text-[#52525B]">Essential</td>
-                <td className="py-3 pr-4 text-[#52525B]">Stores your cookie consent preferences</td>
-                <td className="py-3 text-[#52525B]">1 year</td>
+                <td className="py-3 pr-4 text-[#52525B] font-medium">Essential cookies</td>
+                <td className="py-3 pr-4 text-[#52525B]">Technical operation of the site (navigation, security)</td>
+                <td className="py-3 text-[#52525B]">Session</td>
               </tr>
               <tr>
-                <td className="py-3 pr-4 text-[#52525B]"><code>i18nextLng</code></td>
-                <td className="py-3 pr-4 text-[#52525B]">Functional</td>
-                <td className="py-3 pr-4 text-[#52525B]">Stores your language preference</td>
-                <td className="py-3 text-[#52525B]">1 year</td>
+                <td className="py-3 pr-4 text-[#52525B] font-medium">Analytics cookies</td>
+                <td className="py-3 pr-4 text-[#52525B]">Traffic statistics, user behavior (GA4)</td>
+                <td className="py-3 text-[#52525B]">Up to 13 months</td>
               </tr>
               <tr>
-                <td className="py-3 pr-4 text-[#A1A1AA] italic" colSpan={4}>
-                  [ADD ROWS FOR ANY OTHER COOKIES SET BY YOUR WEBSITE OR THIRD-PARTY SERVICES]
-                </td>
+                <td className="py-3 pr-4 text-[#52525B] font-medium">Preference cookies</td>
+                <td className="py-3 pr-4 text-[#52525B]">Remembering your choices (language, display)</td>
+                <td className="py-3 text-[#52525B]">Up to 12 months</td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-4 text-[#52525B] font-medium">Third-party cookies</td>
+                <td className="py-3 pr-4 text-[#52525B]">External integrations (social media, embedded videos)</td>
+                <td className="py-3 text-[#52525B]">Varies by provider</td>
               </tr>
             </tbody>
           </table>
         </div>
       </LegalSection>
 
-      <LegalSection title="4. Third-Party Cookies">
+      <LegalSection title="3.4 Consent and Cookie Management">
         <LegalParagraph>
-          Some cookies are placed by third-party services that we use on our website. These third parties may use cookies for their own purposes, which are governed by their respective privacy policies:
+          On your first visit, a banner informs you of the use of cookies and allows you to:
         </LegalParagraph>
         <LegalList
           items={[
-            '<strong>[ANALYTICS PROVIDER]</strong> — [LINK TO THEIR COOKIE POLICY]',
-            '<strong>Calendly</strong> — Calendly may set cookies for scheduling functionality. See Calendly\'s privacy policy for details.',
-            '<strong>Google Fonts</strong> — Google may log requests for font files as part of their operations. See Google\'s privacy policy for details.',
-            '<strong>[ADDITIONAL THIRD-PARTY SERVICES — List any other services that set cookies.]</strong>',
-          ]}
-        />
-      </LegalSection>
-
-      <LegalSection title="5. Cookie Consent and Your Choices">
-        <LegalParagraph>
-          When you first visit our website, we display a cookie consent banner that allows you to:
-        </LegalParagraph>
-        <LegalList
-          items={[
-            '<strong>Accept All:</strong> Consent to all categories of cookies.',
-            '<strong>Reject Non-Essential:</strong> Accept only essential/necessary cookies and reject all other categories.',
-            '<strong>Manage Preferences:</strong> Select individual cookie categories to accept or reject.',
+            'Accept all cookies',
+            'Refuse non-essential cookies',
+            'Customize your preferences by category',
           ]}
         />
         <LegalParagraph>
-          You can change your cookie preferences at any time by clicking the "[COOKIE PREFERENCES BUTTON LABEL]" link in the footer of our website. This will reopen the consent banner and allow you to update your choices.
-        </LegalParagraph>
-        <LegalParagraph>
-          You can also manage cookies through your browser settings. Most browsers allow you to:
-        </LegalParagraph>
-        <LegalList
-          items={[
-            'View and delete cookies individually.',
-            'Block cookies from specific websites.',
-            'Block all cookies (which may affect website functionality).',
-            'Enable "Do Not Track" signals.',
-          ]}
-        />
-        <LegalParagraph>
-          For instructions on managing cookies in your browser, visit the help pages of your specific browser:
-        </LegalParagraph>
-        <LegalList
-          items={[
-            '<a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer" class="text-[#8B5CF6] underline underline-offset-2 hover:text-[#7C3AED]">Google Chrome</a>',
-            '<a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences" target="_blank" rel="noopener noreferrer" class="text-[#8B5CF6] underline underline-offset-2 hover:text-[#7C3AED]">Mozilla Firefox</a>',
-            '<a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" target="_blank" rel="noopener noreferrer" class="text-[#8B5CF6] underline underline-offset-2 hover:text-[#7C3AED]">Safari</a>',
-            '<a href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer" class="text-[#8B5CF6] underline underline-offset-2 hover:text-[#7C3AED]">Microsoft Edge</a>',
-          ]}
-        />
-      </LegalSection>
-
-      <LegalSection title="6. How We Obtain Consent">
-        <LegalParagraph>
-          We obtain your consent for non-essential cookies through our cookie consent banner, which appears on your first visit to our website. Your consent is stored in the <code>massar_cookie_consent</code> cookie for future reference. You can withdraw or modify your consent at any time as described in Section 5.
+          You can change your preferences at any time via your browser settings or the cookie management module on our site.
         </LegalParagraph>
       </LegalSection>
 
-      <LegalSection title="7. Updates to This Policy">
+      <LegalSection title="3.5 How to Disable Cookies via Your Browser">
         <LegalParagraph>
-          We may update this Cookie Policy from time to time to reflect changes in the cookies we use, legal requirements, or operational needs. When we make material changes, we will update the "Last updated" date at the top of this policy and may display a notice on our website.
-        </LegalParagraph>
-      </LegalSection>
-
-      <LegalSection title="8. Contact Us">
-        <LegalParagraph>
-          If you have any questions about our use of cookies, please contact us:
+          You can manage or disable cookies through your browser settings:
         </LegalParagraph>
         <LegalList
           items={[
-            'Email: massar.digital.studio@gmail.com',
-            'Phone: +213 699 284 128',
-            'Location: Algeria',
-            '[MAILING ADDRESS — Insert physical mailing address if applicable.]',
+            '<strong>Chrome</strong>: Settings &gt; Privacy and security &gt; Cookies',
+            '<strong>Firefox</strong>: Settings &gt; Privacy &amp; Security',
+            '<strong>Safari</strong>: Preferences &gt; Privacy',
+            '<strong>Edge</strong>: Settings &gt; Cookies and site permissions',
           ]}
         />
+        <LegalParagraph>
+          Disabling certain cookies may affect the proper functioning of the site.
+        </LegalParagraph>
+      </LegalSection>
+
+      <LegalSection title="3.6 Third-Party Cookies">
+        <LegalParagraph>
+          Some cookies come from third-party services integrated into our site (Google Analytics, social media). These third parties have their own privacy policies, which we encourage you to review.
+        </LegalParagraph>
+      </LegalSection>
+
+      <LegalSection title="3.7 Policy Updates">
+        <LegalParagraph>
+          This cookie policy may be updated to reflect legal, technical, or practice changes. We encourage you to review it regularly.
+        </LegalParagraph>
+      </LegalSection>
+
+      <LegalSection title="3.8 Contact">
+        <LegalParagraph>
+          For any questions regarding our use of cookies, contact us via our <strong>Contact</strong> page.
+        </LegalParagraph>
       </LegalSection>
     </LegalLayout>
   )
@@ -251,112 +152,117 @@ function CookieContentFR() {
   return (
     <LegalLayout
       title="Politique de Cookies"
-      subtitle="Comment Massar Digital Studio utilise les cookies et technologies de suivi similaires."
-      lastUpdated="Dernière mise à jour : [DATE — RÉVISER ET METTRE À JOUR RÉGULIÈREMENT]"
+      subtitle="Comment Massar Agency utilise les cookies et technologies de suivi similaires."
+      lastUpdated="Dernière mise à jour : Juillet 2026"
     >
-      <LegalNotice>
-        <strong>Remarque :</strong> Ce modèle de politique de cookies contient des espaces réservés entre crochets <strong>[ ]</strong>. Ce document ne constitue pas un avis juridique. Consultez un professionnel du droit qualifié.
-      </LegalNotice>
-
-      <LegalSection title="1. Que Sont les Cookies">
+      <LegalSection title="3.1 Qu'est-ce qu'un cookie ?">
         <LegalParagraph>
-          Les cookies sont de petits fichiers texte placés sur votre appareil lorsque vous visitez un site web. Ils sont largement utilisés pour faire fonctionner les sites web plus efficacement et améliorer l'expérience utilisateur.
+          Un cookie est un petit fichier texte déposé sur votre appareil (ordinateur, tablette, smartphone) lors de votre navigation sur notre site. Il permet de collecter des informations relatives à votre navigation et de vous offrir une expérience personnalisée.
         </LegalParagraph>
       </LegalSection>
 
-      <LegalSection title="2. Types de Cookies Que Nous Utilisons">
-        <LegalSubsection title="2.1 Cookies Essentiels">
-          <LegalParagraph>
-            Ces cookies sont nécessaires au fonctionnement de base de notre site web et ne peuvent pas être désactivés. Ils permettent la mémorisation de vos préférences de consentement aux cookies et la navigation de base.
-          </LegalParagraph>
-        </LegalSubsection>
-
-        <LegalSubsection title="2.2 Cookies Analytiques">
-          <LegalParagraph>
-            Ces cookies nous aident à comprendre comment les visiteurs interagissent avec notre site web en collectant des informations d'utilisation anonymes. Nous utilisons ces données pour améliorer notre site web et l'expérience utilisateur.
-          </LegalParagraph>
-          <LegalParagraph>
-            <strong>[NOM DU SERVICE D'ANALYTIQUE — Insérez le nom et le lien vers la politique de confidentialité.]</strong>
-          </LegalParagraph>
-        </LegalSubsection>
-
-        <LegalSubsection title="2.3 Cookies Fonctionnels">
-          <LegalParagraph>
-            Ces cookies permettent des fonctionnalités améliorées et une personnalisation, comme la mémorisation de vos préférences linguistiques.
-          </LegalParagraph>
-        </LegalSubsection>
-
-        <LegalSubsection title="2.4 Cookies Marketing">
-          <LegalParagraph>
-            Ces cookies suivent vos habitudes de navigation sur les sites web pour afficher des publicités pertinentes.
-          </LegalParagraph>
-          <LegalParagraph>
-            <strong>[LISTEZ LES COOKIES MARKETING UTILISÉS. SI AUCUN N'EST UTILISÉ, INDIQUEZ-LE.]</strong>
-          </LegalParagraph>
-        </LegalSubsection>
+      <LegalSection title="3.2 Pourquoi utilisons-nous des cookies ?">
+        <LegalParagraph>
+          Massar Agency utilise des cookies pour :
+        </LegalParagraph>
+        <LegalList
+          items={[
+            '<strong>Assurer le bon fonctionnement du site</strong> (cookies essentiels)',
+            '<strong>Analyser l\'audience et le comportement des visiteurs</strong> (Google Analytics 4, mesure des Core Web Vitals)',
+            '<strong>Mémoriser vos préférences</strong> (langue, paramètres d\'affichage)',
+            '<strong>Améliorer nos performances SEO et techniques</strong>',
+          ]}
+        />
       </LegalSection>
 
-      <LegalSection title="3. Cookies Spécifiques">
+      <LegalSection title="3.3 Types de cookies utilisés">
+        <LegalParagraph>
+          Le tableau ci-dessous liste les types de cookies utilisés sur notre site :
+        </LegalParagraph>
         <div className="overflow-x-auto mb-6">
           <table className="w-full text-[13px] sm:text-[14px] border-collapse">
             <thead>
               <tr className="border-b border-[#E4E4E7]">
-                <th className="text-start font-semibold text-[#0A0A0A] py-3 pr-4">Nom du Cookie</th>
-                <th className="text-start font-semibold text-[#0A0A0A] py-3 pr-4">Catégorie</th>
-                <th className="text-start font-semibold text-[#0A0A0A] py-3 pr-4">Objectif</th>
-                <th className="text-start font-semibold text-[#0A0A0A] py-3">Durée</th>
+                <th className="text-start font-semibold text-[#0A0A0A] py-3 pr-4">Type de cookie</th>
+                <th className="text-start font-semibold text-[#0A0A0A] py-3 pr-4">Finalité</th>
+                <th className="text-start font-semibold text-[#0A0A0A] py-3">Durée de conservation</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[#E4E4E7]">
               <tr>
-                <td className="py-3 pr-4 text-[#52525B]"><code>massar_cookie_consent</code></td>
-                <td className="py-3 pr-4 text-[#52525B]">Essentiel</td>
-                <td className="py-3 pr-4 text-[#52525B]">Stocke vos préférences de consentement</td>
-                <td className="py-3 text-[#52525B]">1 an</td>
+                <td className="py-3 pr-4 text-[#52525B] font-medium">Cookies essentiels</td>
+                <td className="py-3 pr-4 text-[#52525B]">Fonctionnement technique du site (navigation, sécurité)</td>
+                <td className="py-3 text-[#52525B]">Session</td>
               </tr>
               <tr>
-                <td className="py-3 pr-4 text-[#52525B]"><code>i18nextLng</code></td>
-                <td className="py-3 pr-4 text-[#52525B]">Fonctionnel</td>
-                <td className="py-3 pr-4 text-[#52525B]">Stocke votre préférence linguistique</td>
-                <td className="py-3 text-[#52525B]">1 an</td>
+                <td className="py-3 pr-4 text-[#52525B] font-medium">Cookies analytiques</td>
+                <td className="py-3 pr-4 text-[#52525B]">Statistiques de fréquentation, comportement utilisateur (GA4)</td>
+                <td className="py-3 text-[#52525B]">Jusqu'à 13 mois</td>
               </tr>
               <tr>
-                <td className="py-3 pr-4 text-[#A1A1AA] italic" colSpan={4}>
-                  [AJOUTEZ DES LIGNES POUR TOUT AUTRE COOKIE]
-                </td>
+                <td className="py-3 pr-4 text-[#52525B] font-medium">Cookies de préférence</td>
+                <td className="py-3 pr-4 text-[#52525B]">Mémorisation de vos choix (langue, affichage)</td>
+                <td className="py-3 text-[#52525B]">Jusqu'à 12 mois</td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-4 text-[#52525B] font-medium">Cookies tiers</td>
+                <td className="py-3 pr-4 text-[#52525B]">Intégrations externes (réseaux sociaux, vidéos embarquées)</td>
+                <td className="py-3 text-[#52525B]">Variable selon le fournisseur</td>
               </tr>
             </tbody>
           </table>
         </div>
       </LegalSection>
 
-      <LegalSection title="4. Gestion du Consentement">
+      <LegalSection title="3.4 Consentement et gestion des cookies">
         <LegalParagraph>
-          Lors de votre première visite sur notre site web, nous affichons une bannière de consentement aux cookies qui vous permet de :
+          Lors de votre première visite, une bannière vous informe de l'utilisation de cookies et vous permet de :
         </LegalParagraph>
         <LegalList
           items={[
-            '<strong>Tout Accepter :</strong> Consentir à toutes les catégories de cookies.',
-            '<strong>Refuser les Non-Essentiels :</strong> N\'accepter que les cookies essentiels.',
-            '<strong>Gérer les Préférences :</strong> Sélectionner individuellement les catégories de cookies à accepter ou refuser.',
+            'Accepter l\'ensemble des cookies',
+            'Refuser les cookies non essentiels',
+            'Personnaliser vos préférences par catégorie',
           ]}
         />
         <LegalParagraph>
-          Vous pouvez modifier vos préférences à tout moment via les paramètres de votre navigateur ou en cliquant sur le lien de préférences dans le pied de page de notre site web.
+          Vous pouvez à tout moment modifier vos préférences via les paramètres de votre navigateur ou le module de gestion des cookies présent sur notre site.
         </LegalParagraph>
       </LegalSection>
 
-      <LegalSection title="5. Contact">
+      <LegalSection title="3.5 Comment désactiver les cookies via votre navigateur">
         <LegalParagraph>
-          Pour toute question concernant notre utilisation des cookies, veuillez nous contacter :
+          Vous pouvez gérer ou désactiver les cookies via les paramètres de votre navigateur :
         </LegalParagraph>
         <LegalList
           items={[
-            'E-mail : massar.digital.studio@gmail.com',
-            'Téléphone : +213 699 284 128',
-            'Localisation : Algérie',
+            '<strong>Chrome</strong> : Paramètres &gt; Confidentialité et sécurité &gt; Cookies',
+            '<strong>Firefox</strong> : Paramètres &gt; Vie privée et sécurité',
+            '<strong>Safari</strong> : Préférences &gt; Confidentialité',
+            '<strong>Edge</strong> : Paramètres &gt; Cookies et autorisations de site',
           ]}
         />
+        <LegalParagraph>
+          La désactivation de certains cookies peut affecter le bon fonctionnement du site.
+        </LegalParagraph>
+      </LegalSection>
+
+      <LegalSection title="3.6 Cookies tiers">
+        <LegalParagraph>
+          Certains cookies proviennent de services tiers intégrés à notre site (Google Analytics, réseaux sociaux). Ces tiers disposent de leur propre politique de confidentialité, que nous vous invitons à consulter.
+        </LegalParagraph>
+      </LegalSection>
+
+      <LegalSection title="3.7 Mise à jour de la politique">
+        <LegalParagraph>
+          Cette politique des cookies peut être mise à jour pour refléter des évolutions légales, techniques ou liées à nos pratiques. Nous vous encourageons à la consulter régulièrement.
+        </LegalParagraph>
+      </LegalSection>
+
+      <LegalSection title="3.8 Contact">
+        <LegalParagraph>
+          Pour toute question concernant notre utilisation des cookies, contactez-nous via notre page <strong>Contact</strong>.
+        </LegalParagraph>
       </LegalSection>
     </LegalLayout>
   )
@@ -366,112 +272,117 @@ function CookieContentAR() {
   return (
     <LegalLayout
       title="سياسة ملفات تعريف الارتباط (الكوكيز)"
-      subtitle="كيف يستخدم استوديو مسار الرقمي ملفات تعريف الارتباط وتقنيات التتبع المماثلة على موقعنا."
-      lastUpdated="آخر تحديث: [التاريخ — يُرجى المراجعة والتحديث بانتظام]"
+      subtitle="كيف تستخدم Massar Agency ملفات تعريف الارتباط وتقنيات التتبع المماثلة على موقعنا."
+      lastUpdated="آخر تحديث: يوليو 2026"
     >
-      <LegalNotice>
-        <strong>ملاحظة:</strong> يحتوي نموذج سياسة ملفات تعريف الارتباط هذا على عناصر نائبة بين قوسين مربعين <strong>[ ]</strong>. هذا المستند ليس نصيحة قانونية. استشر محترفاً قانونياً مؤهلاً.
-      </LegalNotice>
-
-      <LegalSection title="1. ما هي ملفات تعريف الارتباط">
+      <LegalSection title="3.1 ما هو ملف تعريف الارتباط؟">
         <LegalParagraph>
-          ملفات تعريف الارتباط هي ملفات نصية صغيرة يتم وضعها على جهازك عند زيارة موقع ويب. تُستخدم على نطاق واسع لجعل المواقع تعمل بكفاءة أكبر وتحسين تجربة المستخدم.
+          ملف تعريف الارتباط (Cookie) هو ملف نصي صغير يُودع على جهازكم (حاسوب، لوحي، هاتف ذكي) أثناء تصفح موقعنا. يسمح بجمع معلومات متعلقة بتصفحكم وتقديم تجربة مخصصة لكم.
         </LegalParagraph>
       </LegalSection>
 
-      <LegalSection title="2. أنواع ملفات تعريف الارتباط التي نستخدمها">
-        <LegalSubsection title="2.1 الكوكيز الأساسية (الضرورية)">
-          <LegalParagraph>
-            ملفات تعريف الارتباط هذه مطلوبة للتشغيل الأساسي لموقعنا ولا يمكن تعطيلها. تتيح الوظائف الأساسية مثل تذكر تفضيلات الموافقة على ملفات تعريف الارتباط والحفاظ على أمان الجلسة.
-          </LegalParagraph>
-        </LegalSubsection>
-
-        <LegalSubsection title="2.2 كوكيز التحليلات">
-          <LegalParagraph>
-            تساعدنا ملفات تعريف الارتباط هذه في فهم كيفية تفاعل الزوار مع موقعنا من خلال جمع معلومات الاستخدام مجهولة المصدر. نستخدم هذه البيانات لتحسين موقعنا وتجربة المستخدم.
-          </LegalParagraph>
-          <LegalParagraph>
-            <strong>[اسم خدمة التحليلات — أدخل الاسم والرابط لسياسة الخصوصية.]</strong>
-          </LegalParagraph>
-        </LegalSubsection>
-
-        <LegalSubsection title="2.3 الكوكيز الوظيفية">
-          <LegalParagraph>
-            تتيح ملفات تعريف الارتباط هذه وظائف محسّنة وتخصيصاً، مثل تذكر تفضيلات اللغة الخاصة بك.
-          </LegalParagraph>
-        </LegalSubsection>
-
-        <LegalSubsection title="2.4 كوكيز التسويق">
-          <LegalParagraph>
-            تتتبع ملفات تعريف الارتباط هذه عادات التصفح الخاصة بك عبر مواقع الويب لعرض إعلانات ذات صلة.
-          </LegalParagraph>
-          <LegalParagraph>
-            <strong>[قائمة بكوكيز التسويق المستخدمة. إذا لم يتم استخدام أي منها، يُرجى ذكر ذلك.]</strong>
-          </LegalParagraph>
-        </LegalSubsection>
+      <LegalSection title="3.2 لماذا نستخدم ملفات تعريف الارتباط؟">
+        <LegalParagraph>
+          تستخدم Massar Agency ملفات تعريف الارتباط من أجل:
+        </LegalParagraph>
+        <LegalList
+          items={[
+            '<strong>ضمان حسن سير عمل الموقع</strong> (ملفات أساسية)',
+            '<strong>تحليل الجمهور وسلوك الزوار</strong> (Google Analytics 4، قياس Core Web Vitals)',
+            '<strong>حفظ تفضيلاتكم</strong> (اللغة، إعدادات العرض)',
+            '<strong>تحسين أدائنا التقني ومحركات البحث</strong>',
+          ]}
+        />
       </LegalSection>
 
-      <LegalSection title="3. ملفات تعريف الارتباط المحددة التي نستخدمها">
+      <LegalSection title="3.3 أنواع ملفات تعريف الارتباط المستخدمة">
+        <LegalParagraph>
+          يوضح الجدول أدناه أنواع ملفات تعريف الارتباط المستخدمة على موقعنا:
+        </LegalParagraph>
         <div className="overflow-x-auto mb-6">
           <table className="w-full text-[13px] sm:text-[14px] border-collapse">
             <thead>
               <tr className="border-b border-[#E4E4E7]">
-                <th className="text-start font-semibold text-[#0A0A0A] py-3 pr-4">اسم الكوكي</th>
-                <th className="text-start font-semibold text-[#0A0A0A] py-3 pr-4">التصنيف</th>
+                <th className="text-start font-semibold text-[#0A0A0A] py-3 pr-4">نوع الملف</th>
                 <th className="text-start font-semibold text-[#0A0A0A] py-3 pr-4">الغرض</th>
-                <th className="text-start font-semibold text-[#0A0A0A] py-3">المدة</th>
+                <th className="text-start font-semibold text-[#0A0A0A] py-3">مدة الاحتفاظ</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[#E4E4E7]">
               <tr>
-                <td className="py-3 pr-4 text-[#52525B]"><code>massar_cookie_consent</code></td>
-                <td className="py-3 pr-4 text-[#52525B]">أساسي</td>
-                <td className="py-3 pr-4 text-[#52525B]">يخزن تفضيلات الموافقة على الكوكيز</td>
-                <td className="py-3 text-[#52525B]">سنة واحدة</td>
+                <td className="py-3 pr-4 text-[#52525B] font-medium">ملفات أساسية</td>
+                <td className="py-3 pr-4 text-[#52525B]">التشغيل التقني للموقع (التصفح، الأمان)</td>
+                <td className="py-3 text-[#52525B]">مدة الجلسة</td>
               </tr>
               <tr>
-                <td className="py-3 pr-4 text-[#52525B]"><code>i18nextLng</code></td>
-                <td className="py-3 pr-4 text-[#52525B]">وظيفي</td>
-                <td className="py-3 pr-4 text-[#52525B]">يخزن تفضيل اللغة الخاص بك</td>
-                <td className="py-3 text-[#52525B]">سنة واحدة</td>
+                <td className="py-3 pr-4 text-[#52525B] font-medium">ملفات تحليلية</td>
+                <td className="py-3 pr-4 text-[#52525B]">إحصائيات الزيارات، سلوك المستخدم (GA4)</td>
+                <td className="py-3 text-[#52525B]">حتى 13 شهرًا</td>
               </tr>
               <tr>
-                <td className="py-3 pr-4 text-[#A1A1AA] italic" colSpan={4}>
-                  [أضف صفوفاً لأي ملفات تعريف ارتباط أخرى]
-                </td>
+                <td className="py-3 pr-4 text-[#52525B] font-medium">ملفات التفضيلات</td>
+                <td className="py-3 pr-4 text-[#52525B]">حفظ اختياراتكم (اللغة، العرض)</td>
+                <td className="py-3 text-[#52525B]">حتى 12 شهرًا</td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-4 text-[#52525B] font-medium">ملفات خارجية</td>
+                <td className="py-3 pr-4 text-[#52525B]">تكاملات خارجية (شبكات اجتماعية، فيديوهات مضمّنة)</td>
+                <td className="py-3 text-[#52525B]">تختلف حسب المزوّد</td>
               </tr>
             </tbody>
           </table>
         </div>
       </LegalSection>
 
-      <LegalSection title="4. إدارة الموافقة">
+      <LegalSection title="3.4 الموافقة وإدارة ملفات تعريف الارتباط">
         <LegalParagraph>
-          عند زيارتك الأولى لموقعنا، نعرض لافتة موافقة على ملفات تعريف الارتباط تتيح لك:
+          عند زيارتكم الأولى، يُعلمكم شريط إشعار باستخدام ملفات تعريف الارتباط ويتيح لكم:
         </LegalParagraph>
         <LegalList
           items={[
-            '<strong>قبول الكل:</strong> الموافقة على جميع فئات ملفات تعريف الارتباط.',
-            '<strong>رفض غير الأساسي:</strong> قبول ملفات تعريف الارتباط الأساسية فقط.',
-            '<strong>إدارة التفضيلات:</strong> اختيار فئات ملفات تعريف الارتباط بشكل فردي.',
+            'قبول جميع ملفات تعريف الارتباط',
+            'رفض الملفات غير الأساسية',
+            'تخصيص تفضيلاتكم حسب الفئة',
           ]}
         />
         <LegalParagraph>
-          يمكنك تغيير تفضيلاتك في أي وقت من خلال إعدادات المتصفح الخاص بك.
+          يمكنكم في أي وقت تعديل تفضيلاتكم عبر إعدادات متصفحكم أو وحدة إدارة ملفات تعريف الارتباط الموجودة في موقعنا.
         </LegalParagraph>
       </LegalSection>
 
-      <LegalSection title="5. اتصل بنا">
+      <LegalSection title="3.5 كيفية تعطيل ملفات تعريف الارتباط عبر متصفحكم">
         <LegalParagraph>
-          إذا كانت لديك أي أسئلة حول استخدامنا لملفات تعريف الارتباط، يُرجى الاتصال بنا:
+          يمكنكم إدارة أو تعطيل ملفات تعريف الارتباط عبر إعدادات متصفحكم:
         </LegalParagraph>
         <LegalList
           items={[
-            'البريد الإلكتروني: massar.digital.studio@gmail.com',
-            'الهاتف: +213 699 284 128',
-            'الموقع: الجزائر',
+            '<strong>Chrome</strong>: الإعدادات &gt; الخصوصية والأمان &gt; ملفات تعريف الارتباط',
+            '<strong>Firefox</strong>: الإعدادات &gt; الخصوصية والأمان',
+            '<strong>Safari</strong>: التفضيلات &gt; الخصوصية',
+            '<strong>Edge</strong>: الإعدادات &gt; ملفات تعريف الارتباط وأذونات الموقع',
           ]}
         />
+        <LegalParagraph>
+          قد يؤثر تعطيل بعض ملفات تعريف الارتباط على حسن سير عمل الموقع.
+        </LegalParagraph>
+      </LegalSection>
+
+      <LegalSection title="3.6 ملفات تعريف الارتباط الخارجية">
+        <LegalParagraph>
+          تأتي بعض ملفات تعريف الارتباط من خدمات خارجية مدمجة في موقعنا (Google Analytics، الشبكات الاجتماعية). تمتلك هذه الأطراف الخارجية سياسات خصوصية خاصة بها، وندعوكم للاطلاع عليها.
+        </LegalParagraph>
+      </LegalSection>
+
+      <LegalSection title="3.7 تحديث السياسة">
+        <LegalParagraph>
+          يمكن تحديث سياسة ملفات تعريف الارتباط هذه لتعكس تطورات قانونية أو تقنية أو تتعلق بممارساتنا. نشجعكم على مراجعتها بانتظام.
+        </LegalParagraph>
+      </LegalSection>
+
+      <LegalSection title="3.8 التواصل">
+        <LegalParagraph>
+          لأي استفسار بخصوص استخدامنا لملفات تعريف الارتباط، تواصلوا معنا عبر صفحة <strong>اتصل بنا</strong>.
+        </LegalParagraph>
       </LegalSection>
     </LegalLayout>
   )
