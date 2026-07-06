@@ -8,10 +8,12 @@ import { SectionHeader } from '@/components/ui/SectionHeader'
 import { Accordion } from '@/components/ui/Accordion'
 import { Button } from '@/components/ui/Button'
 import { trackEvent } from '@/lib/analytics'
+import { useElementVisibility } from '@/hooks/useElementVisibility'
 import ChatShape from '@/assets/images/chatbulb3d.svg'
 
 export function FAQ() {
   const { t } = useTranslation()
+  useElementVisibility('faq', 'faq_section_visible')
   const items = t('faq.items', { returnObjects: true }) as Array<{
     question: string
     answer: string
