@@ -16,7 +16,7 @@ const processItems: Array<{
   details: Record<string, string>
 }> = [
   {
-    icon: <Search className="h-5 w-5" />,
+    icon: <Search className="h-5 w-5" aria-hidden="true" />,
     phase: 'Discovery & Strategy',
     title: 'Research and planning',
     descriptionKey: 'process.steps.discover.title',
@@ -28,7 +28,7 @@ const processItems: Array<{
     },
   },
   {
-    icon: <PenTool className="h-5 w-5" />,
+    icon: <PenTool className="h-5 w-5" aria-hidden="true" />,
     phase: 'Design',
     title: 'UI/UX and brand design',
     descriptionKey: 'process.steps.design.title',
@@ -40,7 +40,7 @@ const processItems: Array<{
     },
   },
   {
-    icon: <Code2 className="h-5 w-5" />,
+    icon: <Code2 className="h-5 w-5" aria-hidden="true" />,
     phase: 'Development',
     title: 'Build and integration',
     descriptionKey: 'process.steps.develop.title',

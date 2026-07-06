@@ -42,7 +42,7 @@ export function CookieConsent() {
           <div className="mx-auto max-w-3xl rounded-2xl border border-[#E4E4E7] bg-white/95 backdrop-blur-xl shadow-xl shadow-black/5 p-5 sm:p-6">
             <div className="flex items-start gap-4">
               <div className="hidden sm:flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#F3F0FF] text-[#8B5CF6]">
-                <Cookie className="h-5 w-5" />
+                <Cookie className="h-5 w-5" aria-hidden="true" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-start justify-between gap-4">
@@ -55,7 +55,7 @@ export function CookieConsent() {
                     className="h-8 w-8 flex items-center justify-center rounded-lg text-[#A1A1AA] hover:text-[#52525B] hover:bg-[#F4F4F5] transition-colors"
                     aria-label="Close"
                   >
-                    <X className="h-4 w-4" />
+                    <X className="h-4 w-4" aria-hidden="true" />
                   </button>
                 </div>
                 <p className="mt-1.5 text-[13px] leading-[1.7] text-[#71717A] max-w-[500px]">

@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
+import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
@@ -17,6 +17,7 @@ export function Hero() {
   const Arrow = isRTL ? ArrowLeft : ArrowRight
   const [marqueePaused, setMarqueePaused] = useState(false)
   const { variant, trackEvent: trackABEvent } = useABTest(HERO_AB_TEST)
+  const shouldReduceMotion = useReducedMotion()
 
   const heroContent = useMemo(() => {
     if (variant === 'B' && t(`hero.variantB.title`, { defaultValue: '' })) {
@@ -182,8 +183,8 @@ export function Hero() {
             className="mx-auto w-full max-w-[260px] sm:max-w-[320px] lg:max-w-[400px]"
           >
             <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
+              animate={shouldReduceMotion ? undefined : { y: [0, -10, 0] }}
+              transition={shouldReduceMotion ? undefined : { duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
               className="relative block aspect-square w-full"
             >
               <picture>
@@ -208,6 +209,7 @@ export function Hero() {
         className="mt-12 overflow-hidden border-t border-[#E4E4E7] py-6 sm:mt-16"
         onMouseEnter={() => setMarqueePaused(true)}
         onMouseLeave={() => setMarqueePaused(false)}
+        aria-hidden="true"
       >
         <motion.div
           initial={false}

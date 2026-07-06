@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { LanguageSwitcher } from './LanguageSwitcher'
+import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { HoverSlideText } from '@/components/ui/HoverSlideText'
 import { navigateToSection, navigateHome, navigateToAboutPage, isOnAboutPage } from '@/lib/navigate'
 import { trackEvent } from '@/lib/analytics'
@@ -114,6 +115,7 @@ export function Navbar() {
           </div>
 
           <div className="hidden items-center gap-3 md:flex">
+            <ThemeToggle />
             <LanguageSwitcher />
             <div className="flex flex-col items-end">
               <Button size="sm" href="#contact" onClick={() => trackEvent('cta_click', { cta_location: 'navbar', cta_text: t('nav.cta') })}>
@@ -134,7 +136,7 @@ export function Navbar() {
             aria-expanded={mobileOpen}
             aria-controls="mobile-menu-panel"
           >
-            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {mobileOpen ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
           </button>
         </nav>
       </Container>
@@ -167,6 +169,7 @@ export function Navbar() {
                   </a>
                 ))}
                 <div className="mt-4 flex items-center gap-3 border-t border-[#E4E4E7] pt-5">
+                  <ThemeToggle />
                   <LanguageSwitcher />
                   <div className="flex-1">
                     <Button size="sm" href="#contact" className="w-full justify-center" onClick={() => { handleCloseMenu(); trackEvent('cta_click', { cta_location: 'navbar_mobile', cta_text: t('nav.cta') }) }}>

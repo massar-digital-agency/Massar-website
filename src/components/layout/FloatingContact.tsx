@@ -41,7 +41,7 @@ export function FloatingContact() {
       key: 'email',
       href: `mailto:${email}`,
       external: false,
-      icon: <Mail className="h-5 w-5" />,
+      icon: <Mail className="h-5 w-5" aria-hidden="true" />,
       bg: 'bg-[#0A0A0A]',
       label: 'Send us an email',
     },

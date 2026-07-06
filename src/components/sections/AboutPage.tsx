@@ -18,20 +18,20 @@ import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import Logo3D from '@/assets/images/logo3d.jpg'
 
 const valueIcons: Record<string, React.ReactNode> = {
-  craft: <Sparkles className="h-5 w-5" strokeWidth={1.75} />,
-  strategy: <Target className="h-5 w-5" strokeWidth={1.75} />,
-  transparency: <Eye className="h-5 w-5" strokeWidth={1.75} />,
-  performance: <Zap className="h-5 w-5" strokeWidth={1.75} />,
-  reliability: <Shield className="h-5 w-5" strokeWidth={1.75} />,
+  craft: <Sparkles className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />,
+  strategy: <Target className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />,
+  transparency: <Eye className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />,
+  performance: <Zap className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />,
+  reliability: <Shield className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />,
 }
 
 const whyIcons: React.ReactNode[] = [
-  <Layers className="h-5 w-5" strokeWidth={1.75} />,
-  <Code2 className="h-5 w-5" strokeWidth={1.75} />,
-  <Zap className="h-5 w-5" strokeWidth={1.75} />,
-  <Heart className="h-5 w-5" strokeWidth={1.75} />,
-  <Eye className="h-5 w-5" strokeWidth={1.75} />,
-  <Shield className="h-5 w-5" strokeWidth={1.75} />,
+  <Layers className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />,
+  <Code2 className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />,
+  <Zap className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />,
+  <Heart className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />,
+  <Eye className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />,
+  <Shield className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />,
 ]
 
 const processKeys = ['discover', 'plan', 'design', 'develop', 'launch', 'support'] as const
@@ -225,7 +225,7 @@ function AboutMission() {
                   className="rounded-xl border border-[#E4E4E7] bg-white p-5 transition-all duration-200 hover:border-[#D4D4D8] hover:shadow-sm"
                 >
                   <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg border border-[#E4E4E7] bg-white text-[#8B5CF6]">
-                    {valueIcons[item.icon] || <Sparkles className="h-5 w-5" strokeWidth={1.75} />}
+                    {valueIcons[item.icon] || <Sparkles className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />}
                   </div>
                   <h4 className="text-[14px] font-bold text-[#0A0A0A]">
                     {item.title}
@@ -580,10 +580,10 @@ function AboutContactInfo() {
   const { t } = useTranslation()
 
   const contactItems = [
-    { icon: <Mail className="h-5 w-5" />, label: t('footer.email'), href: 'mailto:massar.digital.studio@gmail.com' },
-    { icon: <Phone className="h-5 w-5" />, label: t('footer.phone'), href: 'tel:+213555123456' },
-    { icon: <MapPin className="h-5 w-5" />, label: `${t('footer.location')} — ${t('contact.info.locationVal' as any) || ''}` },
-    { icon: <Clock className="h-5 w-5" />, label: t('contact.info.hoursVal' as any) || 'Sunday - Thursday, 9:00 AM - 6:00 PM' },
+    { icon: <Mail className="h-5 w-5" aria-hidden="true" />, label: t('footer.email'), href: 'mailto:massar.digital.studio@gmail.com' },
+    { icon: <Phone className="h-5 w-5" aria-hidden="true" />, label: t('footer.phone'), href: 'tel:+213555123456' },
+    { icon: <MapPin className="h-5 w-5" aria-hidden="true" />, label: `${t('footer.location')} — ${t('contact.info.locationVal' as any) || ''}` },
+    { icon: <Clock className="h-5 w-5" aria-hidden="true" />, label: t('contact.info.hoursVal' as any) || 'Sunday - Thursday, 9:00 AM - 6:00 PM' },
   ]
 
   return (

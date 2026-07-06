@@ -9,10 +9,10 @@ interface CaseStudyGalleryProps {
 }
 
 const gallerySlots: Array<{ icon: React.ReactNode; label: string; description: string }> = [
-  { icon: <Monitor className="h-6 w-6" />, label: 'Desktop View', description: 'Full-page desktop screenshot of the final design' },
-  { icon: <Smartphone className="h-6 w-6" />, label: 'Mobile View', description: 'Responsive mobile experience showcase' },
-  { icon: <Layout className="h-6 w-6" />, label: 'Key Features', description: 'Highlight of core features and interactions' },
-  { icon: <Image className="h-6 w-6" />, label: 'Brand Assets', description: 'Logo, color palette, and brand identity system' },
+  { icon: <Monitor className="h-6 w-6" aria-hidden="true" />, label: 'Desktop View', description: 'Full-page desktop screenshot of the final design' },
+  { icon: <Smartphone className="h-6 w-6" aria-hidden="true" />, label: 'Mobile View', description: 'Responsive mobile experience showcase' },
+  { icon: <Layout className="h-6 w-6" aria-hidden="true" />, label: 'Key Features', description: 'Highlight of core features and interactions' },
+  { icon: <Image className="h-6 w-6" aria-hidden="true" />, label: 'Brand Assets', description: 'Logo, color palette, and brand identity system' },
 ]
 
 export function CaseStudyGallery({ slug }: CaseStudyGalleryProps) {
