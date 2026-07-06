@@ -674,7 +674,7 @@ function AboutSEO() {
     '@type': 'Organization',
     name: SEO_CONFIG.siteName,
     url: SEO_CONFIG.siteUrl,
-    logo: `${SEO_CONFIG.siteUrl}/favicon.svg`,
+    logo: `${SEO_CONFIG.siteUrl}/images/og-imageFavIcon.png`,
     description: seo.description,
     foundingDate: '2022',
     contactPoint: {

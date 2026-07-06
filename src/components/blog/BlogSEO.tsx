@@ -59,7 +59,7 @@ export function BlogSEO({ meta, isIndex }: BlogSEOProps) {
       name: SEO_CONFIG.siteName,
       logo: {
         '@type': 'ImageObject',
-        url: `${SEO_CONFIG.siteUrl}/favicon.svg`,
+        url: `${SEO_CONFIG.siteUrl}/images/og-imageFavIcon.png`,
       },
     },
     mainEntityOfPage: {

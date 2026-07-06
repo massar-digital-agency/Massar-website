@@ -27,8 +27,8 @@ export function SEOHead() {
       <html lang={lang} />
       {isLegalPage && <meta name="robots" content="noindex, nofollow" />}
 
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="apple-touch-icon" href="/favicon.svg" />
+      <link rel="icon" type="image/png" href="/images/og-imageFavIcon.png" />
+      <link rel="apple-touch-icon" href="/images/og-imageFavIcon.png" />
 
       {isHome && (
         <link

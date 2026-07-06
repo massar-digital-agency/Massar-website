@@ -20,7 +20,7 @@ export function StructuredData({
     '@type': 'Organization',
     name: SEO_CONFIG.siteName,
     url: SEO_CONFIG.siteUrl,
-    logo: `${SEO_CONFIG.siteUrl}/favicon.svg`,
+    logo: `${SEO_CONFIG.siteUrl}/images/og-imageFavIcon.png`,
     description: t('seo.description'),
     email: 'massar.digital.studio@gmail.com',
     telephone: '+213-555-123-456',
