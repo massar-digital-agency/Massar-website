@@ -242,7 +242,7 @@ export function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="rounded-xl border border-[#E4E4E7] bg-[#FAFAF9] p-6 sm:p-8"
+              className="hidden rounded-xl border border-[#E4E4E7] bg-[#FAFAF9] p-6 sm:p-8"
             >
               <div className="flex items-center gap-1.5 text-amber-500 mb-4">
                 {[...Array(5)].map((_, i) => (

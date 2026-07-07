@@ -13,7 +13,7 @@ const resourceKeys = ['blog', 'faq', 'process'] as const
 
 const legalKeys = ['privacy', 'terms', 'cookies'] as const
 
-const socialNetworks = ['instagram', 'linkedin', 'github', 'tiktok'] as const
+const socialNetworks = ['instagram', 'linkedin', 'tiktok'] as const
 
 function FooterColumn({ heading, children }: { heading: string; children: React.ReactNode }) {
   return (

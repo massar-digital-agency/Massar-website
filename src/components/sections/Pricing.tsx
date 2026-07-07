@@ -32,7 +32,7 @@ export function Pricing() {
   }>
 
   return (
-    <Section id="pricing">
+    <Section id="pricing" className="pb-12 sm:pb-16 lg:pb-20">
       <Container>
         <SectionHeader
           label={t('pricing.label')}
@@ -174,11 +174,6 @@ export function Pricing() {
                     </ul>
                   </div>
                 )}
-
-                <div className="mt-4 rounded-lg border border-dashed border-amber-300 bg-amber-50 px-3 py-2 text-[11px] text-amber-800">
-                  <span className="font-semibold">TODO:</span>{' '}
-                  {t('pricing.packages.todoWarning')}
-                </div>
 
                 <div className="mt-6 space-y-3">
                   <Button
@@ -324,44 +319,6 @@ export function Pricing() {
                 </Button>
               </div>
             </div>
-          </div>
-        </motion.div>
-
-        {/* Testimonial */}
-        <motion.div
-          variants={scaleUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-60px' }}
-          className="mt-16 sm:mt-20"
-        >
-          <div className="rounded-2xl border border-[#E4E4E7] bg-[#FAFAF9] p-8 text-center sm:p-12">
-            <div className="flex items-center justify-center gap-1 text-amber-500">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-4 w-4 fill-current" aria-hidden="true" />
-              ))}
-            </div>
-            <blockquote className="mx-auto mt-4 max-w-[600px] text-[15px] italic leading-[1.8] text-[#52525B] sm:text-[16px]">
-              &ldquo;
-              {t('pricing.testimonial.text')}
-              &rdquo;
-            </blockquote>
-            <div className="mt-6 flex items-center justify-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#8B5CF6]/10 text-[14px] font-bold text-[#8B5CF6]">
-                {t('pricing.testimonial.initials')}
-              </div>
-              <div className="text-start">
-                <h3 className="text-[14px] font-bold text-[#0A0A0A]">
-                  {t('pricing.testimonial.author')}
-                </h3>
-                <p className="text-[12px] text-[#71717A]">
-                  {t('pricing.testimonial.role')}
-                </p>
-              </div>
-            </div>
-            <span className="mt-4 inline-block rounded bg-amber-100 px-2 py-0.5 text-[10px] font-medium text-amber-700">
-              TODO: Replace with real testimonial
-            </span>
           </div>
         </motion.div>
 

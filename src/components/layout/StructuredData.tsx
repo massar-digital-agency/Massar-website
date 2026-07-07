@@ -39,7 +39,8 @@ export function StructuredData({
       addressCountry: 'DZ',
     },
     sameAs: [
-      'https://www.linkedin.com/company/massar-studio/',
+      'https://www.linkedin.com/company/massar-studio/posts/?feedView=all',
+      'https://www.tiktok.com/@massar.digital?lang=en',
       'https://twitter.com/massardigital',
       'https://www.facebook.com/massardigital',
       'https://www.instagram.com/massardigital',
