@@ -6,7 +6,7 @@ import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { HoverSlideText } from '@/components/ui/HoverSlideText'
-import { navigateToSection, navigateHome, navigateToAboutPage, isOnAboutPage } from '@/lib/navigate'
+import { navigateToSection, navigateHome } from '@/lib/navigate'
 import { trackEvent } from '@/lib/analytics'
 import Logo from '@/assets/images/Logo.svg'
 
@@ -84,7 +84,7 @@ export function Navbar() {
         <nav className="flex h-[72px] items-center justify-between gap-8" aria-label="Main navigation">
           <a
             href="#"
-            onClick={(e) => { e.preventDefault(); handleCloseMenu(); navigateHome(); trackEvent('logo_click') }}
+            onClick={(e) => { e.preventDefault(); handleCloseMenu(); navigateToSection('hero'); trackEvent('logo_click') }}
             className="flex items-center gap-2.5 shrink-0"
             aria-label="Massar Digital Studio — Home"
           >

@@ -55,7 +55,7 @@ export function Hero() {
   }, [variant, t])
 
   return (
-    <section className="relative flex min-h-[100svh] flex-col pt-24 pb-8 sm:pt-28">
+    <section id="hero" className="relative flex min-h-[100svh] flex-col pt-24 pb-8 sm:pt-28">
       <Container className="flex flex-1 items-center">
         <div className="grid w-full items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
           <div className="mx-auto max-w-[640px] text-center lg:mx-0 lg:max-w-none lg:text-start">
