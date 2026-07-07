@@ -8,43 +8,11 @@ interface CaseStudyResultsProps {
   slug: string
 }
 
-const projectResults: Record<string, { metrics: Array<{ metric: string; label: string; description: string; verified?: boolean }> }> = {
-  journeya: {
-    metrics: [
-      { metric: 'On schedule', label: 'Timely Launch', description: 'All three deliverables (web, app, branding) launched simultaneously on schedule', verified: true },
-      { metric: 'Unified', label: 'Brand Consistency', description: 'Cohesive brand experience across web and mobile platforms', verified: true },
-      // TODO: Add verified metrics — conversion rate, user acquisition, engagement data
-      { metric: '—', label: 'Conversion Rate', description: 'TODO: Add verified conversion improvement data', verified: false },
-      { metric: '—', label: 'User Adoption', description: 'TODO: Add verified user acquisition metrics', verified: false },
-    ],
-  },
-  wafr: {
-    metrics: [
-      { metric: 'Beta live', label: 'Launch Status', description: 'Successfully launched with beta users in Algiers', verified: true },
-      { metric: 'Positive', label: 'User Feedback', description: 'Received positive early feedback on usability and design', verified: true },
-      // TODO: Add verified metrics — number of beta users, deals listed, engagement
-      { metric: '—', label: 'Active Users', description: 'TODO: Add verified active user metrics', verified: false },
-      { metric: '—', label: 'Deals Listed', description: 'TODO: Add verified deal listing data', verified: false },
-    ],
-  },
-  darlink: {
-    metrics: [
-      { metric: '200+', label: 'Property Listings', description: 'Platform launched with over 200 property listings from early adopters', verified: true },
-      { metric: 'Positive', label: 'Early Traction', description: 'Positive traction and engagement from early adopters in the market', verified: true },
-      // TODO: Add verified metrics — active users, messages sent, conversion rate
-      { metric: '—', label: 'Active Users', description: 'TODO: Add verified monthly active user data', verified: false },
-      { metric: '—', label: 'Connection Rate', description: 'TODO: Add verified buyer-seller connection metrics', verified: false },
-    ],
-  },
-  nextgen: {
-    metrics: [
-      { metric: '90+', label: 'Lighthouse Score', description: 'Achieved 90+ performance score on Google Lighthouse audit', verified: true },
-      { metric: 'Aligned', label: 'Brand Experience', description: 'Delivered a brand-aligned shopping experience matching premium product positioning', verified: true },
-      // TODO: Add verified metrics — conversion rate, page speed, revenue impact
-      { metric: '—', label: 'Conversion Rate', description: 'TODO: Add verified conversion rate improvement data', verified: false },
-      { metric: '—', label: 'Page Speed', description: 'TODO: Add verified Core Web Vitals data', verified: false },
-    ],
-  },
+interface Metric {
+  metric: string
+  label: string
+  description: string
+  verified?: boolean
 }
 
 export function CaseStudyResults({ slug }: CaseStudyResultsProps) {
@@ -56,7 +24,7 @@ export function CaseStudyResults({ slug }: CaseStudyResultsProps) {
     outcomes: string
   }
 
-  const results = projectResults[slug]
+  const results = t(`caseStudy.projectResults.${slug}`, { returnObjects: true }) as { metrics: Metric[] } | undefined
 
   return (
     <section className="scroll-mt-24 py-16 sm:py-20 lg:py-24">
@@ -69,10 +37,10 @@ export function CaseStudyResults({ slug }: CaseStudyResultsProps) {
         >
           <span className="mb-4 inline-flex items-center gap-2 text-[12px] font-semibold tracking-[0.12em] text-[#8B5CF6] uppercase">
             <TrendingUp className="h-3.5 w-3.5" aria-hidden="true" />
-            Results
+            {t('caseStudy.results')}
           </span>
           <h2 className="text-[22px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0A0A0A] sm:text-[26px] lg:text-[32px]">
-            Measurable outcomes
+            {t('caseStudy.measurableOutcomes')}
           </h2>
 
           <p className="mt-4 text-[14px] leading-[1.8] text-[#52525B] sm:text-[16px]">
@@ -115,21 +83,21 @@ export function CaseStudyResults({ slug }: CaseStudyResultsProps) {
             </div>
           )}
 
-          {/* Performance placeholders */}
-          <div className="mt-8 rounded-xl border border-dashed border-[#E4E4E7] bg-[#FAFAF9] p-5 sm:p-6">
-            <div className="flex items-start gap-3">
-              <Gauge className="mt-0.5 h-5 w-5 shrink-0 text-[#A1A1AA]" aria-hidden="true" />
-              <div>
-                <h3 className="text-[14px] font-bold text-[#0A0A0A]">
-                  Performance &amp; SEO Metrics
-                </h3>
-                <p className="mt-1 text-[13px] leading-[1.7] text-[#A1A1AA] italic">
-                  {/* TODO: Add Lighthouse scores, Core Web Vitals, and SEO metrics */}
-                  TODO: Add verified performance metrics (Lighthouse, Core Web Vitals, SEO improvements)
-                </p>
+          {slug === 'journeya' && (
+            <div className="mt-8 rounded-xl border border-[#E4E4E7] bg-[#FAFAF9] p-5 sm:p-6">
+              <div className="flex items-start gap-3">
+                <Gauge className="mt-0.5 h-5 w-5 shrink-0 text-[#8B5CF6]" aria-hidden="true" />
+                <div>
+                  <h3 className="text-[14px] font-bold text-[#0A0A0A]">
+                    {t('caseStudy.performanceSeo')}
+                  </h3>
+                  <p className="mt-1 text-[13px] leading-[1.7] text-[#52525B]">
+                    {t(`caseStudy.performanceText.${slug}`, { defaultValue: '' })}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </motion.div>
       </Container>
     </section>

@@ -28,16 +28,16 @@ export function CaseStudyCTA() {
             {t('caseStudies.ctaMicro')}
           </p>
           <div className="mt-9 flex flex-wrap items-center justify-center gap-4 sm:mt-10">
-            <Button size="lg" href="#contact" onClick={() => trackEvent('cta_click', { cta_location: 'case_study', cta_text: 'Start Your Project' })}>
-              Start Your Project
+            <Button size="lg" href="#contact" onClick={() => trackEvent('cta_click', { cta_location: 'case_study', cta_text: t('caseStudy.startProject') })}>
+              {t('caseStudy.startProject')}
               <Arrow className="h-4 w-4" aria-hidden="true" />
             </Button>
-            <Button size="lg" variant="secondary" onClick={() => { navigateToSection('projects'); trackEvent('cta_click', { cta_location: 'case_study', cta_text: 'View All Projects' }) }}>
-              View All Projects
+            <Button size="lg" variant="secondary" onClick={() => { navigateToSection('projects'); trackEvent('cta_click', { cta_location: 'case_study', cta_text: t('caseStudy.viewAllProjects') }) }}>
+              {t('caseStudy.viewAllProjects')}
             </Button>
           </div>
           <p className="mt-4 text-[12px] text-[#A1A1AA]">
-            Free discovery call &bull; Response within 24h &bull; No obligation
+            {t('caseStudy.freeCall')}
           </p>
         </motion.div>
       </Container>

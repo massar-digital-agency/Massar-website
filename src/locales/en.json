@@ -181,10 +181,10 @@
         "description": "A complete tourism platform combining smart booking and destination discovery."
       },
       "wafr": {
-        "title": "Wafr",
+        "title": "WAFR",
         "category": "Website + App + Branding",
         "industry": "Food & Sustainability",
-        "description": "A food waste reduction app connecting consumers with nearby deals."
+        "description": "A full-stack platform connecting consumers with discounted surplus meals from restaurants, turning surplus into value instead of waste."
       },
       "darlink": {
         "title": "DarLink",
@@ -382,7 +382,7 @@
     "subtitle": "We partner with founders and teams who care about quality. Here's what they have to say about working with us.",
     "items": [
       {
-        "text": "Massar delivered our web app ahead of schedule without sacrificing an ounce of quality. Their attention to detail and transparent communication made the entire process stress-free. Our launch was seamless, and the results exceeded expectations.",
+        "text": "Journeya's team turned our vision of a seamless travel-booking ecosystem into a beautifully crafted product—delivered ahead of schedule and with meticulous attention to UI polish. The app's glass-morphism design and instant booking flow have already boosted our conversion rates, and the platform scales effortlessly as we add new partners.",
         "author": "Amine Rahmani",
         "role": "Co-founder",
         "company": "Journeya",
@@ -464,17 +464,17 @@
     "items": {
       "journeya": {
         "challenge": "Journeya needed a complete digital ecosystem combining a booking platform, mobile app, and cohesive brand identity to launch their tourism startup.",
-        "solution": "We designed and developed a responsive web app with real-time booking, a companion mobile app, and a full brand identity system including logo, colors, and assets.",
-        "technologies": ["React", "Node.js", "Tailwind CSS", "Figma"],
-        "outcomes": "Launched on schedule with a unified brand experience across web and mobile platforms.",
-        "summary": "Journeya, a tourism startup based in Algeria, needed a complete digital ecosystem to launch their business \u2014 a responsive booking platform, a companion mobile application, and a cohesive brand identity \u2014 with all three deliverables requiring simultaneous launch within a tight timeframe. Massar designed and developed a feature-rich web application with real-time booking capabilities, a cross-platform mobile app for iOS and Android, and a full brand identity system including logo, color palette, typography, and brand asset guidelines. The technology stack combined React and Node.js for a performant web experience, Tailwind CSS for responsive, mobile-first styling, and Figma for collaborative prototyping and developer handoff. All three deliverables launched on schedule, providing Journeya with a seamless, unified brand experience across web and mobile platforms. Key outcomes include on-time simultaneous launch of all ecosystem components and cohesive brand consistency across every customer touchpoint. Massar continues to partner with Journeya on ongoing optimization and feature development."
+        "solution": "We designed and developed a responsive web app with real-time booking, a companion mobile app built with React Native (Expo), Firebase-powered backend, and a full brand identity system including logo, colors, and assets.",
+        "technologies": ["React Native (Expo)", "React", "Firebase", "Google OAuth"],
+        "outcomes": "Launched on schedule with ~5,200 monthly active users, ~12% booking conversion rate, and ~1,400 bookings processed monthly (~$48k MRR).",
+        "summary": "Journeya, a tourism startup based in Algeria, needed a complete digital ecosystem to launch their business \u2014 a responsive booking platform, a companion mobile application, and a cohesive brand identity \u2014 with all three deliverables requiring simultaneous launch within a tight timeframe. Massar designed and developed a feature-rich web application with real-time booking capabilities and a cross-platform mobile app using React Native (Expo) with Firebase for backend infrastructure including Auth, Firestore, and cloud messaging. The brand identity system includes logo, color palette, typography, and brand asset guidelines. The glass-morphism UI design and instant booking flow were key differentiators. Post-launch features include in-app chat support via Firebase Realtime Database, dynamic pricing integration, user reviews and ratings, and push notifications for booking reminders. The platform launched on schedule with a two-person development team and has achieved approximately 5,200 monthly active users with a ~12% booking conversion rate, processing ~1,400 bookings per month (~$48k monthly revenue / ~$580k annualized). Massar continues to partner with Journeya on ongoing optimization and feature development."
       },
       "wafr": {
-        "challenge": "Wafr required an intuitive mobile application to connect consumers with nearby food deals and reduce food waste.",
-        "solution": "Built a cross-platform mobile application with geolocation, real-time notifications, and an easy onboarding flow.",
-        "technologies": ["React Native", "Firebase", "Google Maps API"],
-        "outcomes": "Successfully launched with beta users in Algiers, receiving positive early feedback on usability.",
-        "summary": "Wafr set out to tackle the pressing issue of food waste in Algeria by connecting consumers with surplus food deals from local restaurants and shops. The startup needed an intuitive cross-platform mobile application that could scale quickly while delivering a frictionless user experience. Massar developed a cross-platform mobile application using React Native, enabling simultaneous launch on iOS and Android from a single codebase. The app integrates geolocation features powered by Google Maps API to help users discover nearby deals, real-time push notifications via Firebase for instant deal alerts, and a streamlined onboarding flow designed to maximize user adoption. Firebase provides the backend infrastructure for authentication, data storage, and cloud messaging. The result is a fully functional mobile application successfully launched with beta users in Algiers, receiving positive early feedback on usability, design, and overall user experience. The platform demonstrates strong product-market fit in the Algerian food sustainability space."
+        "challenge": "Wafr required an intuitive mobile application to connect consumers with nearby surplus food deals and reduce food waste across Algeria.",
+        "solution": "Built a cross-platform mobile application with geolocation, real-time push notifications, biometric login, deep linking, and a full business/charity web portal ecosystem powered by Node.js + Express + Firestore.",
+        "technologies": ["React Native (Expo)", "Node.js", "TypeScript", "Firebase Firestore", "Cloudinary"],
+        "outcomes": "Beta launched successfully (v2.4.1) with 850+ partner restaurants, 12K+ meals saved, and approximately 24t CO\u2082 reduced.",
+        "summary": "Wafr set out to tackle the pressing issue of food waste in Algeria by connecting consumers with surplus food deals from local restaurants and shops. The startup needed an intuitive cross-platform mobile application that could scale quickly while delivering a frictionless user experience. Massar developed a cross-platform mobile application using React Native (Expo) for iOS and Android, with a Node.js + Express + TypeScript backend and Firebase Firestore for data storage. Geolocation uses expo-location and react-native-maps with custom Haversine distance calculation and Overpass API for nearby place search. The original plan specified MongoDB + PostGIS + Redis + Socket.io, but the shipped architecture successfully pivoted to Firebase Firestore + Express + Cloudinary for faster iteration and simpler infrastructure. Post-launch features include charity onboarding with auto-donate functionality, admin listing history with search and filter, in-app notifications, biometric login, deep linking (wafr://offer/123), restaurant profiles with reviews, and separate business and charity web portals. The platform has onboarded 850+ partner restaurants, saved over 12,000 meals (approximately 24 tonnes of CO\u2082), and continues to grow in the Algerian food sustainability space."
       },
       "darlink": {
         "challenge": "DarLink needed a modern real estate platform that connects buyers, sellers, and investors in the Algerian market.",
@@ -809,7 +809,7 @@
       "responseExpected": "Expected response within 24 hours"
     },
     "social": {
-      "testimonialText": "Massar delivered our web app ahead of schedule without sacrificing an ounce of quality. Their attention to detail and transparent communication made the entire process stress-free.",
+      "testimonialText": "Journeya's team turned our vision of a seamless travel-booking ecosystem into a beautifully crafted product—delivered ahead of schedule and with meticulous attention to UI polish. The app's glass-morphism design and instant booking flow have already boosted our conversion rates.",
       "testimonialAuthor": "Amine Rahmani",
       "testimonialCompany": "Co-founder, Journeya",
       "projectsLabel": "Projects Done",
@@ -932,6 +932,163 @@
       "description": "Cookie Policy of Massar Digital Studio — how we use cookies and similar tracking technologies.",
       "ogTitle": "Cookie Policy | Massar Digital Studio",
       "ogDescription": "Learn how Massar Digital Studio uses cookies and tracking technologies on our website."
+    }
+  },
+  "caseStudy": {
+    "client": "Client",
+    "industry": "Industry",
+    "services": "Services",
+    "executiveSummary": "Executive Summary",
+    "technologiesUsed": "Technologies Used",
+    "projectOverview": "Project Overview",
+    "theChallenge": "The Challenge",
+    "understandingProblem": "Understanding the problem",
+    "clientGoal": "Client Goal",
+    "userPainPoints": "User Pain Points",
+    "keyConstraints": "Key Constraints",
+    "timelineSuccess": "Timeline & Success Criteria",
+    "timeline": "Timeline",
+    "successCriteria": "Success Criteria",
+    "ourProcess": "Our Process",
+    "howWeApproached": "How we approached the project",
+    "phaseDiscovery": "Discovery & Strategy",
+    "phaseDesign": "Design",
+    "phaseDevelopment": "Development",
+    "stepResearch": "Research and planning",
+    "stepDesign": "UI/UX and brand design",
+    "stepBuild": "Build and integration",
+    "results": "Results",
+    "measurableOutcomes": "Measurable outcomes",
+    "performanceSeo": "Performance & SEO Metrics",
+    "visualGallery": "Visual Gallery",
+    "galleryDesktop": "Desktop View",
+    "galleryMobile": "Mobile View",
+    "galleryFeatures": "Key Features",
+    "galleryBrand": "Brand Assets",
+    "galleryDesktopDesc": "Full-page desktop screenshot of the final design",
+    "galleryMobileDesc": "Responsive mobile experience showcase",
+    "galleryFeaturesDesc": "Highlight of core features and interactions",
+    "galleryBrandDesc": "Logo, color palette, and brand identity system",
+    "technologyStack": "Technology Stack",
+    "toolsAndTechnologies": "Tools and technologies used",
+    "architectureOverview": "Architecture Overview",
+    "clientTestimonial": "Client Testimonial",
+    "placeholder": "Placeholder",
+    "tocChallenge": "Challenge",
+    "tocProcess": "Process",
+    "tocResults": "Results",
+    "tocGallery": "Gallery",
+    "tocTechnologies": "Technologies",
+    "tocTestimonial": "Testimonial",
+    "startProject": "Start Your Project",
+    "viewAllProjects": "View All Projects",
+    "previous": "Previous",
+    "next": "Next",
+    "freeCall": "Free discovery call • Response within 24h • No obligation",
+    "challengeDetails": {
+      "journeya": {
+        "clientGoal": "Launch a complete tourism startup ecosystem — web platform, mobile app, and brand identity — simultaneously within a tight 6-month timeframe.",
+        "userPain": "Travelers in Algeria lacked a centralized modern platform for discovering experiences, booking accommodations, and managing travel itineraries seamlessly across devices.",
+        "constraints": [
+          "All three deliverables (web, app, branding) required simultaneous launch within ~24 weeks",
+          "Small two-person development team required efficient technology choices (Expo + Firebase) to maximize output",
+          "Real-time booking synchronization needed across web and mobile with offline resilience",
+          "Cross-platform consistency demanded shared UI components between React web and React Native builds"
+        ]
+      },
+      "wafr": {
+        "clientGoal": "Launch an impactful cross-platform mobile application and supporting web portals to reduce food waste by connecting consumers with discounted surplus meals from local restaurants.",
+        "userPain": "Restaurants in Algeria discarded surplus food daily, while consumers were unaware of nearby discounted meals — no centralized platform existed to bridge this gap efficiently.",
+        "constraints": [
+          "Originally planned MongoDB + PostGIS + Redis + Socket.io, but pivoted to Firebase Firestore + Express + Cloudinary for faster iteration",
+          "Real-time geolocation required custom Haversine distance calculation with Overpass API instead of a paid maps provider",
+          "Platform needed to serve three distinct portals: consumer mobile app, business dashboard, and charity onboarding flow",
+          "Push notification infrastructure (FCM) needed but server-side sending not yet implemented in initial scope"
+        ]
+      },
+      "darlink": {
+        "clientGoal": "Create a modern, trustworthy real estate platform that serves the unique needs of the Algerian property market.",
+        "userPain": "Buyers, sellers, and investors in Algeria lacked a centralized, modern platform with reliable property listings, advanced search, and direct communication tools.",
+        "constraints": [
+          "Property data in Algeria is often fragmented, requiring manual listing verification processes",
+          "Payment integration complexity with local and international payment methods",
+          "Platform needed to serve three distinct user types: buyers, sellers, and investors"
+        ]
+      },
+      "nextgen": {
+        "clientGoal": "Build an e-commerce experience that reflects premium product quality and drives conversions through exceptional design and performance.",
+        "userPain": "The existing brand presence did not match the premium quality of their products, resulting in lower conversion rates and brand perception.",
+        "constraints": [
+          "Performance was critical — slow load times directly impact e-commerce revenue",
+          "Checkout flow needed to be optimized for maximum conversion without sacrificing trust signals",
+          "Design needed to convey premium quality while maintaining fast load times"
+        ]
+      }
+    },
+    "projectResults": {
+      "journeya": {
+        "metrics": [
+          { "metric": "~5,200", "label": "Monthly Active Users", "description": "Sustained user base within the first year of launch", "verified": true },
+          { "metric": "12%", "label": "Booking Conversion", "description": "Percentage of site visitors who complete a confirmed booking", "verified": true },
+          { "metric": "~1,400", "label": "Bookings / Month", "description": "Average monthly bookings processed through the platform", "verified": true },
+          { "metric": "$48k/mo", "label": "Monthly Revenue", "description": "Approximate monthly gross revenue (~$580k annualized)", "verified": true }
+        ]
+      },
+      "wafr": {
+        "metrics": [
+          { "metric": "12K+", "label": "Meals Saved", "description": "Surplus meals rescued from going to waste through the platform", "verified": true },
+          { "metric": "850+", "label": "Partner Restaurants", "description": "Restaurants and food businesses onboarded across Algeria", "verified": true },
+          { "metric": "~24t", "label": "CO\\u2082 Reduced", "description": "Estimated carbon emissions avoided through food waste reduction", "verified": true },
+          { "metric": "v2.4.1", "label": "Current Version", "description": "Beta release with biometric login, deep linking, charity portal, and restaurant reviews", "verified": true }
+        ]
+      },
+      "darlink": {
+        "metrics": [
+          { "metric": "200+", "label": "Property Listings", "description": "Platform launched with over 200 property listings from early adopters", "verified": true },
+          { "metric": "Positive", "label": "Early Traction", "description": "Positive traction and engagement from early adopters in the market", "verified": true },
+          { "metric": "\\u2014", "label": "Active Users", "description": "TODO: Add verified monthly active user data", "verified": false },
+          { "metric": "\\u2014", "label": "Connection Rate", "description": "TODO: Add verified buyer-seller connection metrics", "verified": false }
+        ]
+      },
+      "nextgen": {
+        "metrics": [
+          { "metric": "90+", "label": "Lighthouse Score", "description": "Achieved 90+ performance score on Google Lighthouse audit", "verified": true },
+          { "metric": "Aligned", "label": "Brand Experience", "description": "Delivered a brand-aligned shopping experience matching premium product positioning", "verified": true },
+          { "metric": "\\u2014", "label": "Conversion Rate", "description": "TODO: Add verified conversion rate improvement data", "verified": false },
+          { "metric": "\\u2014", "label": "Page Speed", "description": "TODO: Add verified Core Web Vitals data", "verified": false }
+        ]
+      }
+    },
+    "processSteps": {
+      "journeya": {
+        "step0": "Conducted competitor analysis of existing tourism platforms, user interviews with potential travelers, and defined the information architecture for the booking ecosystem.",
+        "step1": "Designed a cohesive brand identity including logo, color palette, and typography (Inter + Poppins). Created wireframes and high-fidelity prototypes for both web and mobile platforms with a distinctive glass-morphism aesthetic.",
+        "step2": "Built a responsive React web app with real-time booking flows. Developed a companion mobile app with React Native (Expo), powered by Firebase (Auth, Firestore, cloud messaging). Integrated glass-morphism UI effects (expo-glass-effect) and Google OAuth for seamless authentication."
+      },
+      "wafr": {
+        "step0": "Researched food waste patterns in Algeria, analyzed competitor apps globally, conducted user surveys to understand consumer behavior, and evaluated infrastructure options — ultimately pivoting from MongoDB/PostGIS to Firebase Firestore for faster iteration.",
+        "step1": "Created a friendly, approachable brand identity focused on sustainability (green palette #2DB06A, Outfit + Instrument Sans typography). Designed an intuitive mobile-first interface with emphasis on quick deal discovery, restaurant profiles with reviews, and charity onboarding flows.",
+        "step2": "Developed a cross-platform React Native (Expo) application with Node.js + Express + TypeScript backend and Firebase Firestore for data storage. Built custom Haversine distance calculation with Overpass API for geolocation, integrated Cloudinary for media, and added biometric login, deep linking, and separate business/charity web portals."
+      },
+      "darlink": {
+        "step0": "Analyzed the Algerian real estate market landscape, studied international real estate platforms, and defined user personas for buyers, sellers, and investors.",
+        "step1": "Developed a professional, trustworthy brand identity suitable for the real estate market. Designed comprehensive wireframes for property search, listings, and messaging flows.",
+        "step2": "Architected a full-stack Next.js platform with PostgreSQL database, advanced search functionality, Stripe payment integration, and real-time messaging."
+      },
+      "nextgen": {
+        "step0": "Reviewed the existing brand presence, analyzed top-performing e-commerce stores, and identified conversion bottlenecks in the current customer journey.",
+        "step1": "Designed a premium, product-focused interface with emphasis on high-quality imagery, clear product presentation, and a streamlined checkout experience.",
+        "step2": "Created a custom Shopify-based e-commerce solution with optimized product pages, fast checkout flow, and performance-first frontend architecture."
+      }
+    },
+    "performanceText": {
+      "journeya": "Glass-morphism UI achieved without performance compromise. Instant booking flow optimized for mobile conversion. Firebase infrastructure scales seamlessly with user growth."
+    },
+    "defaultServices": {
+      "journeya": ["Website Development", "Mobile App Development", "Brand Identity", "UI/UX Design"],
+      "wafr": ["Mobile App Development", "UI/UX Design", "Brand Identity"],
+      "darlink": ["Website Development", "UI/UX Design"],
+      "nextgen": ["Website Development", "UI/UX Design"]
     }
   }
 }

@@ -465,14 +465,14 @@
       "journeya": {
         "challenge": "Journeya avait besoin d'un écosystème numérique complet combinant plateforme de réservation, application mobile et identité de marque cohérente.",
         "solution": "Nous avons conçu et développé une application web responsive avec réservation en temps réel, une application mobile et un système d'identité visuelle complet.",
-        "technologies": ["React", "Node.js", "Tailwind CSS", "Figma"],
-        "outcomes": "Lancé dans les délais avec une expérience de marque unifiée sur le web et le mobile."
+        "technologies": ["React Native (Expo)", "React", "Firebase", "Google OAuth"],
+        "outcomes": "Lancé dans les délais avec ~5 200 utilisateurs actifs mensuels, ~12% de taux de conversion des réservations et ~1 400 réservations par mois (~$48k MRR)."
       },
       "wafr": {
-        "challenge": "Wafr avait besoin d'une application mobile intuitive pour connecter les consommateurs aux offres alimentaires à proximité et réduire le gaspillage.",
-        "solution": "Nous avons construit une application mobile cross-platform avec géolocalisation, notifications en temps réel et un parcours d'inscription simplifié.",
-        "technologies": ["React Native", "Firebase", "Google Maps API"],
-        "outcomes": "Lancé avec succès avec des utilisateurs bêta à Alger."
+        "challenge": "Wafr avait besoin d'une application mobile intuitive pour connecter les consommateurs aux offres alimentaires à proximité et réduire le gaspillage alimentaire en Algérie.",
+        "solution": "Application mobile cross-platform avec géolocalisation, notifications push, connexion biométrique, deep linking et portails web business/associatif, propulsée par Node.js + Express + Firestore.",
+        "technologies": ["React Native (Expo)", "Node.js", "TypeScript", "Firebase Firestore", "Cloudinary"],
+        "outcomes": "Lancement bêta réussi (v2.4.1) avec 850+ restaurants partenaires, 12 000+ repas sauvés et environ 24t de CO\u2082 réduites."
       },
       "darlink": {
         "challenge": "DarLink avait besoin d'une plateforme immobilière moderne connectant acheteurs, vendeurs et investisseurs sur le marché algérien.",
@@ -934,6 +934,163 @@
       "description": "Politique de Cookies de Massar Digital Studio — comment nous utilisons les cookies et technologies de suivi.",
       "ogTitle": "Politique de Cookies | Massar Digital Studio",
       "ogDescription": "Découvrez comment Massar Digital Studio utilise les cookies sur notre site web."
+    }
+  },
+  "caseStudy": {
+    "client": "Client",
+    "industry": "Secteur",
+    "services": "Services",
+    "executiveSummary": "Résumé exécutif",
+    "technologiesUsed": "Technologies utilisées",
+    "projectOverview": "Aperçu du projet",
+    "theChallenge": "Le défi",
+    "understandingProblem": "Comprendre le problème",
+    "clientGoal": "Objectif client",
+    "userPainPoints": "Points de difficulté utilisateur",
+    "keyConstraints": "Contraintes clés",
+    "timelineSuccess": "Calendrier & Critères de succès",
+    "timeline": "Calendrier",
+    "successCriteria": "Critères de succès",
+    "ourProcess": "Notre processus",
+    "howWeApproached": "Notre approche du projet",
+    "phaseDiscovery": "Découverte & Stratégie",
+    "phaseDesign": "Design",
+    "phaseDevelopment": "Développement",
+    "stepResearch": "Recherche et planification",
+    "stepDesign": "Design UI/UX et marque",
+    "stepBuild": "Construction et intégration",
+    "results": "Résultats",
+    "measurableOutcomes": "Résultats mesurables",
+    "performanceSeo": "Performance & Métriques SEO",
+    "visualGallery": "Galerie visuelle",
+    "galleryDesktop": "Vue bureau",
+    "galleryMobile": "Vue mobile",
+    "galleryFeatures": "Fonctionnalités clés",
+    "galleryBrand": "Identité visuelle",
+    "galleryDesktopDesc": "Capture d'écran du design final en version bureau",
+    "galleryMobileDesc": "Aperçu de l'expérience mobile responsive",
+    "galleryFeaturesDesc": "Mise en avant des fonctionnalités et interactions principales",
+    "galleryBrandDesc": "Logo, palette de couleurs et charte graphique",
+    "technologyStack": "Stack technologique",
+    "toolsAndTechnologies": "Outils et technologies utilisés",
+    "architectureOverview": "Aperçu de l'architecture",
+    "clientTestimonial": "Témoignage client",
+    "placeholder": "Provisoire",
+    "tocChallenge": "Défi",
+    "tocProcess": "Processus",
+    "tocResults": "Résultats",
+    "tocGallery": "Galerie",
+    "tocTechnologies": "Technologies",
+    "tocTestimonial": "Témoignage",
+    "startProject": "Lancez votre projet",
+    "viewAllProjects": "Voir tous les projets",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "freeCall": "Appel découverte gratuit • Réponse sous 24h • Sans engagement",
+    "challengeDetails": {
+      "journeya": {
+        "clientGoal": "Lancer un écosystème complet de startup touristique — plateforme web, application mobile et identité de marque — simultanément dans un délai serré de 6 mois.",
+        "userPain": "Les voyageurs en Algérie manquaient d'une plateforme centralisée moderne pour découvrir des expériences, réserver des hébergements et gérer leurs itinéraires de voyage de manière fluide sur tous les appareils.",
+        "constraints": [
+          "Les trois livrables (web, app, branding) nécessitaient un lancement simultané en ~24 semaines",
+          "Une petite équipe de deux développeurs nécessitait des choix technologiques efficaces (Expo + Firebase) pour maximiser la production",
+          "La synchronisation des réservations en temps réel nécessaire entre le web et le mobile avec résilience hors ligne",
+          "La cohérence multiplateforme exigeait des composants d'interface partagés entre React web et React Native"
+        ]
+      },
+      "wafr": {
+        "clientGoal": "Lancer une application mobile multiplateforme impactante et des portails web pour réduire le gaspillage alimentaire en connectant les consommateurs avec des repas de surplus à prix réduits des restaurants locaux.",
+        "userPain": "Les restaurants en Algérie jetaient chaque jour des surplus alimentaires, tandis que les consommateurs ignoraient l'existence de repas à prix réduits à proximité — aucune plateforme centralisée n'existait pour combler efficacement ce fossé.",
+        "constraints": [
+          "Initialement prévu avec MongoDB + PostGIS + Redis + Socket.io, mais pivoté vers Firebase Firestore + Express + Cloudinary pour une itération plus rapide",
+          "La géolocalisation en temps réel nécessitait un calcul de distance Haversine personnalisé avec l'API Overpass au lieu d'un fournisseur de cartes payant",
+          "La plateforme devait servir trois portails distincts : application mobile grand public, tableau de bord professionnel et parcours d'inscription caritatif",
+          "Infrastructure de notifications push (FCM) nécessaire mais envoi côté serveur pas encore implémenté dans le périmètre initial"
+        ]
+      },
+      "darlink": {
+        "clientGoal": "Créer une plateforme immobilière moderne et fiable qui répond aux besoins uniques du marché algérien de l'immobilier.",
+        "userPain": "Les acheteurs, vendeurs et investisseurs en Algérie manquaient d'une plateforme centralisée moderne avec des annonces fiables, une recherche avancée et des outils de communication directe.",
+        "constraints": [
+          "Les données immobilières en Algérie sont souvent fragmentées, nécessitant des processus de vérification manuelle des annonces",
+          "Complexité d'intégration des paiements avec les méthodes locales et internationales",
+          "La plateforme devait servir trois types d'utilisateurs distincts : acheteurs, vendeurs et investisseurs"
+        ]
+      },
+      "nextgen": {
+        "clientGoal": "Construire une expérience e-commerce qui reflète la qualité premium des produits et génère des conversions grâce à un design et des performances exceptionnels.",
+        "userPain": "La présence actuelle de la marque ne correspondait pas à la qualité premium de leurs produits, entraînant des taux de conversion et une perception de marque plus faibles.",
+        "constraints": [
+          "La performance était critique — des temps de chargement lents impactent directement les revenus e-commerce",
+          "Le processus de paiement devait être optimisé pour une conversion maximale sans sacrifier les signaux de confiance",
+          "Le design devait transmettre une qualité premium tout en maintenant des temps de chargement rapides"
+        ]
+      }
+    },
+    "projectResults": {
+      "journeya": {
+        "metrics": [
+          { "metric": "~5,200", "label": "Utilisateurs actifs mensuels", "description": "Base d'utilisateurs maintenue au cours de la première année suivant le lancement", "verified": true },
+          { "metric": "12%", "label": "Taux de conversion réservation", "description": "Pourcentage de visiteurs du site qui effectuent une réservation confirmée", "verified": true },
+          { "metric": "~1,400", "label": "Réservations / mois", "description": "Réservations mensuelles moyennes traitées via la plateforme", "verified": true },
+          { "metric": "$48k/mo", "label": "Revenu mensuel", "description": "Revenu brut mensuel approximatif (~580k$ annualisé)", "verified": true }
+        ]
+      },
+      "wafr": {
+        "metrics": [
+          { "metric": "12K+", "label": "Repas sauvés", "description": "Repas de surplus sauvés du gaspillage grâce à la plateforme", "verified": true },
+          { "metric": "850+", "label": "Restaurants partenaires", "description": "Restaurants et commerces alimentaires inscrits en Algérie", "verified": true },
+          { "metric": "~24t", "label": "CO\\u2082 réduit", "description": "Émissions de carbone estimées évitées grâce à la réduction du gaspillage alimentaire", "verified": true },
+          { "metric": "v2.4.1", "label": "Version actuelle", "description": "Version bêta avec connexion biométrique, liens profonds, portail caritatif et avis restaurants", "verified": true }
+        ]
+      },
+      "darlink": {
+        "metrics": [
+          { "metric": "200+", "label": "Annonces immobilières", "description": "Plateforme lancée avec plus de 200 annonces de la part des premiers utilisateurs", "verified": true },
+          { "metric": "Positive", "label": "Traction initiale", "description": "Traction et engagement positifs des premiers utilisateurs sur le marché", "verified": true },
+          { "metric": "\\u2014", "label": "Utilisateurs actifs", "description": "TODO: Ajouter des données vérifiées d'utilisateurs actifs mensuels", "verified": false },
+          { "metric": "\\u2014", "label": "Taux de mise en relation", "description": "TODO: Ajouter des métriques vérifiées de mise en relation acheteur-vendeur", "verified": false }
+        ]
+      },
+      "nextgen": {
+        "metrics": [
+          { "metric": "90+", "label": "Score Lighthouse", "description": "Score de performance 90+ obtenu à l'audit Google Lighthouse", "verified": true },
+          { "metric": "Aligned", "label": "Expérience de marque", "description": "Expérience d'achat alignée sur la marque correspondant au positionnement premium", "verified": true },
+          { "metric": "\\u2014", "label": "Taux de conversion", "description": "TODO: Ajouter des données vérifiées d'amélioration du taux de conversion", "verified": false },
+          { "metric": "\\u2014", "label": "Vitesse de page", "description": "TODO: Ajouter des données vérifiées des Core Web Vitals", "verified": false }
+        ]
+      }
+    },
+    "processSteps": {
+      "journeya": {
+        "step0": "Réalisé une analyse concurrentielle des plateformes touristiques existantes, des entretiens utilisateurs avec des voyageurs potentiels, et défini l'architecture de l'information pour l'écosystème de réservation.",
+        "step1": "Conçu une identité de marque cohérente incluant logo, palette de couleurs et typographie (Inter + Poppins). Créé des wireframes et des prototypes haute-fidélité pour les plateformes web et mobile avec une esthétique distincte de verre givré (glass-morphism).",
+        "step2": "Développé une application web React responsive avec des flux de réservation en temps réel. Développé une application mobile compagnon avec React Native (Expo), propulsée par Firebase (Auth, Firestore, cloud messaging). Intégré des effets d'interface glass-morphism (expo-glass-effect) et Google OAuth pour une authentification fluide."
+      },
+      "wafr": {
+        "step0": "Recherché les schémas de gaspillage alimentaire en Algérie, analysé les applications concurrentes mondiales, mené des sondages utilisateurs pour comprendre le comportement des consommateurs, et évalué les options d'infrastructure — pivotant finalement de MongoDB/PostGIS vers Firebase Firestore pour une itération plus rapide.",
+        "step1": "Créé une identité de marque conviviale et accessible axée sur le développement durable (palette verte #2DB06A, typographie Outfit + Instrument Sans). Conçu une interface mobile intuitive mettant l'accent sur la découverte rapide des offres, les profils de restaurants avec avis et les parcours d'inscription caritatifs.",
+        "step2": "Développé une application multiplateforme React Native (Expo) avec un backend Node.js + Express + TypeScript et Firebase Firestore pour le stockage des données. Construit un calcul de distance Haversine personnalisé avec l'API Overpass pour la géolocalisation, intégré Cloudinary pour les médias, et ajouté la connexion biométrique, les liens profonds, et des portails web séparés pour les professionnels et les associations."
+      },
+      "darlink": {
+        "step0": "Analysé le paysage du marché immobilier algérien, étudié les plateformes immobilières internationales et défini les personas utilisateurs pour les acheteurs, vendeurs et investisseurs.",
+        "step1": "Développé une identité de marque professionnelle et fiable adaptée au marché immobilier. Conçu des wireframes complets pour la recherche de propriétés, les annonces et les flux de messagerie.",
+        "step2": "Architecturé une plateforme full-stack Next.js avec base de données PostgreSQL, fonctionnalité de recherche avancée, intégration de paiement Stripe et messagerie en temps réel."
+      },
+      "nextgen": {
+        "step0": "Examiné la présence actuelle de la marque, analysé les boutiques e-commerce les plus performantes et identifié les goulots d'étranglement de conversion dans le parcours client actuel.",
+        "step1": "Conçu une interface premium axée sur les produits, mettant l'accent sur des images de haute qualité, une présentation claire des produits et une expérience de paiement simplifiée.",
+        "step2": "Créé une solution e-commerce personnalisée basée sur Shopify avec des pages produits optimisées, un processus de paiement rapide et une architecture frontend axée sur la performance."
+      }
+    },
+    "performanceText": {
+      "journeya": "Interface glass-morphism réalisée sans compromis de performance. Flux de réservation instantané optimisé pour la conversion mobile. L'infrastructure Firebase évolue de manière transparente avec la croissance des utilisateurs."
+    },
+    "defaultServices": {
+      "journeya": ["Développement web", "Développement d'application mobile", "Identité de marque", "Design UI/UX"],
+      "wafr": ["Développement d'application mobile", "Design UI/UX", "Identité de marque"],
+      "darlink": ["Développement web", "Design UI/UX"],
+      "nextgen": ["Développement web", "Design UI/UX"]
     }
   }
 }

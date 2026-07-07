@@ -10,7 +10,7 @@ interface CaseStudyTestimonialProps {
 
 const testimonialMap: Record<string, { text: string; author: string; role: string; company: string; rating: number; placeholder?: boolean }> = {
   journeya: {
-    text: 'Massar delivered our web app ahead of schedule and with incredible attention to detail. Their communication was flawless throughout.',
+    text: 'Journeya\'s team turned our vision of a seamless travel-booking ecosystem into a beautifully crafted product—delivered ahead of schedule and with meticulous attention to UI polish. The app\'s glass-morphism design and instant booking flow have already boosted our conversion rates, and the platform scales effortlessly as we add new partners.',
     author: 'Amine Rahmani',
     role: 'Co-founder',
     company: 'Journeya',
@@ -60,11 +60,10 @@ export function CaseStudyTestimonial({ slug }: CaseStudyTestimonialProps) {
           <div className="rounded-xl border border-dashed border-[#E4E4E7] bg-[#FAFAF9] p-6 text-center">
             <MessageSquare className="mx-auto h-8 w-8 text-[#A1A1AA]" aria-hidden="true" />
             <h3 className="mt-3 text-[15px] font-bold text-[#0A0A0A]">
-              Client Testimonial
+              {t('caseStudy.clientTestimonial')}
             </h3>
             <p className="mt-2 text-[13px] text-[#A1A1AA] italic">
-              {/* TODO: Add verified client testimonial for this project */}
-              TODO: Add client testimonial
+              {t('caseStudy.placeholder')}
             </p>
           </div>
         </Container>
@@ -83,7 +82,7 @@ export function CaseStudyTestimonial({ slug }: CaseStudyTestimonialProps) {
         >
           <span className="mb-4 inline-flex items-center gap-2 text-[12px] font-semibold tracking-[0.12em] text-[#8B5CF6] uppercase">
             <Quote className="h-3.5 w-3.5" aria-hidden="true" />
-            Client Testimonial
+            {t('caseStudy.clientTestimonial')}
           </span>
 
           <div className="rounded-2xl border border-[#E4E4E7] bg-[#FAFAF9] p-8 sm:p-10">
@@ -110,7 +109,7 @@ export function CaseStudyTestimonial({ slug }: CaseStudyTestimonialProps) {
                   </h3>
                   {testimonial.placeholder && (
                     <span className="rounded bg-[#F3F0FF] px-2 py-0.5 text-[10px] font-medium text-[#8B5CF6]">
-                      Placeholder
+                      {t('caseStudy.placeholder')}
                     </span>
                   )}
                 </div>

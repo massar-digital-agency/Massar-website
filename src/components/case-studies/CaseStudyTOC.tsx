@@ -4,12 +4,12 @@ import { motion } from 'framer-motion'
 
 const sections = [
   { id: 'case-study-overview', labelKey: 'caseStudies.label' },
-  { id: 'case-study-challenge', labelKey: 'Challenge' },
-  { id: 'case-study-process', labelKey: 'Process' },
-  { id: 'case-study-results', labelKey: 'Results' },
-  { id: 'case-study-gallery', labelKey: 'Gallery' },
-  { id: 'case-study-tech-stack', labelKey: 'Technologies' },
-  { id: 'case-study-testimonial', labelKey: 'Testimonial' },
+  { id: 'case-study-challenge', labelKey: 'caseStudy.tocChallenge' },
+  { id: 'case-study-process', labelKey: 'caseStudy.tocProcess' },
+  { id: 'case-study-results', labelKey: 'caseStudy.tocResults' },
+  { id: 'case-study-gallery', labelKey: 'caseStudy.tocGallery' },
+  { id: 'case-study-tech-stack', labelKey: 'caseStudy.tocTechnologies' },
+  { id: 'case-study-testimonial', labelKey: 'caseStudy.tocTestimonial' },
 ]
 
 export function CaseStudyTOC() {
@@ -57,7 +57,7 @@ export function CaseStudyTOC() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
       className="fixed left-4 top-1/2 -translate-y-1/2 z-40 hidden xl:block"
-      aria-label="Case study sections"
+      aria-label={t('caseStudies.label')}
     >
       <ul className="flex flex-col gap-3">
         {sections.map((section) => (

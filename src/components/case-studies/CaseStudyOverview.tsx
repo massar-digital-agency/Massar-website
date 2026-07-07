@@ -8,18 +8,12 @@ interface CaseStudyOverviewProps {
   slug: string
 }
 
-const defaultServices: Record<string, string[]> = {
-  journeya: ['Website Development', 'Mobile App Development', 'Brand Identity', 'UI/UX Design'],
-  wafr: ['Mobile App Development', 'UI/UX Design', 'Brand Identity'],
-  darlink: ['Website Development', 'UI/UX Design'],
-  nextgen: ['Website Development', 'UI/UX Design'],
-}
-
 export function CaseStudyOverview({ slug }: CaseStudyOverviewProps) {
   const { t } = useTranslation()
   const project = t(`projects.items.${slug}`, { returnObjects: true }) as {
     title: string
     category: string
+    industry: string
     description: string
   }
   const cs = t(`caseStudies.items.${slug}`, { returnObjects: true }) as {
@@ -30,12 +24,12 @@ export function CaseStudyOverview({ slug }: CaseStudyOverviewProps) {
     summary?: string
   }
 
-  const services = defaultServices[slug] || []
+  const services = t(`caseStudy.defaultServices.${slug}`, { returnObjects: true }) as string[] | undefined
 
   const metaItems = [
-    { label: 'Client', value: project.title },
-    { label: 'Industry', value: project.category.includes('e-commerce') ? 'E-Commerce' : project.category.includes('real estate') || project.category.includes('Real Estate') ? 'Real Estate' : project.category.includes('tourism') || project.category.includes('Tourism') ? 'Travel & Tourism' : project.category.includes('food') || project.category.includes('Food') ? 'Food & Sustainability' : 'Technology', icon: <Building2 className="h-4 w-4 text-[#8B5CF6]" aria-hidden="true" /> },
-    { label: 'Services', value: services.join(', '), icon: <Briefcase className="h-4 w-4 text-[#8B5CF6]" aria-hidden="true" /> },
+    { label: t('caseStudy.client'), value: project.title },
+    { label: t('caseStudy.industry'), value: project.industry || 'Technology', icon: <Building2 className="h-4 w-4 text-[#8B5CF6]" aria-hidden="true" /> },
+    { label: t('caseStudy.services'), value: services.join(', '), icon: <Briefcase className="h-4 w-4 text-[#8B5CF6]" aria-hidden="true" /> },
   ]
 
   return (
@@ -57,7 +51,7 @@ export function CaseStudyOverview({ slug }: CaseStudyOverviewProps) {
           {cs.summary && (
             <div className="mt-6 rounded-xl border border-[#E4E4E7] bg-white p-5 sm:p-6">
               <h3 className="mb-2 text-[14px] font-bold text-[#0A0A0A]">
-                Executive Summary
+                {t('caseStudy.executiveSummary')}
               </h3>
               <p className="text-[14px] leading-[1.8] text-[#52525B] sm:text-[15px]">
                 {cs.summary}
@@ -86,7 +80,7 @@ export function CaseStudyOverview({ slug }: CaseStudyOverviewProps) {
           {/* Technology tags */}
           <div className="mt-6 rounded-xl border border-[#E4E4E7] bg-[#FAFAF9] p-4 sm:p-5">
             <span className="mb-2.5 block text-[12px] font-semibold tracking-[0.05em] text-[#A1A1AA] uppercase">
-              Technologies Used
+              {t('caseStudy.technologiesUsed')}
             </span>
             <div className="flex flex-wrap gap-2">
               {cs.technologies.map((tech) => (
@@ -103,7 +97,7 @@ export function CaseStudyOverview({ slug }: CaseStudyOverviewProps) {
           {/* Overview text */}
           <div className="mt-10">
             <h3 className="text-[18px] font-bold text-[#0A0A0A] sm:text-[20px]">
-              Project Overview
+              {t('caseStudy.projectOverview')}
             </h3>
             <div className="mt-4 space-y-4 text-[14px] leading-[1.8] text-[#52525B] sm:text-[16px]">
               <p>{cs.challenge}</p>

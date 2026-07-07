@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { fadeUp } from '@/hooks/useAnimationVariants'
 import { Container } from '@/components/ui/Container'
-import { Code2, Zap } from 'lucide-react'
+import { Code2, Zap, ExternalLink } from 'lucide-react'
 
 interface CaseStudyTechStackProps {
   slug: string
@@ -31,6 +31,9 @@ export function CaseStudyTechStack({ slug }: CaseStudyTechStackProps) {
     'Stripe': '',
     'Shopify': '',
     'Vercel': '',
+    'React Native (Expo)': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    'Google OAuth': '',
+    'Cloudinary': '',
   }
 
   return (
@@ -44,10 +47,10 @@ export function CaseStudyTechStack({ slug }: CaseStudyTechStackProps) {
         >
           <span className="mb-4 inline-flex items-center gap-2 text-[12px] font-semibold tracking-[0.12em] text-[#8B5CF6] uppercase">
             <Code2 className="h-3.5 w-3.5" aria-hidden="true" />
-            Technology Stack
+            {t('caseStudy.technologyStack')}
           </span>
           <h2 className="text-[22px] font-bold leading-[1.25] tracking-[-0.015em] text-[#0A0A0A] sm:text-[26px] lg:text-[32px]">
-            Tools and technologies used
+            {t('caseStudy.toolsAndTechnologies')}
           </h2>
 
           <div className="mt-8">
@@ -82,7 +85,7 @@ export function CaseStudyTechStack({ slug }: CaseStudyTechStackProps) {
               <Zap className="mt-0.5 h-5 w-5 shrink-0 text-[#A1A1AA]" aria-hidden="true" />
               <div>
                 <h3 className="text-[14px] font-bold text-[#0A0A0A]">
-                  Architecture Overview
+                  {t('caseStudy.architectureOverview')}
                 </h3>
                 <p className="mt-1 text-[13px] leading-[1.7] text-[#A1A1AA] italic">
                   {/* TODO: Add architecture diagram or description */}

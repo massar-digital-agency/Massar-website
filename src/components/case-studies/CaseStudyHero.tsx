@@ -9,6 +9,11 @@ interface CaseStudyHeroProps {
   color: { bg: string; text: string }
 }
 
+const projectMeta: Record<string, { year: string; teamSize: string }> = {
+  journeya: { year: '2025', teamSize: '2 developers + 1 designer' },
+  wafr: { year: '2025', teamSize: '1 developer + 1 designer' },
+}
+
 export function CaseStudyHero({ slug, color }: CaseStudyHeroProps) {
   const { t, i18n } = useTranslation()
   const Arrow = i18n.language === 'ar' ? ArrowLeft : ArrowRight
@@ -17,6 +22,7 @@ export function CaseStudyHero({ slug, color }: CaseStudyHeroProps) {
     category: string
     description: string
   }
+  const meta = projectMeta[slug]
 
   return (
     <section className="relative overflow-hidden border-b border-[#E4E4E7] bg-white pt-[72px]">
@@ -52,24 +58,12 @@ export function CaseStudyHero({ slug, color }: CaseStudyHeroProps) {
           <div className="mt-8 flex flex-wrap items-center gap-5 text-[13px] text-[#52525B]">
             <span className="inline-flex items-center gap-1.5">
               <Clock className="h-4 w-4 text-[#52525B]" aria-hidden="true" />
-              {/* TODO: Replace with actual project duration */}
-              <span>{t('caseStudies.label')} — 2024</span>
+              <span>{t('caseStudies.label')} — {meta?.year || '2024'}</span>
             </span>
             <span className="inline-flex items-center gap-1.5">
               <Users className="h-4 w-4 text-[#71717A]" aria-hidden="true" />
-              {/* TODO: Replace with actual team size */}
-              <span>3–4 team members</span>
+              <span>{meta?.teamSize || '3–4 team members'}</span>
             </span>
-          </div>
-
-          <div className="mt-10">
-            <a
-              href="#case-study-overview"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#0A0A0A] px-6 py-3 text-[14px] font-medium text-white transition-all duration-200 hover:bg-[#1A1A1A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2"
-            >
-              {t('projects.viewProject')}
-              <Arrow className="h-4 w-4" aria-hidden="true" />
-            </a>
           </div>
         </motion.div>
       </div>
