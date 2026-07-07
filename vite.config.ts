@@ -1,9 +1,10 @@
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import mdx from '@mdx-js/rollup'
 import path from 'path'
 import { execSync } from 'node:child_process'
+import { readFileSync, writeFileSync } from 'node:fs'
 
 function sitemapPlugin() {
   return {
@@ -14,12 +15,39 @@ function sitemapPlugin() {
   }
 }
 
+function criticalCSSPlugin(): Plugin {
+  return {
+    name: 'critical-css',
+    closeBundle: {
+      sequential: true,
+      order: 'post',
+      handler: async () => {
+        const { default: Critters } = await import('critters')
+        const distDir = path.resolve(__dirname, 'dist')
+        const htmlPath = path.resolve(distDir, 'index.html')
+        const html = readFileSync(htmlPath, 'utf-8')
+
+        const critters = new Critters({
+          path: distDir,
+          reduceInlineStyles: true,
+          preload: 'media',
+          logLevel: 'warn',
+        })
+
+        const inlined = await critters.process(html)
+        writeFileSync(htmlPath, inlined)
+      },
+    },
+  }
+}
+
 export default defineConfig({
   plugins: [
     mdx({ remarkPlugins: [] }),
     react(),
     tailwindcss(),
     sitemapPlugin(),
+    criticalCSSPlugin(),
   ],
   resolve: {
     alias: {
