@@ -8,7 +8,7 @@ import { Section } from '@/components/ui/Section'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { Button } from '@/components/ui/Button'
 import { PortfolioFilters } from './PortfolioFilters'
-import { navigateToCaseStudy } from '@/lib/navigate'
+import { useNavigate } from 'react-router-dom'
 import { trackEvent } from '@/lib/analytics'
 
 const projectKeys = ['journeya', 'wafr', 'darlink', 'nextgen'] as const
@@ -30,6 +30,7 @@ const estimatedReadingTime: Record<string, number> = {
 export function Projects() {
   const { t } = useTranslation()
   const reducedMotion = useReducedMotion()
+  const navigate = useNavigate()
   const [activeFilter, setActiveFilter] = useState('all')
 
   const filteredKeys = projectKeys.filter((key) => {
@@ -79,11 +80,12 @@ export function Projects() {
                 variants={fadeUp}
                 whileHover={reducedMotion ? {} : { y: -4, transition: { duration: 0.2 } }}
                 whileTap={reducedMotion ? {} : { scale: 0.99 }}
-                href={`#/case-studies/${key}`}
+                href={`/case-studies/${key}`}
                 onClick={(e) => {
                   e.preventDefault()
                   trackEvent('project_card_click', { project_name: t(`projects.items.${key}.title`), project_category: t(`projects.items.${key}.category`) })
-                  navigateToCaseStudy(key)
+                  navigate(`/case-studies/${key}`)
+                  window.scrollTo(0, 0)
                 }}
                 className="group flex flex-col rounded-2xl border border-[#E4E4E7] bg-[#FAFAF9] transition-all duration-300 hover:border-[#D4D4D8] hover:shadow-lg hover:shadow-black/[0.04] overflow-hidden cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded-2xl"
               >

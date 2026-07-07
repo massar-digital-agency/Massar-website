@@ -30,11 +30,6 @@ export function Hero() {
         ctaSecondary: t('hero.variantB.ctaSecondary'),
         trustStatement: t('hero.variantB.trustStatement'),
         ctaMicro: t('hero.variantB.ctaMicro'),
-        trust: {
-          projects: t('hero.variantB.trust.projects'),
-          experience: t('hero.variantB.trust.experience'),
-          clients: t('hero.variantB.trust.clients'),
-        },
         process: {
           discovery: t('hero.variantB.process.discovery'),
           delivery: t('hero.variantB.process.delivery'),
@@ -51,11 +46,6 @@ export function Hero() {
       ctaSecondary: t('hero.ctaSecondary'),
       trustStatement: t('hero.trustStatement'),
       ctaMicro: t('hero.ctaMicro'),
-      trust: {
-        projects: t('hero.trust.projects'),
-        experience: t('hero.trust.experience'),
-        clients: t('hero.trust.clients'),
-      },
       process: {
         discovery: t('hero.process.discovery'),
         delivery: t('hero.process.delivery'),
@@ -132,27 +122,6 @@ export function Hero() {
             >
               {heroContent.ctaMicro}
             </motion.p>
-
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.22 }}
-              className="mt-6 flex flex-wrap items-center justify-center gap-6 lg:justify-start"
-            >
-              <div className="flex items-center gap-2 text-[13px] text-[#52525B]">
-                <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                {heroContent.trust.projects}
-              </div>
-              <div className="flex items-center gap-2 text-[13px] text-[#52525B]">
-                <span className="flex h-1.5 w-1.5 rounded-full bg-[#8B5CF6]" />
-                {heroContent.trust.experience}
-              </div>
-              <div className="flex items-center gap-2 text-[13px] text-[#52525B]">
-                <span className="flex h-1.5 w-1.5 rounded-full bg-amber-500" />
-                {heroContent.trust.clients}
-              </div>
-            </motion.div>
 
             <motion.div
               variants={fadeUp}
