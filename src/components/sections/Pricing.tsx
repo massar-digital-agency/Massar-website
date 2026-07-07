@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion, useReducedMotion } from '@/lib/motion'
 import { Check, ArrowRight, ArrowUpRight, Calendar, Star, Layout, Zap, Settings } from 'lucide-react'
 import { fadeUp, stagger, scaleUp } from '@/hooks/useAnimationVariants'
 import { Container } from '@/components/ui/Container'

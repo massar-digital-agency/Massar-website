@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion } from '@/lib/motion'
 import { Link } from 'react-router-dom'
 import { Calendar, Clock, ArrowUpRight } from 'lucide-react'
 import { useTranslation } from 'react-i18next'

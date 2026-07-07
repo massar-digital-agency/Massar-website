@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion, useReducedMotion } from '@/lib/motion'
 import { Mail } from 'lucide-react'
 import { trackEvent } from '@/lib/analytics'
 

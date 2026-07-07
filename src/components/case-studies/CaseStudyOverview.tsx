@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
+import { motion } from '@/lib/motion'
 import { fadeUp } from '@/hooks/useAnimationVariants'
 import { Container } from '@/components/ui/Container'
 import { Building2, Briefcase } from 'lucide-react'

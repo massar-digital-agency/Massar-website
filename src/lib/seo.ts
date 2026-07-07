@@ -54,6 +54,21 @@ export const HERO_MASCOT = {
   height: 800,
 } as const
 
+/** Responsive 3D logo variants for the About hero image. */
+export const LOGO_3D = {
+  avif: '/images/logo3d/340w.avif',
+  webp: '/images/logo3d/340w.webp',
+  jpg: '/images/logo3d/340w.jpg',
+  srcset: {
+    avif: '/images/logo3d/240w.avif 240w, /images/logo3d/340w.avif 340w, /images/logo3d/480w.avif 480w, /images/logo3d/680w.avif 680w',
+    webp: '/images/logo3d/240w.webp 240w, /images/logo3d/340w.webp 340w, /images/logo3d/480w.webp 480w, /images/logo3d/680w.webp 680w',
+    jpg: '/images/logo3d/240w.jpg 240w, /images/logo3d/340w.jpg 340w, /images/logo3d/480w.jpg 480w, /images/logo3d/680w.jpg 680w',
+  },
+  sizes: '(min-width: 1024px) 340px, 0px',
+  width: 340,
+  height: 293,
+} as const
+
 export const SEO_CONFIG = {
   siteUrl: SITE_URL,
   siteName: SITE_NAME,

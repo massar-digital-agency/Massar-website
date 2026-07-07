@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence } from '@/lib/motion'
 import { useTranslation } from 'react-i18next'
 import { Cookie, X } from 'lucide-react'
 import { updateConsent } from '@/lib/analytics'

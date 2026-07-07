@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet-async'
-import { motion } from 'framer-motion'
+import { motion } from '@/lib/motion'
 import { fadeUp, stagger } from '@/hooks/useAnimationVariants'
 import { ArrowLeft, ArrowRight, Sparkles, Target, Shield, Eye, Heart, Code2, Star, MapPin, Clock, Mail, Phone, Users, CheckCircle2, Zap, Layers } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
@@ -13,9 +13,8 @@ import { Footer } from '@/components/layout/Footer'
 import { FloatingContact } from '@/components/layout/FloatingContact'
 import { navigateToSection } from '@/lib/navigate'
 import { trackPageView, trackEvent } from '@/lib/analytics'
-import { SEO_CONFIG } from '@/lib/seo'
+import { SEO_CONFIG, LOGO_3D } from '@/lib/seo'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
-import Logo3D from '@/assets/images/logo3d.jpg'
 
 const valueIcons: Record<string, React.ReactNode> = {
   craft: <Sparkles className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />,
@@ -81,14 +80,20 @@ function AboutHero() {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
             className="hidden lg:block"
           >
-            <img
-              src={Logo3D}
-              alt="Massar Digital Studio — 3D logo"
-              width={4126}
-              height={3552}
-              className="w-full max-w-[340px] mx-auto rounded-2xl"
-              loading="eager"
-            />
+            <picture>
+              <source srcSet={LOGO_3D.srcset.avif} sizes={LOGO_3D.sizes} type="image/avif" />
+              <source srcSet={LOGO_3D.srcset.webp} sizes={LOGO_3D.sizes} type="image/webp" />
+              <source srcSet={LOGO_3D.srcset.jpg} sizes={LOGO_3D.sizes} type="image/jpeg" />
+              <img
+                src={LOGO_3D.jpg}
+                alt="Massar Digital Studio — 3D logo"
+                width={LOGO_3D.width}
+                height={LOGO_3D.height}
+                className="w-full max-w-[340px] mx-auto rounded-2xl"
+                loading="eager"
+                decoding="async"
+              />
+            </picture>
           </motion.div>
         </div>
       </Container>

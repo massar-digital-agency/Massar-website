@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence } from '@/lib/motion'
 import { useTransparentImage } from '@/hooks/useTransparentImage'
-import { HERO_MASCOT } from '@/lib/seo'
-import FrameBSrc from '@/assets/images/logo3d.jpg'
+import { HERO_MASCOT, LOGO_3D } from '@/lib/seo'
 
 const FRAME_DURATION = 420
 const MIN_VISIBLE = 1600
@@ -11,7 +10,7 @@ export function LoadingScreen({ onFinish }: { onFinish: () => void }) {
   const [frame, setFrame] = useState(0)
   const [exiting, setExiting] = useState(false)
   const frameA = HERO_MASCOT.webp
-  const frameB = useTransparentImage(FrameBSrc)
+  const frameB = useTransparentImage(LOGO_3D.jpg)
   const frames = [frameA, frameB]
 
   useEffect(() => {

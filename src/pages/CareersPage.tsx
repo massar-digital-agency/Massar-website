@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet-async'
-import { motion } from 'framer-motion'
-import type { Variants } from 'framer-motion'
+import { motion } from '@/lib/motion'
+import type { Variants } from '@/lib/motion'
 import {
   Briefcase,
   MapPin,

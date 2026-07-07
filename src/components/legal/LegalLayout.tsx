@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { motion } from 'framer-motion'
+import { motion } from '@/lib/motion'
 import { Container } from '@/components/ui/Container'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 import { fadeUp } from '@/hooks/useAnimationVariants'

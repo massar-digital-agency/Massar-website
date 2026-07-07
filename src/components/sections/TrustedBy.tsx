@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion'
-import type { Variants } from 'framer-motion'
+import { motion } from '@/lib/motion'
+import type { Variants } from '@/lib/motion'
 import { Container } from '@/components/ui/Container'
 
 const logoKeys = ['journeya', 'wafr', 'darlink', 'nextgen', 'nestcode', 'datasphere'] as const

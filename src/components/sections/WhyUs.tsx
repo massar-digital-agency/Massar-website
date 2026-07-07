@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion, useReducedMotion } from '@/lib/motion'
 import { fadeUp, stagger } from '@/hooks/useAnimationVariants'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { motion, useReducedMotion } from 'framer-motion'
+import { motion, useReducedMotion } from '@/lib/motion'
 import { Calendar } from 'lucide-react'
 import { trackEvent } from '@/lib/analytics'
 
