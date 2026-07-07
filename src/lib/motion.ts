@@ -46,9 +46,7 @@ export const motion = new Proxy({} as FM['motion'], {
     if (!_cache.has(tag)) {
       _cache.set(
         tag,
-        forwardRef(function Motion(props: Record<string, unknown>, ref) {
-          const ready = useFramerReady()
-
+        forwardRef(function Motion(props: any, ref) {
           if (_mod) {
             const RealComp = _mod.motion[tag as keyof FM['motion']] as any
             return createElement(RealComp, { ...props, ref })
@@ -86,7 +84,7 @@ export const motion = new Proxy({} as FM['motion'], {
 export function AnimatePresence(props: Record<string, unknown>) {
   const ready = useFramerReady()
   const Comp = ready ? (_mod!.AnimatePresence as any) : Fragment
-  return createElement(Comp, ready ? props : undefined, props.children)
+  return createElement(Comp, ready ? props : undefined, props.children as any)
 }
 
 /* ------------------------------------------------------------------ */
