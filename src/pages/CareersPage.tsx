@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
+import type { Variants } from 'framer-motion'
 import {
   Briefcase,
   MapPin,
@@ -63,12 +64,12 @@ const processStepIcons = [
   <Sparkles className="h-5 w-5" strokeWidth={1.75} />,
 ]
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] },
   },
 }
 
@@ -249,8 +250,8 @@ function OpeningsSection() {
   const careers = t('careers', { returnObjects: true }) as Record<string, unknown>
   const openings = careers.openings as Record<string, unknown>
   const items = openings.items as Array<Record<string, unknown>>
-  const types = openings.employmentType as Record<string, string>
-  const locs = openings.location as Record<string, string>
+  const types: Record<string, string> = openings.employmentType as Record<string, string>
+  const locs: Record<string, string> = openings.location as Record<string, string>
 
   const jobSchema = items.map((job) => ({
     '@context': 'https://schema.org',
@@ -317,11 +318,11 @@ function OpeningsSection() {
                       <div className="mt-3 flex flex-wrap gap-3">
                         <span className="inline-flex items-center gap-1.5 rounded-full border border-[#E4E4E7] bg-[#F8F7F4] px-3 py-1 text-[12px] font-medium text-[#52525B]">
                           <Clock className="h-3.5 w-3.5" aria-hidden="true" />
-                          {types[job.type as string] || job.type}
+                          {types[job.type as string] || job.type as string}
                         </span>
                         <span className="inline-flex items-center gap-1.5 rounded-full border border-[#E4E4E7] bg-[#F8F7F4] px-3 py-1 text-[12px] font-medium text-[#52525B]">
                           <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
-                          {locs[job.location as string] || job.location}
+                          {locs[job.location as string] || job.location as string}
                         </span>
                       </div>
                       <p className="mt-4 text-[14px] leading-[1.7] text-[#71717A]">
