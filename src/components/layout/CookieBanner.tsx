@@ -124,7 +124,7 @@ export function CookieBanner({ consent }: CookieBannerProps) {
                     </button>
                   </div>
 
-                  <p className="mt-3 text-[11px] leading-[1.6] text-[#A1A1AA]">
+                  <p className="mt-3 text-[11px] leading-[1.6] text-[#52525B]">
                     {t('cookieBanner.moreInfo')}{' '}
                     <a href="#/privacy" className="underline underline-offset-2 hover:text-[#71717A]">
                       {t('cookieBanner.privacyLink')}

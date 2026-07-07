@@ -111,7 +111,7 @@ export function Navbar() {
               <Button size="sm" href="#contact" onClick={() => trackEvent('cta_click', { cta_location: 'navbar', cta_text: t('nav.cta') })}>
                 {t('nav.cta')}
               </Button>
-              <span className="mt-1 text-[10px] text-[#A1A1AA] whitespace-nowrap">
+              <span className="mt-1 text-[10px] text-[#71717A] whitespace-nowrap">
                 {t('nav.ctaMicro')}
               </span>
             </div>
@@ -164,7 +164,7 @@ export function Navbar() {
                     <Button size="sm" href="#contact" className="w-full justify-center" onClick={() => { handleCloseMenu(); trackEvent('cta_click', { cta_location: 'navbar_mobile', cta_text: t('nav.cta') }) }}>
                       {t('nav.cta')}
                     </Button>
-                    <span className="mt-1 block text-center text-[10px] text-[#A1A1AA]">
+                    <span className="mt-1 block text-center text-[10px] text-[#71717A]">
                       {t('nav.ctaMicro')}
                     </span>
                   </div>

@@ -287,7 +287,7 @@ export function Contact() {
 
         <div className="mt-24 sm:mt-32">
           <div className="text-center mb-12 sm:mb-16">
-            <span className="mb-3 inline-block text-[13px] font-semibold tracking-[0.1em] text-[#8B5CF6] uppercase">
+            <span className="mb-3 inline-block text-[13px] font-semibold tracking-[0.1em] text-[#7C3AED] uppercase">
               {t('contact.why.label')}
             </span>
             <h3 className="text-[24px] font-bold leading-[1.25] text-[#0A0A0A] sm:text-[32px]">
