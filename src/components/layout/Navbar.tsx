@@ -6,7 +6,7 @@ import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { HoverSlideText } from '@/components/ui/HoverSlideText'
-import { navigateToSection, navigateHome } from '@/lib/navigate'
+import { navigateToSection } from '@/lib/navigate'
 import { trackEvent } from '@/lib/analytics'
 import Logo from '@/assets/images/Logo.svg'
 

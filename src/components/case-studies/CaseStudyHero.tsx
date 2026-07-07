@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { fadeUp } from '@/hooks/useAnimationVariants'
-import { ArrowLeft, ArrowRight, Clock, Users } from 'lucide-react'
+import { Clock, Users } from 'lucide-react'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
 
 interface CaseStudyHeroProps {
@@ -15,8 +15,7 @@ const projectMeta: Record<string, { year: string; teamSize: string }> = {
 }
 
 export function CaseStudyHero({ slug, color }: CaseStudyHeroProps) {
-  const { t, i18n } = useTranslation()
-  const Arrow = i18n.language === 'ar' ? ArrowLeft : ArrowRight
+  const { t } = useTranslation()
   const project = t(`projects.items.${slug}`, { returnObjects: true }) as {
     title: string
     category: string

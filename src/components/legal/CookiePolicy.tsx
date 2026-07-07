@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { FloatingContact } from '@/components/layout/FloatingContact'
-import { LegalLayout, LegalSection, LegalSubsection, LegalParagraph, LegalList } from './LegalLayout'
+import { LegalLayout, LegalSection, LegalParagraph, LegalList } from './LegalLayout'
 import { useEffect } from 'react'
 import { SEO_CONFIG } from '@/lib/seo'
 

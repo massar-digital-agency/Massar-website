@@ -29,7 +29,7 @@ export function CaseStudyOverview({ slug }: CaseStudyOverviewProps) {
   const metaItems = [
     { label: t('caseStudy.client'), value: project.title },
     { label: t('caseStudy.industry'), value: project.industry || 'Technology', icon: <Building2 className="h-4 w-4 text-[#8B5CF6]" aria-hidden="true" /> },
-    { label: t('caseStudy.services'), value: services.join(', '), icon: <Briefcase className="h-4 w-4 text-[#8B5CF6]" aria-hidden="true" /> },
+    { label: t('caseStudy.services'), value: (services ?? []).join(', '), icon: <Briefcase className="h-4 w-4 text-[#8B5CF6]" aria-hidden="true" /> },
   ]
 
   return (

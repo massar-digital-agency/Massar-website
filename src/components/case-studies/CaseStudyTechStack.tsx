@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { fadeUp } from '@/hooks/useAnimationVariants'
 import { Container } from '@/components/ui/Container'
-import { Code2, Zap, ExternalLink } from 'lucide-react'
+import { Code2, Zap } from 'lucide-react'
 
 interface CaseStudyTechStackProps {
   slug: string

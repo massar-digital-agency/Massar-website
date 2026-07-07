@@ -1,15 +1,16 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
+import type { Variants } from 'framer-motion'
 import { Container } from '@/components/ui/Container'
 
 const logoKeys = ['journeya', 'wafr', 'darlink', 'nextgen', 'nestcode', 'datasphere'] as const
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.6, ease: [0.4, 0, 0.2, 1] },
   },
 }
 
