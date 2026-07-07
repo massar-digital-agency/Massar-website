@@ -48,10 +48,15 @@ export function truncateMetaDescription(description: string, maxLength = META_DE
 
 /** Pre-optimized hero mascot (LCP image) — AVIF preferred, WebP fallback. */
 export const HERO_MASCOT = {
-  avif: '/images/hero-mascot.avif',
-  webp: '/images/hero-mascot.webp',
-  width: 800,
-  height: 800,
+  avif: '/images/hero-mascot/400w.avif',
+  webp: '/images/hero-mascot/400w.webp',
+  srcset: {
+    avif: '/images/hero-mascot/260w.avif 260w, /images/hero-mascot/320w.avif 320w, /images/hero-mascot/400w.avif 400w, /images/hero-mascot.avif 800w',
+    webp: '/images/hero-mascot/260w.webp 260w, /images/hero-mascot/320w.webp 320w, /images/hero-mascot/400w.webp 400w, /images/hero-mascot.webp 800w',
+  },
+  sizes: '(max-width: 640px) 260px, (max-width: 1024px) 320px, 400px',
+  width: 400,
+  height: 400,
 } as const
 
 /** Responsive 3D logo variants for the About hero image. */

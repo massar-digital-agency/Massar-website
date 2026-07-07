@@ -157,8 +157,8 @@ export function Hero() {
               className="relative block aspect-square w-full"
             >
               <picture>
-                <source srcSet={HERO_MASCOT.avif} type="image/avif" />
-                <source srcSet={HERO_MASCOT.webp} type="image/webp" />
+                <source srcSet={HERO_MASCOT.srcset.avif} sizes={HERO_MASCOT.sizes} type="image/avif" />
+                <source srcSet={HERO_MASCOT.srcset.webp} sizes={HERO_MASCOT.sizes} type="image/webp" />
                 <img
                   src={HERO_MASCOT.webp}
                   alt="Massar Digital Studio brand mascot"

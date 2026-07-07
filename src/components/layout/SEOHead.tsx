@@ -36,8 +36,8 @@ export function SEOHead() {
           as="image"
           href={HERO_MASCOT.avif}
           type="image/avif"
-          imageSrcSet={`${HERO_MASCOT.avif} 800w`}
-          imageSizes="(max-width: 1024px) 320px, 400px"
+          imageSrcSet={HERO_MASCOT.srcset.avif}
+          imageSizes={HERO_MASCOT.sizes}
         />
       )}
 
