@@ -21,7 +21,6 @@ const projectColors: Record<string, { bg: string; text: string }> = {
   journeya: { bg: '#ECFDF5', text: '#059669' },
   wafr: { bg: '#FEF3C7', text: '#D97706' },
   darlink: { bg: '#DBEAFE', text: '#2563EB' },
-  nextgen: { bg: '#F3F0FF', text: '#8B5CF6' },
 }
 
 interface CaseStudyPageProps {

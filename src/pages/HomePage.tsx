@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet-async'
 import { useCookieConsent } from '@/hooks/useCookieConsent'
 import { StructuredData } from '@/components/layout/StructuredData'
-import { LoadingScreen } from '@/components/layout/LoadingScreen'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { FloatingContact } from '@/components/layout/FloatingContact'
@@ -21,7 +20,6 @@ import { SEO_CONFIG, getOgImage } from '@/lib/seo'
 
 export default function HomePage() {
   const { t, i18n } = useTranslation()
-  const [loading, setLoading] = useState(true)
   const ogImage = getOgImage(i18n.language)
 
   useEffect(() => {
@@ -47,7 +45,6 @@ export default function HomePage() {
         <meta name="twitter:image" content={ogImage} />
       </Helmet>
       <StructuredData />
-      {loading && <LoadingScreen onFinish={() => setLoading(false)} />}
       <Navbar />
       <main id="main-content">
         <Hero />

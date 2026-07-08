@@ -1,5 +1,5 @@
 /** Public case study slugs — keep in sync with locale content and sitemap generation. */
-export const CASE_STUDY_SLUGS = ['journeya', 'wafr', 'darlink', 'nextgen'] as const
+export const CASE_STUDY_SLUGS = ['journeya', 'wafr', 'darlink'] as const
 
 export type CaseStudySlug = (typeof CASE_STUDY_SLUGS)[number]
 

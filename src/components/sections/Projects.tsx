@@ -11,20 +11,18 @@ import { PortfolioFilters } from './PortfolioFilters'
 import { useNavigate } from 'react-router-dom'
 import { trackEvent } from '@/lib/analytics'
 
-const projectKeys = ['journeya', 'wafr', 'darlink', 'nextgen'] as const
+const projectKeys = ['journeya', 'wafr', 'darlink'] as const
 
 const projectColors: Record<string, { bg: string; text: string }> = {
   journeya: { bg: '#ECFDF5', text: '#059669' },
   wafr: { bg: '#FEF3C7', text: '#D97706' },
   darlink: { bg: '#DBEAFE', text: '#2563EB' },
-  nextgen: { bg: '#F3F0FF', text: '#8B5CF6' },
 }
 
 const estimatedReadingTime: Record<string, number> = {
   journeya: 8,
   wafr: 7,
   darlink: 8,
-  nextgen: 7,
 }
 
 export function Projects() {

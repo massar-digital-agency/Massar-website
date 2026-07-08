@@ -10,7 +10,7 @@ interface CaseStudyNavProps {
   slug: string
 }
 
-const projectKeys = ['journeya', 'wafr', 'darlink', 'nextgen'] as const
+const projectKeys = ['journeya', 'wafr', 'darlink'] as const
 
 export function CaseStudyNav({ slug }: CaseStudyNavProps) {
   const { t, i18n } = useTranslation()

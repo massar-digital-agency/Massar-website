@@ -192,12 +192,6 @@
         "industry": "Real Estate",
         "description": "Plateforme immobilière moderne connectant acheteurs, vendeurs et investisseurs de manière fluide."
       },
-      "nextgen": {
-        "title": "NextGen",
-        "category": "Développement web",
-        "industry": "E-commerce",
-        "description": "Boutique en ligne moderne avec une expérience d'achat fluide et un design qui reflète la qualité des produits."
-      }
     }
   },
   "pricing": {
@@ -456,10 +450,6 @@
         "title": "Étude de cas DarLink | Plateforme immobilière | Massar Digital Studio",
         "description": "DarLink atteint 200+ annonces immobilières avec recherche avancée et messagerie — plateforme créée par Massar en Algérie."
       },
-      "nextgen": {
-        "title": "Étude de cas NextGen | Boutique e-commerce | Massar Digital Studio",
-        "description": "NextGen atteint 90+ sur Lighthouse avec une boutique e-commerce sur mesure par Massar — checkout rapide et UX premium."
-      }
     },
     "items": {
       "journeya": {
@@ -480,12 +470,6 @@
         "technologies": ["Next.js", "TypeScript", "PostgreSQL", "Stripe"],
         "outcomes": "Plateforme lancée avec plus de 200 annonces immobilières."
       },
-      "nextgen": {
-        "challenge": "NextGen souhaitait une boutique en ligne reflétant la qualité premium de ses produits avec une expérience d'achat fluide.",
-        "solution": "Création d'une solution e-commerce sur mesure avec pages produit optimisées et processus de paiement rapide.",
-        "technologies": ["Next.js", "Shopify", "Tailwind CSS", "Vercel"],
-        "outcomes": "Score de performance Lighthouse de 90+ et expérience d'achat alignée sur la marque."
-      }
     }
   },
   "aboutPage": {
@@ -1017,15 +1001,6 @@
           "La plateforme devait servir trois types d'utilisateurs distincts : acheteurs, vendeurs et investisseurs"
         ]
       },
-      "nextgen": {
-        "clientGoal": "Construire une expérience e-commerce qui reflète la qualité premium des produits et génère des conversions grâce à un design et des performances exceptionnels.",
-        "userPain": "La présence actuelle de la marque ne correspondait pas à la qualité premium de leurs produits, entraînant des taux de conversion et une perception de marque plus faibles.",
-        "constraints": [
-          "La performance était critique — des temps de chargement lents impactent directement les revenus e-commerce",
-          "Le processus de paiement devait être optimisé pour une conversion maximale sans sacrifier les signaux de confiance",
-          "Le design devait transmettre une qualité premium tout en maintenant des temps de chargement rapides"
-        ]
-      }
     },
     "projectResults": {
       "journeya": {
@@ -1052,14 +1027,6 @@
           { "metric": "\\u2014", "label": "Taux de mise en relation", "description": "TODO: Ajouter des métriques vérifiées de mise en relation acheteur-vendeur", "verified": false }
         ]
       },
-      "nextgen": {
-        "metrics": [
-          { "metric": "90+", "label": "Score Lighthouse", "description": "Score de performance 90+ obtenu à l'audit Google Lighthouse", "verified": true },
-          { "metric": "Aligned", "label": "Expérience de marque", "description": "Expérience d'achat alignée sur la marque correspondant au positionnement premium", "verified": true },
-          { "metric": "\\u2014", "label": "Taux de conversion", "description": "TODO: Ajouter des données vérifiées d'amélioration du taux de conversion", "verified": false },
-          { "metric": "\\u2014", "label": "Vitesse de page", "description": "TODO: Ajouter des données vérifiées des Core Web Vitals", "verified": false }
-        ]
-      }
     },
     "processSteps": {
       "journeya": {
@@ -1077,11 +1044,6 @@
         "step1": "Développé une identité de marque professionnelle et fiable adaptée au marché immobilier. Conçu des wireframes complets pour la recherche de propriétés, les annonces et les flux de messagerie.",
         "step2": "Architecturé une plateforme full-stack Next.js avec base de données PostgreSQL, fonctionnalité de recherche avancée, intégration de paiement Stripe et messagerie en temps réel."
       },
-      "nextgen": {
-        "step0": "Examiné la présence actuelle de la marque, analysé les boutiques e-commerce les plus performantes et identifié les goulots d'étranglement de conversion dans le parcours client actuel.",
-        "step1": "Conçu une interface premium axée sur les produits, mettant l'accent sur des images de haute qualité, une présentation claire des produits et une expérience de paiement simplifiée.",
-        "step2": "Créé une solution e-commerce personnalisée basée sur Shopify avec des pages produits optimisées, un processus de paiement rapide et une architecture frontend axée sur la performance."
-      }
     },
     "performanceText": {
       "journeya": "Interface glass-morphism réalisée sans compromis de performance. Flux de réservation instantané optimisé pour la conversion mobile. L'infrastructure Firebase évolue de manière transparente avec la croissance des utilisateurs."
@@ -1089,8 +1051,7 @@
     "defaultServices": {
       "journeya": ["Développement web", "Développement d'application mobile", "Identité de marque", "Design UI/UX"],
       "wafr": ["Développement d'application mobile", "Design UI/UX", "Identité de marque"],
-      "darlink": ["Développement web", "Design UI/UX"],
-      "nextgen": ["Développement web", "Design UI/UX"]
+      "darlink": ["Développement web", "Design UI/UX"]
     }
   }
 }

@@ -21,7 +21,6 @@ const CASE_STUDY_DATES: Record<string, { published: string; modified: string }> 
   journeya: { published: '2024-03-01', modified: '2024-06-15' },
   wafr: { published: '2024-04-01', modified: '2024-07-01' },
   darlink: { published: '2024-05-01', modified: '2024-08-01' },
-  nextgen: { published: '2024-06-01', modified: '2024-09-01' },
 }
 
 const organizationRef = {

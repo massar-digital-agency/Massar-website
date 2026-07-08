@@ -3,7 +3,7 @@ import { motion } from '@/lib/motion'
 import type { Variants } from '@/lib/motion'
 import { Container } from '@/components/ui/Container'
 
-const logoKeys = ['journeya', 'wafr', 'darlink', 'nextgen', 'nestcode', 'datasphere'] as const
+const logoKeys = ['journeya', 'wafr', 'darlink', 'nestcode', 'datasphere'] as const
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },

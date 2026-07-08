@@ -192,12 +192,6 @@
         "industry": "Real Estate",
         "description": "A modern real estate platform seamlessly connecting buyers, sellers, and investors."
       },
-      "nextgen": {
-        "title": "NextGen",
-        "category": "Website development",
-        "industry": "E-commerce",
-        "description": "A modern e-commerce store with a seamless shopping experience and design that reflects product quality."
-      }
     }
   },
   "pricing": {
@@ -456,10 +450,6 @@
         "title": "DarLink Case Study | Real Estate Platform | Massar Digital Studio",
         "description": "DarLink reached 200+ property listings with advanced search and messaging — a real estate platform built by Massar in Algeria."
       },
-      "nextgen": {
-        "title": "NextGen Case Study | E-Commerce Store | Massar Digital Studio",
-        "description": "NextGen hit 90+ Lighthouse scores with a custom e-commerce store by Massar — fast checkout, premium UX, and SEO-ready architecture."
-      }
     },
     "items": {
       "journeya": {
@@ -483,13 +473,6 @@
         "outcomes": "Platform launched with 200+ property listings and positive traction from early adopters.",
         "summary": "DarLink recognized the need for a modern, trustworthy real estate platform tailored to the unique dynamics of the Algerian property market. Buyers, sellers, and investors lacked a centralized digital solution with reliable listings, advanced search capabilities, and direct communication tools. Massar developed a full-featured web platform using Next.js and TypeScript for a robust, type-safe frontend, with PostgreSQL powering a reliable database layer and Stripe integrated for payment processing. The platform includes advanced property search with comprehensive filters, direct messaging between buyers and sellers, detailed property listing pages, and investor-specific features. The platform launched successfully with over 200 property listings from early adopter agents and property owners, generating positive traction and engagement from the real estate community in Algeria. DarLink now serves as a central hub connecting property seekers with sellers and investors, addressing a critical gap in the Algerian proptech landscape."
       },
-      "nextgen": {
-        "challenge": "NextGen wanted an e-commerce store that reflected their premium product quality and provided a seamless shopping experience.",
-        "solution": "Created a custom e-commerce solution with optimized product pages, fast checkout flow, and performance-first architecture.",
-        "technologies": ["Next.js", "Shopify", "Tailwind CSS", "Vercel"],
-        "outcomes": "Achieved 90+ Lighthouse performance score and delivered a brand-aligned shopping experience.",
-        "summary": "NextGen, a premium product brand, needed an e-commerce store that would reflect the exceptional quality of their products while delivering a seamless, conversion-optimized shopping experience. Their existing online presence did not match the premium nature of their brand, resulting in suboptimal conversion rates. Massar built a custom e-commerce solution using Next.js for server-side rendering and optimal performance, integrated with Shopify\u2019s commerce backend for reliable order management. Tailwind CSS enabled a custom, brand-aligned design system, and the site was deployed on Vercel for global edge delivery and instant scalability. The result is a premium e-commerce experience that achieved a 90+ performance score on Google Lighthouse, reflecting the performance-first architecture. The checkout flow was optimized for maximum conversion without compromising trust signals, and the design language consistently reflects the brand\u2019s premium positioning across every product page, cart interaction, and customer touchpoint."
-      }
     }
   },
   "aboutPage": {
@@ -1015,15 +998,6 @@
           "Platform needed to serve three distinct user types: buyers, sellers, and investors"
         ]
       },
-      "nextgen": {
-        "clientGoal": "Build an e-commerce experience that reflects premium product quality and drives conversions through exceptional design and performance.",
-        "userPain": "The existing brand presence did not match the premium quality of their products, resulting in lower conversion rates and brand perception.",
-        "constraints": [
-          "Performance was critical — slow load times directly impact e-commerce revenue",
-          "Checkout flow needed to be optimized for maximum conversion without sacrificing trust signals",
-          "Design needed to convey premium quality while maintaining fast load times"
-        ]
-      }
     },
     "projectResults": {
       "journeya": {
@@ -1050,14 +1024,6 @@
           { "metric": "\\u2014", "label": "Connection Rate", "description": "TODO: Add verified buyer-seller connection metrics", "verified": false }
         ]
       },
-      "nextgen": {
-        "metrics": [
-          { "metric": "90+", "label": "Lighthouse Score", "description": "Achieved 90+ performance score on Google Lighthouse audit", "verified": true },
-          { "metric": "Aligned", "label": "Brand Experience", "description": "Delivered a brand-aligned shopping experience matching premium product positioning", "verified": true },
-          { "metric": "\\u2014", "label": "Conversion Rate", "description": "TODO: Add verified conversion rate improvement data", "verified": false },
-          { "metric": "\\u2014", "label": "Page Speed", "description": "TODO: Add verified Core Web Vitals data", "verified": false }
-        ]
-      }
     },
     "processSteps": {
       "journeya": {
@@ -1075,11 +1041,6 @@
         "step1": "Developed a professional, trustworthy brand identity suitable for the real estate market. Designed comprehensive wireframes for property search, listings, and messaging flows.",
         "step2": "Architected a full-stack Next.js platform with PostgreSQL database, advanced search functionality, Stripe payment integration, and real-time messaging."
       },
-      "nextgen": {
-        "step0": "Reviewed the existing brand presence, analyzed top-performing e-commerce stores, and identified conversion bottlenecks in the current customer journey.",
-        "step1": "Designed a premium, product-focused interface with emphasis on high-quality imagery, clear product presentation, and a streamlined checkout experience.",
-        "step2": "Created a custom Shopify-based e-commerce solution with optimized product pages, fast checkout flow, and performance-first frontend architecture."
-      }
     },
     "performanceText": {
       "journeya": "Glass-morphism UI achieved without performance compromise. Instant booking flow optimized for mobile conversion. Firebase infrastructure scales seamlessly with user growth."
@@ -1087,8 +1048,7 @@
     "defaultServices": {
       "journeya": ["Website Development", "Mobile App Development", "Brand Identity", "UI/UX Design"],
       "wafr": ["Mobile App Development", "UI/UX Design", "Brand Identity"],
-      "darlink": ["Website Development", "UI/UX Design"],
-      "nextgen": ["Website Development", "UI/UX Design"]
+      "darlink": ["Website Development", "UI/UX Design"]
     }
   }
 }
