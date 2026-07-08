@@ -11,7 +11,7 @@ import { trackEvent } from '@/lib/analytics'
 import { useElementVisibility } from '@/hooks/useElementVisibility'
 import ChatShape from '@/assets/images/chatbulb3d.svg'
 
-export function FAQ() {
+export function FAQ({ hideHeader = false, ctaHref }: { hideHeader?: boolean; ctaHref?: string }) {
   const { t } = useTranslation()
   useElementVisibility('faq', 'faq_section_visible')
   const items = t('faq.items', { returnObjects: true }) as Array<{
@@ -28,10 +28,12 @@ export function FAQ() {
         className="pointer-events-none absolute -top-10 end-[-80px] hidden h-[280px] w-auto opacity-[0.07] lg:block"
       />
       <Container narrow className="relative">
-        <SectionHeader
-          label={t('faq.label')}
-          title={t('faq.title')}
-        />
+        {!hideHeader && (
+          <SectionHeader
+            label={t('faq.label')}
+            title={t('faq.title')}
+          />
+        )}
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -52,7 +54,7 @@ export function FAQ() {
           <p className="text-[14px] leading-[1.7] text-[#71717A] mb-5 sm:text-[15px]">
             {t('faq.ctaMicro')}
           </p>
-          <Button size="lg" variant="secondary" href="#contact" onClick={() => trackEvent('cta_click', { cta_location: 'faq', cta_text: t('faq.cta') })}>
+          <Button size="lg" variant="secondary" href={ctaHref ?? '#contact'} onClick={() => trackEvent('cta_click', { cta_location: 'faq', cta_text: t('faq.cta') })}>
             {t('faq.cta')}
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Button>

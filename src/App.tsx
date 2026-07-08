@@ -21,6 +21,8 @@ const BlogIndex = lazy(() => import('@/pages/BlogIndex').then((m) => ({ default:
 const BlogPost = lazy(() => import('@/pages/BlogPost').then((m) => ({ default: m.BlogPost })))
 const ContactPage = lazy(() => import('@/pages/ContactPage').then((m) => ({ default: m.ContactPage })))
 const CareersPage = lazy(() => import('@/pages/CareersPage').then((m) => ({ default: m.CareersPage })))
+const FAQPage = lazy(() => import('@/pages/FAQPage').then((m) => ({ default: m.FAQPage })))
+const ProcessPage = lazy(() => import('@/pages/ProcessPage').then((m) => ({ default: m.ProcessPage })))
 const ExitIntentModal = lazy(() =>
   import('@/components/layout/ExitIntentModal').then((m) => ({ default: m.ExitIntentModal })),
 )
@@ -54,6 +56,8 @@ export default function App() {
           <Route path="/blog" element={<BlogIndex />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/careers" element={<CareersPage />} />
+          <Route path="/faq" element={<FAQPage />} />
+          <Route path="/process" element={<ProcessPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </Suspense>

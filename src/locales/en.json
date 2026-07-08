@@ -57,6 +57,7 @@
     "contact": "Contact",
     "cta": "Get a free quote",
     "faq": "FAQ",
+    "process": "Our Process",
     "ctaMicro": "Free discovery call • Response within 24h"
   },
   "hero": {
@@ -155,6 +156,12 @@
   "process": {
     "label": "Our process",
     "title": "From idea to launch",
+    "seo": {
+      "title": "Our Process | Massar Digital Studio",
+      "description": "From idea to launch — discover how Massar Digital Studio takes your project through discovery, planning, design, development, launch, and support.",
+      "ogTitle": "Our Process — Massar Digital Studio",
+      "ogDescription": "A structured, transparent six-phase process from discovery to launch and beyond."
+    },
     "steps": {
       "discover": { "title": "Discover", "description": "We learn your business, audience, and goals inside-out. This upfront clarity eliminates guesswork, reduces costly revisions, and sets your project up for success from day one." },
       "plan": { "title": "Plan", "description": "We create a detailed roadmap with clear milestones, timelines, and deliverables. You'll always know what's happening and when — giving you full control and confidence in the process." },
@@ -191,7 +198,7 @@
         "category": "Website + App + Branding",
         "industry": "Real Estate",
         "description": "A modern real estate platform seamlessly connecting buyers, sellers, and investors."
-      },
+      }
     }
   },
   "pricing": {
@@ -404,30 +411,7 @@
     "label": "Results",
     "title": "Measurable impact, real outcomes",
     "subtitle": "We build with business goals in mind. Every project is designed and measured for performance, engagement, and growth.",
-    "items": [
-      {
-        "metric": "15+",
-        "label": "Projects Delivered",
-        "description": "Across web, mobile, branding, and AI"
-      },
-      {
-        "metric": "40%",
-        "label": "Avg. Engagement Lift",
-        "description": "User interaction improvement post-launch",
-        "placeholder": true
-      },
-      {
-        "metric": "3+",
-        "label": "Years in Business",
-        "description": "Serving clients in Algeria and beyond"
-      },
-      {
-        "metric": "98%",
-        "label": "Client Satisfaction",
-        "description": "Based on post-project feedback scores",
-        "placeholder": true
-      }
-    ],
+    "items": [],
     "cta": "See projects we've delivered",
     "ctaMicro": "Explore real case studies with challenges, solutions, and measurable outcomes."
   },
@@ -449,7 +433,7 @@
       "darlink": {
         "title": "DarLink Case Study | Real Estate Platform | Massar Digital Studio",
         "description": "DarLink reached 200+ property listings with advanced search and messaging — a real estate platform built by Massar in Algeria."
-      },
+      }
     },
     "items": {
       "journeya": {
@@ -472,7 +456,7 @@
         "technologies": ["Next.js", "TypeScript", "PostgreSQL", "Stripe"],
         "outcomes": "Platform launched with 200+ property listings and positive traction from early adopters.",
         "summary": "DarLink recognized the need for a modern, trustworthy real estate platform tailored to the unique dynamics of the Algerian property market. Buyers, sellers, and investors lacked a centralized digital solution with reliable listings, advanced search capabilities, and direct communication tools. Massar developed a full-featured web platform using Next.js and TypeScript for a robust, type-safe frontend, with PostgreSQL powering a reliable database layer and Stripe integrated for payment processing. The platform includes advanced property search with comprehensive filters, direct messaging between buyers and sellers, detailed property listing pages, and investor-specific features. The platform launched successfully with over 200 property listings from early adopter agents and property owners, generating positive traction and engagement from the real estate community in Algeria. DarLink now serves as a central hub connecting property seekers with sellers and investors, addressing a critical gap in the Algerian proptech landscape."
-      },
+      }
     }
   },
   "aboutPage": {
@@ -659,6 +643,12 @@
   "faq": {
     "label": "FAQ",
     "title": "Everything you need to know",
+    "seo": {
+      "title": "FAQ | Massar Digital Studio",
+      "description": "Answers to common questions about pricing, timelines, our process, technology stack, and ongoing support for web and app projects.",
+      "ogTitle": "FAQ — Massar Digital Studio",
+      "ogDescription": "Everything you need to know about working with Massar Digital Studio."
+    },
     "cta": "Still have questions?",
     "ctaMicro": "We're happy to help. Reach out and we'll get back to you within 24 hours.",
     "items": [
@@ -815,7 +805,9 @@
     "contact": "Contact",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "cookies": "Cookie Policy"
+    "cookies": "Cookie Policy",
+    "faq": "FAQ",
+    "process": "Our Process"
   },
   "footer": {
     "description": "Algeria's strategy-first digital agency — custom website development, SEO services, and mobile apps built for growth.",
@@ -997,7 +989,7 @@
           "Payment integration complexity with local and international payment methods",
           "Platform needed to serve three distinct user types: buyers, sellers, and investors"
         ]
-      },
+      }
     },
     "projectResults": {
       "journeya": {
@@ -1023,7 +1015,7 @@
           { "metric": "\\u2014", "label": "Active Users", "description": "TODO: Add verified monthly active user data", "verified": false },
           { "metric": "\\u2014", "label": "Connection Rate", "description": "TODO: Add verified buyer-seller connection metrics", "verified": false }
         ]
-      },
+      }
     },
     "processSteps": {
       "journeya": {
@@ -1040,7 +1032,7 @@
         "step0": "Analyzed the Algerian real estate market landscape, studied international real estate platforms, and defined user personas for buyers, sellers, and investors.",
         "step1": "Developed a professional, trustworthy brand identity suitable for the real estate market. Designed comprehensive wireframes for property search, listings, and messaging flows.",
         "step2": "Architected a full-stack Next.js platform with PostgreSQL database, advanced search functionality, Stripe payment integration, and real-time messaging."
-      },
+      }
     },
     "performanceText": {
       "journeya": "Glass-morphism UI achieved without performance compromise. Instant booking flow optimized for mobile conversion. Firebase infrastructure scales seamlessly with user growth."

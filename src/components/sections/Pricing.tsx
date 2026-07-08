@@ -40,39 +40,6 @@ export function Pricing() {
           subtitle={t('pricing.subtitle')}
         />
 
-        {/* Trust Signals Strip */}
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-60px' }}
-          className="mb-12 sm:mb-16 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 rounded-2xl border border-[#E4E4E7] bg-white px-6 py-4 sm:px-10 sm:py-5"
-        >
-          <div className="flex items-center gap-2 text-[13px] font-medium text-[#52525B] sm:text-[14px]">
-            <span className="flex items-center justify-center rounded-md bg-[#F3F0FF] px-2 py-0.5 text-[12px] font-bold text-[#8B5CF6]">
-              15+
-            </span>
-            {t('pricing.trust.projects')}
-          </div>
-          <div className="hidden h-4 w-px bg-[#E4E4E7] sm:block" aria-hidden="true" />
-          <div className="flex items-center gap-2 text-[13px] font-medium text-[#52525B] sm:text-[14px]">
-            <span className="flex items-center justify-center rounded-md bg-emerald-50 px-2 py-0.5 text-[12px] font-bold text-emerald-600">
-              98%
-            </span>
-            {t('pricing.trust.satisfaction')}
-            <span className="rounded bg-amber-100 px-1.5 py-0.5 text-[10px] font-medium text-amber-700">
-              TODO
-            </span>
-          </div>
-          <div className="hidden h-4 w-px bg-[#E4E4E7] sm:block" aria-hidden="true" />
-          <div className="flex items-center gap-2 text-[13px] font-medium text-[#52525B] sm:text-[14px]">
-            <span className="flex items-center justify-center rounded-md bg-[#EBF5FF] px-2 py-0.5 text-[12px] font-bold text-blue-600">
-              24h
-            </span>
-            {t('pricing.trust.response')}
-          </div>
-        </motion.div>
-
         {/* Pricing Cards */}
         <motion.div
           variants={stagger}
@@ -346,7 +313,7 @@ export function Pricing() {
           <p className="mt-6 text-center text-[13px] text-[#71717A]">
             {t('pricing.faq.moreQuestions')}{' '}
             <a
-              href="#faq"
+              href="/faq"
               className="font-semibold text-[#8B5CF6] underline underline-offset-2 transition-colors hover:text-[#7C3AED]"
             >
               {t('pricing.faq.contactLink')}

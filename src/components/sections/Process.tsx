@@ -83,7 +83,7 @@ function VerticalConnector({ active }: { active: boolean }) {
   )
 }
 
-export function Process() {
+export function Process({ hideHeader = false, ctaHref }: { hideHeader?: boolean; ctaHref?: string }) {
   const { t } = useTranslation()
   const [hovered, setHovered] = useState<number | null>(null)
 
@@ -93,10 +93,12 @@ export function Process() {
   return (
     <Section id="process">
       <Container>
-        <SectionHeader
-          label={t('process.label')}
-          title={t('process.title')}
-        />
+        {!hideHeader && (
+          <SectionHeader
+            label={t('process.label')}
+            title={t('process.title')}
+          />
+        )}
 
         <motion.div
           variants={fadeUp}
@@ -170,7 +172,7 @@ export function Process() {
           <p className="text-[14px] leading-[1.7] text-[#71717A] mb-5 sm:text-[15px]">
             {t('process.ctaMicro')}
           </p>
-          <Button size="lg" href="#contact">
+          <Button size="lg" href={ctaHref ?? '#contact'}>
             {t('process.cta')}
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Button>

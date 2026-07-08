@@ -7,11 +7,15 @@ import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { Button } from '@/components/ui/Button'
-import { PortfolioFilters } from './PortfolioFilters'
 import { useNavigate } from 'react-router-dom'
 import { trackEvent } from '@/lib/analytics'
+import wafrLogo from '@/assets/images/wafr-logo.svg'
 
 const projectKeys = ['journeya', 'wafr', 'darlink'] as const
+
+const projectLogos: Partial<Record<string, string>> = {
+  wafr: wafrLogo,
+}
 
 const projectColors: Record<string, { bg: string; text: string }> = {
   journeya: { bg: '#ECFDF5', text: '#059669' },
@@ -29,18 +33,6 @@ export function Projects() {
   const { t } = useTranslation()
   const reducedMotion = useReducedMotion()
   const navigate = useNavigate()
-  const [activeFilter, setActiveFilter] = useState('all')
-
-  const filteredKeys = projectKeys.filter((key) => {
-    if (activeFilter === 'all') return true
-    const project = t(`projects.items.${key}`, { returnObjects: true }) as {
-      title: string
-      category: string
-      description: string
-    }
-    return project.category === activeFilter
-  })
-
   return (
     <Section id="projects" className="bg-white border-y border-[#E4E4E7]">
       <Container>
@@ -50,11 +42,6 @@ export function Projects() {
           subtitle={t('projects.subtitle')}
         />
 
-        <PortfolioFilters
-          activeFilter={activeFilter}
-          onFilterChange={setActiveFilter}
-        />
-
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -62,7 +49,7 @@ export function Projects() {
           viewport={{ once: true, margin: '-60px' }}
           className="grid gap-5 sm:gap-6 sm:grid-cols-2"
         >
-          {filteredKeys.map((key) => {
+          {projectKeys.map((key) => {
             const color = projectColors[key]
             const cs = t(`caseStudies.items.${key}`, { returnObjects: true }) as {
               challenge: string
@@ -89,10 +76,23 @@ export function Projects() {
               >
                 <div className="flex-1 p-7 sm:p-8">
                   <div
-                    className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl text-[18px] font-bold"
-                    style={{ backgroundColor: color.bg, color: color.text }}
+                    className="mb-5 flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl"
+                    style={{ backgroundColor: color.bg }}
                   >
-                    {t(`projects.items.${key}.title`).charAt(0)}
+                    {projectLogos[key] ? (
+                      <img
+                        src={projectLogos[key]}
+                        alt={t(`projects.items.${key}.title`)}
+                        className="h-9 w-9 object-contain"
+                      />
+                    ) : (
+                      <span
+                        className="text-[18px] font-bold"
+                        style={{ color: color.text }}
+                      >
+                        {t(`projects.items.${key}.title`).charAt(0)}
+                      </span>
+                    )}
                   </div>
 
                   <div className="mb-3 flex items-center justify-between">
@@ -145,12 +145,6 @@ export function Projects() {
             )
           })}
         </motion.div>
-
-        {filteredKeys.length === 0 && (
-          <p className="mt-8 text-center text-[14px] text-[#A1A1AA]">
-            No projects match the selected filter.
-          </p>
-        )}
 
         <motion.div
           variants={fadeUp}

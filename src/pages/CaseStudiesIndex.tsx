@@ -1,4 +1,3 @@
-// src/pages/CaseStudiesIndex.tsx
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import CaseStudyCard from '@/components/case-studies/CaseStudyCard';

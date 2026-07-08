@@ -57,6 +57,7 @@
     "contact": "Contact",
     "cta": "Obtenez un devis gratuit",
     "faq": "FAQ",
+    "process": "Notre processus",
     "ctaMicro": "Appel découverte gratuit • Sans engagement • Réponse sous 24h"
   },
   "hero": {
@@ -155,6 +156,12 @@
   "process": {
     "label": "Notre méthode",
     "title": "De l'idée au lancement",
+    "seo": {
+      "title": "Notre processus | Massar Digital Studio",
+      "description": "De l'idée au lancement — découvrez comment Massar Digital Studio mène votre projet de la découverte à la conception, au développement, au lancement et au support.",
+      "ogTitle": "Notre processus — Massar Digital Studio",
+      "ogDescription": "Un processus structuré et transparent en six phases, de la découverte au lancement."
+    },
     "steps": {
       "discover": { "title": "Découverte", "description": "Nous analysons votre activité, votre audience et vos objectifs en profondeur. Cette clarté initiale élimine les suppositions, réduit les révisions coûteuses et prépare votre projet au succès dès le premier jour." },
       "plan": { "title": "Planification", "description": "Nous élaborons une feuille de route détaillée avec des jalons clairs, des délais réalistes et des livrables précis. Vous savez toujours où en est votre projet — pour une tranquillité d'esprit totale." },
@@ -191,7 +198,7 @@
         "category": "Site + App + Identité visuelle",
         "industry": "Real Estate",
         "description": "Plateforme immobilière moderne connectant acheteurs, vendeurs et investisseurs de manière fluide."
-      },
+      }
     }
   },
   "pricing": {
@@ -404,30 +411,7 @@
     "label": "Résultats",
     "title": "Un impact mesurable, des résultats concrets",
     "subtitle": "Nous construisons avec des objectifs business en tête. Chaque projet est conçu et mesuré pour la performance, l'engagement et la croissance.",
-    "items": [
-      {
-        "metric": "15+",
-        "label": "Projets Livrés",
-        "description": "En web, mobile, branding et IA"
-      },
-      {
-        "metric": "40%",
-        "label": "Amélioration d'engagement",
-        "description": "Amélioration de l'interaction utilisateur après le lancement",
-        "placeholder": true
-      },
-      {
-        "metric": "3+",
-        "label": "Années d'expérience",
-        "description": "Au service des clients en Algérie et au-delà"
-      },
-      {
-        "metric": "98%",
-        "label": "Satisfaction Client",
-        "description": "Basé sur les scores de feedback post-projet",
-        "placeholder": true
-      }
-    ],
+    "items": [],
     "cta": "Voir les projets que nous avons livrés",
     "ctaMicro": "Explorez des études de cas réelles avec défis, solutions et résultats mesurables."
   },
@@ -449,7 +433,7 @@
       "darlink": {
         "title": "Étude de cas DarLink | Plateforme immobilière | Massar Digital Studio",
         "description": "DarLink atteint 200+ annonces immobilières avec recherche avancée et messagerie — plateforme créée par Massar en Algérie."
-      },
+      }
     },
     "items": {
       "journeya": {
@@ -469,7 +453,7 @@
         "solution": "Développement d'une plateforme web complète avec recherche avancée de propriétés, filtres et messagerie directe.",
         "technologies": ["Next.js", "TypeScript", "PostgreSQL", "Stripe"],
         "outcomes": "Plateforme lancée avec plus de 200 annonces immobilières."
-      },
+      }
     }
   },
   "aboutPage": {
@@ -641,6 +625,12 @@
   "faq": {
     "label": "FAQ",
     "title": "Tout ce que vous devez savoir",
+    "seo": {
+      "title": "FAQ | Massar Digital Studio",
+      "description": "Réponses aux questions fréquentes sur les tarifs, les délais, notre processus, la technologie et le support continu pour vos projets web et applications.",
+      "ogTitle": "FAQ — Massar Digital Studio",
+      "ogDescription": "Tout ce que vous devez savoir sur la collaboration avec Massar Digital Studio."
+    },
     "cta": "Encore des questions ?",
     "ctaMicro": "Nous sommes là pour vous aider. Contactez-nous et nous vous répondrons sous 24 heures.",
     "items": [
@@ -815,7 +805,9 @@
     "contact": "Contact",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
-    "cookies": "Politique de cookies"
+    "cookies": "Politique de cookies",
+    "faq": "FAQ",
+    "process": "Notre processus"
   },
   "footer": {
     "description": "Agence digitale algérienne orientée stratégie — création de site web, référencement SEO et applications mobiles pour votre croissance.",
@@ -1000,7 +992,7 @@
           "Complexité d'intégration des paiements avec les méthodes locales et internationales",
           "La plateforme devait servir trois types d'utilisateurs distincts : acheteurs, vendeurs et investisseurs"
         ]
-      },
+      }
     },
     "projectResults": {
       "journeya": {
@@ -1026,7 +1018,7 @@
           { "metric": "\\u2014", "label": "Utilisateurs actifs", "description": "TODO: Ajouter des données vérifiées d'utilisateurs actifs mensuels", "verified": false },
           { "metric": "\\u2014", "label": "Taux de mise en relation", "description": "TODO: Ajouter des métriques vérifiées de mise en relation acheteur-vendeur", "verified": false }
         ]
-      },
+      }
     },
     "processSteps": {
       "journeya": {
@@ -1043,7 +1035,7 @@
         "step0": "Analysé le paysage du marché immobilier algérien, étudié les plateformes immobilières internationales et défini les personas utilisateurs pour les acheteurs, vendeurs et investisseurs.",
         "step1": "Développé une identité de marque professionnelle et fiable adaptée au marché immobilier. Conçu des wireframes complets pour la recherche de propriétés, les annonces et les flux de messagerie.",
         "step2": "Architecturé une plateforme full-stack Next.js avec base de données PostgreSQL, fonctionnalité de recherche avancée, intégration de paiement Stripe et messagerie en temps réel."
-      },
+      }
     },
     "performanceText": {
       "journeya": "Interface glass-morphism réalisée sans compromis de performance. Flux de réservation instantané optimisé pour la conversion mobile. L'infrastructure Firebase évolue de manière transparente avec la croissance des utilisateurs."

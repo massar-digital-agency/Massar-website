@@ -7,13 +7,17 @@ import { Button } from '@/components/ui/Button'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { HoverSlideText } from '@/components/ui/HoverSlideText'
 import { navigateToSection } from '@/lib/navigate'
+import { useNavigate } from 'react-router-dom'
 import { trackEvent } from '@/lib/analytics'
 import Logo from '@/assets/images/Logo.svg'
 
-const navLinks = ['services', 'about', 'projects', 'pricing', 'faq', 'contact'] as const
+const navLinks = ['services', 'about', 'projects', 'pricing', 'faq', 'process', 'contact'] as const
+
+const PAGE_LINKS = new Set(['faq', 'process'])
 
 export function Navbar() {
   const { t } = useTranslation()
+  const navigate = useNavigate()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const mobileMenuRef = useRef<HTMLDivElement>(null)
@@ -69,7 +73,11 @@ export function Navbar() {
     e.preventDefault()
     handleCloseMenu()
     trackEvent('nav_click', { nav_section: sectionId, nav_label: t(`nav.${sectionId}`) })
-    navigateToSection(sectionId)
+    if (PAGE_LINKS.has(sectionId)) {
+      navigate(`/${sectionId}`)
+    } else {
+      navigateToSection(sectionId)
+    }
   }
 
   return (
@@ -83,8 +91,8 @@ export function Navbar() {
       <Container>
         <nav className="flex h-[72px] items-center justify-between gap-8" aria-label="Main navigation">
           <a
-            href="#"
-            onClick={(e) => { e.preventDefault(); handleCloseMenu(); navigateToSection('hero'); trackEvent('logo_click') }}
+            href="/"
+            onClick={(e) => { e.preventDefault(); handleCloseMenu(); navigate('/'); trackEvent('logo_click') }}
             className="flex items-center gap-2.5 shrink-0"
             aria-label="Massar Digital Studio — Home"
           >
@@ -96,7 +104,7 @@ export function Navbar() {
             {navLinks.map((key) => (
               <a
                 key={key}
-                href={`#${key}`}
+                href={PAGE_LINKS.has(key) ? `/${key}` : `#${key}`}
                 onClick={handleNavClick(key)}
                 className="group text-[14px] font-medium text-[#71717A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-offset-2 focus-visible:rounded"
               >
@@ -151,7 +159,7 @@ export function Navbar() {
                 {navLinks.map((key) => (
                   <a
                     key={key}
-                    href={`#${key}`}
+                    href={PAGE_LINKS.has(key) ? `/${key}` : `#${key}`}
                     onClick={handleNavClick(key)}
                     className="rounded-xl px-4 py-3 text-[15px] font-medium text-[#52525B] transition-colors hover:bg-[#F4F4F5] hover:text-[#0A0A0A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8B5CF6] focus-visible:ring-inset"
                   >

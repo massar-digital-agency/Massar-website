@@ -45,8 +45,7 @@ export function Footer() {
 
   const handleResourceClick = (key: string) => () => {
     trackEvent('footer_link_click', { link_type: 'resource', link_text: key })
-    if (key === 'faq') navigateToSection('faq')
-    else if (key === 'process') navigateToSection('process')
+    navigate(`/${key}`)
   }
 
   const socialUrl = (network: string): string => {

@@ -87,6 +87,28 @@ export function getBreadcrumbsForRoute(
     ]
   }
 
+  if (pathname === '/faq') {
+    return [
+      homeCrumb(t),
+      {
+        label: t('breadcrumbs.faq'),
+        canonicalUrl: `${SEO_CONFIG.siteUrl}/faq`,
+        isCurrent: true,
+      },
+    ]
+  }
+
+  if (pathname === '/process') {
+    return [
+      homeCrumb(t),
+      {
+        label: t('breadcrumbs.process'),
+        canonicalUrl: `${SEO_CONFIG.siteUrl}/process`,
+        isCurrent: true,
+      },
+    ]
+  }
+
   if (pathname === '/blog') {
     return [
       homeCrumb(t),

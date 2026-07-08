@@ -3,6 +3,7 @@ import { motion } from '@/lib/motion'
 import { fadeUp } from '@/hooks/useAnimationVariants'
 import { Clock, Users } from 'lucide-react'
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs'
+import wafrLogo from '@/assets/images/wafr-logo.svg'
 
 interface CaseStudyHeroProps {
   slug: string
@@ -12,6 +13,10 @@ interface CaseStudyHeroProps {
 const projectMeta: Record<string, { year: string; teamSize: string }> = {
   journeya: { year: '2025', teamSize: '2 developers + 1 designer' },
   wafr: { year: '2025', teamSize: '1 developer + 1 designer' },
+}
+
+const projectLogos: Partial<Record<string, string>> = {
+  wafr: wafrLogo,
 }
 
 export function CaseStudyHero({ slug, color }: CaseStudyHeroProps) {
@@ -36,10 +41,23 @@ export function CaseStudyHero({ slug, color }: CaseStudyHeroProps) {
           <Breadcrumbs />
 
           <div
-            className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl text-[22px] font-bold"
-            style={{ backgroundColor: color.bg, color: color.text }}
+            className="mb-6 inline-flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl"
+            style={{ backgroundColor: color.bg }}
           >
-            {project.title.charAt(0)}
+            {projectLogos[slug] ? (
+              <img
+                src={projectLogos[slug]}
+                alt={project.title}
+                className="h-11 w-11 object-contain"
+              />
+            ) : (
+              <span
+                className="text-[22px] font-bold"
+                style={{ color: color.text }}
+              >
+                {project.title.charAt(0)}
+              </span>
+            )}
           </div>
 
           <span className="mb-3 inline-block text-[12px] font-semibold tracking-[0.08em] text-[#8B5CF6] uppercase">
